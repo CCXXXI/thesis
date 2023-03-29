@@ -20,13 +20,15 @@ jobs:
             update-ms-fonts
             fc-cache -f
 
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: src/main.pdf
+      - run: mkdir pdf && mv src/main.pdf pdf/main.pdf
+
       - uses: actions/upload-artifact@v3
         with:
           name: pdf
-          path: src/main.pdf
+          path: pdf/main.pdf
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: pdf/
 
   release:
     needs: [ build-pdf ]
