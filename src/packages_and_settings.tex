@@ -108,11 +108,12 @@
 \usepackage[bibstyle=gb7714-2015,citestyle=gb7714-2015,hyperref=true,backend=biber,sorting=none,gbpub=false]{biblatex}
 %\usepackage[bibstyle=gb7714-2015,citestyle=gb7714-2015,hyperref=true,backend=biber,sorting=none]{biblatex} %使用biblatex管理文献，输出格式使用gb7714-2015标准，后端为biber
 
+\usepackage{titletoc}
 \titlecontents{section}[0pt]{\addvspace{2pt}\filright}
 {\contentspush{\thecontentslabel\ }}
 {}{\titlerule*[8pt]{.}\contentspage}
 
-\usepackage[titletoc,title]{appendix} %提供了附录支持并显示在目录中
+\usepackage[title]{appendix} %提供了附录支持并显示在目录中
 \renewcommand{\appendixtocname}{附录} %
 
 \newcommand{\apdx}[1] { %
