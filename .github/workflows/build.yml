@@ -24,6 +24,12 @@ jobs:
             update-ms-fonts
             fc-cache -f
 
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: log
+          path: src/main.log
+
       - run: mkdir pdf && mv src/main.pdf pdf/main.pdf
 
       - uses: actions/upload-artifact@v3
