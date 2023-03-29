@@ -16,10 +16,9 @@ jobs:
           working_directory: src
           latexmk_use_xelatex: true
           pre_compile: |
-            wget https://www.wfonts.com/download/data/2015/08/10/simsun/simsun.zip
-            unzip simsun.zip
+            wget https://github.com/sonatype/maven-guide-zh/raw/master/content-zh/src/main/resources/fonts/simsun.ttc
             mkdir ~/.fonts
-            cp SIMSUN.ttf ~/.fonts/
+            cp simsun.ttc ~/.fonts/
             apk add msttcorefonts-installer fontconfig
             update-ms-fonts
             fc-cache -f
