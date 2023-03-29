@@ -1,0 +1,15 @@
+name: release-please
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.RELEASE_PAT }}
+          release-type: simple
+          changelog-types: '[{"type":"feat","section":"Features"},{"type":"fix","section":"Bug Fixes"},{"type":"perf","section":"Performance Improvements"},{"type":"revert","section":"Reverts"},{"type":"chore","section":"Miscellaneous Chores"},{"type":"docs","section":"Documentation"},{"type":"style","section":"Styles"},{"type":"refactor","section":"Code Refactoring"},{"type":"test","section":"Tests"},{"type":"build","section":"Build System"},{"type":"ci","section":"Continuous Integration"}]'
