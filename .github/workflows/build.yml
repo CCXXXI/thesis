@@ -1,0 +1,47 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+          working_directory: src
+          latexmk_use_xelatex: true
+
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: src/main.pdf
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pdf
+          path: src/main.pdf
+
+  release:
+    needs: [ build-pdf ]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: pdf
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: 'main.pdf'
+
+  release-web:
+    permissions:
+      pages: write
+      id-token: write
+    needs: [ build-pdf ]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v2
