@@ -16,4 +16,5 @@
 ![repositories](https://raw.githubusercontent.com/CCXXXI/thesis/main/assets/repositories.drawio.svg#gh-light-mode-only)
 ![repositories](https://raw.githubusercontent.com/CCXXXI/thesis/main/assets/repositories.drawio.dark.svg#gh-dark-mode-only)
 
-该图片中的仓库名称是可点击跳转的，但在 Markdown 中不生效，请查看[原始图片](https://raw.githubusercontent.com/CCXXXI/thesis/main/assets/repositories.drawio.svg)。
+该图片中的仓库名称是可点击跳转的，但在 Markdown
+中不生效，请查看[原始图片](https://raw.githubusercontent.com/CCXXXI/thesis/main/assets/repositories.drawio.svg)。
