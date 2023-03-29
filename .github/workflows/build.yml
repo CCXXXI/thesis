@@ -18,6 +18,7 @@ jobs:
           pre_compile: |
             wget https://www.wfonts.com/download/data/2015/08/10/simsun/simsun.zip
             unzip simsun.zip
+            cp *.ttf *.TTF /usr/share/fonts/truetype/
             apk add msttcorefonts-installer fontconfig
             update-ms-fonts
             fc-cache -f
