@@ -1518,17 +1518,17 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 
 % beamer define is own caption overrinding latex caption!
 % as we need it, we have put here the original definition
-\long\def\algocf@latexcaption\#1[\#2]\#3{% original definition of caption
+\long\def\algocf@latexcaption#1[#2]#3{% original definition of caption
     \par
-\addcontentsline{\csname ext@\#1\endcsname}{\#1}%
-    {\protect\numberline{\csname the\#1\endcsname}{\ignorespaces \#2}}%
+    \addcontentsline{\csname ext@#1\endcsname}{#1}%
+    {\protect\numberline{\csname the#1\endcsname}{\ignorespaces #2}}%
     \begingroup
     \@parboxrestore
     \if@minipage
     \@setminipage
     \fi
     \normalsize
-    \@makecaption{\csname fnum@\#1\endcsname}{\ignorespaces \#3}\par
+    \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
     \endgroup%
 }
 
@@ -1751,10 +1751,10 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 \newenvironment{\algocf@envname}[1][htbp]{%
 \@algocf@init%
 \ifthenelse{\equal{\algocf@float}{figure}}%
-{\begin{figure}[\#1]}%
-{\@algocf@init@caption\ifthenelse{\equal{\#1}{H}}%
+{\begin{figure}[#1]}%
+{\@algocf@init@caption\ifthenelse{\equal{#1}{H}}%
 {\setboolean{algocf@algoH}{true}\begin{algocf@Here}}%
-{\begin{algocf}[\#1]}%
+{\begin{algocf}[#1]}%
 }%
 \@algocf@start%
 \@ResetCounterIfNeeded%
