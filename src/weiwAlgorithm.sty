@@ -14,12 +14,11 @@
 
 
 \RequirePackage[
-algoruled,
-longend,
-linesnumbered,
-lined
+    algoruled,
+    longend,
+    linesnumbered,
+    lined
 ]{algorithm2e}
-
 
 
 %% algorithm2e has several package options. Some relevant ones are:
@@ -53,11 +52,11 @@ lined
 %% useful commands
 \newcommand{\State}[1]{#1\;}
 \newcommand{\StateCmt}[2]{% statement (#1) with comment (#2)
-  #1;\quad\tcc*[f]{#2}\;
+    #1;\quad\tcc*[f]{#2}\;
 }
 %% this command is not well implemented (buggy or ugly)
 \newcommand{\CmtState}[2]{% comment (#2) and then statement (#1)
-  \tcc*[f]{#2} #1\;
+    \tcc*[f]{#2} #1\;
 }
 
 

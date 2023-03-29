@@ -13,15 +13,14 @@
 \newlistof{fixme}{fxm}{\listfixmename}
 
 \newcommand{\fixme}[1]{%
-  \refstepcounter{fixme}
-  \footnote{\textbf{FIXME!!!} #1}%
-  \addcontentsline{fxm}{fixme}{\protect\numberline{\thefixme}#1}\par%
+    \refstepcounter{fixme}
+    \footnote{\textbf{FIXME!!!} #1}%
+    \addcontentsline{fxm}{fixme}{\protect\numberline{\thefixme}#1}\par%
 }
 
 \newcommand{\listoffixmes}{
-  {\color{red}\listoffixme}
+        {\color{red}\listoffixme}
 }
-
 
 
 % % %% Macros adapted from

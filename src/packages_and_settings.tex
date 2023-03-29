@@ -5,7 +5,6 @@
 \usepackage{amsthm}  %
 \usepackage{graphicx} %插入图片所需宏包
 \usepackage{adjustbox}  %也许需要的宏包
-\usepackage{xspace} %提供一些好用的空格命令
 \usepackage{tikz-cd} %画交换图需要的宏包
 \usepackage{url} %更好的超链接显示
 \usepackage{array} %表格相关的宏包
@@ -20,8 +19,6 @@
 \usepackage{algorithmicx}
 \usepackage{lineno,hyperref}
 \usepackage{comment}
-\usepackage{ulem} %for sout
-
 \usepackage{ulem} %更好的下划线
 
 \usepackage[ top=2.5cm, bottom=2.0cm, left=3.0cm, right=2.0cm]{geometry} %设置页边距
@@ -56,7 +53,7 @@
 \usepackage[bottom,perpage]{footmisc}               %脚注，显示在每页底部，编号按页重置
 \renewcommand*{\footnotelayout}{\zihao{-5}\songti}  %设置脚注为小五号宋体
 \renewcommand{\thefootnote}{[\arabic{footnote}]}    %设置脚注标记为  [编号]
-                      %脚注的反向超链接
+%脚注的反向超链接
 
 \usepackage{fancyhdr}               %
 \renewcommand{\headrulewidth}{0.5pt}  %
@@ -75,9 +72,9 @@
 \renewcommand{\enotesize}{\zihao{-5}}                                           %
 \renewcommand{\notesname}{\heiti \zihao {-4} 尾注}                              %
 \renewcommand\enoteformat{                                                      %
-  \raggedright                                                                  %尾注的相关设置
-  \leftskip=1.8em                                                               %
-  \makebox[0pt][r]{\theenmark. \rule{0pt}{\dimexpr\ht\strutbox+\baselineskip}}  %
+    \raggedright                                                                  %尾注的相关设置
+    \leftskip=1.8em                                                               %
+    \makebox[0pt][r]{\theenmark. \rule{0pt}{\dimexpr\ht\strutbox+\baselineskip}}  %
 }                                                                               %
 \renewcommand\makeenmark{\textsuperscript{[尾注\theenmark]}}                    %
 \usepackage{footnotebackref}
@@ -98,10 +95,10 @@
 \newtheorem{example}[theorem]{\heiti 例子}      %
 \newtheorem*{example*}{\heiti 例子}             %
 \newenvironment{solution}                       %
-  {\renewcommand\qedsymbol{$\blacksquare$}      %
-  \begin{proof}[\heiti \bf 解]}                 %
-  {\end{proof}}                                 %
-\renewcommand*{\proofname}{\heiti \bf 证明}     %
+{\renewcommand\qedsymbol{$\blacksquare$}      %
+    \begin{proof}[\heiti \textbf 解]}                 %
+    {\end{proof}}                                 %
+\renewcommand*{\proofname}{\heiti \textbf 证明}     %
 
 \allowdisplaybreaks %允许公式跨页显示
 
@@ -116,9 +113,9 @@
 {\contentspush{\thecontentslabel\ }}
 {}{\titlerule*[8pt]{.}\contentspage}
 
-\usepackage[titletoc,title]{appendix} %提供了附录支持并显示在目录中
+\usepackage[title]{appendix} %提供了附录支持并显示在目录中
 \renewcommand{\appendixtocname}{附录} %
 
 \newcommand{\apdx}[1] { %
-\clearpage              %重定义生成附录的命令，使得每个附录都单独成页
-\section{#1}}           %
+    \clearpage              %重定义生成附录的命令，使得每个附录都单独成页
+    \section{#1}}           %
