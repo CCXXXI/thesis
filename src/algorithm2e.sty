@@ -590,7 +590,7 @@
     \renewcommand{\algorithmcfname}{Algoritmo}%
     \renewcommand{\algocf@typo}{}%
     \renewcommand{\@algocf@procname}{Procedimento}
-    \renewcommand{\@algocf@funcname}{Fun\c{c}\~{a}o}
+    \renewcommand{\@algocf@funcname}{Função}
 }
 %
 % OPTIONs plain, boxed, ruled, algoruled & boxruled
@@ -1518,17 +1518,17 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 
 % beamer define is own caption overrinding latex caption!
 % as we need it, we have put here the original definition
-\long\def\algocf@latexcaption#1[#2]#3{% original definition of caption
+\long\def\algocf@latexcaption\#1[\#2]\#3{% original definition of caption
     \par
-    \addcontentsline{\csname ext@#1\endcsname}{#1}%
-    {\protect\numberline{\csname the#1\endcsname}{\ignorespaces #2}}%
+\addcontentsline{\csname ext@\#1\endcsname}{\#1}%
+    {\protect\numberline{\csname the\#1\endcsname}{\ignorespaces \#2}}%
     \begingroup
     \@parboxrestore
     \if@minipage
     \@setminipage
     \fi
     \normalsize
-    \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
+    \@makecaption{\csname fnum@\#1\endcsname}{\ignorespaces \#3}\par
     \endgroup%
 }
 
@@ -1653,9 +1653,9 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 \newcommand{\@algocf@init}{%
 \refstepcounter{algocfline}%
 \ifthenelse{\boolean{algocf@optnoend}}{%
-\renewcommand{\a@block}[2]{\a@group{##1}}%
+\renewcommand{\a@block}[2]{\a@group{\#\#1}}%
 }{%
-\renewcommand{\a@block}[2]{\a@@block{##1}{##2}}%
+\renewcommand{\a@block}[2]{\a@@block{\#\#1}{\#\#2}}%
 }%
 }
 %% after the end of algocf or figure environment
@@ -1665,9 +1665,9 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 \newcommand{\@algocf@term}{%
 \setboolean{algocf@algoH}{false}% no H by default
 \ifthenelse{\boolean{algocf@optnoend}}{%
-\renewcommand{\a@block}[2]{\a@@block{##1}{##2}}
+\renewcommand{\a@block}[2]{\a@@block{\#\#1}{\#\#2}}
 }{%
-\renewcommand{\a@block}[2]{\a@group{##1}}%
+\renewcommand{\a@block}[2]{\a@group{\#\#1}}%
 }%
 }
 %
@@ -1751,10 +1751,10 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 \newenvironment{\algocf@envname}[1][htbp]{%
 \@algocf@init%
 \ifthenelse{\equal{\algocf@float}{figure}}%
-{\begin{figure}[#1]}%
-{\@algocf@init@caption\ifthenelse{\equal{#1}{H}}%
+{\begin{figure}[\#1]}%
+{\@algocf@init@caption\ifthenelse{\equal{\#1}{H}}%
 {\setboolean{algocf@algoH}{true}\begin{algocf@Here}}%
-{\begin{algocf}[#1]}%
+{\begin{algocf}[\#1]}%
 }%
 \@algocf@start%
 \@ResetCounterIfNeeded%
@@ -1775,8 +1775,8 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 \newenvironment{\algocf@envname*}[1][htbp]{%
 \@algocf@init%
 \ifthenelse{\equal{\algocf@float}{figure}}%
-{\begin{figure*}[#1]}%
-{\begin{algocf*}[#1]}%
+{\begin{figure*}[\#1]}%
+{\begin{algocf*}[\#1]}%
 \@algocf@start%
 \@ResetCounterIfNeeded%
 \algocf@linesnumbered%
@@ -1802,37 +1802,37 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 %
 % -- new style (used in particular in the caption of function and procedure environments)
 %
-\newcommand{\ProcNameSty}[1]{\FuncSty{#1}}%
-\newcommand{\SetProcNameSty}[1]{\renewcommand{\ProcNameSty}[1]{\textnormal{\csname#1\endcsname{##1}}}}
-\newcommand{\ProcArgSty}[1]{\ArgSty{#1}}%
-\newcommand{\SetProcArgSty}[1]{\renewcommand{\ProcArgSty}[1]{\textnormal{\csname#1\endcsname{##1}}}}
+\newcommand{\ProcNameSty}[1]{\FuncSty{\#1}}%
+\newcommand{\SetProcNameSty}[1]{\renewcommand{\ProcNameSty}[1]{\textnormal{\csname\#1\endcsname{\#\#1}}}}
+\newcommand{\ProcArgSty}[1]{\ArgSty{\#1}}%
+\newcommand{\SetProcArgSty}[1]{\renewcommand{\ProcArgSty}[1]{\textnormal{\csname\#1\endcsname{\#\#1}}}}
 % three macros to extract parts of the caption
-\gdef\algocf@captname#1(#2)#3@{#1}  % keep characters before the first brace
-\gdef\algocf@captparam#1(#2)#3@{#2} % keep character in between the braces
-\gdef\algocf@captother#1(#2)#3@{#3} % keep character after the braces
+\gdef\algocf@captname\#1(\#2)\#3@{\#1}  % keep characters before the first brace
+\gdef\algocf@captparam\#1(\#2)\#3@{\#2} % keep character in between the braces
+\gdef\algocf@captother\#1(\#2)\#3@{\#3} % keep character after the braces
 %
 %%% Text of caption for Procedure or Function
 \newcommand{\algocf@captionproctext}[2]{%
 {\AlCapFnt{}\AlTitleFnt{\algocf@procname} %
-\ProcNameSty{\algocf@captname #2@}% Name of the procedure in ProcName Style.
-\ifthenelse{\equal{\algocf@captparam #2@}{\arg@e}}{}% if no argument, write nothing
+\ProcNameSty{\algocf@captname \#2@}% Name of the procedure in ProcName Style.
+\ifthenelse{\equal{\algocf@captparam \#2@}{\arg@e}}{}% if no argument, write nothing
 {%                                                else put arguments in ProcArgSty:
-\ProcNameSty{(}\ProcArgSty{\algocf@captparam #2@}\ProcNameSty{)}%
+\ProcNameSty{(}\ProcArgSty{\algocf@captparam \#2@}\ProcNameSty{)}%
 }% endif
-\algocf@captother #2@%
+\algocf@captother \#2@%
 }
 }
 %%%% set caption for the environment
 % unfortunately, makecaption is called with \ignorespace #3 so
 % we can't do the @currentlabel definition inside \algocf@captionproctext
-\long\def\algocf@caption@proc#1[#2]#3{%
-\gdef\@currentlabel{\algocf@captname #3@}%
-\algocf@old@caption{#1}[\algocf@procname\nobreakspace #2]{\ #3}%
+\long\def\algocf@caption@proc\#1[\#2]\#3{%
+\gdef\@currentlabel{\algocf@captname \#3@}%
+\algocf@old@caption{\#1}[\algocf@procname\nobreakspace \#2]{\ \#3}%
 }%
 \newcommand{\algocf@setcaptionproc}{%
 \let\algocf@oldcaptiontext=\algocf@captiontext%
 \renewcommand{\algocf@captiontext}[2]{%
-\algocf@captionproctext{##1}{##2}}%
+\algocf@captionproctext{\#\#1}{\#\#2}}%
 \let\algocf@old@caption=\@caption%
 \let\@caption=\algocf@caption@proc%
 }
@@ -1854,13 +1854,13 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 \algocf@setcaption%       set caption to our caption style
 \refstepcounter{algocfline}%
 \ifthenelse{\equal{\algocf@float}{figure}}{%
-\ifthenelse{\boolean{algocf@procstar}}{\begin{figure*}[#1]}{\begin{figure}[#1]}%
+\ifthenelse{\boolean{algocf@procstar}}{\begin{figure*}[\#1]}{\begin{figure}[\#1]}%
 }{%
 \ifthenelse{\boolean{algocf@procstar}}%
-{\begin{algocf*}[#1]}%
-{\ifthenelse{\equal{#1}{H}}%
+{\begin{algocf*}[\#1]}%
+{\ifthenelse{\equal{\#1}{H}}%
 {\setboolean{algocf@algoH}{true}\begin{algocf@Here}}%
-{\begin{algocf}[#1]}%
+{\begin{algocf}[\#1]}%
 }%
 }%
 \@algocf@start%
@@ -1888,27 +1888,27 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 %
 \newenvironment{procedure}[1][htbp]%
 {\setboolean{algocf@procstar}{false}%
-\newcommand{\algocf@procname}{\@algocf@procname}\begin{algocf@proc}[#1]}%
+\newcommand{\algocf@procname}{\@algocf@procname}\begin{algocf@proc}[\#1]}%
 {\end{algocf@proc}}
 \newenvironment{function}[1][htbp]%
 {\setboolean{algocf@procstar}{false}%
-\newcommand{\algocf@procname}{\@algocf@funcname}\begin{algocf@proc}[#1]}%
+\newcommand{\algocf@procname}{\@algocf@funcname}\begin{algocf@proc}[\#1]}%
 {\end{algocf@proc}}
 %
 \newenvironment{procedure*}[1][htbp]%
 {\setboolean{algocf@procstar}{true}%
-\newcommand{\algocf@procname}{\@algocf@procname}\begin{algocf@proc}[#1]}%
+\newcommand{\algocf@procname}{\@algocf@procname}\begin{algocf@proc}[\#1]}%
 {\end{algocf@proc}}
 \newenvironment{function*}[1][htbp]%
 {\setboolean{algocf@procstar}{true}%
-\newcommand{\algocf@procname}{\@algocf@funcname}\begin{algocf@proc}[#1]}%
+\newcommand{\algocf@procname}{\@algocf@funcname}\begin{algocf@proc}[\#1]}%
 {\end{algocf@proc}}
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %
-\newcommand{\Titleofalgo}[1]{\@titleprefix\TitleSty{#1}\par\smallskip}
+\newcommand{\Titleofalgo}[1]{\@titleprefix\TitleSty{\#1}\par\smallskip}
 %
 %
 % -------------------------   Default Definitions
@@ -2068,7 +2068,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'^^J
 %
 %
 \newcommand{\algocf@defaults@noend}{%
-\renewcommand{\a@block}[2]{\a@group{##1}}
+\renewcommand{\a@block}[2]{\a@group{\#\#1}}
 \algocf@defaults@common
 \SetKwIF{gSi}{gSinonSi}{gSinon}{si}{alors}{sinon si}{sinon}{}%
 \SetKwIF{Si}{SinonSi}{Sinon}{si}{alors}{sinon si}{sinon}{}%
