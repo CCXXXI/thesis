@@ -1,13 +1,13 @@
 \documentclass[a4paper,oneside,UTF8]{article} %A4纸，单面，UTF-8
 
-\input{packages_and_settings.tex} %加载各宏包以及本模板的主要设置
+\input{packages_and_settings} %加载各宏包以及本模板的主要设置
 \addbibresource{ref.bib} %加载bib文件（参考文献）
 
 \begin{document}
     \pagestyle{empty} %不对正文前的各页面使用页眉页脚
 
-    \input{inner-cover.tex} %插入内封面
-    \input{sign.tex} %插入签名页面
+    \input{inner-cover} %插入内封面
+    \input{sign} %插入签名页面
 
     \tableofcontents %生成目录
 
@@ -17,15 +17,15 @@
     \pagenumbering{Roman}
     \setcounter{page}{1}
 
-    \input{abstract.tex} %生成中英文摘要及关键词
+    \input{abstract} %生成中英文摘要及关键词
 
 
     \clearpage
     \pagenumbering{arabic}
     \setcounter{page}{1} %论文页码从正文开始记数
 
-    \input{intros.tex}
-    \input{preli.tex}
+    \input{intros}
+    \input{preli}
 
     \cleardoublepage                                      %
     \phantomsection                                       %生成参考文献
