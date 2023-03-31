@@ -10,7 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: |
+      - name: Download fonts
+        run: |
           wget https://github.com/dolbydu/font/raw/master/unicode/SimSun.ttc
           wget https://github.com/dolbydu/font/raw/master/unicode/FangSong.ttf
       - uses: xu-cheng/latex-action@v2
