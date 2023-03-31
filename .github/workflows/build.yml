@@ -15,6 +15,7 @@ jobs:
           working_directory: src
           root_file: main.tex
           latexmk_use_xelatex: true
+          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode -f"
 
       # ref_name for tags, sha for commits
       - name: Rename pdf file (for tags)
