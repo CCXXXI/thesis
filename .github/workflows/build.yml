@@ -10,12 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # 20220801 is the last good version.
+      # See: https://github.com/Koyamin/ECNUThesis-Undergraduate/issues/3#issuecomment-1491303676
       - uses: CCXXXI/latex-action@20220801
-        continue-on-error: true
         with:
           working_directory: src
           root_file: main.tex
-          args: "-pdf -file-line-error -interaction=nonstopmode -xelatex -f"
+          latexmk_use_xelatex: true
 
       # ref_name for tags, sha for commits
       - name: Rename pdf file (for tags)
