@@ -52,7 +52,7 @@
 \newcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
 \newcommand{\algorithmicrepeat}{\textbf{repeat}}
 \newcommand{\algorithmicuntil}{\textbf{until}}
-\def\ALC@item[\#1]{%
+\def\ALC@item[#1]{%
     \if@noparitem \@donoparitem
     \else \if@inlabel \indent \par \fi
     \ifhmode \unskip\unskip \par \fi
@@ -68,7 +68,7 @@
     \penalty\z@ \fi
     \everypar{}}\global\@nobreakfalse
     \if@noitemarg \@noitemargfalse \if@nmbrlist \refstepcounter{\@listctr}\fi \fi
-    \sbox\@tempboxa{\makelabel{\#1}}%
+    \sbox\@tempboxa{\makelabel{#1}}%
     \global\setbox\@labels
     \hbox{\unhbox\@labels \hskip \itemindent
     \hskip -\labelwidth \hskip -\ALC@tlm
@@ -114,23 +114,23 @@
 \newcommand{\IF}[2][default]{\ALC@it\algorithmicif\ ##2\ \algorithmicthen%
 \ALC@com{##1}\begin{ALC@if}}
 \newcommand{\ELSE}[1][default]{\end{ALC@if}\ALC@it\algorithmicelse%
-\ALC@com{\#\#1}\begin{ALC@if}}
+\ALC@com{##1}\begin{ALC@if}}
 \newcommand{\ELSIF}[2][default]%
-{\end{ALC@if}\ALC@it\algorithmicelsif\ \#\#2\ \algorithmicthen%
-\ALC@com{\#\#1}\begin{ALC@if}}
-\newcommand{\FOR}[2][default]{\ALC@it\algorithmicfor\ \#\#2\ \algorithmicdo%
-\ALC@com{\#\#1}\begin{ALC@for}}
-\newcommand{\FORALL}[2][default]{\ALC@it\algorithmicforall\ \#\#2\ %
+{\end{ALC@if}\ALC@it\algorithmicelsif\ ##2\ \algorithmicthen%
+\ALC@com{##1}\begin{ALC@if}}
+\newcommand{\FOR}[2][default]{\ALC@it\algorithmicfor\ ##2\ \algorithmicdo%
+\ALC@com{##1}\begin{ALC@for}}
+\newcommand{\FORALL}[2][default]{\ALC@it\algorithmicforall\ ##2\ %
 \algorithmicdo%
-\ALC@com{\#\#1}\begin{ALC@for}}
-\newcommand{\WHILE}[2][default]{\ALC@it\algorithmicwhile\ \#\#2\ %
+\ALC@com{##1}\begin{ALC@for}}
+\newcommand{\WHILE}[2][default]{\ALC@it\algorithmicwhile\ ##2\ %
 \algorithmicdo%
-\ALC@com{\#\#1}\begin{ALC@whl}}
+\ALC@com{##1}\begin{ALC@whl}}
 \newcommand{\LOOP}[1][default]{\ALC@it\algorithmicloop%
-\ALC@com{\#\#1}\begin{ALC@loop}}
+\ALC@com{##1}\begin{ALC@loop}}
 \newcommand{\REPEAT}[1][default]{\ALC@it\algorithmicrepeat%
-\ALC@com{\#\#1}\begin{ALC@rpt}}
-\newcommand{\UNTIL}[1]{\end{ALC@rpt}\ALC@it\algorithmicuntil\ \#\#1}
+\ALC@com{##1}\begin{ALC@rpt}}
+\newcommand{\UNTIL}[1]{\end{ALC@rpt}\ALC@it\algorithmicuntil\ ##1}
 \ifthenelse{\boolean{ALC@noend}}{
 \newcommand{\ENDIF}{\end{ALC@if}}
 \newcommand{\ENDFOR}{\end{ALC@for}}
@@ -147,7 +147,7 @@
 \itemsep\z@ \itemindent\z@ \listparindent\z@%
 \partopsep\z@ \parskip\z@ \parsep\z@%
 \labelsep 0.5em \topsep 0.2em%
-\ifthenelse{\equal{\#1}{0}}
+\ifthenelse{\equal{#1}{0}}
 {\labelwidth 0.5em }
 {\labelwidth  1.2em }
 \leftmargin\labelwidth \addtolength{\leftmargin}{\labelsep}

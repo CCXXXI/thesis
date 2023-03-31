@@ -5,6 +5,7 @@
 \usepackage{amsthm}  %
 \usepackage{graphicx} %插入图片所需宏包
 \usepackage{adjustbox}  %也许需要的宏包
+\usepackage{xspace} %提供一些好用的空格命令
 \usepackage{tikz-cd} %画交换图需要的宏包
 \usepackage{url} %更好的超链接显示
 \usepackage{array} %表格相关的宏包
@@ -19,6 +20,8 @@
 \usepackage{algorithmicx}
 \usepackage{lineno,hyperref}
 \usepackage{comment}
+\usepackage{ulem} %for sout
+
 \usepackage{ulem} %更好的下划线
 
 \usepackage[ top=2.5cm, bottom=2.0cm, left=3.0cm, right=2.0cm]{geometry} %设置页边距
@@ -96,9 +99,9 @@
 \newtheorem*{example*}{\heiti 例子}             %
 \newenvironment{solution}                       %
 {\renewcommand\qedsymbol{$\blacksquare$}      %
-    \begin{proof}[\heiti \textbf 解]}                 %
+    \begin{proof}[\heiti \bf 解]}                 %
     {\end{proof}}                                 %
-\renewcommand*{\proofname}{\heiti \textbf 证明}     %
+\renewcommand*{\proofname}{\heiti \bf 证明}     %
 
 \allowdisplaybreaks %允许公式跨页显示
 
@@ -113,7 +116,7 @@
 {\contentspush{\thecontentslabel\ }}
 {}{\titlerule*[8pt]{.}\contentspage}
 
-\usepackage[title]{appendix} %提供了附录支持并显示在目录中
+\usepackage[titletoc,title]{appendix} %提供了附录支持并显示在目录中
 \renewcommand{\appendixtocname}{附录} %
 
 \newcommand{\apdx}[1] { %
