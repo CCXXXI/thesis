@@ -12,20 +12,20 @@ jobs:
 
       - uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
           working_directory: src
+          root_file: main.tex
           latexmk_use_xelatex: true
           pre_compile: |
             apk add msttcorefonts-installer fontconfig
             update-ms-fonts
             fc-cache -f
 
-      - run: mkdir pdf && mv src/main.pdf pdf/main.pdf
+      - run: mv src/main.pdf ${{ github.ref }}.pdf
 
       - uses: actions/upload-artifact@v3
         with:
           name: pdf
-          path: pdf/main.pdf
+          path: "*.pdf"
 
   release:
     needs: [ build-pdf ]
@@ -37,4 +37,4 @@ jobs:
           name: pdf
       - uses: softprops/action-gh-release@v1
         with:
-          files: 'main.pdf'
+          files: '*'
