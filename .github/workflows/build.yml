@@ -20,7 +20,7 @@ jobs:
             update-ms-fonts
             fc-cache -f
 
-      - run: mv src/main.pdf ${{ github.ref }}.pdf
+      - run: mv src/main.pdf ${{ github.ref_name }}.pdf
 
       - uses: actions/upload-artifact@v3
         with:
