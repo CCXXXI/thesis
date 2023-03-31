@@ -12,7 +12,7 @@
 
 ## 论文模板
 
-[Xiejiadong/ECNU_Undergraduate_Dissertation_Template](https://github.com/Xiejiadong/ECNU_Undergraduate_Dissertation_Template)
+[Koyamin/ECNUThesis-Undergraduate](https://github.com/Koyamin/ECNUThesis-Undergraduate)
 
 ## 毕设仓库
 
