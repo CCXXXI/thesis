@@ -1,46 +1,150 @@
-\documentclass[a4paper,oneside,UTF8]{article} %A4纸，单面，UTF-8
+\documentclass{ecnuthesis}
+% 模版选项:
+% printMode     是否开启打印模式, 若缺省则为关闭, 反之则为开启
+% 用法示例
+% \documentclass[printMode]{ecnuthesis}   (开启打印模式, 适合双面打印)
+% \documentclass{ecnuthesis}              (关闭打印模式, 适合提交电子版)
 
-\input{packages_and_settings} %加载各宏包以及本模板的主要设置
-\addbibresource{ref.bib} %加载bib文件（参考文献）
+\ecnuSetup {
+% 参数设置
+% 允许采用两种方式设置选项:
+%   1. style/... = ...
+%   2. style = { ... = ... }
+% 注意事项:
+%   1. 请勿在参数设置中出现空行
+%   2. "=" 两侧的空格将被忽略
+%   3. "/" 两侧的空格不会被忽略
+%   4. 请使用英文逗号 "," 分隔选项
+%
+% info 类用于输入论文信息
+    info = {
+        title = {面向移动终端的可穿戴动态心电图的智能监测应用},
+        % 中文标题
+        %
+        titleEN = {Intelligent Monitoring Application of Wearable Dynamic Electrocardiogram for Mobile Terminals},
+        % 英文标题
+        %
+        author = {刘议临},
+        % 作者姓名
+        %
+        studentID = {10195101428},
+        % 作者学号
+        %
+        department = {软件工程学院},
+        % 学院名称
+        %
+        major = {软件工程},
+        % 专业名称
+        %
+        supervisor = {王丽苹},
+        % 指导教师姓名
+        %
+        academicTitle = {副教授},
+        % 指导教师职称
+        %
+        year  = 2023,
+        % 论文完成年份
+        %
+        month = 6,
+        % 论文完成月份
+        %
+        keywords = {}, % todo
+        % 中文关键词
+        % 请使用英文逗号 "," 以分隔
+        %
+        keywordsEN = {}, % todo
+        % 英文关键词
+        % 请使用英文逗号 "," 以分隔
+        %
+    },
+% style 类用于简单设置论文格式
+    style = {
+        footnote  = plain,
+        % 脚注编号样式
+        % 可用选项:
+        %   footnote = plain|circled
+        % 说明:
+        %   plain     脚注的编号仅为数字
+        %   circled   脚注的编号为带圆圈数字 (仅限1-10)
+        %   (默认选项为 plain )
+        %
+        numbering = arabic,
+        % 章节编号样式
+        % 可用选项:
+        %   numbering = arabic|alpha|chinese
+        % 说明:
+        %   arabic    使用数字进行编号 (即理科要求)
+        %   alpha     使用字母进行编号 (即外文要求)
+        %   chinese   使用汉字进行编号 (即文科要求)
+        %   (默认选项为 arabic )
+        %
+        fontCJK = fandol,
+        % 中文字体选择
+        % 可用选项:
+        %   fontCJK = fandol|windows|mac
+        % 说明:
+        %   fandol    使用 TeX 自带的 fandol 字体
+        %   windows   使用 Windows 系统内的字体 (中易)
+        %   mac       使用 MacOS 系统内的字体
+        %   (默认选项为 fandol )
+        %
+        fontMath = lm,
+        % 数学字体选择
+        % 可用选项:
+        %   fontMath = lm|times
+        % 说明:
+        %   lm        使用 TeX 自带的 Latin Modern 数学字体
+        %   times     使用 Times 风格的数学字体
+        %   (默认选项为 lm )
+        %
+        bibResource = {./thesis-ref.bib},
+        % 参考文献数据源
+        % 由于使用的是 biber + biblatex , 所以必须明确给出 .bib 后缀名
+        %
+        logoResource = {./inner-cover(contains-font).eps},
+        % 封面插图数据源
+        % 模版已自带, 位于 ./inner-cover(contains-font).eps
+        % 默认值为空
+    }
+}
+
+% 需要的宏包可以自行调用
+\usepackage{mwe}
 
 \begin{document}
-    \pagestyle{empty} %不对正文前的各页面使用页眉页脚
 
-    \input{inner-cover} %插入内封面
-    \input{sign} %插入签名页面
+% 设置前置部分编号
+    \frontmatter
 
-    \tableofcontents %生成目录
+% 中文摘要环境
+    \begin{abstract}
+        % todo
+    \end{abstract}
 
-    \clearpage
-    \pagestyle{fancy} %开始使用页眉页脚
+% 英文摘要环境
+    \begin{abstractEN}
+        % todo
+    \end{abstractEN}
 
-    \pagenumbering{Roman}
-    \setcounter{page}{1}
-
-    \input{abstract} %生成中英文摘要及关键词
-
-
-    \clearpage
-    \pagenumbering{arabic}
-    \setcounter{page}{1} %论文页码从正文开始记数
-
-    \input{intros}
-    \input{preli}
-
-    \cleardoublepage                                      %
-    \phantomsection                                       %生成参考文献
-    \addcontentsline{toc}{section}{参考文献}               %
-    \printbibliography[title={\centering \heiti \zihao {-3}参考文献}] %
-
-    \clearpage                                       %
+% 设置正文编号
+    \mainmatter
 
 
-% \begin{appendices}                               %
-% \renewcommand{\thesection}{\chinese{section}}  %生成附录
-% \input{./ending/Appendix.tex}                    %
-% \end{appendices}                                 %
 
-% \clearpage                           %生成感谢
-% \input{./ending/acknowledgement.tex} %
+
+% 正文后部分
+    \backmatter
+% 导入参考文献 (需要通过 latexmk 编译后才能显示)
+    \PrintReference
+
+% 附录环境
+    \begin{appendix}
+        % todo
+    \end{appendix}
+
+% 致谢环境
+    \begin{acknowledgement}
+        % todo
+    \end{acknowledgement}
 
 \end{document}

@@ -1,12 +1,12 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
     <texify>
-      <compiler>XELATEX</compiler>
+      <compiler>LATEXMK</compiler>
       <compiler-path />
       <sumatra-path />
       <pdf-viewer>SUMATRA</pdf-viewer>
       <viewer-command />
-      <compiler-arguments />
+      <compiler-arguments>-xelatex</compiler-arguments>
       <envs />
       <main-file>$PROJECT_DIR$/src/main.tex</main-file>
       <output-path>$PROJECT_DIR$/out</output-path>
@@ -15,7 +15,7 @@
       <output-format>PDF</output-format>
       <latex-distribution>TEXLIVE</latex-distribution>
       <has-been-run>true</has-been-run>
-      <bib-run-config>[BibTeX.main bibliography]</bib-run-config>
+      <bib-run-config>[]</bib-run-config>
       <makeindex-run-config>[]</makeindex-run-config>
     </texify>
     <method v="2" />

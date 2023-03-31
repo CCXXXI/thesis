@@ -10,20 +10,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: xu-cheng/latex-action@v2
+      # 20220801 is the last good version.
+      # See: https://github.com/Koyamin/ECNUThesis-Undergraduate/issues/3#issuecomment-1491303676
+      - uses: CCXXXI/latex-action@20220801
         with:
           working_directory: src
           root_file: main.tex
           latexmk_use_xelatex: true
-          pre_compile: |
-            apk add msttcorefonts-installer fontconfig
-            update-ms-fonts
-            fc-cache -f
 
       # ref_name for tags, sha for commits
-      - if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+      - name: Rename pdf file (for tags)
+        if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         run: mv src/main.pdf 10195101428_刘议临_${{ github.ref_name }}.pdf
-      - if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+      - name: Rename pdf file (for commits)
+        if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: mv src/main.pdf 10195101428_刘议临_${{ github.sha }}.pdf
 
       - uses: actions/upload-artifact@v3
