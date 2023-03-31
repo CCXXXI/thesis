@@ -25,7 +25,7 @@ jobs:
 #        if: startsWith(github.ref, 'refs/tags/v')
 #      - run: mv src/main.pdf ${{ github.sha }}.pdf
 #        if: !startsWith(github.ref, 'refs/tags/v')
-      - if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+      - if: !startsWith(github.ref, 'refs/tags/v')
         run: echo test
 
       - uses: actions/upload-artifact@v3
