@@ -2,35 +2,31 @@
 
 ## [0.2.0](https://github.com/CCXXXI/thesis/compare/v0.1.0...v0.2.0) (2023-03-31)
 
-
 ### Features
 
-* add chapter{应用实现} ([608bf6a](https://github.com/CCXXXI/thesis/commit/608bf6a420357f1584c246f59609079fce0fca55))
-* add chapter{应用测试} ([7f2dc42](https://github.com/CCXXXI/thesis/commit/7f2dc4255e39eb62be77dbee5fe6a55f37d1b108))
-* add chapter{应用设计} ([fde5d24](https://github.com/CCXXXI/thesis/commit/fde5d24535d686f5b7f1df95baba997dd2c18377))
-* add chapter{总结与展望} ([b6c3cd3](https://github.com/CCXXXI/thesis/commit/b6c3cd3cdb85c8d53662638e9ae0fdf9ae186b60))
-* add chapter{相关技术分析与介绍} ([5069b21](https://github.com/CCXXXI/thesis/commit/5069b21466eb222df9a19e0ea99e478d2b4c4458))
-* add chapter{绪论} ([b93a595](https://github.com/CCXXXI/thesis/commit/b93a59574db9d2436c1ecc767fb8e9cae1c09ea7))
-* add chapter{需求分析} ([b394713](https://github.com/CCXXXI/thesis/commit/b394713a42cc75ae680371561c3b1c5ecd95512b))
-* add section{国内外应用现状} ([99d9f35](https://github.com/CCXXXI/thesis/commit/99d9f35f64ded81f9e27102f1de2834567301661))
-* add section{论文组织结构} ([71c6caa](https://github.com/CCXXXI/thesis/commit/71c6caaf141e61bd1db03f397af9b2b3088d9d34))
-* add section{课题主要工作} ([3184da2](https://github.com/CCXXXI/thesis/commit/3184da2dd816b8d1e295130a4f2b200a73bd7043))
-* add section{选题的背景与意义} ([c970d15](https://github.com/CCXXXI/thesis/commit/c970d15c77e23139b1b9577f80a7a1e48584d8f3))
-
+- add chapter{应用实现} ([608bf6a](https://github.com/CCXXXI/thesis/commit/608bf6a420357f1584c246f59609079fce0fca55))
+- add chapter{应用测试} ([7f2dc42](https://github.com/CCXXXI/thesis/commit/7f2dc4255e39eb62be77dbee5fe6a55f37d1b108))
+- add chapter{应用设计} ([fde5d24](https://github.com/CCXXXI/thesis/commit/fde5d24535d686f5b7f1df95baba997dd2c18377))
+- add chapter{总结与展望} ([b6c3cd3](https://github.com/CCXXXI/thesis/commit/b6c3cd3cdb85c8d53662638e9ae0fdf9ae186b60))
+- add chapter{相关技术分析与介绍} ([5069b21](https://github.com/CCXXXI/thesis/commit/5069b21466eb222df9a19e0ea99e478d2b4c4458))
+- add chapter{绪论} ([b93a595](https://github.com/CCXXXI/thesis/commit/b93a59574db9d2436c1ecc767fb8e9cae1c09ea7))
+- add chapter{需求分析} ([b394713](https://github.com/CCXXXI/thesis/commit/b394713a42cc75ae680371561c3b1c5ecd95512b))
+- add section{国内外应用现状} ([99d9f35](https://github.com/CCXXXI/thesis/commit/99d9f35f64ded81f9e27102f1de2834567301661))
+- add section{论文组织结构} ([71c6caa](https://github.com/CCXXXI/thesis/commit/71c6caaf141e61bd1db03f397af9b2b3088d9d34))
+- add section{课题主要工作} ([3184da2](https://github.com/CCXXXI/thesis/commit/3184da2dd816b8d1e295130a4f2b200a73bd7043))
+- add section{选题的背景与意义} ([c970d15](https://github.com/CCXXXI/thesis/commit/c970d15c77e23139b1b9577f80a7a1e48584d8f3))
 
 ### Bug Fixes
 
-* month = 4 ([9dc38eb](https://github.com/CCXXXI/thesis/commit/9dc38eb8ad99d91640ba4a36368c94d23e69f2ac))
-
+- month = 4 ([9dc38eb](https://github.com/CCXXXI/thesis/commit/9dc38eb8ad99d91640ba4a36368c94d23e69f2ac))
 
 ### Continuous Integration
 
-* **build:** remove Unicode chars in file name ([#30](https://github.com/CCXXXI/thesis/issues/30)) ([a234c39](https://github.com/CCXXXI/thesis/commit/a234c39d85da6f7efb4d59a88989651e666ee861))
-
+- **build:** remove Unicode chars in file name ([#30](https://github.com/CCXXXI/thesis/issues/30)) ([a234c39](https://github.com/CCXXXI/thesis/commit/a234c39d85da6f7efb4d59a88989651e666ee861))
 
 ### Documentation
 
-* add more comments ([831ad5a](https://github.com/CCXXXI/thesis/commit/831ad5a08ae913cbb6201e56e84c3af989c42f72))
+- add more comments ([831ad5a](https://github.com/CCXXXI/thesis/commit/831ad5a08ae913cbb6201e56e84c3af989c42f72))
 
 ## 0.1.0 (2023-03-31)
 
