@@ -4,12 +4,15 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ccxxxi/thesis)](https://github.com/CCXXXI/thesis/commits)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![LaTeX](https://img.shields.io/badge/LaTeX-008080?logo=LaTeX)](https://www.latex-project.org)
+[![CodeFactor](https://www.codefactor.io/repository/github/ccxxxi/thesis/badge)](https://www.codefactor.io/repository/github/ccxxxi/thesis)
+[![build](https://github.com/CCXXXI/thesis/actions/workflows/build.yml/badge.svg)](https://github.com/CCXXXI/thesis/actions/workflows/build.yml)
+[![GitHub release](https://img.shields.io/github/v/release/ccxxxi/thesis)](https://github.com/CCXXXI/thesis/releases)
 
 我的本科毕业论文的 $\LaTeX$ 源码和一些相关的 [设计文档](https://github.com/CCXXXI/thesis/wiki)、CI 配置。
 
 ## 论文模板
 
-[Xiejiadong/ECNU_Undergraduate_Dissertation_Template](https://github.com/Xiejiadong/ECNU_Undergraduate_Dissertation_Template)
+[Koyamin/ECNUThesis-Undergraduate](https://github.com/Koyamin/ECNUThesis-Undergraduate)
 
 ## 毕设仓库
 
