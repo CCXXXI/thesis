@@ -17,9 +17,11 @@ jobs:
           latexmk_use_xelatex: true
 
       # ref_name for tags, sha for commits
-      - if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+      - name: Rename pdf file (for tags)
+        if: ${{ startsWith(github.ref, 'refs/tags/v') }}
         run: mv src/main.pdf 10195101428_刘议临_${{ github.ref_name }}.pdf
-      - if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+      - name: Rename pdf file (for commits)
+        if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: mv src/main.pdf 10195101428_刘议临_${{ github.sha }}.pdf
 
       - uses: actions/upload-artifact@v3
