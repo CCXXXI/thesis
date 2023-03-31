@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: xu-cheng/latex-action@v2
+      - uses: CCXXXI/latex-action@20230301
         continue-on-error: true
         with:
           working_directory: src
