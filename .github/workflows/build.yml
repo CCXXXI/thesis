@@ -10,14 +10,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: wget https://github.com/Xiejiadong/ECNU_Undergraduate_Dissertation_Template/raw/main/simsun.ttc
+      - run: |
+          wget https://github.com/dolbydu/font/raw/master/unicode/SimSun.ttc
+          wget https://github.com/dolbydu/font/raw/master/unicode/FangSong.ttf
       - uses: xu-cheng/latex-action@v2
         continue-on-error: true
         with:
           working_directory: src
           root_file: main.tex
           args: "-pdf -file-line-error -interaction=nonstopmode -xelatex -f"
-          extra_fonts: ../simsun.ttc
+          extra_fonts: |
+            ../SimSun.ttc
+            ../FangSong.ttf
 
       # ref_name for tags, sha for commits
       - name: Rename pdf file (for tags)
