@@ -6,10 +6,10 @@
   {\ExplFileDate}{\ExplFileVersion}{\ExplFileDescription}
 \RequirePackage { xparse, xtemplate, l3keys2e }
 % 编译器只能选为 XeTeX
-\msg_new:nnn { ecnuthesis } { engine-unsupportd } 
+\msg_new:nnn { ecnuthesis } { engine-unsupportd }
   { \\
     This~ class~ requires~ XeTeX~ to~ compile. \\
-    The~ engine~ "#1"~ is~ not~ supported. 
+    The~ engine~ "#1"~ is~ not~ supported.
   }
 \sys_if_engine_xetex:F
   {
@@ -28,13 +28,13 @@
 \keys_define:nn { ecnu / option }
   {
     printMode   .choice:,
-    printMode / true  .code:n = 
+    printMode / true  .code:n =
       {
         \clist_gput_right:Nn \g__ecnu_to_ctexart_clist { twoside }
         \bool_set_true:N     \g__ecnu_twoside_bool
         \bool_set_false:N    \g__ecnu_pdfpagelabels_bool
       },
-      printMode / false .code:n = 
+      printMode / false .code:n =
       {
         \clist_gput_right:Nn \g__ecnu_to_ctexart_clist { oneside }
         \bool_set_false:N    \g__ecnu_twoside_bool
@@ -85,7 +85,7 @@
     caption,
     graphicx,
     fancyhdr,
-    enumitem, 
+    enumitem,
     amsthm,
     thmtools,
     xeCJKfntef,
@@ -100,24 +100,24 @@
   {
     % showframe,
     a4paper,
-    top       = 2.5 cm, 
-    bottom    = 2.0 cm, 
+    top       = 2.5 cm,
+    bottom    = 2.0 cm,
     footskip  = 0.7 cm,
   }
-\bool_if:NTF \g__ecnu_twoside_bool 
+\bool_if:NTF \g__ecnu_twoside_bool
   {
-    \geometry 
+    \geometry
       {
-        left      = 3.0 cm, 
+        left      = 3.0 cm,
         right     = 2.5 cm,
-      } 
+      }
   }
   {
-    \geometry 
+    \geometry
       {
-        left      = 3.0 cm, 
+        left      = 3.0 cm,
         right     = 2.5 cm,
-      } 
+      }
   }
 
 \cs_new_protected:Npn \__ecnu_appto_cmd:Nn #1#2
@@ -140,8 +140,8 @@
   }
 \ctex_at_end_preamble:n {\ecnu_allow_url_break:}
 % 论文基本信息
-\clist_map_inline:nn 
-  { 
+\clist_map_inline:nn
+  {
     title, titleEN, author, studentID, department, major, supervisor
     academicTitle
   }
@@ -168,19 +168,19 @@
     keywords        .clist_set:N  = \l__ecnu_info_keywords_clist,
     keywordsEN      .clist_set:N  = \l__ecnu_info_keywordsEN_clist
   }
-\int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int } 
-  { \int_set_eq:NN \l__ecnu_info_year_int \c_sys_year_int } 
+\int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int }
+  { \int_set_eq:NN \l__ecnu_info_year_int \c_sys_year_int }
   { }
-\int_compare:nNnTF { \l__ecnu_info_month_int } = { \c_zero_int } 
+\int_compare:nNnTF { \l__ecnu_info_month_int } = { \c_zero_int }
   {
     \int_set_eq:NN \l__ecnu_info_month_int \c_sys_month_int
-    \NewDocumentCommand \themonth { } 
-      { \int_use:N \l__ecnu_info_month_int } 
-  } 
+    \NewDocumentCommand \themonth { }
+      { \int_use:N \l__ecnu_info_month_int }
+  }
   { \NewDocumentCommand \themonth { } { \int_use:N \c_sys_month_int } }
 \NewDocumentCommand \theyear { } { \int_to_arabic:n {\l__ecnu_info_year_int} }
-\NewDocumentCommand \enrollYear { } 
-  { 
+\NewDocumentCommand \enrollYear { }
+  {
     \int_set:Nn \l__ecnu_enroll_year_int {\l__ecnu_info_year_int - 4 }
     \int_use:N  \l__ecnu_enroll_year_int
   }
@@ -190,7 +190,7 @@
   \fancyfoot[C]         { \zihao{-5} \thepage }
   \fancyfoot[L,R]       { }
   \headheight = 13 pt
-\fancypagestyle{plain} 
+\fancypagestyle{plain}
   {
     \fancyhead[L,R]     { }
     \fancyhead[C]       {  \sffamily\zihao{-5} \l__ecnu_info_title_tl }
@@ -269,7 +269,7 @@
   }
 \tl_set:Nx \g__ecnu_font_name_xits_tl
   { \g__ecnu_font_family_xits_tl - \g__ecnu_font_style_xits_rm_tl }
-\fontspec_font_if_exist:nTF { Times~ New~ Roman } 
+\fontspec_font_if_exist:nTF { Times~ New~ Roman }
   {
     \cs_new_protected:Npn \__ecnu_load_fontEN:
       {
@@ -280,7 +280,7 @@
         { BoldFont = \g__ecnu_font_name_xits_math_bf_tl .otf }
       }
   }
-  { 
+  {
     \cs_new_protected:Npn \__ecnu_load_fontEN:
       {
         \__ecnu_setmainfont:nn { \g__ecnu_font_family_xits_tl }
@@ -308,7 +308,7 @@
             BoldItalicFont = *-bolditalic,
             Ligatures      = CommonOff
           }
-        
+
       }
   }
 \cs_new_protected:Npn \__ecnu_load_math_font_lm:
@@ -388,9 +388,9 @@
     \__ecnu_setCJKmonofont:n   { FangSong }
     \__ecnu_set_cjk_font_kai:n { KaiTi    }
   }
-\cs_new_protected:Npn \__ecnu_load_font: 
-  { 
-    \__ecnu_load_fontEN: 
+\cs_new_protected:Npn \__ecnu_load_font:
+  {
+    \__ecnu_load_fontEN:
     \use:c { __ecnu_load_math_font_ \g__ecnu_math_fontset_tl : }
     \use:c { __ecnu_load_cjk_font_ \g__ecnu_cjk_fontset_tl : }
   }
@@ -423,12 +423,12 @@
 \cs_set:Npn \thefootnote { \ecnu_footnote_number:N \c@footnote }
 \cs_new:Npn \ecnu_footnote_number:N #1
   {
-    \tl_case:NnF \l__ecnu_fn_style_tl 
+    \tl_case:NnF \l__ecnu_fn_style_tl
       {
         \c__ecnu_fn_style_plain_tl
           { \int_use:N #1 }
           \c__ecnu_fn_style_circled_tl
-          { 
+          {
             \fontspec { \g__ecnu_font_name_xits_tl .otf }
             \__ecnu_fn_symbol_xits:n {#1}
           }
@@ -487,7 +487,7 @@
 \keys_define:nn { ecnu / style }
   {
     numbering   .choice:,
-    numbering / arabic  .code:n = 
+    numbering / arabic  .code:n =
       {
         \keys_set:nn { ctex }
           {
@@ -508,15 +508,15 @@
             },
             subsection = {
               name    = {,},
-              number  = 
+              number  =
                 {\arabic{chapter}.\arabic{section}.\arabic{subsection}},
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
-            }, 
+            },
             subsubsection = {
               name    = {,},
-              number  = 
+              number  =
                 {
                   \arabic{chapter}.\arabic{section}.
                   \arabic{subsection}.\arabic{subsubsection}
@@ -524,7 +524,7 @@
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
-            }, 
+            },
             paragraph = {
               name    = {,)},
               number  = \arabic{paragraph},
@@ -534,7 +534,7 @@
             },
           }
       },
-    numbering / chinese .code:n = 
+    numbering / chinese .code:n =
       {
         \keys_set:nn { ctex }
           {
@@ -549,21 +549,21 @@
               number  = \chinese{section},
               format  = \sffamily\zihao{-4},
               aftername  = \ ,
-            }, 
+            },
             subsection = {
               name    = {,.},
               number  = \arabic{subsection},
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
-            }, 
+            },
             subsubsection = {
               name    = {(,)},
               number  = \arabic{subsubsection},
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
-            }, 
+            },
             paragraph = {
               name    = {,)},
               number  = \arabic{paragraph},
@@ -573,7 +573,7 @@
             },
           }
       },
-    numbering / alpha   .code:n = 
+    numbering / alpha   .code:n =
       {
         \keys_set:nn { ctex }
           {
@@ -598,14 +598,14 @@
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
-            }, 
+            },
             subsubsection = {
               name    = {(,)},
               number  = \alph{subsubsection},
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
-            }, 
+            },
             paragraph = {
               name    = {,)},
               number  = \alph{paragraph},
@@ -619,23 +619,23 @@
   }
 \keys_set:nn { ctex }
   {
-    chapter = { 
+    chapter = {
       beforeskip    = 0ex,
       afterskip     = 2.5ex plus .2ex,
       fixskip       = true,
     },
-    section = { 
+    section = {
       beforeskip    = 2.5ex plus 1ex minus .2ex,
       afterskip     = 2.5ex plus .2ex,
       fixskip       = true,
     },
-    subsection = { 
+    subsection = {
       beforeskip    = 2.5ex plus 1ex minus .2ex,
       afterskip     = 2.5ex plus .2ex,
       indent        = 1 em,
       fixskip       = true,
     },
-    subsubsection   = { 
+    subsubsection   = {
       beforeskip    = 2.5ex plus 1ex minus .2ex,
       afterskip     = 2.5ex plus .2ex,
       indent        = 2 em,
@@ -660,7 +660,7 @@
     spaceabove=6pt, spacebelow=6pt,
     headfont      = \sffamily,
     headpunct     = ,
-    notefont      = \mdseries, 
+    notefont      = \mdseries,
     notebraces    = {(}{)},
     bodyfont      = \normalfont,
     postheadspace = 1em,
@@ -671,7 +671,7 @@
     spaceabove=6pt, spacebelow=6pt,
     headfont      = \sffamily,
     headpunct     = ,
-    notefont      = \mdseries, 
+    notefont      = \mdseries,
     notebraces    = {(}{)},
     bodyfont      = \normalfont,
     postheadspace = 1em,
@@ -694,7 +694,7 @@
   {
     bibResource .tl_set:N = \l__ecnu_bib_resource_tl
   }
-\PassOptionsToPackage 
+\PassOptionsToPackage
   {
     backend   = biber,
     style     = gb7714-2015,
@@ -702,7 +702,7 @@
     hyperref  = true,
     gbpub     = false,
     gbpunctin = false,
-  } 
+  }
   { biblatex }
 \RequirePackage { biblatex }
 \renewcommand*{\bibfont}{\zihao{5}}
@@ -710,11 +710,11 @@
   {
     \exp_args:NV \addbibresource \l__ecnu_bib_resource_tl
     \__ecnu_biblatex_allow_url_break:
-    \defbibheading { bibliography } [ \bibname ] 
-    { 
+    \defbibheading { bibliography } [ \bibname ]
+    {
       \phantomsection
       \addcontentsline{toc}{chapter}{参考文献}
-      \__ecnu_title:n {##1} 
+      \__ecnu_title:n {##1}
       \mode_leave_vertical: \par \noindent
     }
   }
@@ -725,7 +725,7 @@
     \int_set_eq:NN \c@biburllcpenalty  \c_one_int
   }
 \ctex_at_end_preamble:n { \__ecnu_biblatex_setup: }
-\NewDocumentCommand \PrintReference {} 
+\NewDocumentCommand \PrintReference {}
   {
     \cleardoublepage
     \printbibliography
@@ -790,8 +790,8 @@
 \cs_new_protected:Npn \__ecnu_title:n #1
   {
     \group_begin:
-      \ctexset 
-        { 
+      \ctexset
+        {
           chapter / numbering = false,
           chapter / format    = \sffamily\bfseries\centering,
           chapter / titleformat = \zihao{-3},
@@ -802,8 +802,8 @@
 \cs_new_protected:Npn \__ecnu_table_of_contents_title:n #1
   {
     \group_begin:
-      \ctexset 
-        { 
+      \ctexset
+        {
           chapter / numbering = false,
           chapter / format    = \rmfamily\bfseries\centering,
           chapter / titleformat = \zihao{-3},
@@ -888,7 +888,7 @@
   }
 
 \cs_new_protected:Npn \__ecnu_cover_logo:
-  { 
+  {
     \tl_if_empty:NF \l__ecnu_logo_resource_tl
       {
         \begin{minipage} [ c ] { \textwidth }
@@ -999,7 +999,7 @@
         \AssignTemplateKeys
         \tl_use:c        { l__ecnu_cover / #1 / format_tl }
         \clist_map_inline:nn {#2}
-          { 
+          {
             \noindent
             \use:c { __ecnu_cover / #1 / ####1 / align:n }
               {
@@ -1025,11 +1025,11 @@
     logo     / content     = \__ecnu_cover_logo:,
     title    / content     =
       \__ecnu_fixed_width_center_box:nn
-        { 0.9 \textwidth } 
+        { 0.9 \textwidth }
         { \expandafter\uline\expandafter{\l__ecnu_info_title_tl} },
-    titleEN  / content     = 
+    titleEN  / content     =
       \__ecnu_fixed_width_center_box:nn
-        { 0.9 \textwidth } 
+        { 0.9 \textwidth }
         { \expandafter\uline\expandafter{\l__ecnu_info_titleEN_tl} },
     info     / content     = \__ecnu_cover_info:,
     title    / format      = \__ecnu_line_spread:n { 1.1 } \zihao { 1 } \bfseries,
@@ -1065,25 +1065,25 @@
 \NewDocumentEnvironment { abstractEN  } { }
   { \__ecnu_abstractEN_begin:    } { \__ecnu_abstractEN_end:      }
 \cs_new_protected:Npn \__ecnu_abstract_begin:
-  { 
+  {
     \phantomsection
     \addcontentsline{toc}{chapter}{摘要}
     \__ecnu_title:V \l__ecnu_info_title_tl
     \mode_leave_vertical: \par \noindent
     \zihao{5}
-    \group_begin: 
+    \group_begin:
       \rmfamily\bfseries \c__ecnu_name_abstract_tl \c__ecnu_colon_tl
     \group_end:
     \par
   }
 \cs_new_protected:Npn \__ecnu_abstractEN_begin:
-  { 
+  {
     \phantomsection
     \addcontentsline{toc}{chapter}{ABSTRACT}
     \__ecnu_title:V { \rmfamily\bfseries \l__ecnu_info_titleEN_tl }
     \mode_leave_vertical: \par \noindent
     \zihao{5}
-    \group_begin: 
+    \group_begin:
       \rmfamily\bfseries \c__ecnu_name_abstractEN_tl \c__ecnu_colon_tl
     \group_end:
     \par
@@ -1114,7 +1114,7 @@
   {
     contentsname   = \c__ecnu_name_toc_tl,
   }
-\cs_set:Npn \tableofcontents 
+\cs_set:Npn \tableofcontents
   {
     \__ecnu_table_of_contents_title:V \contentsname
     \vspace{10pt}
@@ -1131,7 +1131,7 @@
 \RenewDocumentEnvironment { appendix } { }
   { \__ecnu_appendix_begin: } { \__ecnu_appendix_end: }
 \cs_new_protected:Npn \__ecnu_appendix_begin:
-  { 
+  {
     \phantomsection
     \addcontentsline{toc}{chapter}{\c__ecnu_name_appendix_tl}
     \__ecnu_title:V \c__ecnu_name_appendix_tl
@@ -1146,14 +1146,14 @@
   }
 \cs_new_protected:Npn \__ecnu_appendix_end:
   {
-    \endgroup 
-    \clearpage{\thispagestyle{empty}\cleardoublepage} 
+    \endgroup
+    \clearpage{\thispagestyle{empty}\cleardoublepage}
     \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
   }
 \NewDocumentEnvironment { acknowledgement } { }
   { \__ecnu_acknowledgement_begin: } { \__ecnu_acknowledgement_end: }
 \cs_new_protected:Npn \__ecnu_acknowledgement_begin:
-  { 
+  {
     \phantomsection
     \addcontentsline{toc}{chapter}{\c__ecnu_name_acknowledgement_tl}
     \__ecnu_title:V \c__ecnu_name_acknowledgement_tl
@@ -1181,9 +1181,9 @@
   {
     \newgeometry
       {
-        top     = 2.0 cm, 
+        top     = 2.0 cm,
         bottom  = 2.0 cm,
-        left    = 2.5 cm, 
+        left    = 2.5 cm,
         right   = 2.5 cm
       }
     \begin{titlepage}
@@ -1231,7 +1231,7 @@
     info    .meta:nn = { ecnu / info } {#1},
     style   .meta:nn = { ecnu / style } {#1},
   }
-\DeclareDocumentCommand \ecnuSetup { m } 
+\DeclareDocumentCommand \ecnuSetup { m }
   { \keys_set:nn { ecnu } { #1 } }
 %%
 %% End of file `ecnuthesis.cls'.
