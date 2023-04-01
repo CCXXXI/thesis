@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.5.0](https://github.com/CCXXXI/thesis/compare/v0.4.1...v0.5.0) (2023-04-01)
+
+### Features
+
+- **disease:** 完成 subsection{国内外心血管疾病现状} ([fa69e7b](https://github.com/CCXXXI/thesis/commit/fa69e7baa27c868bee6648e2eff09202204d9c94))
+
+### Bug Fixes
+
+- **disease:** COVID-19 -&gt; 新型冠状病毒 ([6eb2c24](https://github.com/CCXXXI/thesis/commit/6eb2c24cf96e1da91ddcdc6f6e33ef04c59ac4cf))
+- **disease:** U+FF05 -&gt; U+0025 ([867916e](https://github.com/CCXXXI/thesis/commit/867916e10a8f33bb69038a0089ee2b4dda2dcf27))
+- **disease:** 新冠病毒 -&gt; 新型冠状病毒 ([b7dde44](https://github.com/CCXXXI/thesis/commit/b7dde4427c34cb6e5868b4f7e1b10fe533fc44c1))
+- **disease:** 新型冠状病毒（COVID-19） ([7b075a4](https://github.com/CCXXXI/thesis/commit/7b075a43b01ce1135f60185060874df5b344f661))
+
+### Build System
+
+- usepackage{todonotes} -&gt; usepackage{easy-todo} ([619cc6b](https://github.com/CCXXXI/thesis/commit/619cc6b1fc37329568f7f79b1ef66b7e922fe8a0))
+
+### Documentation
+
+- add todos in keywords ([951f333](https://github.com/CCXXXI/thesis/commit/951f3335a38b1d948e3825832bab790eb5fe023f))
+- **background:** add more todos ([db8f8d3](https://github.com/CCXXXI/thesis/commit/db8f8d30dbc4fe51e39ff1e2f2c5a7a892ab6c4c))
+- more todos ([5bb3eda](https://github.com/CCXXXI/thesis/commit/5bb3eda730f0c68b4ffa7e89845ea90a48be3144))
+
 ## [0.4.1](https://github.com/CCXXXI/thesis/compare/v0.4.0...v0.4.1) (2023-04-01)
 
 ### Bug Fixes
