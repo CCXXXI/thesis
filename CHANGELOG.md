@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.1](https://github.com/CCXXXI/thesis/compare/v0.4.0...v0.4.1) (2023-04-01)
+
+### Bug Fixes
+
+- **TOC:** add colons after 摘要 & ABSTRACT ([#41](https://github.com/CCXXXI/thesis/issues/41)) ([a9b769a](https://github.com/CCXXXI/thesis/commit/a9b769ac645ffd926326ae760690a6cc1d9f8756))
+
 ## [0.4.0](https://github.com/CCXXXI/thesis/compare/v0.3.0...v0.4.0) (2023-04-01)
 
 ### Features
