@@ -111,7 +111,8 @@
 }
 
 % 需要的宏包可以自行调用
-\usepackage{easy-todo}
+\usepackage[chapter]{easy-todo}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -243,7 +244,14 @@
 
 % 附录环境
     \begin{appendix}
+
+        \begingroup
+        \renewcommand{\clearpage}{\relax}
         \listoftodos
+        \endgroup
+
+        \listoffigures
+
     \end{appendix}
 
 % 致谢环境

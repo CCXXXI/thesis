@@ -1139,7 +1139,6 @@ qed           = \qedsymbol
     \zihao{5}
     \par
     \begingroup
-    \let\clearpage\relax
     \setcounter{chapter}{0}
     \setcounter{section}{0}
     \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
