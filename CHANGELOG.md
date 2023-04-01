@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0](https://github.com/CCXXXI/thesis/compare/v0.3.0...v0.4.0) (2023-04-01)
+
+### Features
+
+- add app name to titles ([2450892](https://github.com/CCXXXI/thesis/commit/24508920431a6a41baddff3aceba349f0599861e))
+
+### Bug Fixes
+
+- chapter{\app 的实现} -&gt; chapter{\app 的开发} ([0fbf7c4](https://github.com/CCXXXI/thesis/commit/0fbf7c451dabeeea9fe6d7035db15a5638bfb2e3))
+- 面向移动终端的可穿戴动态心电图的智能监测应用 -&gt; 移动心电监测应用 ([e594157](https://github.com/CCXXXI/thesis/commit/e594157c9b4231c355652fd734c60e3111b2443e))
+
+### Documentation
+
+- merge abstract todos ([55825b8](https://github.com/CCXXXI/thesis/commit/55825b8ed75359fd35acd0f0571a027bd3248163))
+
 ## [0.3.0](https://github.com/CCXXXI/thesis/compare/v0.2.1...v0.3.0) (2023-04-01)
 
 ### Features
