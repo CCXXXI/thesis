@@ -1,193 +1,184 @@
-% !Mode:: "TeX:UTF-8"
-% UTF-8 编辑器
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%   LaTeX File for Doctor (Master) Thesis of Tsinghua University
-%   LaTeX + CJK     清华大学博士（硕士）论文模板
-%   Based on Wang Tianshu's Template for XJTU
-%   Version: 1.65
-%   Last Update: 2004-03-14
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Copyright 2002-2004  by  Lei Wang (BaconChina)       (bcpub@sina.com)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%   LaTeX File for phd thesis of xi'an Jiao Tong University
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Copyright 2002  by  Wang Tianshu    (tswang@asia.com)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%
-%The bibitems are sorted by pulication date and AUTHOR name.
-%
-
-@ARTICLE{Bayes63:classical,
-    AUTHOR = "R. T. Bayes",
-    FULLAUTHOR = "Reverend Thomas Bayes",
-    TITLE = "Essay Towards Solving a Problem in the Doctrine of Chances",
-    JOURNAL = "Philosophical Transactions of the Royal Society",
-    YEAR = "1763",
+@thesis{chenJiyushenduxuexidexindianfenximoxingdeshejiyuyouhua2021,
+  type = {硕士},
+  title = {基于深度学习的心电分析模型的设计与优化},
+  author = {陈, 桂琛},
+  date = {2021},
+  institution = {{北京邮电大学}},
+  doi = {10.26969/d.cnki.gbydu.2021.001431},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?filename=1021130914.nh&dbname=CMFDTEMP},
+  urldate = {2023-03-31},
+  abstract = {心律失常是心血管疾病的常见病症,与其相关的研究一直是医学界备受关注的课题,主要通过心电图对其进行筛查与诊断。通过计算机与相关算法对心电数据进行分析,利用其波形形态特征与节律信息获取患者的生理、病理状态,能够有效提高心血管疾病的筛查效率,辅助医疗工作者,节省医疗成本,亦能够弥补因医生经验差异或知识水平差异而造成的漏诊或误诊的现象。目前,在心电数据分析上的传统算法会运用到知识推理或结构模式识别的方式,但因其所能表达的模式无法描述多样而复杂的心电图波形,在应用上存在局限性。本文针对基于心电图的心律失常自动诊断问题,研究了心电数据以及深度学习相关文献,基于深度学习技术与数据均衡策略提出了一系列的数据预处理方案、数据均衡方案、模型搭建方案与性能评估方案,设计并实现了一种基于ResNet结构的一维卷积神经网络对心电图进行有效的心律失常疾病识别,论文的主要工作与成果如下:（1）研究了心电数据的产生方式、波形构成与心律失常波形形态特征,通过所拥有的心电数据与专业医生对其诊断的结果进行数据抽取,完成了心电数据集的构建。针对心电数据集存在的基线漂移、肌电干扰等噪声问题,利用和合理的滤波方式对数据进行噪声消除,为后续的模型训练打下良好基础。（2）心电数据集中存在的严重数据不均衡问题,在绝大多数心律失常类别上其正例样本与反例样本数量差异悬殊。针对该问题本文研究并设计了数据均衡策略,通过数据、算法、评价指标三个层面的方案来减少类别数量差异以及提升模型学习效率,有效地降低了数据不均衡问题的影响。（3）分析了心电数据的周期特性以及波形形态,基于full pre-activation 结构的 Resnet 模块设计深层一维卷积神经网络,利用处理完毕的数据集与合理策略进行模型训练。并根据多种深度学习网络模式搭建实验组模型,通过准确率、灵敏度、F1分数等多项指标来验证模型结构设计的有效性以及完成性能测试。（4）研究了模型可视化方法,实现了模型的可视化,完成了模型在移动端的部署。本文从网络层间特征图与GradCam可视化技术出发,对网络所抽取的特征形态以及类别判定依据进行展示,为模型在心律失常分类过程中提供了一定的可解释性。并将模型部署至移动端,从而实现离线、便携的心电自动诊断,在提升诊断便利性的同时,可有效保障医疗数据的安全性与隐私性。},
+  langid = {chinese},
+  keywords = {arrhythmia classification,convolutional neural network,data imbalance,model visualization,卷积神经网络,心律失常分类,数据不均衡,模型可视化},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\FQP7QDJ8\\陈_2021_基于深度学习的心电分析模型的设计与优化.pdf}
 }
 
-@BOOK{BEZOS02,
-    AUTHOR = "J. Bezos",
-    FULLAUTHOR = "Javier Bezos",
-    TITLE = "The TITLEsec and TITLEtoc Packages",
-    MONTH = "March",
-    YEAR = "2002",
+@thesis{chenYidongxindianxinxijianhuxitongjixindianjiancesuanfadeyanjiu2018,
+  type = {硕士},
+  title = {移动心电信息监护系统及心电监测算法的研究},
+  author = {陈, 耿铎},
+  date = {2018},
+  institution = {{南方医科大学}},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?filename=1018276660.nh&dbname=CMFDTEMP},
+  urldate = {2023-03-31},
+  abstract = {近年来,随着社会经济的快速发展,人们的生活水平也在不断提高。但是生活水平不断提高的同时,也带来了日益严重的心血管疾病。于此同时,越来越多人开始慢慢对自己的健康有着更负责的意识。而心血管疾病中的心律失常是所有疾病基本病症,同时也是大部分有致死性的心脏疾病的根源。因此对于心律失常疾病的快速、准确、有效检出,对预防相应心血管疾病有着重要意义。系统采用便携式的监护终端采集生理信息并通过蓝牙传输至智能手机,智能手机再通过网络将数据传输至服务器端,用于医护人员统一的信息化管理、自动诊断分析和实时监护。本文旨在搭建一个能够有效接收移动设备发送过来的心电数据的服务器和实现一个执行效率高、特征提取有效、疾病诊断准确的QRS波群检出算法。该服务器可以实现数据存储、依据用户数据实时绘制心电波形和方便用户查看历史波形等功能。本文从开发工具Visual Studio 2013和编程语言C\#入手,详细介绍了该服务器程序的整体功能框架及各组成部分,从技术手段和编程工具方面细致阐述了服务器开发的思路和过程。最终成功实现了从智能手机接收心电数据,并在上位机程序上以准确的心电波形的形式实时绘制出来,结合心电自诊断算法做出相应的诊断报告。心电自诊断算法是在现有的自适应差分阈值法和双重阈值法上进行改进,结合两者之间的优点,对R波进行检测,计算出相应的RR间期和QRS波群宽度,并与一般临床心律失常特征进行比对,得出心电自诊断结果。用美国麻省理工学院的MIT-BIH数据库进行验证,R波与QRS波群的检出率高达99.5\%并能对相关心律失常疾病作出判断。},
+  langid = {chinese},
+  keywords = {C\#programming,C\#编程,ECG waveform detection,Mobile medical,Remote ECG monitoring,Self-diagnosis of arrhythmia,心律失常自诊,心电波形检测,移动医疗,远程心电监护},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\TW62ZM6M\\陈_2018_移动心电信息监护系统及心电监测算法的研究.pdf}
 }
 
-@ARTICLE{ELIDRISSI94,
-    AUTHOR = "Elidrissi, M.C. and Roney, A. and Frigon, C. and et al",
-    TITLE = "Measurements of total kinetic-energy released to the {N=2}
-  dissociation limit of {H}$_2$ - evidence of the dissociation of very high vibrational
-  {R}ydberg states of {H}$_2$ by doubly-excited states",
-    JOURNAL = "Chem. Phys. Lett.",
-    PAGES = "260-266",
-    VOLUME = "224",
-    YEAR = "1994",
+@inproceedings{gradlRealtimeECGMonitoring2012,
+  title = {Real-Time {{ECG}} Monitoring and Arrhythmia Detection Using {{Android-based}} Mobile Devices},
+  booktitle = {2012 {{Annual International Conference}} of the {{IEEE Engineering}} in {{Medicine}} and {{Biology Society}}},
+  author = {Gradl, Stefan and Kugler, Patrick and Lohmüller, Clemens and Eskofier, Bjoern},
+  date = {2012-08},
+  pages = {2452--2455},
+  issn = {1558-4615},
+  doi = {10.1109/EMBC.2012.6346460},
+  abstract = {We developed an application for Android™-based mobile devices that allows real-time electrocardiogram (ECG) monitoring and automated arrhythmia detection by analyzing ECG parameters. ECG data provided by pre-recorded files or acquired live by accessing a Shimmer™ sensor node via Bluetooth™ can be processed and evaluated. The application is based on the Pan-Tompkins algorithm for QRS-detection and contains further algorithm blocks to detect abnormal heartbeats. The algorithm was validated using the MIT-BIH Arrhythmia and MIT-BIH Supraventricular Arrhythmia databases. More than 99\% of all QRS complexes were detected correctly by the algorithm. Overall sensitivity for abnormal beat detection was 89.5\% with a specificity of 80.6\%. The application is available for download and may be used for real-time ECG-monitoring on mobile devices.},
+  eventtitle = {2012 {{Annual International Conference}} of the {{IEEE Engineering}} in {{Medicine}} and {{Biology Society}}},
+  keywords = {Databases,Electrocardiography,Feature extraction,Mobile handsets,Monitoring,Real-time systems,Signal processing algorithms},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\DEST89S3\\Gradl et al_2012_Real-time ECG monitoring and arrhythmia detection using Android-based mobile.pdf}
 }
 
-@ARTICLE{MELLINGER96,
-    AUTHOR = "Mellinger, A. and Vidal, C.R. and Jungen, Ch.",
-    TITLE = "Laser reduced fluorescence study of the carbon-monoxide nd triplet
-  {R}ydberg series - experimental results and multichannel quantum-defect analysis",
-    JOURNAL = "J. Chem. Phys.",
-    PAGES = "8913-8921",
-    VOLUME = "104",
-    YEAR = "1996",
+@article{heJiyuyidongpingtaidexindianjianceyiliaoxitongdeshixian2017,
+  title = {基于移动平台的心电监测医疗系统的实现},
+  author = {贺, 其 and 张, 鹏 and 赵, 安华 and 赵, 凯},
+  date = {2017},
+  journaltitle = {山东师范大学学报(自然科学版)},
+  volume = {32},
+  number = {01},
+  pages = {49--53},
+  issn = {1001-4748},
+  url = {https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2017&filename=SDZK201701009&uniplatform=NZKPT&v=_Ff55QWuexZwI7yxFvcsmT5z3mSAez3W3-2AxlIytwOqblTi-wsWVWiI4COyjbvg},
+  abstract = {随着移动终端设备的发展,尤其是智能手机的广泛应用,移动医疗得到迅速发展.本文中设计实现了基于移动平台的心电监测医疗系统.系统架构由数据采集端,心电监测端,健康数据管理平台,移动终端四部分组成.数据采集端采用了TMS320C5515处理器,数据采集端采集心电数据,利用蓝牙和WIFI等通信技术,数据被传送至健康数据管理平台,医生诊断完毕后可以将诊断结果及时的发送到平台,患者利用移动终端可查看诊断信息.设计此系统的目的是为心血管病患者提供实时的可靠的医疗服务,减少病人的各项花费,同时提高医生的工作效率.},
+  langid = {chinese},
+  keywords = {⛔ No DOI found,bluetooth,cardiovascular disease,mobile health-care,TMS320C5515DSP,TMS320C5515处理器,心血管病,移动医疗,蓝牙技术},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\P7BDN8SG\\贺 et al_2017_基于移动平台的心电监测医疗系统的实现.pdf}
 }
 
-@BOOK{OOSTRUM01,
-    AUTHOR = "{P. Oostrum, ifuleyou@bbs.ctex.org~译}",
-    FULLAUTHOR = "Piet van Oostrum",
-    TITLE = "{\LaTeX}下的页面布局",
-    MONTH = "August",
-    YEAR = "2001",
+@inproceedings{jinPredictingCardiovascularDisease2009,
+  title = {Predicting Cardiovascular Disease from Real-Time Electrocardiographic Monitoring: {{An}} Adaptive Machine Learning Approach on a Cell Phone},
+  shorttitle = {Predicting Cardiovascular Disease from Real-Time Electrocardiographic Monitoring},
+  booktitle = {2009 {{Annual International Conference}} of the {{IEEE Engineering}} in {{Medicine}} and {{Biology Society}}},
+  author = {Jin, Zhanpeng and Sun, Yuwen and Cheng, Allen C.},
+  date = {2009-09},
+  pages = {6889--6892},
+  issn = {1558-4615},
+  doi = {10.1109/IEMBS.2009.5333610},
+  abstract = {To date, cardiovascular disease (CVD) is the leading cause of global death. The Electrocardiogram (ECG) is the most widely adopted clinical tool that measures the electrical activities of the heart from the body surface. However, heart rhythm irregularities cannot always be detected on a standard resting ECG machine, since they may not occur during an individual's recording session. Common Holter-based portable solutions that record ECG for up to 24 to 48 hours lack the capability to provide real-time feedback. In this research, we seek to establish a cell phone-based real-time monitoring technology for CVD, capable of performing continuous on-line ECG processing, generating a personalized cardiac health summary report in layman's language, automatically detecting and classifying abnormal CVD conditions, all in real time. Specifically, we developed an adaptive artificial neural network (ANN)-based machine learning technique, combining both an individual's cardiac characteristics and information from clinical ECG databases, to train the cell phone to learn to adapt to its user's physiological conditions to achieve better ECG feature extraction and more accurate CVD classification on cell phones.},
+  eventtitle = {2009 {{Annual International Conference}} of the {{IEEE Engineering}} in {{Medicine}} and {{Biology Society}}},
+  keywords = {Cardiovascular diseases,Cellular phones,Computerized monitoring,Condition monitoring,Electric variables measurement,Electrocardiography,Heart,Machine learning,Neurofeedback,Rhythm},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\3QWKHMPC\\Jin et al_2009_Predicting cardiovascular disease from real-time electrocardiographic monitoring.pdf}
 }
 
-@ARTICLE{SHELL02,
-    AUTHOR = "Michael Shell",
-    TITLE = "How to Use the {IEEEtran \LaTeX} Class",
-    JOURNAL = "Journal of {\LaTeX} Class Files",
-    VOLUME = "1",
-    NUMBER = "11",
-    MONTH = "November",
-    YEAR = "2002",
+@thesis{liuJiyuyidongzhongduanfenxidekechuandairouxingxindianjiancexitong2021,
+  type = {硕士},
+  title = {基于移动终端分析的可穿戴柔性心电监测系统},
+  author = {刘, 荟},
+  date = {2021},
+  institution = {{东南大学}},
+  doi = {10.27014/d.cnki.gdnau.2021.001090},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?filename=1022468120.nh&dbname=CMFDTEMP},
+  urldate = {2023-03-31},
+  abstract = {随着生活节奏的加快,人们的健康日益受到威胁,尤其在心血管健康领域更为突出。目前,心电图是医生进行心血管疾病检测和治疗的重要依据和参考。然而,对于预防心血管疾病具有重要意义的连续的、常规的心电监测,总是因设备不可穿戴而难以实现。同时,心电图分析既要耗费医生大量的时间,又有可能因数据之多而导致医生错过关键信息或产生误判。因此,需要一种新型的心电测量和分析设备。本文设计了一种基于移动终端分析的可穿戴柔性心电监测系统。在硬件方面,首先根据心电信号的幅频特性选择了模拟芯片AD8233并完成了外围电路设计,用于信号的放大、滤波和共模抑制,以实现稳定且高质量的心电信号测量。其次,根据系统无线通信的需求选择了集成芯片CC2541并完成了通信数字电路设计和单片机编程,用于实现心电信号的模数转换和蓝牙通信。其中,针对心电监护仪不可穿戴的问题,本文提出了一种新型的柔性互联电路。在制作印刷电路时尽可能地缩小各模块电路的体积,并利用丝网印刷的柔性导线将传统的硅基电路与柔性电路相结合,既保证了信号的质量,也兼顾了整体电路的柔韧性,实现了系统可穿戴式心电测量的目标。在软件方面,针对分析设备智能诊断与便携性难以兼顾的问题,本文训练了一个适用于移动端的神经网络模型,并以安卓系统为开发平台,开发了一款专用的心电监测APP。通过结合移动端的神经网络框架TFLite和网络模型Mobile Net,将心电分析的神经网络小型化设计后嵌入至手机应用中,最终实现了APP与用户的流畅交互、手机端与前端电路的无线通信、心电图的动态显示和实时心电图分类。综上,本文实现了完整的硬件电路与软件应用设计,创新性地提出了一种柔性互联电路对心电信号进行采集,并利用移动端的神经网络对心电信号进行实时分析。最终,系统印刷电路板的总面积仅9.8 cm\textasciitilde 2,柔性互联后电路可近180°弯曲,采集心电信号的信噪比达40 d B。智能分析采用基于心电片段的“inter-patient”分类模式,神经网络模型有22层但参数量仅240万,训练时的平均准确率为87\%,对N类与V类心电图的分类准确性高达92\%和91\%。模型转换为tflite格式后文件大小仅9 M,在移动端每3秒钟运行一次智能心电诊断的耗时小于30 ms。因此,整体系统实现了对心电信号的实时可穿戴式测量和便携式智能诊断,对后续可穿戴式心电监护设备的开发具有重要的借鉴意义。},
+  langid = {chinese},
+  keywords = {Android,flexible-interconnection circuit,MobileNet,MobileNet ECG monitoring system,TFLite,安卓系统,心电监测系统,柔性互联电路},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\N6P4SIW6\\刘_2021_基于移动终端分析的可穿戴柔性心电监测系统.pdf}
 }
 
-@BOOK{TEXGURU99,
-    AUTHOR = "{\TeX}Guru",
-    TITLE = "{\LaTeX 2$\varepsilon$}用户手册",
-    YEAR = "1999",
+@inproceedings{singhSmartECGMonitoring2022,
+  title = {Smart {{ECG Monitoring}} and {{Analysis System Using Machine Learning}}},
+  booktitle = {2022 {{IEEE VLSI Device Circuit}} and {{System}} ({{VLSI DCS}})},
+  author = {Singh, Sarab Nidhaan and Bhushan, Megha},
+  date = {2022-02},
+  pages = {304--309},
+  doi = {10.1109/VLSIDCS53788.2022.9811433},
+  abstract = {In critical situations, a patient quarantines himself from others which makes it difficult for a doctor to monitor the acute health symptoms of a patient. This work aims to create a Smart Electrocardiogram monitoring and analysis system. It works intelligently using machine learning for the detection of heart disease. It enables doctors to monitor the patient remotely from a developed Django Web application. The patient will be able to record and transfer the Electrocardiogram (ECG) data to the doctor or any family members remotely which can detect heart disease. Also, it will help the people living in remote areas, lacking a proper infrastructure but can be monitored at low cost by a doctor easily. Therefore, in case of emergency situations patients can be saved by real time monitoring.},
+  eventtitle = {2022 {{IEEE VLSI Device Circuit}} and {{System}} ({{VLSI DCS}})},
+  keywords = {Costs,Django,ECG,Electrocardiography,Heart,Heart disease,Infectious diseases,IoT,Machine learning,Medical services,Sensor,Very large scale integration},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\NQNTWN44\\Singh_Bhushan_2022_Smart ECG Monitoring and Analysis System Using Machine Learning.pdf;C\:\\Users\\ccxxxi\\Zotero\\storage\\32MMLDCT\\9811433.html}
 }
 
-
-% English
-
-@ARTICLE{Joa1999,
-    AUTHOR = "Joa-Ng, M. and I-Tai Lu",
-    TITLE = "A novel spread spectrum-based synchronization and location determination method for wireless system",
-    JOURNAL = "IEEE Communications Letters",
-    YEAR = "1999",
-    MONTH = "Jun.",
-    VOLUME = "3",
-    NUMBER = "6",
-    PAGES = "177-179",
+@article{wangEnablingSmartPersonalized2014,
+  title = {Enabling {{Smart Personalized Healthcare}}: {{A Hybrid Mobile-Cloud Approach}} for {{ECG Telemonitoring}}},
+  shorttitle = {Enabling {{Smart Personalized Healthcare}}},
+  author = {Wang, Xiaoliang and Gui, Qiong and Liu, Bingwei and Jin, Zhanpeng and Chen, Yu},
+  date = {2014-05},
+  journaltitle = {IEEE Journal of Biomedical and Health Informatics},
+  volume = {18},
+  number = {3},
+  pages = {739--745},
+  issn = {2168-2208},
+  doi = {10.1109/JBHI.2013.2286157},
+  abstract = {The severe challenges of the skyrocketing healthcare expenditure and the fast aging population highlight the needs for innovative solutions supporting more accurate, affordable, flexible, and personalized medical diagnosis and treatment. Recent advances of mobile technologies have made mobile devices a promising tool to manage patients' own health status through services like telemedicine. However, the inherent limitations of mobile devices make them less effective in computation- or data-intensive tasks such as medical monitoring. In this study, we propose a new hybrid mobile-cloud computational solution to enable more effective personalized medical monitoring. To demonstrate the efficacy and efficiency of the proposed approach, we present a case study of mobile-cloud based electrocardiograph monitoring and analysis and develop a mobile-cloud prototype. The experimental results show that the proposed approach can significantly enhance the conventional mobile-based medical monitoring in terms of diagnostic accuracy, execution efficiency, and energy efficiency, and holds the potential in addressing future large-scale data analysis in personalized healthcare.},
+  eventtitle = {{{IEEE Journal}} of {{Biomedical}} and {{Health Informatics}}},
+  keywords = {Artificial neural networks,Biomedical monitoring,Electrocardiograph (ECG),Electrocardiography,medical monitoring,Medical services,mobile cloud,Mobile handsets,Monitoring,telemedicine,Training},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\5RBSPHE6\\Wang et al_2014_Enabling Smart Personalized Healthcare.pdf}
 }
 
-@ARTICLE{Fujinoki2001,
-    AUTHOR = "Fujinoki, Hiroshi and , PhD",
-    TITLE = "Performance evaluation of multicast routing algorithms to trade-off path length and bandwidth consumption and of a protocol to reduce messaging overhead",
-    JOURNAL = "UNIVERSITY OF SOUTH FLORIDA, 2001, 109 PAGES",
-    YEAR = "2001",
-    MONTH = " ",
-    VOLUME = " ",
-    NUMBER = " ",
-    PAGES = " ",
+@article{wangJiyushenduxuexideyidongyuanchengxindianjiancexitongshejiyushixian2020,
+  title = {基于深度学习的移动远程心电监测系统设计与实现},
+  author = {汪, 祖民 and 左, 长青 and 秦, 静 and 季, 长清},
+  date = {2020},
+  journaltitle = {大连大学学报},
+  volume = {41},
+  number = {6},
+  pages = {84-88+98},
+  issn = {1008-2395},
+  url = {https://kns.cnki.net/kcms/detail/detail.aspx?dbname=cjfd2020&filename=dali202006015&dbcode=cjfq},
+  urldate = {2023-03-31},
+  abstract = {心电监测是通过计算机技术监测心电图的变化来判定用户是否有心脏疾病的一种方式。本文设计了一种基于深度学习的心电监测算法,通过卷积神经网络模型提取更加细微的特征,判定心电异常的类别。设计了一个移动远程心电监测系统,实时把用户的心电图传输到服务器端,由心电监测智能算法判定异常结果并反馈给用户,对心脏病的监测有重要的理论意义和实用价值。},
+  langid = {chinese},
+  keywords = {⛔ No DOI found,convolutional neural network,deep learning,ECG monitoring,mobile monitoring system,卷积神经网络,心电监测,深度学习,移动监测系统},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\NJYQUH6D\\汪 等 - 2020 - 基于深度学习的移动远程心电监测系统设计与实现.pdf}
 }
 
-@CONFERENCE{Altman1997,
-    AUTHOR = "Altman, Eitan and Basar, Tamer",
-    TITLE = "Multi-user rate-based flow control: Distributed game-theoretic algorithms",
-    BOOKTITLE = "Proceedings of the IEEE Conference on Decision and Control",
-    YEAR = "1997",
-    MONTH = " ",
-    VOLUME = "3",
-    PAGES = "2916-2921",
+@article{wenRealtimeECGTelemonitoring2008,
+  title = {Real-Time {{ECG}} Telemonitoring System Design with Mobile Phone Platform},
+  author = {Wen, Cheng and Yeh, Ming-Feng and Chang, Kuang-Chiung and Lee, Ren-Guey},
+  date = {2008-05-01},
+  journaltitle = {Measurement},
+  shortjournal = {Measurement},
+  volume = {41},
+  number = {4},
+  pages = {463--470},
+  issn = {0263-2241},
+  doi = {10.1016/j.measurement.2006.12.006},
+  url = {https://www.sciencedirect.com/science/article/pii/S0263224107000036},
+  urldate = {2023-03-31},
+  abstract = {In this paper, we propose an ECG (electrocardiogram) telemonitoring system based on a mobile phone platform. It transmits abnormal heartbeats, which are identified in the patient-worn unit (Holter), in real time by using MMS (multimedia messaging service) on GPRS (general packet radio service) and transfers all ECG data acquired and stored in the Holter by the Internet. By this way, the Holter can be used outdoors, and the communication cost can be reduced without losing important information of patients. The GPS (global positioning system) information provided by the Holter can be used to locate the patient for emergency help. To identify abnormal beats, we develop a real-time ECG classification algorithm that can be executed by the dual-core processor in the Holter. Experimental results show that the proposed system achieves an ECG classification accuracy of 98.98\%.},
+  langid = {english},
+  keywords = {Electrocardiogram (ECG),Multimedia messaging service (MMS),R wave detection,Real-time classification,Telemonitoring},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\K6UNTJSW\\Wen et al_2008_Real-time ECG telemonitoring system design with mobile phone platform.pdf}
 }
 
-@MANUAL{Hills,
-    AUTHOR = "Willoughby Hills",
-    TITLE = "Reconfigurable Assembly Cell(RAC)",
-    NOTE = "OH 44094",
-    YEAR = " ",
-    MONTH = " ",
+@thesis{wuYidongxindianjiancexitongdeyanjiuyushixian2018,
+  type = {硕士},
+  title = {移动心电监测系统的研究与实现},
+  author = {吴, 敏},
+  date = {2018},
+  institution = {{广东工业大学}},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?filename=1018866799.nh&dbname=CMFDTEMP},
+  urldate = {2023-03-31},
+  abstract = {近年来,慢性疾病的问题越来越严重,而慢性病发病具有突发性和随机性的特点,需要依靠长期治疗。随着智能移动设备的普及,移动医疗领域各类监测设备,成为了实体医院的辅助途径,这种方式给患者带来了极大的便利,能够解决大部分患者的需求,尤其是老年人。但这些监测设备大都是使用时间短、价格昂贵或携带不方便,导致使用范围不广。为了实现实时和携带方便的要求,需要设计一款低功耗、体积小、可穿戴的心电监测系统（electrocardiography,ECG monitoring system）。为此,本文采用了模拟和数字可编程技术,以可编程嵌入式系统控制器（Programmable System on Chip 4Bluetooth Smart,PSo C 4 BLE）芯片为主处理器的心电采集前端,该芯片集合了放大、滤波、A/D转换和蓝牙传输等功能模块,极大地降低了移动设备的体积,达到便携的效果。智能客户端主要采用了Android软件编程技术设计显示界面。智能客户端通过蓝牙传输接收心电信号后,在显示界面上显示波形,实现实时监测的目的,并对用户的心电信号进行初步诊断和对心电数据异常的用户进行警告的功能,以便病人能够及时到医院就医。此外,在服务器端设计了用户的病历档案,该档案包括病人的个人信息和心电数据信息,在服务器中对心电数据进行更加专业的分析诊断,医生根据心电数据和自动诊断分析结果对病人做出最后的诊断。此远程诊断方式,达到移动医疗所要实现的目的。本文最后对该系统的心电采集前端和心电采集前端与智能客户端之间的交互进行了功能测试,通过测试结果显示,心电采集模块电路稳定性高,系统能够实时、有效地进行心电监测。整个系统保证了心电信号检测准确的前提下,达到了低成本、低功耗且穿戴舒适的效果,具有非常广阔的市场应用前景。},
+  langid = {chinese},
+  keywords = {Bluetooth transmission,electrocardiography monitoring,PSoC 4 BLE,wearable,可穿戴,心电监测,蓝牙传输},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\MC73NHXK\\吴 - 2018 - 移动心电监测系统的研究与实现.pdf}
 }
 
-@MANUAL{Hills,
-    AUTHOR = "PATRICK W. DALY",
-    TITLE = "Graphics and Colour with ",
-    NOTE = " ",
-    YEAR = "1998",
-    MONTH = "4",
-}
-
-@MANUAL{Hills,
-    AUTHOR = "PATRICK W. DALY",
-    TITLE = "TexFriend/Graphics插件",
-    NOTE = " ",
-    YEAR = "2003",
-    MONTH = "12",
-}
-
-% Chinese
-
-@ARTICLE{Yang_Hy200215,
-    AUTHOR = "杨洪勇 and 宗广灯 and 武玉强",
-    TITLE = "多输入多输出网络系统的拥塞控制方法",
-    JOURNAL = "计算机工程与应用",
-    YEAR = "2002",
-    MONTH = " ",
-    VOLUME = " ",
-    NUMBER = "15",
-    PAGES = "27-30",
-}
-
-
-@BOOK{Zheng_wb200108,
-    AUTHOR = "郑文波",
-    TITLE = "控制网络技术",
-    YEAR = "2001",
-    MONTH = "8",
-}
-
-@BOOK{Xie_dy1997,
-    AUTHOR = "薛定宇",
-    TITLE = "\LaTeX 科学文件处理软件入门(修订版)",
-    YEAR = "1997",
-    MONTH = "5",
-}
-
-@BOOK{Deng_PC2001,
-    AUTHOR = "邓建松 and 彭冉冉 and 陈长松",
-    TITLE = "\LaTeX 2e 科技排版指南",
-    YEAR = "2001",
-    MONTH = "9",
-}
-
-@BOOK{Shang_dy2001,
-    AUTHOR = "桑大勇 and 王瑛",
-    TITLE = "科技文献排版系统：\LaTeX 入门与提高",
-    YEAR = "2001",
-    MONTH = "5",
-}
-
-
-@BOOK{Wang_2,
-    AUTHOR = "王 磊",
-    TITLE = "LATEX2e 插图指南",
+@article{zhengJiyukechuandaishebeideyidongjianhuAPP2019,
+  title = {基于可穿戴设备的移动监护APP},
+  author = {郑, 贤娴},
+  date = {2019},
+  journaltitle = {电子技术与软件工程},
+  number = {23},
+  pages = {34--35},
+  issn = {2095-5650},
+  url = {https://kns.cnki.net/kcms/detail/detail.aspx?dbname=cjfd2019&filename=dzru201923021&dbcode=cjfq},
+  urldate = {2023-03-31},
+  abstract = {本文探讨了将互联网技术应用于医疗领域,利用可穿戴设备对心电信号以及其他生命体征进行采集,汇聚至医院数据中心进行量化、分析、计算后反馈患者,设计一套集成心电监护、健康报告、服药提醒、饮食推荐及运动方案等功能为一体的移动监护系统,辅助临床实现对患者进行有效的疾病预防和治疗。},
+  langid = {chinese},
+  keywords = {⛔ No DOI found,可穿戴设备,心脑血管,移动终端},
+  file = {C\:\\Users\\ccxxxi\\Zotero\\storage\\L9N3VPB4\\郑_2019_基于可穿戴设备的移动监护APP.pdf}
 }
