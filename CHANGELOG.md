@@ -2,22 +2,19 @@
 
 ## [0.6.0](https://github.com/CCXXXI/thesis/compare/v0.5.0...v0.6.0) (2023-04-01)
 
-
 ### Features
 
-* add list of figures ([2298a6d](https://github.com/CCXXXI/thesis/commit/2298a6dec099eca8d1b6a9ebc8f809b91b434e1a))
-* **monitoring:** 完成 subsection{心电监测的用途与原理} ([b20f8b9](https://github.com/CCXXXI/thesis/commit/b20f8b9eb973185a766034097dd9c3f64d03ec9e))
-
+- add list of figures ([2298a6d](https://github.com/CCXXXI/thesis/commit/2298a6dec099eca8d1b6a9ebc8f809b91b434e1a))
+- **monitoring:** 完成 subsection{心电监测的用途与原理} ([b20f8b9](https://github.com/CCXXXI/thesis/commit/b20f8b9eb973185a766034097dd9c3f64d03ec9e))
 
 ### Bug Fixes
 
-* **monitoring:** subsection{心电信号监测} -&gt; subsection{心电图监测} ([61979f6](https://github.com/CCXXXI/thesis/commit/61979f6cf73e5e9bb369ed831dac72f385e696fe))
-* **monitoring:** subsection{心电图监测} -&gt; subsection{心电监测的用途与原理} ([8efd933](https://github.com/CCXXXI/thesis/commit/8efd9337333fe257f8b16089fa3e9d8671dd3493))
-
+- **monitoring:** subsection{心电信号监测} -&gt; subsection{心电图监测} ([61979f6](https://github.com/CCXXXI/thesis/commit/61979f6cf73e5e9bb369ed831dac72f385e696fe))
+- **monitoring:** subsection{心电图监测} -&gt; subsection{心电监测的用途与原理} ([8efd933](https://github.com/CCXXXI/thesis/commit/8efd9337333fe257f8b16089fa3e9d8671dd3493))
 
 ### Miscellaneous Chores
 
-* add an ECG image ([d92a363](https://github.com/CCXXXI/thesis/commit/d92a363680ef3290e0e32397e2c2b9221e1d726e))
+- add an ECG image ([d92a363](https://github.com/CCXXXI/thesis/commit/d92a363680ef3290e0e32397e2c2b9221e1d726e))
 
 ## [0.5.0](https://github.com/CCXXXI/thesis/compare/v0.4.1...v0.5.0) (2023-04-01)
 
