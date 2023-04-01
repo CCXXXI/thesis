@@ -113,6 +113,13 @@
 % 需要的宏包可以自行调用
 \usepackage[chapter]{easy-todo}
 \usepackage{graphicx}
+\usepackage{newfloat}
+\usepackage{hyperref}
+
+% https://tex.stackexchange.com/a/584994/254533
+\captionsetup[figure][bi-second]{name=Figure}
+\captionsetup[bi-second]{listtype+=Eng}
+\DeclareFloatingEnvironment[fileext=lof2]{figureEng}[Figure][List of Figures]
 
 \begin{document}
 
@@ -151,11 +158,16 @@
 
     \subsection{心电监测的用途与原理}\label{subsec:monitoring}
 
-    尽早发现心血管疾病非常重要，这样就可以及时采取措施，减少疾病对患者健康的威胁\cite{CardiovascularDiseasesCVDs}。
+    尽早发现心血管疾病非常重要，这样就可以及时采取措施，减少疾病对患者健康的威胁\cite{CardiovascularDiseasesCVDs}。在各种心血管疾病的诊断方法中，心电图是最常用、最基本、最重要的一种，具有非侵入性、诊断快速、成本低廉、广泛可用等诸多优点\cite{Xinxieguanjibingzhenduanliuchengyuzhiliaocelue2007}。
 
-    \todo{心电信号监测在心血管疾病诊断中的作用}
+    心电图（Electrocardiogram，缩写为ECG）是对心电信号的记录。通过放置在皮肤上的电极可以检测到心脏的电活动，将电压与时间的关系绘制为二维图像就得到了心电图，如图\ref{fig:10sec-ekg-lead}所示。
 
-    \todo{什么是心电信号和心电图？}
+    \begin{figure}
+        \centering
+        % 这个大小刚好可以把 \subsection{静态与动态心电图} 挤到下一页，但不会把自己挤下去
+        \includegraphics[width=.63\textwidth]{../assets/10sec-ekg-lead}
+        \bicaption{一张10秒12导联心电图}{A 10-second 12-lead ECG}\label{fig:10sec-ekg-lead}
+    \end{figure}
 
     \subsection{静态与动态心电图}\label{subsec:static-dynamic}
 
@@ -251,6 +263,22 @@
         \endgroup
 
         \listoffigures
+        \listoffigureEng
+
+
+        \chapter*{部分插图的许可协议}\label{ch:license}
+
+        文中使用的部分插图来自维基共享资源，相关信息列举于此。
+
+        \section*{图\ref{fig:10sec-ekg-lead}}
+
+        \begin{description}
+            \item[作品名称：]10秒心电图纸
+            \item[作者：]\href{https://zh.wikipedia.org/wiki/User:Kuyohong}{邱钰锋}
+            \item[许可协议：]\href{https://creativecommons.org/licenses/by/4.0/}{署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)}
+            \item[作品链接：]\url{https://commons.wikimedia.org/wiki/File:10sec-ekg-lead.jpg}
+            \item[是否对原始内容进行了更改：]否
+        \end{description}
 
     \end{appendix}
 
