@@ -2,43 +2,39 @@
 
 ## [0.3.0](https://github.com/CCXXXI/thesis/compare/v0.2.1...v0.3.0) (2023-04-01)
 
-
 ### Features
 
-* add subsection{心电信号监测的意义} ([01f64d1](https://github.com/CCXXXI/thesis/commit/01f64d114c12831b35c1dead356f51336a6daa61))
-* add subsection{心电自动诊断技术} ([fb0a708](https://github.com/CCXXXI/thesis/commit/fb0a7087f71184897a3944a7f7519b23a6924332))
-* add subsection{心血管疾病现状} ([709a8d8](https://github.com/CCXXXI/thesis/commit/709a8d8fa28ee4bbf57a53691477c72511ac8aea))
-* add subsection{短时与长时心电监测} ([9e5ee60](https://github.com/CCXXXI/thesis/commit/9e5ee608bb2b69a6f9a63164bf144033e56e0f47))
-* add subsubsection{心电分割算法} ([b049999](https://github.com/CCXXXI/thesis/commit/b049999440885c8f17192a8ecf9451600bc86baf))
-* add subsubsection{心电分类算法} ([354e264](https://github.com/CCXXXI/thesis/commit/354e264788bf65f48b86cc9490bd901abaf25de5))
-* add subsubsection{移动端心电自动诊断} ([ade70b7](https://github.com/CCXXXI/thesis/commit/ade70b7bbd5e7e8648c04744dc73f49a7f4f7d4a))
-* 从开题报告复制一些内容 ([c2a73a0](https://github.com/CCXXXI/thesis/commit/c2a73a00edd93724e8f6bc36d6f068490928b0e0))
-
+- add subsection{心电信号监测的意义} ([01f64d1](https://github.com/CCXXXI/thesis/commit/01f64d114c12831b35c1dead356f51336a6daa61))
+- add subsection{心电自动诊断技术} ([fb0a708](https://github.com/CCXXXI/thesis/commit/fb0a7087f71184897a3944a7f7519b23a6924332))
+- add subsection{心血管疾病现状} ([709a8d8](https://github.com/CCXXXI/thesis/commit/709a8d8fa28ee4bbf57a53691477c72511ac8aea))
+- add subsection{短时与长时心电监测} ([9e5ee60](https://github.com/CCXXXI/thesis/commit/9e5ee608bb2b69a6f9a63164bf144033e56e0f47))
+- add subsubsection{心电分割算法} ([b049999](https://github.com/CCXXXI/thesis/commit/b049999440885c8f17192a8ecf9451600bc86baf))
+- add subsubsection{心电分类算法} ([354e264](https://github.com/CCXXXI/thesis/commit/354e264788bf65f48b86cc9490bd901abaf25de5))
+- add subsubsection{移动端心电自动诊断} ([ade70b7](https://github.com/CCXXXI/thesis/commit/ade70b7bbd5e7e8648c04744dc73f49a7f4f7d4a))
+- 从开题报告复制一些内容 ([c2a73a0](https://github.com/CCXXXI/thesis/commit/c2a73a00edd93724e8f6bc36d6f068490928b0e0))
 
 ### Bug Fixes
 
-* section{课题主要工作} -&gt; section{项目主要工作} ([c957953](https://github.com/CCXXXI/thesis/commit/c957953814117b5dc6e67432c7947a7867bdb345))
-* section{选题的背景与意义} -&gt; section{项目的背景与意义} ([1c6b6db](https://github.com/CCXXXI/thesis/commit/1c6b6dbcfb51df0ad0cf6b014d6fef5ba10096bb))
-* subsection{心电信号监测的意义} -&gt; subsection{心电信号监测} ([6883783](https://github.com/CCXXXI/thesis/commit/68837833b68a12b2d3e2adcc3fe9ae67f27d1643))
-* subsection{短时与长时心电监测} -&gt; subsection{静态与动态心电图} ([8afa1d8](https://github.com/CCXXXI/thesis/commit/8afa1d84960e9ea0bba41a992aaf48dcb8f288d3))
-* 将实时分析相关移至 subsection{心电自动诊断技术} ([84a511f](https://github.com/CCXXXI/thesis/commit/84a511f75e42491a753d96d090a54503fdda656a))
-* 将目标用户移至 chapter{需求分析} ([9593ddd](https://github.com/CCXXXI/thesis/commit/9593ddd542a0978918b3a5c887198e7771a3bc28))
-
+- section{课题主要工作} -&gt; section{项目主要工作} ([c957953](https://github.com/CCXXXI/thesis/commit/c957953814117b5dc6e67432c7947a7867bdb345))
+- section{选题的背景与意义} -&gt; section{项目的背景与意义} ([1c6b6db](https://github.com/CCXXXI/thesis/commit/1c6b6dbcfb51df0ad0cf6b014d6fef5ba10096bb))
+- subsection{心电信号监测的意义} -&gt; subsection{心电信号监测} ([6883783](https://github.com/CCXXXI/thesis/commit/68837833b68a12b2d3e2adcc3fe9ae67f27d1643))
+- subsection{短时与长时心电监测} -&gt; subsection{静态与动态心电图} ([8afa1d8](https://github.com/CCXXXI/thesis/commit/8afa1d84960e9ea0bba41a992aaf48dcb8f288d3))
+- 将实时分析相关移至 subsection{心电自动诊断技术} ([84a511f](https://github.com/CCXXXI/thesis/commit/84a511f75e42491a753d96d090a54503fdda656a))
+- 将目标用户移至 chapter{需求分析} ([9593ddd](https://github.com/CCXXXI/thesis/commit/9593ddd542a0978918b3a5c887198e7771a3bc28))
 
 ### Miscellaneous Chores
 
-* export bib ([dec89ce](https://github.com/CCXXXI/thesis/commit/dec89ce66f351f9ffea9f2a814a7d314a68228b1))
-* export bib ([854b013](https://github.com/CCXXXI/thesis/commit/854b0135a8adb59cd1c88d6cfb376e183e24f9ba))
-* export bib again ([3d5d673](https://github.com/CCXXXI/thesis/commit/3d5d6733fd5fe7aed702168429d699e58a5f890d))
-* suppress = UnresolvedReference ([89f6879](https://github.com/CCXXXI/thesis/commit/89f6879ac5c39342a842d23c80bf4f88c8b8b9ee))
-
+- export bib ([dec89ce](https://github.com/CCXXXI/thesis/commit/dec89ce66f351f9ffea9f2a814a7d314a68228b1))
+- export bib ([854b013](https://github.com/CCXXXI/thesis/commit/854b0135a8adb59cd1c88d6cfb376e183e24f9ba))
+- export bib again ([3d5d673](https://github.com/CCXXXI/thesis/commit/3d5d6733fd5fe7aed702168429d699e58a5f890d))
+- suppress = UnresolvedReference ([89f6879](https://github.com/CCXXXI/thesis/commit/89f6879ac5c39342a842d23c80bf4f88c8b8b9ee))
 
 ### Documentation
 
-* add todonotes ([d0b3d39](https://github.com/CCXXXI/thesis/commit/d0b3d397a65c3c6a22b609b324da021573d8b470))
-* listoftodos ([e582ef0](https://github.com/CCXXXI/thesis/commit/e582ef078abd7e48d011b4b5fc8e8ee15b569bd2))
-* more todonotes ([be34a93](https://github.com/CCXXXI/thesis/commit/be34a93151f45cb9b4ba32b1458f824d0a8a2041))
-* 从开题报告要求复制一些注释 ([c74257f](https://github.com/CCXXXI/thesis/commit/c74257f52d8e5cd46562e5f3ccc454fa489bb1ba))
+- add todonotes ([d0b3d39](https://github.com/CCXXXI/thesis/commit/d0b3d397a65c3c6a22b609b324da021573d8b470))
+- listoftodos ([e582ef0](https://github.com/CCXXXI/thesis/commit/e582ef078abd7e48d011b4b5fc8e8ee15b569bd2))
+- more todonotes ([be34a93](https://github.com/CCXXXI/thesis/commit/be34a93151f45cb9b4ba32b1458f824d0a8a2041))
+- 从开题报告要求复制一些注释 ([c74257f](https://github.com/CCXXXI/thesis/commit/c74257f52d8e5cd46562e5f3ccc454fa489bb1ba))
 
 ## [0.2.1](https://github.com/CCXXXI/thesis/compare/v0.2.0...v0.2.1) (2023-04-01)
 
