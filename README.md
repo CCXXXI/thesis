@@ -8,7 +8,7 @@
 [![build](https://github.com/CCXXXI/thesis/actions/workflows/build.yml/badge.svg)](https://github.com/CCXXXI/thesis/actions/workflows/build.yml)
 [![GitHub release](https://img.shields.io/github/v/release/ccxxxi/thesis)](https://github.com/CCXXXI/thesis/releases)
 
-我的本科毕业论文的 $\LaTeX$ 源码和一些相关的 [设计文档](https://github.com/CCXXXI/thesis/wiki)、CI 配置。
+我的本科毕业论文的 $\LaTeX$ 源码和一些相关的设计文档、CI 配置。
 
 ## 论文模板
 
