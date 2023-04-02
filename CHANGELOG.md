@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/CCXXXI/thesis/compare/v0.8.0...v0.8.1) (2023-04-02)
+
+
+### Performance Improvements
+
+* [ImgBot] Optimize images ([#52](https://github.com/CCXXXI/thesis/issues/52)) ([5d039f3](https://github.com/CCXXXI/thesis/commit/5d039f399feabea988a295a626db1384b733940c))
+
 ## [0.8.0](https://github.com/CCXXXI/thesis/compare/v0.7.0...v0.8.0) (2023-04-02)
 
 ### Features
