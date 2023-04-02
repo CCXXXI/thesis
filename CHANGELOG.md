@@ -2,23 +2,20 @@
 
 ## [0.8.0](https://github.com/CCXXXI/thesis/compare/v0.7.0...v0.8.0) (2023-04-02)
 
-
 ### Features
 
-* **status:** 完成 section{国内外\app 现状} 的文本部分 ([c0e0a72](https://github.com/CCXXXI/thesis/commit/c0e0a72ab49ea20006d5028855d39224d470af25))
-* **status:** 添加插图 ([c2d2028](https://github.com/CCXXXI/thesis/commit/c2d2028a0fc95544366729f79bf65bd0d1f457bf))
-
+- **status:** 完成 section{国内外\app 现状} 的文本部分 ([c0e0a72](https://github.com/CCXXXI/thesis/commit/c0e0a72ab49ea20006d5028855d39224d470af25))
+- **status:** 添加插图 ([c2d2028](https://github.com/CCXXXI/thesis/commit/c2d2028a0fc95544366729f79bf65bd0d1f457bf))
 
 ### Bug Fixes
 
-* **appendix:** add space before ref ([3c2a173](https://github.com/CCXXXI/thesis/commit/3c2a173402c4cd70c4e41e7bd379f12c59c46d90))
-* **background:** add spaces around ref ([9ab1048](https://github.com/CCXXXI/thesis/commit/9ab10485ca2bd811a727a30c8683b5330714b6af))
-
+- **appendix:** add space before ref ([3c2a173](https://github.com/CCXXXI/thesis/commit/3c2a173402c4cd70c4e41e7bd379f12c59c46d90))
+- **background:** add spaces around ref ([9ab1048](https://github.com/CCXXXI/thesis/commit/9ab10485ca2bd811a727a30c8683b5330714b6af))
 
 ### Documentation
 
-* **abstract:** update todos ([938f70a](https://github.com/CCXXXI/thesis/commit/938f70ad3380e21b5e5da9ffe66bc02753d4a1ca))
-* **readme:** remove wiki link ([#49](https://github.com/CCXXXI/thesis/issues/49)) ([4ebd684](https://github.com/CCXXXI/thesis/commit/4ebd684dcff679526ca6445dca1842c13c1c52ac))
+- **abstract:** update todos ([938f70a](https://github.com/CCXXXI/thesis/commit/938f70ad3380e21b5e5da9ffe66bc02753d4a1ca))
+- **readme:** remove wiki link ([#49](https://github.com/CCXXXI/thesis/issues/49)) ([4ebd684](https://github.com/CCXXXI/thesis/commit/4ebd684dcff679526ca6445dca1842c13c1c52ac))
 
 ## [0.7.0](https://github.com/CCXXXI/thesis/compare/v0.6.0...v0.7.0) (2023-04-02)
 
