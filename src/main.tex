@@ -119,10 +119,9 @@
 \captionsetup[bi-second]{listtype+=Eng}
 \DeclareFloatingEnvironment[fileext=lof2]{figureEng}[Figure][List of Figures]
 
+\newcommand*{\app}{移动心电监测应用}
+
 \begin{document}
-
-    \newcommand*{\app}{移动心电监测应用}
-
 
 % 设置前置部分编号
     \frontmatter
@@ -133,7 +132,6 @@
 % 设置正文编号
     \mainmatter
 
-
     \include{chapters/intro}
     \include{chapters/tech}
     \include{chapters/req}
@@ -142,43 +140,14 @@
     \include{chapters/test}
     \include{chapters/conc}
 
-
 % 正文后部分
     \backmatter
-% 导入参考文献 (需要通过 latexmk 编译后才能显示)
+
+    % 参考文献
     \PrintReference
 
-% 附录环境
-    \begin{appendix}
-
-        \begingroup
-        \renewcommand{\clearpage}{\relax}
-        \listoftodos
-        \endgroup
-
-        \listoffigures
-        \listoffigureEng
-
-
-        \chapter*{部分插图的许可协议}\label{ch:license}
-
-        文中使用的部分插图来自维基共享资源，相关信息列举于此。
-
-        \section*{图\ref{fig:10sec-ekg-lead}}
-
-        \begin{description}
-            \item[作品名称：]10秒心电图纸
-            \item[作者：]\href{https://zh.wikipedia.org/wiki/User:Kuyohong}{邱钰锋}
-            \item[许可协议：]\href{https://creativecommons.org/licenses/by/4.0/}{署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)}
-            \item[作品链接：]\url{https://commons.wikimedia.org/wiki/File:10sec-ekg-lead.jpg}
-            \item[是否对原始内容进行了更改：]否
-        \end{description}
-
-    \end{appendix}
-
-% 致谢环境
-    \begin{acknowledgement}
-        \todo{此处撰写致谢词，主要感谢论文撰写过程中给予帮助的老师和同学，也可以感谢大学四年学习生涯中曾给予你重要帮助的人。请勿照抄。}
-    \end{acknowledgement}
+    % \include 会导致这些不出现在目录，原因未知
+    \input{chapters/appendix}
+    \input{chapters/acknowledgement}
 
 \end{document}
