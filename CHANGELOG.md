@@ -1,5 +1,57 @@
 # Changelog
 
+## [0.7.0](https://github.com/CCXXXI/thesis/compare/v0.6.0...v0.7.0) (2023-04-02)
+
+
+### Features
+
+* **appendix:** update desc ([fe736af](https://github.com/CCXXXI/thesis/commit/fe736afcde4b4a027167be48a200780da3904b69))
+* **background:** add footnote for 预后 ([c75f256](https://github.com/CCXXXI/thesis/commit/c75f2569c14a3fca3dc8c00f5e6225d68ac43245))
+* **background:** 完成 subsection{心电自动分析技术} ([708c1d0](https://github.com/CCXXXI/thesis/commit/708c1d0434ed32d82bf3a96d7faf5fff5a39fe19))
+* **conc:** add section{展望} ([752c48d](https://github.com/CCXXXI/thesis/commit/752c48df144dd7118bb4936498c96d7991795a69))
+* **conc:** add section{总结} ([86af53b](https://github.com/CCXXXI/thesis/commit/86af53b8b1c40cdc1d9e929eb921ea6337d12137))
+* **design:** add sections ([6ec0356](https://github.com/CCXXXI/thesis/commit/6ec03569e9b135dfd62e9dbb2b3a290b93447200))
+* **dev:** add sections ([41ca867](https://github.com/CCXXXI/thesis/commit/41ca867edc6b7721b4dc08bb834623e3d0b10f8d))
+* **python-cpp-packages:** add subsections ([40aaf65](https://github.com/CCXXXI/thesis/commit/40aaf65e0082e4f43b7b11aede72820626f4907e))
+* **req:** add sections ([c64d460](https://github.com/CCXXXI/thesis/commit/c64d460902716a45bc0bb79a0d6a4a6dadc09995))
+* **standard-holter:** 完成 subsection{常规心电图与动态心电图} ([8ae50a9](https://github.com/CCXXXI/thesis/commit/8ae50a9dc18fa8e3626e5de41b52bda2f26deb21))
+* **tech:** add sections ([5027b82](https://github.com/CCXXXI/thesis/commit/5027b828f27d3deb50f21d7fb9e7dc084b579538))
+* **test:** add sections ([3926014](https://github.com/CCXXXI/thesis/commit/3926014d8d381ca301ae293f2b866274b06fd824))
+
+
+### Bug Fixes
+
+* **background:** subsection{心电自动诊断技术} -&gt; subsection{心电自动分析技术} ([60adc6c](https://github.com/CCXXXI/thesis/commit/60adc6c64f79f46e9de540ee92057a9dc746e4b0))
+* **background:** subsection{静态与动态心电图} -&gt; subsection{常规心电图与动态心电图} ([b4130bf](https://github.com/CCXXXI/thesis/commit/b4130bf6bf78dbd9f5f2d8414d6df5c9a1b8c609))
+* **background:** 将插图移至常规心电图介绍之后 ([09faa1b](https://github.com/CCXXXI/thesis/commit/09faa1b8e6ea4d0de4b1bb18c60233eb724f7e4c))
+* **background:** 心电图信号 -&gt; 心电信号 ([7648531](https://github.com/CCXXXI/thesis/commit/7648531df731db099712afe493c74d49add7bf7a))
+* **background:** 心电图算法 -&gt; 心电分析算法 ([4ea88df](https://github.com/CCXXXI/thesis/commit/4ea88df3779b5333ad22875a7d58f39f7c0927ea))
+* **background:** 自动诊断技术 -&gt; 心电自动分析技术 ([a00820d](https://github.com/CCXXXI/thesis/commit/a00820df2153825b218e9dd9aa723563d723a8a5))
+* **design:** section{应用的各个功能模块设计} -&gt; section{应用的界面与功能设计} ([9587937](https://github.com/CCXXXI/thesis/commit/9587937a7becfafd48d4bc86a920bda75ceef04b))
+* **disease:** 报道 -&gt; 统计 ([a2a3ca6](https://github.com/CCXXXI/thesis/commit/a2a3ca69be29011ab08539d047bc70e1d05f0706))
+* **monitoring:** 将术语英文标注移至首次提及处 ([fdfe79b](https://github.com/CCXXXI/thesis/commit/fdfe79b15c1fe1c73c1ebdab3247949fffc47e17))
+
+
+### Code Refactoring
+
+* include instead of input ([982d939](https://github.com/CCXXXI/thesis/commit/982d939d15b362ac0fe286f90e59ca08a622114a))
+* separate appendix & acknowledgement ([9b96d0a](https://github.com/CCXXXI/thesis/commit/9b96d0a8c5715d2facef5e8ee41006871505ebfd))
+* separate chapters/* ([e1b033f](https://github.com/CCXXXI/thesis/commit/e1b033fe5f467573555aa8713c6b68db3a992476))
+* separate chapters/abstract[-en] ([a8f067f](https://github.com/CCXXXI/thesis/commit/a8f067f20a4ae80e4f0376162d65138eddbea220))
+* separate chapters/intro.tex ([d5b3c0f](https://github.com/CCXXXI/thesis/commit/d5b3c0fd6f5f5a1077081618cc72f75da00a5325))
+* separate chapters/tech.tex ([4885880](https://github.com/CCXXXI/thesis/commit/4885880515ab2398fb86d04d7730f49be6f3de64))
+
+
+### Documentation
+
+* **acknowledgement:** add todo comment ([ebffdc3](https://github.com/CCXXXI/thesis/commit/ebffdc326c006079f986dcfc6eb4366beb9e3b42))
+* **conc:** add todos ([2b82796](https://github.com/CCXXXI/thesis/commit/2b827966802432465672c7e4b438291e51b726dc))
+* **design:** add todos ([8e87749](https://github.com/CCXXXI/thesis/commit/8e8774909c93d29e6eb6e7f266afbef634630a9d))
+* **dev:** add todos ([a328038](https://github.com/CCXXXI/thesis/commit/a328038ed2bb0ba5e94dcf77e28eb134028b8662))
+* **req:** add todos ([1a9823e](https://github.com/CCXXXI/thesis/commit/1a9823e3cb133f45d01d46e532d56a6a5d901d6f))
+* **test:** add todos ([ee0d12a](https://github.com/CCXXXI/thesis/commit/ee0d12a7ff5b6c1bed4e80882edb0017f7447992))
+* update todos ([ae063bb](https://github.com/CCXXXI/thesis/commit/ae063bb6cd30ea1ec4fb7f49cb8be5325153e58f))
+
 ## [0.6.0](https://github.com/CCXXXI/thesis/compare/v0.5.0...v0.6.0) (2023-04-01)
 
 ### Features
