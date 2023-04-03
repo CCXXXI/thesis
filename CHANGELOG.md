@@ -171,7 +171,7 @@
 
 ### Continuous Integration
 
-- uses: xu-cheng/latex-action@v2-texlive2022 ([#35](https://github.com/CCXXXI/thesis/issues/35)) ([03f3761](https://github.com/CCXXXI/thesis/commit/03f3761ad687baccd9a67391e6dcd426a06be0cc))
+- uses: xu-cheng/latex-action@v2-texlive2021 ([#35](https://github.com/CCXXXI/thesis/issues/35)) ([03f3761](https://github.com/CCXXXI/thesis/commit/03f3761ad687baccd9a67391e6dcd426a06be0cc))
 
 ## [0.2.0](https://github.com/CCXXXI/thesis/compare/v0.1.0...v0.2.0) (2023-03-31)
 
