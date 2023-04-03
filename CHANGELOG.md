@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.9.0](https://github.com/CCXXXI/thesis/compare/v0.8.2...v0.9.0) (2023-04-03)
+
+### Features
+
+- **appendix:** add fig:demos ([fc5257f](https://github.com/CCXXXI/thesis/commit/fc5257f04ee489db1be074b41436e2e7d9a63610))
+- **work:** 完成 section{本项目的主要工作} 的开头 ([dbbb2e7](https://github.com/CCXXXI/thesis/commit/dbbb2e72f2e05dc94d64af484ce31e91537431b1))
+
+### Bug Fixes
+
+- **appendix:** 部分插图的许可协议 -&gt; 部分插图的来源 ([26e6276](https://github.com/CCXXXI/thesis/commit/26e62761936ba056a3dde462ba75a30ceef2ae24))
+- **tech:** section{算法所需的 Python 包...} -&gt; section{项目使用的 Python 包...} ([2882712](https://github.com/CCXXXI/thesis/commit/2882712b562e5530d42ec2d9a0fc8cd273738d79))
+
+### Miscellaneous Chores
+
+- export bib ([30ea287](https://github.com/CCXXXI/thesis/commit/30ea287de8df654a75112aaa60c0f12e41efee7c))
+
+### Documentation
+
+- **structure:** update todo ([990cce2](https://github.com/CCXXXI/thesis/commit/990cce2f7937a704677a1a61a9a97312f138ff60))
+- **tech:** add todo for pytest name ([3336960](https://github.com/CCXXXI/thesis/commit/333696004dbb54cb6bfdfb7407bb56b63d919aa2))
+- **work:** update todo ([813d9c2](https://github.com/CCXXXI/thesis/commit/813d9c29f66a2f46f29cdec497d96376657b49b2))
+
 ## [0.8.2](https://github.com/CCXXXI/thesis/compare/v0.8.1...v0.8.2) (2023-04-03)
 
 ### Bug Fixes
