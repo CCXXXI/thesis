@@ -760,8 +760,7 @@ qed           = \qedsymbol
 \cs_new_protected:Npn \__ecnu_spread_box:nn #1#2
     {
     \mode_leave_vertical:
-    \hbox_to_wd:nn {#1}
-        { \tl_map_inline:xn {#2} { ##1 \hfil } \unskip }
+    \hbox_to_wd:nn {#1} {\unskip #2 \unskip}
 }
 \cs_new_protected:Npn \__ecnu_center_box:nn #1#2
     {
