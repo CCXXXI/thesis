@@ -10,9 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # 20220801 is the last good version.
-      # See: https://github.com/Koyamin/ECNUThesis-Undergraduate/issues/3#issuecomment-1491303676
-      - uses: xu-cheng/latex-action@v2-texlive2021
+      - uses: xu-cheng/latex-action@v2
         with:
           working_directory: src
           root_file: main.tex
