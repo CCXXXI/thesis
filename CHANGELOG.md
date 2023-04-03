@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.8.2](https://github.com/CCXXXI/thesis/compare/v0.8.1...v0.8.2) (2023-04-03)
+
+### Bug Fixes
+
+- **cls:** apply fix for TeX Live 2023 ([99c3db5](https://github.com/CCXXXI/thesis/commit/99c3db5d28af64320cfbb618338b4074df485670))
+
+### Documentation
+
+- **changelog:** fix typo ([#54](https://github.com/CCXXXI/thesis/issues/54)) ([68bb9a9](https://github.com/CCXXXI/thesis/commit/68bb9a96d9f739329dd767299741d7b81cd1879b))
+
+### Continuous Integration
+
+- **build:** use latest TeX Live ([3da0197](https://github.com/CCXXXI/thesis/commit/3da01972bbd3d90b81f3d4713bc597649eef4eef))
+
 ## [0.8.1](https://github.com/CCXXXI/thesis/compare/v0.8.0...v0.8.1) (2023-04-02)
 
 ### Performance Improvements
