@@ -68,18 +68,34 @@ Dart程序有一个默认的主Isolate，在Flutter应用中也称为UI Isolate�
 
 \section{项目使用的Python包与C++中的对应替代}\label{sec:python-cpp-packages}
 
-\todo{为什么需要C++中的对应替代？}
+\todo{为什么需要C++中的对应替代？（需要将Python算法迁移至C++，部分依赖无法舍弃。）}
 
 \subsection{PyTorch与LibTorch}\label{subsec:pytorch-libtorch}
 
-\todo{PyTorch与LibTorch}
+\todo{什么是PyTorch？}
+
+\todo{什么是LibTorch？}
+
+\todo{为什么选择LibTorch而不是MNN、NCNN等？（PyTorch官方支持，接口设计高度相似，引用官方文档中相关说明。）}
 
 \subsection{NumPy与NumCpp}\label{subsec:numpy-numcpp}
 
-\todo{NumPy与NumCpp}
+\todo{什么是NumPy？}
+
+\todo{什么是NumCpp？}
+
+\todo{为什么选择NumCpp而不是Eigen等？（接口与NumPy更相似。）}
 
 \subsection{pytest与Catch2}\label{subsec:pytest-catch2}
 
-\todo{pytest与Catch2}
+\todo{什么是pytest？（关于名字：pytest的官方名称即为全小写形式，即使在位于句首的情况下也是如此。）}
 
-\todo{pytest的官方名称即为全小写形式，即使在位于句首的情况下也是如此。}
+\todo{什么是Catch2？}
+
+\todo{为什么选择Catch2而不是Google Test、Boost Test等？（更简单，本项目的C++部分没有编写复杂的测试用例的需求。）}
+
+\subsection{nlohmann::json}\label{subsec:nlohmann-json}
+
+\todo{为什么需要nlohmann::json？（Python标准库有Json支持，C++没有，需要第三方库。）}
+
+\todo{什么是nlohmann::json，不是其他Json库？（接口简单。虽然性能有劣势，但只是用于读取少量测试数据，速度不重要。）}
