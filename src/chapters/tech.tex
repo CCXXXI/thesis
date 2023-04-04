@@ -57,9 +57,9 @@ Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄�
 
 \subsubsection{Isolate}\label{subsubsec:isolate}
 
-Isolate是Dart中的一种介于线程与进程之间的概念。在Dart程序中，所有的代码都在Isolate中运行。每一个Isolate都有独立的运行线程和独立的堆内存，从而确保Isolate之间互相隔离，无法互相访问状态。相比于常规的线程，这样的实现并不会共享内存，所以也不需要担心互斥锁和其他锁等问题。相对地，由于无法与其他Isolate共享可变对象，Isolate之间的通信必须使用消息机制。
+Isolate\footnote{该术语没有常用的中文译名，故本文中直接使用英文原名。}是Dart中的一种介于线程与进程之间的概念。在Dart程序中，所有的代码都在isolate中运行。每一个isolate都有独立的运行线程和独立的堆内存，从而确保isolate之间互相隔离，无法互相访问状态。相比于常规的线程，这样的实现并不会共享内存，所以也不需要担心互斥锁和其他锁等问题。相对地，由于无法与其他isolate共享可变对象，isolate之间的通信必须使用消息机制。
 
-Dart程序有一个默认的主Isolate，在Flutter应用中也称为UI Isolate，因为UI的更新都是在主Isolate中进行的。在本应用中，数据库查询等可能较为耗时的操作都是放在其他Isolate中异步执行的，以避免阻塞UI Isolate导致UI卡顿。
+Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate，因为UI的更新都是在主isolate中进行的。在本应用中，数据库查询等可能较为耗时的操作都是放在其他isolate中异步执行的，以避免阻塞UI isolate导致UI卡顿。
 
 \subsection{应用依赖的部分Flutter包}\label{subsec:flutter-packages}
 
