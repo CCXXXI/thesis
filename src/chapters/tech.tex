@@ -20,7 +20,26 @@ Flutter对Android和iOS平台均有良好支持，此外还支持Windows、Linux
 
 \subsection{Flutter与其他框架的对比}\label{subsec:flutter-compare}
 
-\todo{为什么选择Flutter而不是其他框架？}
+Flutter并不是唯一一个支持Android和iOS平台的跨平台应用程序开发框架。在本项目的选型过程中也考虑了其他几个经常被与Flutter进行比较的同类框架，包括React Native\cite{ReactNativeLearn}、Xamarin\cite{XamarinOpensourceMobile}、Ionic Creator\cite{IonicFrameworkCrossPlatform}。
+
+关于这几个框架，最先被对比的是其热度。以近一年的Google趋势作为标准，对比结果如图~\ref{fig:google-trends} 所示。
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{../assets/google-trends}
+    \bicaption{Flutter与其他框架的Google趋势}{Google Trends for Flutter and other frameworks}
+    \label{fig:google-trends}
+\end{figure}
+
+从图中可以看出，Flutter和React Native的热度远远高于Xamarin和Ionic Creator。热度高意味着其社区更加活跃，生态更为优秀，更容易找到相关的资料和技术支持，也更容易利用社区已经开发过的包，这些对于项目开发来说都是非常重要的。因此，Xamarin和Ionic Creator在本项目的选型过程中最先被排除。
+
+之后需要对比的是Flutter和React Native。从热度上来看，两者的热度都比较平稳，Flutter长期保持在React Native的两倍左右，这意味着Flutter应当被优先考虑，但还不足以作为决定性理由。因此，需要进一步对比这两个框架的特性。
+
+React Native是由Meta（前身为Facebook）于2015年开源的跨平台应用程序开发框架。正如其名称所暗示的，React Native和React（一个流行的Web框架）的关系十分密切，这既是优点也是缺点。从优点的方面来说，React Native非常适合已有React开发经验但没有移动平台开发经验的开发者快速上手，也适合将已有的基于React的Web项目迁移至移动端，但这两点对于本项目来说都没有明显意义。另一方面，由于和React的紧密联系，基于React Native的应用需要使用JavaScript和CSS编写，代码会在JavaScript引擎下解释执行，并通过序列化消息与本机代码桥接通信以渲染原生组件。JavaScript本来就不是一个以性能见长的语言，额外的桥接翻译层更使得其性能较之原生应用程序相去甚远。
+
+作为对比，Flutter是Google于两年后（2017年）开源的，其设计上明显借鉴了React Native，与其一样使用响应式风格的界面编写方式，主要差别在于Flutter是编译成原生代码运行，直接接管并控制屏幕上的每一个像素，由此可以避免使用JavaScript桥接导致的性能问题。
+
+除了上述的性能优势之外，Flutter还在热重载、IDE集成、内置调试工具等方面相较其他框架更为优秀。最终，基于以上所有考虑，本项目选择了Flutter作为开发框架。
 
 \subsection{Dart语言}\label{subsec:dart}
 
