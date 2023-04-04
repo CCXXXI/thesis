@@ -1,5 +1,39 @@
 # Changelog
 
+## [0.10.0](https://github.com/CCXXXI/thesis/compare/v0.9.0...v0.10.0) (2023-04-04)
+
+
+### Features
+
+* **tech:** add subsection{使用跨平台应用程序开发框架的意义} ([8913263](https://github.com/CCXXXI/thesis/commit/8913263005469fbcf74d110bba4ebe14dc3bf5e8))
+* **tech:** 完成 section{Flutter应用程序开发框架} 的开头 ([d2eceb4](https://github.com/CCXXXI/thesis/commit/d2eceb467a24db5aa82a1f6389c892ca786d2107))
+* **tech:** 完成 subsection{Dart语言} ([d7386c6](https://github.com/CCXXXI/thesis/commit/d7386c6b3c42217cf40dcbbc2192ea248153ff24))
+* **tech:** 完成 subsection{Flutter与其他框架的对比} ([fa137b5](https://github.com/CCXXXI/thesis/commit/fa137b570658756e35010b38c0fe6e4f0ca68f28))
+
+
+### Bug Fixes
+
+* **intro:** 1.2 -&gt; 1.2节 ([09efe7d](https://github.com/CCXXXI/thesis/commit/09efe7d165a074271c7d481509015cb7379c58bc))
+* **intro:** 将心电图纸网格的具体解释移至 chapter{\app 的设计} ([3e3e447](https://github.com/CCXXXI/thesis/commit/3e3e4472830a998d506a5827432e2215a49738e3))
+* **req:** 移动目标用户到单独小节 ([22d3271](https://github.com/CCXXXI/thesis/commit/22d327179c645327fb51e714098262b13946f13b))
+* **tech:** ， -&gt; 。 ([0122065](https://github.com/CCXXXI/thesis/commit/0122065a425eb41f215bd4f98e9d2381f3a6e466))
+* **tech:** Flutter应用程序开发框架 -&gt; Flutter跨平台应用程序开发框架 ([963668e](https://github.com/CCXXXI/thesis/commit/963668e4a2ab0bfa86434eb0ae3d4fd789220ed9))
+
+
+### Styles
+
+* **appendix:** add newlines ([5b4049d](https://github.com/CCXXXI/thesis/commit/5b4049de3656892805a7e3668bd5ceaef893d830))
+* **intro:** \begin{figure} -&gt; \begin{figure}[h] ([b8f3c3b](https://github.com/CCXXXI/thesis/commit/b8f3c3b4cf32e884e3a3bfec19c0a990ccab0513))
+* **intro:** break line between \bication & \label ([ba74021](https://github.com/CCXXXI/thesis/commit/ba7402133be2a0861b5bf25c3661bdaa9659cbe4))
+
+
+### Documentation
+
+* **req:** update todos ([1759b85](https://github.com/CCXXXI/thesis/commit/1759b8546c06df316da0fc8b2aad67c793f558e0))
+* **tech:** fix typo ([2b12223](https://github.com/CCXXXI/thesis/commit/2b12223ceeb182cecef2f99a5eec00793117681d))
+* **tech:** update todos ([1cef04c](https://github.com/CCXXXI/thesis/commit/1cef04caefa1e4a4b8bd2ec6b7e9bb88d77a1f91))
+* **tech:** update todos again ([fb5cb05](https://github.com/CCXXXI/thesis/commit/fb5cb0515dbf441b6fa1ff4400c31a22c0a1c08b))
+
 ## [0.9.0](https://github.com/CCXXXI/thesis/compare/v0.8.2...v0.9.0) (2023-04-03)
 
 ### Features
