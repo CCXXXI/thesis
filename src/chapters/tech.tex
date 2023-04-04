@@ -43,13 +43,23 @@ React Native是由Meta（前身为Facebook）于2015年开源的跨平台应用�
 
 \subsection{Dart语言}\label{subsec:dart}
 
-\todo{什么是Dart？}
+Dart是由Google开源的编程语言，专门针对用户界面（User interface，缩写为UI）的创造进行优化，可编译为移动端、桌面端的二进制文件和Web平台的Javascript代码\cite{DartProgrammingLanguage}。Dart最初于2011年发布，原本是打算捆绑于Chrome浏览器来替代JavaScript，但后来由于各种因素而未能成功。在Flutter开发团队选择了Dart作为开发语言之后，两者的关系便愈加紧密，Dart也因此得到了更多的关注，并顺应Flutter框架的需求进行了许多更新迭代。时至今日，Dart与Flutter可以说是处于完全捆绑的状态，使用Flutter框架进行开发几乎是学习并使用Dart语言的唯一目的，使用Dart语言也是基于Flutter框架进行开发的必要条件。
 
-\todo{为什么选择Dart，因为这是Flutter所必需的。}
+Dart是一种多范式的语言，支持函数式、命令式、面向对象、反射式的写法，语法风格近似于C++与Java的混合，支持抽象类、泛型、类型推断、自动内存管理、空安全等其他语言中较为常见的特性，也有Mixin、Extension方法等其他语言中不太常见的特性。因篇幅限制，本文不便对Dart的诸多特性进行完整介绍，这里仅对后文必须涉及，且与其他语言有明显差异的部分特性进行简单说明。
 
-\subsubsection{Dart FFI}\label{subsubsec:ffi}
+\subsubsection{外部函数接口}\label{subsubsec:ffi}
 
-\todo{什么是Dart FFI？}
+外部函数接口（Foreign function interface，缩写为FFI）是一种机制，指用一种编程语言编写的程序可以调用另一种编程语言编写的功能。比如在C++中可以使用 \lstinline[language=C]{extern "C"} 来实现与C语言之间的双向FFI。
+
+Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄弱。作为一种弥补方式，Dart实现了与许多其他语言之间的FFI，比如在Web上可以与JavaScript互相调用，在macOS和iOS上可以与Swift和Objective-C互相调用，在Android、Windows、macOS、Linux上可以与Java和Kotlin互相调用，以及对本项目来说最重要的——在除Web以外的所有平台可以与C语言直接进行交互，而无须像React Native等框架那样通过Java等中间层进行间接调用，这使得Dart与C语言之间的FFI十分高效。由于C++代码也可以编译为C语言风格的接口，这意味着本应用的部分功能可以直接使用C++编写，从而充分利用C++的性能、生态、跨平台性等优势。
+
+在项目的开发过程中，使用C++编写了两部分代码供Dart FFI调用，分别是Pan-Tompkins算法和基于LibTorch的人工智能算法，在后文会详细介绍。
+
+\subsubsection{Isolate}\label{subsubsec:isolate}
+
+Isolate是Dart中的一种介于线程与进程之间的概念。在Dart程序中，所有的代码都在Isolate中运行。每一个Isolate都有独立的运行线程和独立的堆内存，从而确保Isolate之间互相隔离，无法互相访问状态。相比于常规的线程，这样的实现并不会共享内存，所以也不需要担心互斥锁和其他锁等问题。相对地，由于无法与其他Isolate共享可变对象，Isolate之间的通信必须使用消息机制。
+
+Dart程序有一个默认的主Isolate，在Flutter应用中也称为UI Isolate，因为UI的更新都是在主Isolate中进行的。在本应用中，数据库查询等可能较为耗时的操作都是放在其他Isolate中异步执行的，以避免阻塞UI Isolate导致UI卡顿。
 
 \subsection{应用依赖的部分Flutter包}\label{subsec:flutter-packages}
 
