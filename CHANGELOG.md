@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.3](https://github.com/CCXXXI/thesis/compare/v0.10.2...v0.10.3) (2023-04-04)
+
+### Bug Fixes
+
+- **dev:** 拆分 sections ([#66](https://github.com/CCXXXI/thesis/issues/66)) ([b4ef7bc](https://github.com/CCXXXI/thesis/commit/b4ef7bc1267241411978937573870a75e59a1e6c))
+
 ## [0.10.2](https://github.com/CCXXXI/thesis/compare/v0.10.1...v0.10.2) (2023-04-04)
 
 ### Bug Fixes
