@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.2](https://github.com/CCXXXI/thesis/compare/v0.10.1...v0.10.2) (2023-04-04)
+
+### Bug Fixes
+
+- **intro:** correct app name ([da8a27c](https://github.com/CCXXXI/thesis/commit/da8a27ce8875bf1f294e70ccbabbbe0c6bb929d4))
+- **tech:** 面向移动终端的\app ([7652368](https://github.com/CCXXXI/thesis/commit/76523687c93472dd6845293e1ccb00eff97d02f0))
+- 移动心电监测应用 -&gt; 可穿戴动态心电监测应用 ([f11b8a2](https://github.com/CCXXXI/thesis/commit/f11b8a23fb83c1a0769b0fbc2aba00b5587d491d))
+
 ## [0.10.1](https://github.com/CCXXXI/thesis/compare/v0.10.0...v0.10.1) (2023-04-04)
 
 ### Bug Fixes
