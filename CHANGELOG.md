@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.4](https://github.com/CCXXXI/thesis/compare/v0.10.3...v0.10.4) (2023-04-04)
+
+### Bug Fixes
+
+- **dev:** 其他杂项功能的实现 -&gt; 其他功能的实现 ([#68](https://github.com/CCXXXI/thesis/issues/68)) ([292e7bd](https://github.com/CCXXXI/thesis/commit/292e7bd53b343e68ced848a009b1032af68dacab))
+
 ## [0.10.3](https://github.com/CCXXXI/thesis/compare/v0.10.2...v0.10.3) (2023-04-04)
 
 ### Bug Fixes
