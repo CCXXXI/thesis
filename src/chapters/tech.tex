@@ -6,9 +6,15 @@
 
 \section{Flutter跨平台应用程序开发框架}\label{sec:flutter}
 
-Flutter是一个由Google开源的跨平台应用程序开发框架，仅通过一套代码库就能构建精美的、原生平台编译的跨平台应用\cite{FlutterBuildApps}。
+\subsection{使用跨平台应用程序开发框架的意义}\label{subsec:why-framework}
 
 要开发一个\app ，首先要考虑的是该应用支持哪些移动平台。根据2023年3月的数据\cite{MobileOperatingSystem}，在中国的移动平台操作系统占有率中，Android系统以76.15\%名列第一，iOS系统以23.28\%位居第二，这两个最主流的移动平台操作系统占据了绝大部分市场份额。因此，本应用开发的目标平台选定为Android和iOS。
+
+Android和iOS开发的各种技术可以分为两大方向：原生应用程序开发和跨平台应用程序开发。构建传统的原生应用程序需要维护两个不同的代码库，分别为Android和iOS平台编写代码，通常意味着需要分别使用Kotlin/Java和Swift/Objective-C来编写两份高度相似的代码。而跨平台应用程序开发框架则可以通过一套代码库同时为Android和iOS平台构建应用程序，降低了开发人员的学习成本，缩减了开发时间，提高了开发效率。
+
+\subsection{Flutter简介}\label{subsec:flutter}
+
+Flutter是一个由Google开源的跨平台应用程序开发框架，仅通过一套代码库就能构建精美的、原生平台编译的跨平台应用\cite{FlutterBuildApps}。
 
 Flutter对Android和iOS平台均有良好支持，此外还支持Windows、Linux、macOS、Web等平台\cite{SupportedDeploymentPlatforms}。基于Flutter框架进行开发不仅可以避免为Android和iOS平台分别编写大量相似的代码，还可以方便未来将部分不依赖于移动端特性的功能（比如历史心电展示等）的相关代码在其他平台（比如Web端）复用。
 
