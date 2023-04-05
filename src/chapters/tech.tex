@@ -61,9 +61,11 @@ Isolate\footnote{该术语没有常用的中文译名，故本文中直接使用
 
 Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate，因为UI的更新都是在主isolate中进行的。在本应用中，数据库查询等可能较为耗时的操作都是放在其他isolate中异步执行的，以避免阻塞UI isolate导致UI卡顿。
 
-\subsection{应用依赖的部分Flutter包}\label{subsec:flutter-packages}
+\subsection{项目使用的Flutter包}\label{subsec:flutter-packages}
 
-\todo{依赖里有上百个包，介绍哪些？}
+尽管Flutter SDK本身已经包含了大量的基础组件，但是在实际开发中，还是经常需要额外使用官方或社区开发的Flutter包来实现一些特定的功能。本项目所使用的Flutter包总计有上百个，其中一些包的使用比较简单，比如URL Launcher包只是用来在各个平台提供在浏览器中打开指定的URL的功能；而另一些包则在项目开发的各个阶段有着广泛的影响，比如Isar包的特性直接影响了本项目数据库的设计、实现与测试。
+
+由于项目使用的Flutter包非常多，而且作用分散在项目的各个阶段、各个模块，在此处一一介绍会使得本节过于冗长且难以理解，因此在后文涉及到相关Flutter包时再进行说明。
 
 
 \section{项目使用的Python包与C++中的对应替代}\label{sec:python-cpp-packages}
