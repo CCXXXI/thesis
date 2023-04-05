@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.11.0](https://github.com/CCXXXI/thesis/compare/v0.10.4...v0.11.0) (2023-04-05)
+
+### Features
+
+- **tech:** 完成 {移动端直接执行 Python 代码的方案} ([1e67bec](https://github.com/CCXXXI/thesis/commit/1e67bec01a7ff2d7a7fdd88ce9ef5086db786a1e))
+- **tech:** 完成 {移动端直接执行 Python 代码的方案} 的开头 ([6963355](https://github.com/CCXXXI/thesis/commit/6963355d480a811520a2c7376cd9baf70185379d))
+- **tech:** 完成 subsection{项目使用的 Flutter 包} ([ad5f192](https://github.com/CCXXXI/thesis/commit/ad5f192d618fd45dafb946de7daa0b94b6f865b1))
+
+### Bug Fixes
+
+- **dart:** 使用框架 -&gt; 基于框架 ([1261036](https://github.com/CCXXXI/thesis/commit/1261036d2d498ac1d904dfe1be71c285c564a1fa))
+- **dart:** 把 Kotlin 排在 Java 之前 ([e8ebbcd](https://github.com/CCXXXI/thesis/commit/e8ebbcd212d2f3d788ac88c28480ecb469cea5ec))
+- **dart:** 端 -&gt; 平台 ([9956435](https://github.com/CCXXXI/thesis/commit/99564351313d6ec9fdb59ac3e6e4010e12d65399))
+- **ffi:** 微调 extern "C" 相关描述 ([5567157](https://github.com/CCXXXI/thesis/commit/55671570c4e8e5cf4e5e157fcd87392d7f89dd64))
+- **tech:** 添加语言链接的 footnote ([54f23e3](https://github.com/CCXXXI/thesis/commit/54f23e3ed407cad35d1ac4bdcf07fe10321d1a19))
+- **tech:** 补充更多关于语言链接的信息 ([0c9401f](https://github.com/CCXXXI/thesis/commit/0c9401f41d8f5fe8de56dbaf3520ca0091a35316))
+- **tech:** 避免“由于”和“因此”连用 ([4764603](https://github.com/CCXXXI/thesis/commit/47646039a82421f5189291d5c742b54d7718ddb5))
+- 将“语言”的量词统一为“种” ([1bdb216](https://github.com/CCXXXI/thesis/commit/1bdb216f2bf5e5c8a10d4d65063059d47b2fb099))
+
+### Documentation
+
+- **intro:** correct suppress comment ([ad5eca2](https://github.com/CCXXXI/thesis/commit/ad5eca29f2d500d3371129404235593395565c01))
+
 ## [0.10.4](https://github.com/CCXXXI/thesis/compare/v0.10.3...v0.10.4) (2023-04-04)
 
 ### Bug Fixes
