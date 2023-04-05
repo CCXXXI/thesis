@@ -35,7 +35,7 @@ Flutter并不是唯一一个支持Android和iOS平台的跨平台应用程序开
 
 之后需要对比的是Flutter和React Native。从热度上来看，两者的热度都比较平稳，Flutter长期保持在React Native的两倍左右，这意味着Flutter应当被优先考虑，但还不足以作为决定性理由。因此，需要进一步对比这两个框架的特性。
 
-React Native是由Meta（前身为Facebook）于2015年开源的跨平台应用程序开发框架。正如其名称所暗示的，React Native和React（一个流行的Web框架）的关系十分密切，这既是优点也是缺点。从优点的方面来说，React Native非常适合已有React开发经验但没有移动平台开发经验的开发者快速上手，也适合将已有的基于React的Web项目迁移至移动端，但这两点对于本项目来说都没有明显意义。另一方面，由于和React的紧密联系，基于React Native的应用需要使用JavaScript和CSS编写，代码会在JavaScript引擎下解释执行，并通过序列化消息与本机代码桥接通信以渲染原生组件。JavaScript本来就不是一个以性能见长的语言，额外的桥接翻译层更使得其性能较之原生应用程序相去甚远。
+React Native是由Meta（前身为Facebook）于2015年开源的跨平台应用程序开发框架。正如其名称所暗示的，React Native和React（一个流行的Web框架）的关系十分密切，这既是优点也是缺点。从优点的方面来说，React Native非常适合已有React开发经验但没有移动平台开发经验的开发者快速上手，也适合将已有的基于React的Web项目迁移至移动端，但这两点对于本项目来说都没有明显意义。另一方面，由于和React的紧密联系，基于React Native的应用需要使用JavaScript和CSS编写，代码会在JavaScript引擎下解释执行，并通过序列化消息与本机代码桥接通信以渲染原生组件。JavaScript本来就不是一种以性能见长的语言，额外的桥接翻译层更使得其性能较之原生应用程序相去甚远。
 
 作为对比，Flutter是Google于两年后（2017年）开源的，其设计上明显借鉴了React Native，与其一样使用响应式风格的界面编写方式。主要差别在于Flutter是编译成原生代码运行，直接接管并控制屏幕上的每一个像素，由此可以避免使用JavaScript桥接导致的性能问题。
 
@@ -43,15 +43,15 @@ React Native是由Meta（前身为Facebook）于2015年开源的跨平台应用�
 
 \subsection{Dart语言}\label{subsec:dart}
 
-Dart是由Google开源的编程语言，专门针对用户界面（User interface，缩写为UI）的创造进行优化，可编译为移动端、桌面端的二进制文件和Web平台的Javascript代码\cite{DartProgrammingLanguage}。Dart最初于2011年发布，原本是打算捆绑于Chrome浏览器来替代JavaScript，但后来由于各种因素而未能成功。在Flutter开发团队选择了Dart作为开发语言之后，两者的关系便愈加紧密，Dart也因此得到了更多的关注，并顺应Flutter框架的需求进行了许多更新迭代。时至今日，Dart与Flutter可以说是处于完全捆绑的状态，使用Flutter框架进行开发几乎是学习并使用Dart语言的唯一目的，使用Dart语言也是基于Flutter框架进行开发的必要条件。
+Dart是由Google开源的编程语言，专门针对用户界面（User interface，缩写为UI）的创造进行优化，可编译为移动平台、桌面平台的二进制文件和Web平台的Javascript代码\cite{DartProgrammingLanguage}。Dart最初于2011年发布，原本是打算捆绑于Chrome浏览器来替代JavaScript，但后来由于各种因素而未能成功。在Flutter开发团队选择了Dart作为开发语言之后，两者的关系便愈加紧密，Dart也因此得到了更多的关注，并顺应Flutter框架的需求进行了许多更新迭代。时至今日，Dart与Flutter可以说是处于完全捆绑的状态，基于Flutter框架进行开发几乎是学习并使用Dart语言的唯一目的，使用Dart语言也是基于Flutter框架进行开发的必要条件。
 
 Dart是一种多范式的语言，支持函数式、命令式、面向对象、反射式的写法，语法风格近似于C++与Java的混合，支持抽象类、泛型、类型推断、自动内存管理、空安全等其他语言中较为常见的特性，也有Mixin、Extension方法等其他语言中不太常见的特性。因篇幅限制，本文不便对Dart的诸多特性进行完整介绍，这里仅对后文必须涉及，且与其他语言有明显差异的部分特性进行简单说明。
 
 \subsubsection{外部函数接口}\label{subsubsec:ffi}
 
-外部函数接口（Foreign function interface，缩写为FFI）是一种机制，指用一种编程语言编写的程序可以调用另一种编程语言编写的功能。比如在C++中可以使用 \lstinline[language=C]{extern "C"} 来实现与C语言之间的双向FFI。
+外部函数接口（Foreign function interface，缩写为FFI）是一种机制，指用一种编程语言编写的程序可以调用另一种编程语言编写的功能。比如在C++中可以指定 \lstinline[language=C]{extern "C"} 来要求编译器在调用约定、名字重整等方面遵循C语言的标准\footnote{这一特性在C++中被称为语言链接（Language linkage）。}，从而实现与C语言之间的双向FFI。
 
-Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄弱。作为一种弥补方式，Dart实现了与许多其他语言之间的FFI，比如在Web上可以与JavaScript互相调用，在macOS和iOS上可以与Swift和Objective-C互相调用，在Android、Windows、macOS、Linux上可以与Java和Kotlin互相调用，以及对本项目来说最重要的——在除Web以外的所有平台可以与C语言直接进行交互，而无须像React Native等框架那样通过Java等中间层进行间接调用，这使得Dart与C语言之间的FFI十分高效。由于C++代码也可以编译为C语言风格的接口，这意味着本应用的部分功能可以直接使用C++编写，从而充分利用C++的性能、生态、跨平台性等优势。
+Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄弱。作为一种弥补方式，Dart实现了与许多其他语言之间的FFI，比如在Web上可以与JavaScript互相调用，在macOS和iOS上可以与Swift或Objective-C互相调用，在Android、Windows、macOS、Linux上可以与Kotlin或Java互相调用，以及对本项目来说最重要的——在除Web以外的所有平台可以与C语言直接进行交互，而无须像React Native等框架那样通过Java等中间层进行间接调用，这使得Dart与C语言之间的FFI十分高效。由于C++代码也可以通过指定 \lstinline[language=C]{extern "C"} 来编译为与C语言格式相同的接口，这意味着本应用的部分功能可以直接使用C++编写，从而充分利用C++的性能、生态、跨平台性等优势。
 
 在项目的开发过程中，使用C++编写了两部分代码供Dart FFI调用，分别是Pan-Tompkins算法和基于LibTorch的人工智能算法，在后文会详细介绍。
 
@@ -61,14 +61,42 @@ Isolate\footnote{该术语没有常用的中文译名，故本文中直接使用
 
 Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate，因为UI的更新都是在主isolate中进行的。在本应用中，数据库查询等可能较为耗时的操作都是放在其他isolate中异步执行的，以避免阻塞UI isolate导致UI卡顿。
 
-\subsection{应用依赖的部分Flutter包}\label{subsec:flutter-packages}
+\subsection{项目使用的Flutter包}\label{subsec:flutter-packages}
 
-\todo{依赖里有上百个包，介绍哪些？}
+尽管Flutter SDK本身已经包含了大量的基础组件，但是在实际开发中，还是经常需要额外使用官方或社区开发的Flutter包来实现一些特定的功能。本项目所使用的Flutter包总计有上百个，其中一些包的使用比较简单，比如URL Launcher包只是用来在各个平台提供在浏览器中打开指定的URL的功能；而另一些包则在项目开发的各个阶段有着广泛的影响，比如Isar包的特性直接影响了本项目数据库的设计、实现与测试。
+
+由于项目使用的Flutter包非常多，而且作用分散在项目的各个阶段、各个模块，在此处一一介绍会使得本节过于冗长且难以理解，本文在后续章节涉及到相关Flutter包时再进行说明。
 
 
 \section{项目使用的Python包与C++中的对应替代}\label{sec:python-cpp-packages}
 
+\subsection{将Python代码迁移至C++的原因}\label{subsec:why-cpp}
+
+本项目使用的用于心电信号分析的人工智能算法最初是使用Python编写的。为了在面向移动终端的应用中使用这些算法，考虑了各种可能的技术方案。
+
+\subsubsection{移动端直接执行Python代码的方案}\label{subsubsec:run-python}
+
+最简单的一个方案是设法在移动端直接执行Python代码。这种方式在移动应用开发中很少被使用，主要是基于时间上和空间上这两个方面的顾虑。从时间上来说，Python语言的执行效率较低，在设备性能相对较差的移动端表现得更为明显；不过本应用中人工智能算法的执行时间占比并不大，仅仅是每10分钟调用一次，一次执行数秒而已，所以这一缺点也并非不可接受。从空间上来说，将Python语言的运行环境打包进应用会导致应用的安装包体积更大；但此算法所需要的Torch模型文件本身就已有60多MB，相较之下Python的运行环境所额外占据的大小并不是很明显。因此，常见的关于性能或安装包大小的顾虑并不能构成否定本方案的充分依据。之后考虑了在移动端执行Python代码的各种方式。
+
+PyQtDeploy\cite{RiverbankComputingIntroduction}、QPython\cite{QPythonPythonAndroid}、Termux\cite{Termux}等工具可以用于在移动端执行Python代码，但未提供可供Java、Dart等语言调用的接口，因此无法在本项目中使用。
+
+Kivy\cite{KivyCrossplatformPython}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
+
+Chaquopy\cite{EasiestWayUse}提供了PyTorch的支持。尽管最高只支持1.8.1版本，但算法原本所依赖的版本甚至比这更旧，所以PyTorch的使用没有问题。但是，Chaquopy仅支持Android平台，而不支持iOS平台，所以无法完全满足本项目的需求。
+
+BeeWare\cite{WriteOnceDeploy}在Chaquopy之上增加了对iOS平台的支持，但是需要将整个应用都使用Python编写，这样就无法通过仅在少数部分调用Python来避开本小节最初提到的性能问题，因此也不是可行的方案。
+
+综合以上调查结果，可以认定移动端直接执行Python代码的方案并不可行。因此，必须将原本使用Python编写的算法迁移至其他语言。
+
+\subsubsection{使用Dart实现相关算法的方案}\label{subsubsec:python-dart}
+
+\todo{}
+
+\subsubsection{使用C++实现相关算法的方案}\label{subsubsec:python-cpp}
+
 \todo{为什么需要C++中的对应替代？（需要将Python算法迁移至C++，部分关键依赖无法消除。）}
+
+本项目的一部分工作是将已有的使用Python编写的算法迁移至C++。
 
 \subsection{PyTorch与LibTorch}\label{subsec:pytorch-libtorch}
 
@@ -76,7 +104,7 @@ Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate�
 
 \todo{什么是LibTorch？}
 
-\todo{为什么选择LibTorch而不是MNN、NCNN等？（PyTorch官方支持，接口设计高度相似，引用官方文档中相关说明。）}
+\todo{为什么选择LibTorch而不是PyTorch Mobile、MNN、NCNN等？（PyTorch官方支持，接口设计高度相似，引用官方文档中相关说明。）}
 
 \subsection{NumPy与NumCpp}\label{subsec:numpy-numcpp}
 
