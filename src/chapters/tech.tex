@@ -51,7 +51,7 @@ Dart是一种多范式的语言，支持函数式、命令式、面向对象、�
 
 外部函数接口（Foreign function interface，缩写为FFI）是一种机制，指用一种编程语言编写的程序可以调用另一种编程语言编写的功能。比如在C++中可以使用 \lstinline[language=C]{extern "C"} 来实现与C语言之间的双向FFI。
 
-Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄弱。作为一种弥补方式，Dart实现了与许多其他语言之间的FFI，比如在Web上可以与JavaScript互相调用，在macOS和iOS上可以与Swift和Objective-C互相调用，在Android、Windows、macOS、Linux上可以与Java和Kotlin互相调用，以及对本项目来说最重要的——在除Web以外的所有平台可以与C语言直接进行交互，而无须像React Native等框架那样通过Java等中间层进行间接调用，这使得Dart与C语言之间的FFI十分高效。由于C++代码也可以编译为C语言风格的接口，这意味着本应用的部分功能可以直接使用C++编写，从而充分利用C++的性能、生态、跨平台性等优势。
+Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄弱。作为一种弥补方式，Dart实现了与许多其他语言之间的FFI，比如在Web上可以与JavaScript互相调用，在macOS和iOS上可以与Swift或Objective-C互相调用，在Android、Windows、macOS、Linux上可以与Kotlin或Java互相调用，以及对本项目来说最重要的——在除Web以外的所有平台可以与C语言直接进行交互，而无须像React Native等框架那样通过Java等中间层进行间接调用，这使得Dart与C语言之间的FFI十分高效。由于C++代码也可以编译为C语言风格的接口，这意味着本应用的部分功能可以直接使用C++编写，从而充分利用C++的性能、生态、跨平台性等优势。
 
 在项目的开发过程中，使用C++编写了两部分代码供Dart FFI调用，分别是Pan-Tompkins算法和基于LibTorch的人工智能算法，在后文会详细介绍。
 
