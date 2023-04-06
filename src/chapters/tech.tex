@@ -14,13 +14,13 @@ Android和iOS开发的各种技术可以分为两大方向：原生应用程序�
 
 \subsection{Flutter简介}\label{subsec:flutter}
 
-Flutter是一个由Google开源的跨平台应用程序开发框架，仅通过一套代码库就能构建精美的、原生平台编译的跨平台应用\cite{FlutterBuildApps}。
+Flutter是一个由Google开源的跨平台应用程序开发框架，仅通过一套代码库就能构建精美的、原生平台编译的跨平台应用\cite{FlutterFlutter2023}。
 
 Flutter对Android和iOS平台均有良好支持，此外还支持Windows、Linux、macOS、Web等平台\cite{SupportedDeploymentPlatforms}。基于Flutter框架进行开发不仅可以避免为Android和iOS平台分别编写大量相似的代码，还可以方便未来将部分不依赖于移动端特性的功能（比如历史心电展示等）的相关代码在其他平台（比如Web端）复用。
 
 \subsection{Flutter与其他框架的对比}\label{subsec:flutter-compare}
 
-Flutter并不是唯一一个支持Android和iOS平台的跨平台应用程序开发框架。在本项目的选型过程中也考虑了其他几个经常被与Flutter进行比较的同类框架，包括React Native\cite{ReactNativeLearn}、Xamarin\cite{XamarinOpensourceMobile}、Ionic Creator\cite{IonicFrameworkCrossPlatform}。
+Flutter并不是唯一一个支持Android和iOS平台的跨平台应用程序开发框架。在本项目的选型过程中也考虑了其他几个经常被与Flutter进行比较的同类框架，包括React Native\cite{ReactNative2023}、Xamarin\cite{XamarinForms2023}、Ionic Creator\cite{Ionic2023}。
 
 关于这几个框架，最先被对比的是其热度。以近一年的Google趋势作为标准，对比结果如图~\ref{fig:google-trends} 所示。
 
@@ -43,7 +43,7 @@ React Native是由Meta（前身为Facebook）于2015年开源的跨平台应用�
 
 \subsection{Dart语言}\label{subsec:dart}
 
-Dart是由Google开源的编程语言，专门针对用户界面（User interface，缩写为UI）的创造进行优化，可编译为移动平台、桌面平台的二进制文件和Web平台的Javascript代码\cite{DartProgrammingLanguage}。Dart最初于2011年发布，原本是打算捆绑于Chrome浏览器来替代JavaScript，但后来由于各种因素而未能成功。在Flutter开发团队选择了Dart作为开发语言之后，两者的关系便愈加紧密，Dart也因此得到了更多的关注，并顺应Flutter框架的需求进行了许多更新迭代。时至今日，Dart与Flutter可以说是处于完全捆绑的状态，基于Flutter框架进行开发几乎是学习并使用Dart语言的唯一目的，使用Dart语言也是基于Flutter框架进行开发的必要条件。
+Dart是由Google开源的编程语言，专门针对用户界面（User interface，缩写为UI）的创造进行优化，可编译为移动平台、桌面平台的二进制文件和Web平台的Javascript代码\cite{DartLanguageEvolution2023}。Dart最初于2011年发布，原本是打算捆绑于Chrome浏览器来替代JavaScript，但后来由于各种因素而未能成功。在Flutter开发团队选择了Dart作为开发语言之后，两者的关系便愈加紧密，Dart也因此得到了更多的关注，并顺应Flutter框架的需求进行了许多更新迭代。时至今日，Dart与Flutter可以说是处于完全捆绑的状态，基于Flutter框架进行开发几乎是学习并使用Dart语言的唯一目的，使用Dart语言也是基于Flutter框架进行开发的必要条件。
 
 Dart是一种多范式的语言，支持函数式、命令式、面向对象、反射式的写法，语法风格近似于C++与Java的混合，支持抽象类、泛型、类型推断、自动内存管理、空安全等其他语言中较为常见的特性，也有Mixin、Extension方法等其他语言中不太常见的特性。因篇幅限制，本文不便对Dart的诸多特性进行完整介绍，这里仅对后文必须涉及，且与其他语言有明显差异的部分特性进行简单说明。
 
@@ -65,7 +65,7 @@ Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate�
 
 尽管Flutter SDK本身已经包含了大量的基础组件，但是在实际开发中，还是经常需要额外使用官方或社区开发的Flutter包来实现一些特定的功能。本项目所使用的Flutter包总计有上百个，其中一些包的使用比较简单，比如URL Launcher包只是用来在各个平台提供在浏览器中打开指定的URL的功能；而另一些包则在项目开发的各个阶段有着广泛的影响，比如Isar包的特性直接影响了本项目数据库的设计、实现与测试。
 
-由于项目使用的Flutter包非常多，而且作用分散在项目的各个阶段、各个模块，在此处一一介绍会使得本节过于冗长且难以理解，本文在后续章节涉及到相关Flutter包时再进行说明。
+由于项目使用的Flutter包非常多，而且作用分散在项目的各个阶段、各个模块，在此处一一介绍会使得本节过于冗长且难以理解，本文在后续章节涉及到相关Flutter包时再对各个包分别进行说明。另外，所有包的相关文档均可在 \url{https://pub.dev/} 上找到，由于数目众多，本文不在参考文献中分别列出。
 
 
 \section{项目使用的Python包与C++中的对应替代}\label{sec:python-cpp-packages}
@@ -78,52 +78,44 @@ Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate�
 
 最简单的一个方案是设法在移动端直接执行Python代码。这种方式在移动应用开发中很少被使用，主要是基于时间上和空间上这两个方面的顾虑。从时间上来说，Python语言的执行效率较低，在设备性能相对较差的移动端表现得更为明显；不过本应用中人工智能算法的执行时间占比并不大，仅仅是每10分钟调用一次，一次执行数秒而已，所以这一缺点也并非不可接受。从空间上来说，将Python语言的运行环境打包进应用会导致应用的安装包体积更大；但此算法所需要的Torch模型文件本身就已有60多MB，相较之下Python的运行环境所额外占据的大小并不是很明显。因此，常见的关于性能或安装包大小的顾虑并不能构成否定本方案的充分依据。之后考虑了在移动端执行Python代码的各种方式。
 
-PyQtDeploy\cite{RiverbankComputingIntroduction}、QPython\cite{QPythonPythonAndroid}、Termux\cite{Termux}等工具可以用于在移动端执行Python代码，但未提供可供Java、Dart等语言调用的接口，因此无法在本项目中使用。
+PyQtDeploy\cite{PyqtdeployPyQtApplication}、QPython\cite{QPython2023}、Termux\cite{TermuxApplication2023}等工具可以用于在移动端执行Python代码，但未提供可供Java、Dart等语言调用的接口，因此无法在本项目中使用。
 
-Kivy\cite{KivyCrossplatformPython}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
+Kivy\cite{Kivy2023}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
 
-Chaquopy\cite{EasiestWayUse}提供了PyTorch的支持。尽管最高只支持1.8.1版本，但算法原本所依赖的版本甚至比这更旧，所以PyTorch的使用没有问题。但是，Chaquopy仅支持Android平台，而不支持iOS平台，所以无法完全满足本项目的需求。
+Chaquopy\cite{ChaquopyPythonSDK2023}提供了PyTorch的支持。尽管最高只支持1.8.1版本，但算法原本所依赖的版本甚至比这更旧，所以PyTorch的使用没有问题。但是，Chaquopy仅支持Android平台，而不支持iOS平台，所以无法完全满足本项目的需求。
 
-BeeWare\cite{WriteOnceDeploy}在Chaquopy之上增加了对iOS平台的支持，但是需要将整个应用都使用Python编写，这样就无法通过仅在少数部分调用Python来避开本小节最初提到的性能问题，因此也不是可行的方案。
+BeeWare\cite{BeewareToga2023}在Chaquopy之上增加了对iOS平台的支持，但是需要将整个应用都使用Python编写，这样就无法通过仅在少数部分调用Python来避开本小节最初提到的性能问题，因此也不是可行的方案。
 
 综合以上调查结果，可以认定移动端直接执行Python代码的方案并不可行。因此，必须将原本使用Python编写的算法迁移至其他语言。
 
 \subsubsection{使用Dart实现相关算法的方案}\label{subsubsec:python-dart}
 
-\todo{}
+由于应用主体使用Dart编写，下一个考虑的方案是使用Dart实现相关算法。社区已经编写了PyTorch Mobile、PyTorch Lite等包来帮助将PyTorch模型迁移至Flutter框架，但这些包都仅支持对模型的直接调用，而本项目所使用的算法除了直接调用模型的部分之外还包含一些额外的处理步骤，这些步骤在缺少相关支持的Dart中较难实现，因此这一方案也不可行。
 
 \subsubsection{使用C++实现相关算法的方案}\label{subsubsec:python-cpp}
 
-\todo{为什么需要C++中的对应替代？（需要将Python算法迁移至C++，部分关键依赖无法消除。）}
-
-本项目的一部分工作是将已有的使用Python编写的算法迁移至C++。
+本项目最终采用的方案是将已有的使用Python编写的算法迁移至C++。使用C++编写的内容可以通过Dart FFI在移动端使用，而且C++代码具有跨平台性，这两点完全契合本项目的需要。在迁移之前对Python代码进行了大幅度精简，消去了许多非必要的依赖项，但是仍然有一些关键的依赖项无法消除，因此需要在C++中找到对应的替代。
 
 \subsection{PyTorch与LibTorch}\label{subsec:pytorch-libtorch}
 
-\todo{什么是PyTorch？}
+PyTorch\cite{paszkePyTorchImperativeStyle2019}是一个开源的Python机器学习库，也是算法中最核心的依赖项，必须找到可能的替代。
 
-\todo{什么是LibTorch？}
+一个可能的选择是使用PyTorch官方推出的PyTorch Mobile。PyTorch Mobile目前尚处于Beta测试阶段，但已经被广泛验证可用，并且同时适用于Android和iOS平台。然而PyTorch Mobile为Android和iOS平台提供的接口并不相同，使得在多平台使用时需要编写两套不同的代码。由于算法在Python中的实现较为繁琐，单次迁移的工作量已经很大，因此分别针对Android和iOS平台进行两次迁移的方案的工作量难以接受。综上所述，PyTorch Mobile本身并不是一个可行的替代方案。不过，由于PyTorch Mobile在实现上是为LibTorch封装了Java和Swift接口，其作为依赖项的存在仍然为本项目提供了很大帮助，在后文介绍具体实现时会详细说明。
 
-\todo{为什么选择LibTorch而不是PyTorch Mobile、MNN、NCNN等？（PyTorch官方支持，接口设计高度相似，引用官方文档中相关说明。）}
+其他的替代方案包括PyTorch官方提供的LibTorch、阿里巴巴的MNN、腾讯的NCNN等。MNN和NCNN提供了对于PyTorch模型迁移的支持，但是这两个框架的接口与PyTorch不同，需要对算法进行较大的重构。相比之下，LibTorch本身是PyTorch的C++前端\footnote{考虑到PyTorch的底层是使用C++实现的，某种程度上也可以说PyTorch是在LibTorch之上封装了Python接口。}，其设计理念即是Python前端很棒，应该尽可能使用。所以，LibTorch在编写时就考虑了在设计、命名、约定和功能方面紧密模拟PyTorch。虽然两个前端之间偶尔可能存在差异，但官方保证将Python算法移植到C++的努力应该完全在于翻译语言功能，不修改功能或行为。因此，经过综合考虑，本项目最终选择了LibTorch作为PyTorch的替代。
 
 \subsection{NumPy与NumCpp}\label{subsec:numpy-numcpp}
 
-\todo{什么是NumPy？}
+NumPy\cite{harrisArrayProgrammingNumPy2020}是Python的一个很常用的科学计算库，算法中使用其进行了许多矩阵操作。严格来说，NumPy这一依赖项并非完全不可能消除，其许多功能在PyTorch/LibTorch中也有提供，剩下的一些则可以通过手动编写相关算法来完成。但是，由于存在NumCpp\cite{pilgerNumCppTemplatizedHeader2023}这一完美的替代，因此在算法重构过程中保留了NumPy的依赖，这也使得算法实现的过程更加顺畅。
 
-\todo{什么是NumCpp？}
-
-\todo{为什么选择NumCpp而不是Eigen等？（接口与NumPy更相似。）}
+NumCpp，顾名思义，是NumPy的C++实现，接口设计紧密贴合NumPy（类似LibTorch之于PyTorch）。NumCpp提供了其矩阵与LibTorch张量之间的双向转换，这使得其可以在本项目中作为NumPy的C++替代。
 
 \subsection{pytest与Catch2}\label{subsec:pytest-catch2}
 
-\todo{什么是pytest？（关于名字：pytest的官方名称即为全小写形式，即使在位于句首的情况下也是如此。）}
+pytest\footnote{pytest的官方名称即为全小写形式，即使在位于句首的情况下也是如此。}\cite{krekelPytest2023}是一个Python的测试框架。原始版本的算法并未包含单元测试，在重构过程中，为了保证不破坏算法的正确性，基于pytest编写了简单的测试用例。
 
-\todo{什么是Catch2？}
-
-\todo{为什么选择Catch2而不是Google Test、Boost Test等？（更简单，本项目的C++部分没有编写复杂的测试用例的需求。）}
+Catch2\cite{CatchorgCatch22023}是C++中的一个轻量的测试框架。在算法迁移至C++的过程中，为了保证两边的实现一致，在C++中编写了与Python中几乎相同的测试用例。由于本项目的C++部分没有编写复杂的测试用例的需求，所以没有选择Google Test、Boost Test等功能更强大但依赖也更重的测试框架。此外，本项目的Pan-Tompkins算法部分也基于Catch2进行了测试。
 
 \subsection{nlohmann::json}\label{subsec:nlohmann-json}
 
-\todo{为什么需要nlohmann::json？（Python标准库有JSON支持，C++没有，需要第三方库。）}
-
-\todo{什么是nlohmann::json，不是其他JSON库？（接口简单。虽然性能有劣势，但只是用于读取少量测试数据，速度不重要。）}
+本项目中使用了多种编程语言，为了方便不同语言中对数据的读写，数据交换格式统一为了JSON。在Python中，标准库中已经提供了JSON的支持，因此不需要额外的依赖。而在C++中，标准库中并没有提供JSON的支持，因此需要选定使用哪一个第三方JSON库。由于项目中对JSON的需求仅在测试阶段，只是用于读取少量测试数据，因此性能不是一个重要的考量因素。最终，出于接口设计简洁易用的优势，本项目选择了nlohmann::json\cite{lohmannJSONModern2022}这一JSON库作为C++中的JSON解析器。
