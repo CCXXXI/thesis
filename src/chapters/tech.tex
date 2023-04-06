@@ -98,7 +98,7 @@ BeeWare\cite{BeewareToga2023}在Chaquopy之上增加了对iOS平台的支持，�
 
 \subsection{PyTorch与LibTorch}\label{subsec:pytorch-libtorch}
 
-PyTorch\cite{PyTorch}是一个开源的Python机器学习库，也是算法中最核心的依赖项，必须找到可能的替代。
+PyTorch\cite{paszkePyTorchImperativeStyle2019}是一个开源的Python机器学习库，也是算法中最核心的依赖项，必须找到可能的替代。
 
 一个可能的选择是使用PyTorch官方推出的PyTorch Mobile。PyTorch Mobile目前尚处于Beta测试阶段，但已经被广泛验证可用，并且同时适用于Android和iOS平台。然而PyTorch Mobile为Android和iOS平台提供的接口并不相同，使得在多平台使用时需要编写两套不同的代码。由于算法在Python中的实现较为繁琐，单次迁移的工作量已经很大，因此分别针对Android和iOS平台进行两次迁移的方案的工作量难以接受。综上所述，PyTorch Mobile本身并不是一个可行的替代方案。不过，由于PyTorch Mobile在实现上是为LibTorch封装了Java和Swift接口，其作为依赖项的存在仍然为本项目提供了很大帮助，在后文介绍具体实现时会详细说明。
 
