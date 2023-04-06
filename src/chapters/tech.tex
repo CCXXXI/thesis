@@ -118,6 +118,4 @@ Catch2\cite{CatchorgCatch22023}是C++中的一个轻量的测试框架。在算�
 
 \subsection{nlohmann::json}\label{subsec:nlohmann-json}
 
-\todo{为什么需要nlohmann::json？（Python标准库有JSON支持，C++没有，需要第三方库。）}
-
-\todo{什么是nlohmann::json，不是其他JSON库？（接口简单。虽然性能有劣势，但只是用于读取少量测试数据，速度不重要。）}
+本项目中使用了多种编程语言，为了方便不同语言中对数据的读写，数据交换格式统一为了JSON。在Python中，标准库中已经提供了JSON的支持，因此不需要额外的依赖。而在C++中，标准库中并没有提供JSON的支持，因此需要选定使用哪一个第三方JSON库。由于项目中对JSON的需求仅在测试阶段，只是用于读取少量测试数据，因此性能不是一个重要的考量因素。最终，出于接口设计简洁易用的优势，本项目选择了nlohmann::json\cite{lohmannJSONModern2022}这一JSON库作为C++中的JSON解析器。
