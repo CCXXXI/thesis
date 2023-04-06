@@ -108,7 +108,7 @@ PyTorch\cite{paszkePyTorchImperativeStyle2019}是一个开源的Python机器学�
 
 NumPy\cite{harrisArrayProgrammingNumPy2020}是Python的一个很常用的科学计算库，算法中使用其进行了许多矩阵操作。严格来说，NumPy这一依赖项并非完全不可能消除，其许多功能在PyTorch/LibTorch中也有提供，剩下的一些则可以通过手动编写相关算法来完成。但是，由于存在NumCpp\cite{pilgerNumCppTemplatizedHeader2023}这一完美的替代，因此在算法重构过程中保留了NumPy的依赖，这也使得算法实现的过程更加顺畅。
 
-NumCpp，顾名思义，是NumPy的C++实现。其接口设计紧密贴合NumPy（类似LibTorch之于PyTorch），其提供了NumCpp矩阵与LibTorch张量之间的双向转换，这使得其可以在本项目中作为NumPy的C++替代。
+NumCpp，顾名思义，是NumPy的C++实现，接口设计紧密贴合NumPy（类似LibTorch之于PyTorch）。NumCpp提供了其矩阵与LibTorch张量之间的双向转换，这使得其可以在本项目中作为NumPy的C++替代。
 
 \subsection{pytest与Catch2}\label{subsec:pytest-catch2}
 
