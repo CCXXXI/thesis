@@ -82,7 +82,7 @@ PyQtDeploy\cite{RiverbankComputingIntroduction}、QPython\cite{QPythonPythonAndr
 
 Kivy\cite{KivyCrossplatformPython}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
 
-Chaquopy\cite{EasiestWayUse}提供了PyTorch的支持。尽管最高只支持1.8.1版本，但算法原本所依赖的版本甚至比这更旧，所以PyTorch的使用没有问题。但是，Chaquopy仅支持Android平台，而不支持iOS平台，所以无法完全满足本项目的需求。
+Chaquopy\cite{ChaquopyPythonSDK2023}提供了PyTorch的支持。尽管最高只支持1.8.1版本，但算法原本所依赖的版本甚至比这更旧，所以PyTorch的使用没有问题。但是，Chaquopy仅支持Android平台，而不支持iOS平台，所以无法完全满足本项目的需求。
 
 BeeWare\cite{BeewareToga2023}在Chaquopy之上增加了对iOS平台的支持，但是需要将整个应用都使用Python编写，这样就无法通过仅在少数部分调用Python来避开本小节最初提到的性能问题，因此也不是可行的方案。
 
