@@ -94,9 +94,7 @@ BeeWare\cite{WriteOnceDeploy}在Chaquopy之上增加了对iOS平台的支持，�
 
 \subsubsection{使用C++实现相关算法的方案}\label{subsubsec:python-cpp}
 
-\todo{为什么需要C++中的对应替代？（需要将Python算法迁移至C++，部分关键依赖无法消除。）}
-
-本项目的一部分工作是将已有的使用Python编写的算法迁移至C++。
+本项目最终采用的方案是将已有的使用Python编写的算法迁移至C++。使用C++编写的内容可以通过Dart FFI在移动端使用，而且C++代码具有跨平台性，这两点完全契合本项目的需要。在迁移之前对Python代码进行了大幅度精简，消去了许多非必要的依赖项，但是仍然有一些关键的依赖项无法消除，因此需要在C++中找到对应的替代。
 
 \subsection{PyTorch与LibTorch}\label{subsec:pytorch-libtorch}
 
