@@ -98,11 +98,11 @@ BeeWare\cite{WriteOnceDeploy}在Chaquopy之上增加了对iOS平台的支持，�
 
 \subsection{PyTorch与LibTorch}\label{subsec:pytorch-libtorch}
 
-\todo{什么是PyTorch？}
+PyTorch\cite{PyTorch}是一个开源的Python机器学习库，也是算法中最核心的依赖项，必须找到可能的替代。
 
-\todo{什么是LibTorch？}
+一个可能的选择是使用PyTorch官方推出的PyTorch Mobile。PyTorch Mobile目前尚处于Beta测试阶段，但已经被广泛验证可用，并且同时适用于Android和iOS平台。然而PyTorch Mobile为Android和iOS平台提供的接口并不相同，使得在多平台使用时需要编写两套不同的代码。由于算法在Python中的实现较为繁琐，单次迁移的工作量已经很大，因此分别针对Android和iOS平台进行两次迁移的方案的工作量难以接受。综上所述，PyTorch Mobile本身并不是一个可行的替代方案。不过，由于PyTorch Mobile在实现上是为LibTorch封装了Java和Swift接口，其作为依赖项的存在仍然为本项目提供了很大帮助，在后文介绍具体实现时会详细说明。
 
-\todo{为什么选择LibTorch而不是PyTorch Mobile、MNN、NCNN等？（PyTorch官方支持，接口设计高度相似，引用官方文档中相关说明。）}
+其他的替代方案包括PyTorch官方提供的LibTorch、阿里巴巴的MNN、腾讯的NCNN等。MNN和NCNN提供了对于PyTorch模型迁移的支持，但是这两个框架的接口与PyTorch不同，需要对算法进行较大的重构。相比之下，LibTorch本身是PyTorch的C++前端\footnote{考虑到PyTorch的底层是使用C++实现的，某种程度上也可以说PyTorch是在LibTorch之上封装了Python接口。}，其设计理念即是Python前端很棒，应该尽可能使用。所以，LibTorch在编写时就考虑了在设计、命名、约定和功能方面紧密模拟PyTorch。虽然两个前端之间偶尔可能存在差异，但官方保证将Python算法移植到C++的努力应该完全在于翻译语言功能，不修改功能或行为。因此，经过综合考虑，本项目最终选择了LibTorch作为PyTorch的替代。
 
 \subsection{NumPy与NumCpp}\label{subsec:numpy-numcpp}
 
