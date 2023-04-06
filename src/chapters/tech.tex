@@ -78,7 +78,7 @@ Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate�
 
 最简单的一个方案是设法在移动端直接执行Python代码。这种方式在移动应用开发中很少被使用，主要是基于时间上和空间上这两个方面的顾虑。从时间上来说，Python语言的执行效率较低，在设备性能相对较差的移动端表现得更为明显；不过本应用中人工智能算法的执行时间占比并不大，仅仅是每10分钟调用一次，一次执行数秒而已，所以这一缺点也并非不可接受。从空间上来说，将Python语言的运行环境打包进应用会导致应用的安装包体积更大；但此算法所需要的Torch模型文件本身就已有60多MB，相较之下Python的运行环境所额外占据的大小并不是很明显。因此，常见的关于性能或安装包大小的顾虑并不能构成否定本方案的充分依据。之后考虑了在移动端执行Python代码的各种方式。
 
-PyQtDeploy\cite{RiverbankComputingIntroduction}、QPython\cite{QPythonPythonAndroid}、Termux\cite{Termux}等工具可以用于在移动端执行Python代码，但未提供可供Java、Dart等语言调用的接口，因此无法在本项目中使用。
+PyQtDeploy\cite{RiverbankComputingIntroduction}、QPython\cite{QPythonPythonAndroid}、Termux\cite{TermuxApplication2023}等工具可以用于在移动端执行Python代码，但未提供可供Java、Dart等语言调用的接口，因此无法在本项目中使用。
 
 Kivy\cite{KivyCrossplatformPython}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
 
