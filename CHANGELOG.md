@@ -2,38 +2,36 @@
 
 ## [0.12.0](https://github.com/CCXXXI/thesis/compare/v0.11.0...v0.12.0) (2023-04-06)
 
-
 ### Features
 
-* **tech:** 完成 {nlohmann::json} ([8b1923f](https://github.com/CCXXXI/thesis/commit/8b1923fda3733209104f6dac2fba508438c45d90))
-* **tech:** 完成 {NumPy与NumCpp} ([e9fdbd4](https://github.com/CCXXXI/thesis/commit/e9fdbd4092d35a09dd93b90e8cf5e44bce0b9be2))
-* **tech:** 完成 {pytest与Catch2} ([91e8d3a](https://github.com/CCXXXI/thesis/commit/91e8d3ab6fbf2e3794142cbf2a32f2e978749714))
-* **tech:** 完成 {PyTorch与LibTorch} ([55b9e61](https://github.com/CCXXXI/thesis/commit/55b9e6178936d195191795f3032439a5f8f33523))
-* **tech:** 完成 {使用C++实现相关算法的方案} 的开头 ([2ef903b](https://github.com/CCXXXI/thesis/commit/2ef903b9679558b3cb2dc8047efbb92dfb6fa2fe))
-* **tech:** 完成 {使用Dart实现相关算法的方案} ([38841b0](https://github.com/CCXXXI/thesis/commit/38841b0b5ad7c02b29daf445957fc62ad337815e))
-
+- **tech:** 完成 {nlohmann::json} ([8b1923f](https://github.com/CCXXXI/thesis/commit/8b1923fda3733209104f6dac2fba508438c45d90))
+- **tech:** 完成 {NumPy 与 NumCpp} ([e9fdbd4](https://github.com/CCXXXI/thesis/commit/e9fdbd4092d35a09dd93b90e8cf5e44bce0b9be2))
+- **tech:** 完成 {pytest 与 Catch2} ([91e8d3a](https://github.com/CCXXXI/thesis/commit/91e8d3ab6fbf2e3794142cbf2a32f2e978749714))
+- **tech:** 完成 {PyTorch 与 LibTorch} ([55b9e61](https://github.com/CCXXXI/thesis/commit/55b9e6178936d195191795f3032439a5f8f33523))
+- **tech:** 完成 {使用 C++实现相关算法的方案} 的开头 ([2ef903b](https://github.com/CCXXXI/thesis/commit/2ef903b9679558b3cb2dc8047efbb92dfb6fa2fe))
+- **tech:** 完成 {使用 Dart 实现相关算法的方案} ([38841b0](https://github.com/CCXXXI/thesis/commit/38841b0b5ad7c02b29daf445957fc62ad337815e))
 
 ### Bug Fixes
 
-* **tech:** add spaces around url ([269d100](https://github.com/CCXXXI/thesis/commit/269d10067411b4c7fb76a89af9fc7a2e2d610482))
-* **tech:** update BeeWare cite ([6302511](https://github.com/CCXXXI/thesis/commit/6302511e6a4de688cfb66ef533f86b52aaa4f409))
-* **tech:** update Chaquopy cite ([b88d6ae](https://github.com/CCXXXI/thesis/commit/b88d6ae7e1641c3b1f2d774c46130c838697e817))
-* **tech:** update Dart cite ([a7b4ec4](https://github.com/CCXXXI/thesis/commit/a7b4ec4b70046c59359e1478ece3ab04ba016fc5))
-* **tech:** update Flutter cite ([e48798a](https://github.com/CCXXXI/thesis/commit/e48798a14f931bf01020929f314def1c74b62a30))
-* **tech:** update Ionic cite ([9ed36b6](https://github.com/CCXXXI/thesis/commit/9ed36b6f46d9e03908c899691d8ed70f19b1ba46))
-* **tech:** update Kivy cite ([99ae3f2](https://github.com/CCXXXI/thesis/commit/99ae3f2fd316df3e564c068e21c2ddc13753d1e0))
-* **tech:** update NumPy cite ([4626bf9](https://github.com/CCXXXI/thesis/commit/4626bf91433a9d4277d20ca5ee40d4f3e0115762))
-* **tech:** update PyQtDeploy cite ([402248d](https://github.com/CCXXXI/thesis/commit/402248d174ee850765ec4def24e2dc34405e55b4))
-* **tech:** update PyQtDeploy cite again ([f3407a4](https://github.com/CCXXXI/thesis/commit/f3407a4d662556e2258dd966657abaa9eb00f545))
-* **tech:** update PyTorch cite ([91994d7](https://github.com/CCXXXI/thesis/commit/91994d72055f14eb2340b0b466d7d5607943358e))
-* **tech:** update PyTorch cite again ([60319b3](https://github.com/CCXXXI/thesis/commit/60319b3102fd6b00a210547e9686f1468ffaba26))
-* **tech:** update QPython2023 cite ([6df6696](https://github.com/CCXXXI/thesis/commit/6df66961809cc45e0d07abf6c232916d53753937))
-* **tech:** update RN cite ([9b59b47](https://github.com/CCXXXI/thesis/commit/9b59b474935a8c785c7876977af50a7cdcac1668))
-* **tech:** update Termux cite ([41b1f21](https://github.com/CCXXXI/thesis/commit/41b1f21e53a1bd61f981df60798957faab4df5b4))
-* **tech:** update xamarin cite ([a4f07f5](https://github.com/CCXXXI/thesis/commit/a4f07f5ef0c14e9806d743b69573a0fa58e6f576))
-* **tech:** 微调表述 & 移除完成的 todos ([c4d6090](https://github.com/CCXXXI/thesis/commit/c4d60906bf846f67b140c86c19cc16eb0f07aa72))
-* **tech:** 提供 pub.dev 链接 ([e271978](https://github.com/CCXXXI/thesis/commit/e27197874a128246051292d780a6f401a879327c))
-* **tech:** 调整重复用词 ([b95f55b](https://github.com/CCXXXI/thesis/commit/b95f55b09d7436e162f0649e4fde979f670a9505))
+- **tech:** add spaces around url ([269d100](https://github.com/CCXXXI/thesis/commit/269d10067411b4c7fb76a89af9fc7a2e2d610482))
+- **tech:** update BeeWare cite ([6302511](https://github.com/CCXXXI/thesis/commit/6302511e6a4de688cfb66ef533f86b52aaa4f409))
+- **tech:** update Chaquopy cite ([b88d6ae](https://github.com/CCXXXI/thesis/commit/b88d6ae7e1641c3b1f2d774c46130c838697e817))
+- **tech:** update Dart cite ([a7b4ec4](https://github.com/CCXXXI/thesis/commit/a7b4ec4b70046c59359e1478ece3ab04ba016fc5))
+- **tech:** update Flutter cite ([e48798a](https://github.com/CCXXXI/thesis/commit/e48798a14f931bf01020929f314def1c74b62a30))
+- **tech:** update Ionic cite ([9ed36b6](https://github.com/CCXXXI/thesis/commit/9ed36b6f46d9e03908c899691d8ed70f19b1ba46))
+- **tech:** update Kivy cite ([99ae3f2](https://github.com/CCXXXI/thesis/commit/99ae3f2fd316df3e564c068e21c2ddc13753d1e0))
+- **tech:** update NumPy cite ([4626bf9](https://github.com/CCXXXI/thesis/commit/4626bf91433a9d4277d20ca5ee40d4f3e0115762))
+- **tech:** update PyQtDeploy cite ([402248d](https://github.com/CCXXXI/thesis/commit/402248d174ee850765ec4def24e2dc34405e55b4))
+- **tech:** update PyQtDeploy cite again ([f3407a4](https://github.com/CCXXXI/thesis/commit/f3407a4d662556e2258dd966657abaa9eb00f545))
+- **tech:** update PyTorch cite ([91994d7](https://github.com/CCXXXI/thesis/commit/91994d72055f14eb2340b0b466d7d5607943358e))
+- **tech:** update PyTorch cite again ([60319b3](https://github.com/CCXXXI/thesis/commit/60319b3102fd6b00a210547e9686f1468ffaba26))
+- **tech:** update QPython2023 cite ([6df6696](https://github.com/CCXXXI/thesis/commit/6df66961809cc45e0d07abf6c232916d53753937))
+- **tech:** update RN cite ([9b59b47](https://github.com/CCXXXI/thesis/commit/9b59b474935a8c785c7876977af50a7cdcac1668))
+- **tech:** update Termux cite ([41b1f21](https://github.com/CCXXXI/thesis/commit/41b1f21e53a1bd61f981df60798957faab4df5b4))
+- **tech:** update xamarin cite ([a4f07f5](https://github.com/CCXXXI/thesis/commit/a4f07f5ef0c14e9806d743b69573a0fa58e6f576))
+- **tech:** 微调表述 & 移除完成的 todos ([c4d6090](https://github.com/CCXXXI/thesis/commit/c4d60906bf846f67b140c86c19cc16eb0f07aa72))
+- **tech:** 提供 pub.dev 链接 ([e271978](https://github.com/CCXXXI/thesis/commit/e27197874a128246051292d780a6f401a879327c))
+- **tech:** 调整重复用词 ([b95f55b](https://github.com/CCXXXI/thesis/commit/b95f55b09d7436e162f0649e4fde979f670a9505))
 
 ## [0.11.0](https://github.com/CCXXXI/thesis/compare/v0.10.4...v0.11.0) (2023-04-05)
 
