@@ -112,11 +112,9 @@ NumCpp，顾名思义，是NumPy的C++实现，接口设计紧密贴合NumPy（�
 
 \subsection{pytest与Catch2}\label{subsec:pytest-catch2}
 
-\todo{什么是pytest？（关于名字：pytest的官方名称即为全小写形式，即使在位于句首的情况下也是如此。）}
+pytest\footnote{pytest的官方名称即为全小写形式，即使在位于句首的情况下也是如此。}\cite{krekelPytest2023}是一个Python的测试框架。原始版本的算法并未包含单元测试，在重构过程中，为了保证不破坏算法的正确性，基于pytest编写了简单的测试用例。
 
-\todo{什么是Catch2？}
-
-\todo{为什么选择Catch2而不是Google Test、Boost Test等？（更简单，本项目的C++部分没有编写复杂的测试用例的需求。）}
+Catch2\cite{CatchorgCatch22023}是C++中的一个轻量的测试框架。在算法迁移至C++的过程中，为了保证两边的实现一致，在C++中编写了与Python中几乎相同的测试用例。由于本项目的C++部分没有编写复杂的测试用例的需求，所以没有选择Google Test、Boost Test等功能更强大但依赖也更重的测试框架。此外，本项目的Pan-Tompkins算法部分也基于Catch2进行了测试。
 
 \subsection{nlohmann::json}\label{subsec:nlohmann-json}
 
