@@ -80,7 +80,7 @@ Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate�
 
 PyQtDeploy\cite{RiverbankComputingIntroduction}、QPython\cite{QPython2023}、Termux\cite{TermuxApplication2023}等工具可以用于在移动端执行Python代码，但未提供可供Java、Dart等语言调用的接口，因此无法在本项目中使用。
 
-Kivy\cite{KivyCrossplatformPython}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
+Kivy\cite{Kivy2023}提供了Python与Java、Objective-C的交互，但是缺少对于PyTorch的支持，而这一依赖难以替代，所以Kivy也无法在本项目中使用。
 
 Chaquopy\cite{ChaquopyPythonSDK2023}提供了PyTorch的支持。尽管最高只支持1.8.1版本，但算法原本所依赖的版本甚至比这更旧，所以PyTorch的使用没有问题。但是，Chaquopy仅支持Android平台，而不支持iOS平台，所以无法完全满足本项目的需求。
 
