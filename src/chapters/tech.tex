@@ -90,7 +90,7 @@ BeeWare\cite{WriteOnceDeploy}在Chaquopy之上增加了对iOS平台的支持，�
 
 \subsubsection{使用Dart实现相关算法的方案}\label{subsubsec:python-dart}
 
-\todo{}
+由于应用主体使用Dart编写，下一个考虑的方案是使用Dart实现相关算法。社区已经编写了PyTorch Mobile、PyTorch Lite等包来帮助将PyTorch模型迁移至Flutter框架，但这些包都仅支持对模型的直接调用，而本项目所使用的算法除了直接调用模型的部分之外还包含一些额外的处理步骤，这些步骤在缺少相关支持的Dart中较难实现，因此这一方案也不可行。
 
 \subsubsection{使用C++实现相关算法的方案}\label{subsubsec:python-cpp}
 
