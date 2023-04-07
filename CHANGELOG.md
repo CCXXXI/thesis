@@ -2,45 +2,41 @@
 
 ## [0.13.0](https://github.com/CCXXXI/thesis/compare/v0.12.0...v0.13.0) (2023-04-07)
 
-
 ### Features
 
-* **design:** 完成 {Git子模块简介} ([3e41e51](https://github.com/CCXXXI/thesis/commit/3e41e519b9bb248b5ce7a9dba5eb4f097b7594b2))
-* **design:** 完成 {应用的界面设计规范} ([c823d35](https://github.com/CCXXXI/thesis/commit/c823d35e279958423e697ba2041cd850a71cd7b6))
-* **design:** 完成 {应用的界面设计规范} 的文字部分 ([5364d5c](https://github.com/CCXXXI/thesis/commit/5364d5cb2a696dcd962fa7d63e3028646bae4301))
-* **design:** 完成 {项目包含的Git仓库} ([c67617a](https://github.com/CCXXXI/thesis/commit/c67617aa0e31bf589262723e348aacf89a6dbc7c))
-* **design:** 添加 Git 仓库图 ([fabe9ba](https://github.com/CCXXXI/thesis/commit/fabe9baf6fcc91019911ba0a3ad7d64e83cd3e08))
-* **design:** 添加大量应用截图 ([add17d7](https://github.com/CCXXXI/thesis/commit/add17d74107ecd0b79282bbae8daa73847225b48))
-* **req:** 完成 {应用的兼容性需求分析} ([a084591](https://github.com/CCXXXI/thesis/commit/a084591528c4a902a086689e767b900ff3b92515))
-* **req:** 完成 {应用的性能需求分析} ([e3a1b81](https://github.com/CCXXXI/thesis/commit/e3a1b8121afa8cd8453d2d25aa534d08ad63e257))
-* **req:** 完成 {易用性} ([5848d92](https://github.com/CCXXXI/thesis/commit/5848d922214b9619fd24f1ae6ba4ea38ca8f3015))
-* **req:** 添加 {应用的无障碍需求分析} ([2c2f587](https://github.com/CCXXXI/thesis/commit/2c2f5875e1ced6a44cfe0fc163e608665cf0abd6))
-
+- **design:** 完成 {Git 子模块简介} ([3e41e51](https://github.com/CCXXXI/thesis/commit/3e41e519b9bb248b5ce7a9dba5eb4f097b7594b2))
+- **design:** 完成 {应用的界面设计规范} ([c823d35](https://github.com/CCXXXI/thesis/commit/c823d35e279958423e697ba2041cd850a71cd7b6))
+- **design:** 完成 {应用的界面设计规范} 的文字部分 ([5364d5c](https://github.com/CCXXXI/thesis/commit/5364d5cb2a696dcd962fa7d63e3028646bae4301))
+- **design:** 完成 {项目包含的 Git 仓库} ([c67617a](https://github.com/CCXXXI/thesis/commit/c67617aa0e31bf589262723e348aacf89a6dbc7c))
+- **design:** 添加 Git 仓库图 ([fabe9ba](https://github.com/CCXXXI/thesis/commit/fabe9baf6fcc91019911ba0a3ad7d64e83cd3e08))
+- **design:** 添加大量应用截图 ([add17d7](https://github.com/CCXXXI/thesis/commit/add17d74107ecd0b79282bbae8daa73847225b48))
+- **req:** 完成 {应用的兼容性需求分析} ([a084591](https://github.com/CCXXXI/thesis/commit/a084591528c4a902a086689e767b900ff3b92515))
+- **req:** 完成 {应用的性能需求分析} ([e3a1b81](https://github.com/CCXXXI/thesis/commit/e3a1b8121afa8cd8453d2d25aa534d08ad63e257))
+- **req:** 完成 {易用性} ([5848d92](https://github.com/CCXXXI/thesis/commit/5848d922214b9619fd24f1ae6ba4ea38ca8f3015))
+- **req:** 添加 {应用的无障碍需求分析} ([2c2f587](https://github.com/CCXXXI/thesis/commit/2c2f5875e1ced6a44cfe0fc163e608665cf0abd6))
 
 ### Bug Fixes
 
-* **design:** {心电图纸} -&gt; {心电图纸介绍} ([47a31ba](https://github.com/CCXXXI/thesis/commit/47a31baa44ee69a24926034575f2445cf3df5b95))
-* **design:** 为了排版多凑几句话 ([85a1d8c](https://github.com/CCXXXI/thesis/commit/85a1d8c48521849a3b76e407c3b8f706ca90d684))
-* **design:** 完善 {Git子模块介绍} ([f8104d4](https://github.com/CCXXXI/thesis/commit/f8104d4f181f25038423845b8133165e0d9f15b7))
-* **design:** 插图更大一些 ([429ef9f](https://github.com/CCXXXI/thesis/commit/429ef9f53fc4ef7d50248cd7cae82b8991409dfc))
-* **design:** 更新 {Git子模块介绍} ([177a606](https://github.com/CCXXXI/thesis/commit/177a6061cb2a82ee9d366d619decf573b45b95c4))
-* **design:** 更新 {项目包含的Git仓库} ([69a696f](https://github.com/CCXXXI/thesis/commit/69a696fa4e22f6808c345e1369458f42c8379948))
-* **design:** 页面 -&gt; 界面 ([e86893e](https://github.com/CCXXXI/thesis/commit/e86893eb7fe7948b3eec192e82a9e7c4bfa1d0b0))
-* update demos figure ([b0d1574](https://github.com/CCXXXI/thesis/commit/b0d1574ee5c28e3e210380789c921588307f2e94))
-
+- **design:** {心电图纸} -&gt; {心电图纸介绍} ([47a31ba](https://github.com/CCXXXI/thesis/commit/47a31baa44ee69a24926034575f2445cf3df5b95))
+- **design:** 为了排版多凑几句话 ([85a1d8c](https://github.com/CCXXXI/thesis/commit/85a1d8c48521849a3b76e407c3b8f706ca90d684))
+- **design:** 完善 {Git 子模块介绍} ([f8104d4](https://github.com/CCXXXI/thesis/commit/f8104d4f181f25038423845b8133165e0d9f15b7))
+- **design:** 插图更大一些 ([429ef9f](https://github.com/CCXXXI/thesis/commit/429ef9f53fc4ef7d50248cd7cae82b8991409dfc))
+- **design:** 更新 {Git 子模块介绍} ([177a606](https://github.com/CCXXXI/thesis/commit/177a6061cb2a82ee9d366d619decf573b45b95c4))
+- **design:** 更新 {项目包含的 Git 仓库} ([69a696f](https://github.com/CCXXXI/thesis/commit/69a696fa4e22f6808c345e1369458f42c8379948))
+- **design:** 页面 -&gt; 界面 ([e86893e](https://github.com/CCXXXI/thesis/commit/e86893eb7fe7948b3eec192e82a9e7c4bfa1d0b0))
+- update demos figure ([b0d1574](https://github.com/CCXXXI/thesis/commit/b0d1574ee5c28e3e210380789c921588307f2e94))
 
 ### Miscellaneous Chores
 
-* export png image ([45ee4b9](https://github.com/CCXXXI/thesis/commit/45ee4b91574e534b0c227c7e053e44186d3d0efc))
-* rename assets ([e4daf51](https://github.com/CCXXXI/thesis/commit/e4daf51ba1169723ae64d9c7efb2cd8c1797d9c3))
-* save iOS image ([868b60f](https://github.com/CCXXXI/thesis/commit/868b60f0be1748ca75877f97ac0dcb612071cfd4))
-
+- export png image ([45ee4b9](https://github.com/CCXXXI/thesis/commit/45ee4b91574e534b0c227c7e053e44186d3d0efc))
+- rename assets ([e4daf51](https://github.com/CCXXXI/thesis/commit/e4daf51ba1169723ae64d9c7efb2cd8c1797d9c3))
+- save iOS image ([868b60f](https://github.com/CCXXXI/thesis/commit/868b60f0be1748ca75877f97ac0dcb612071cfd4))
 
 ### Documentation
 
-* add more todos ([01d71eb](https://github.com/CCXXXI/thesis/commit/01d71ebe36a66a930211314d982b35d5c9dbb563))
-* **req:** update todo ([d749ce0](https://github.com/CCXXXI/thesis/commit/d749ce02a5e9a4ccdb4ffb95ca5906909558c1e5))
-* **req:** update todo again ([d64fb5c](https://github.com/CCXXXI/thesis/commit/d64fb5cb55365a13e77e9bfba3486292f53cdccd))
+- add more todos ([01d71eb](https://github.com/CCXXXI/thesis/commit/01d71ebe36a66a930211314d982b35d5c9dbb563))
+- **req:** update todo ([d749ce0](https://github.com/CCXXXI/thesis/commit/d749ce02a5e9a4ccdb4ffb95ca5906909558c1e5))
+- **req:** update todo again ([d64fb5c](https://github.com/CCXXXI/thesis/commit/d64fb5cb55365a13e77e9bfba3486292f53cdccd))
 
 ## [0.12.0](https://github.com/CCXXXI/thesis/compare/v0.11.0...v0.12.0) (2023-04-06)
 
