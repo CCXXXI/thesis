@@ -82,52 +82,126 @@ Python版本的算法并不直接被应用调用，因此该仓库不是其他�
 
 \subsection{实时心电界面的设计}\label{subsec:real-time-design}
 
-\todo{把下面这些图插到合适的位置。}
+实时心电界面的整体设计如图~\ref{fig:real-time} 所示。
 
-\includegraphics[width=.3\textwidth]{../assets/analytics-dialog}
-\includegraphics[width=.3\textwidth]{../assets/analytics-loading}
-\includegraphics[width=.3\textwidth]{../assets/analytics}
-\includegraphics[width=.3\textwidth]{../assets/device-connected}
-\includegraphics[width=.3\textwidth]{../assets/device-na}
-\includegraphics[width=.3\textwidth]{../assets/device-new}
-\includegraphics[width=.3\textwidth]{../assets/history-dialog-clock}
-\includegraphics[width=.3\textwidth]{../assets/history-dialog-field}
-\includegraphics[width=.3\textwidth]{../assets/history-loading}
-\includegraphics[width=.3\textwidth]{../assets/history-na}
-\includegraphics[width=.3\textwidth]{../assets/history}
-\includegraphics[width=.3\textwidth]{../assets/label-details}
-\includegraphics[width=.3\textwidth]{../assets/license}
-\includegraphics[width=.3\textwidth]{../assets/me}
-\includegraphics[width=.3\textwidth]{../assets/real-time-landscape}
-\includegraphics[width=.3\textwidth]{../assets/real-time-learning}
-\includegraphics[width=.3\textwidth]{../assets/real-time-na}
-\includegraphics[width=.3\textwidth]{../assets/real-time}
+\begin{figure}[h]
+    \subcaptionbox{心率检测中}{\includegraphics[width=.33\textwidth]{../assets/real-time-learning}}
+    \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/real-time}}
+    \subcaptionbox{设备未连接}{\includegraphics[width=.33\textwidth]{../assets/real-time-na}}
+    \bicaption{实时心电界面的设计}{Design of the real-time ECG page}
+    \label{fig:real-time}
+\end{figure}
+
+\todo{实时心电界面的设计}
+
+\subsubsection{横屏状态下的心电图设计}\label{subsubsec:real-time-landscape}
+
+\todo{横屏状态下的心电图设计}
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{../assets/real-time-landscape}
+    \bicaption{横屏状态下的心电图设计}{Design of the ECG in landscape mode}
+    \label{fig:real-time-landscape}
+\end{figure}
 
 \subsubsection{心电图纸介绍}\label{subsubsec:ecg-paper}
 
 % 心电图纸包含红色的坐标线，每1mm一小格（用细线分隔），每5mm一大格（用粗线分隔）。横轴一小格表示40ms，一大格表示200ms。纵轴一小格表示0.1mV，一大格表示0.5mV。
 
-\todo{实时心电界面的设计}
+\todo{心电图纸介绍}
 
 \subsection{历史心电界面的设计}\label{subsec:history-design}
+
+历史心电界面的整体设计如图~\ref{fig:history} 所示。
+
+\begin{figure}[h]
+    \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/history-loading}}
+    \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/history}}
+    \subcaptionbox{无数据}{\includegraphics[width=.33\textwidth]{../assets/history-na}}
+    \bicaption{历史心电界面的设计}{Design of the history ECG page}
+    \label{fig:history}
+\end{figure}
+
+\subsubsection{时间选择器}\label{subsubsec:history-time-picker}
+
+\todo{时间选择器}
+
+\begin{figure}[h]
+    \centering
+    \subcaptionbox{表盘模式}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-clock}}
+    \subcaptionbox{数字模式}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-field}}
+    \bicaption{历史心电时间选择器的设计}{Design of the history ECG time picker}
+    \label{fig:history-time-picker}
+\end{figure}
 
 \todo{历史心电界面的设计}
 
 \subsection{分析报告界面的设计}\label{subsec:analytics-design}
 
+分析报告界面的整体设计如图~\ref{fig:analytics} 所示。
+
+\begin{figure}[h]
+    \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/analytics-loading}}
+    \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/analytics}}
+    \subcaptionbox{时间范围选择}{\includegraphics[width=.33\textwidth]{../assets/analytics-dialog}}
+    \bicaption{分析报告界面的设计}{Design of the analytics page}
+    \label{fig:analytics}
+\end{figure}
+
 \todo{分析报告界面的设计}
+
+\subsubsection{心律类型详情界面的设计}\label{subsubsec:label-details}
+
+\todo{心律类型详情界面的设计}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.33\textwidth]{../assets/label-details}
+    \bicaption{心律类型详情界面的设计}{Design of the heart rhythm details page}
+    \label{fig:label-details}
+\end{figure}
 
 \subsection{设备管理界面的设计}\label{subsec:device-design}
 
+设备管理界面的整体设计如图~\ref{fig:device} 所示。
+
+\begin{figure}[h]
+    \subcaptionbox{已连接}{\includegraphics[width=.33\textwidth]{../assets/device-connected}}
+    \subcaptionbox{连接新设备}{\includegraphics[width=.33\textwidth]{../assets/device-new}}
+    \subcaptionbox{无可用设备}{\includegraphics[width=.33\textwidth]{../assets/device-na}}
+    \bicaption{分析报告界面的设计}{Design of the analytics page}
+    \label{fig:device}
+\end{figure}
+
 \todo{设备管理界面的设计}
 
-\subsection{我的界面的设计}\label{subsec:me-design}
+\subsection{其他界面的设计}\label{subsec:other-design}
+
+应用中有一些用户不常使用，但仍然应该提供的功能，相关界面的设计如图~\ref{fig:other} 所示。
+
+\begin{figure}[h]
+    \subcaptionbox{我的}{\includegraphics[width=.33\textwidth]{../assets/me}}
+    \subcaptionbox{设置}{\includegraphics[width=.33\textwidth]{../assets/settings}}
+    \subcaptionbox{许可}{\includegraphics[width=.33\textwidth]{../assets/license}}
+    \bicaption{其他界面的设计}{Design of the other pages}
+    \label{fig:other}
+\end{figure}
+
+\subsubsection{我的界面的设计}\label{subsubsec:me-design}
 
 \todo{我的界面的设计}
 
-\subsection{应用设置界面的设计}\label{subsec:settings-design}
+\subsubsection{应用设置界面的设计}\label{subsubsec:settings-design}
 
 \todo{应用设置界面的设计}
+
+\subsubsection{许可界面的设计}\label{subsubsec:license-design}
+
+\todo{许可界面的设计}
+
+\subsection{界面过渡动画的设计}\label{subsec:transition-design}
+
+\todo{界面过渡动画的设计}
 
 
 \section{应用的数据库设计}\label{sec:db-design}
