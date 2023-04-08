@@ -16,7 +16,7 @@ Git子模块（submodule）允许将一个Git仓库作为另一个Git仓库的�
 
 本项目在整体架构上一共由7个Git仓库组成，这些仓库的名称以及仓库之间的子模块关系如图~\ref{fig:repositories}所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \includegraphics[width=\textwidth]{../assets/repositories.drawio}
     \bicaption{项目包含的Git仓库}{Git repositories of the project}
     \label{fig:repositories}
@@ -71,7 +71,7 @@ Python版本的算法并不直接被应用调用，因此该仓库不是其他�
 
 尽管Material 3按照Google的设计是可以在任何平台（包括iOS）上使用的，但从事实上来说，iOS应用确实较少使用Material风格的设计，而较多按照苹果的推荐遵循Cupertino\footnote{苹果官方并未给自己的设计规范进行像Material这样的明确命名，Cupertino这个名字是Flutter在其文档中使用的，可能是基于苹果总部位于美国加利福尼亚州丘珀蒂诺（Cupertino）市的事实。}设计。为了符合iOS平台的用户习惯，本应用在iOS平台上将部分UI组件替换为了iOS应用常用的Cupertino风格的组件。由于Cupertino并未像Material一样提供全平台可用的设计，所以应用的设计仍然以Material为主，在Android平台上完全使用Material 3风格的设计，而在iOS平台上则使用Material 3风格与Cupertino风格的混合设计，如图~\ref{fig:android-ios} 所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \subcaptionbox{Android}{\includegraphics[height=17cm]{../assets/settings}}
     \subcaptionbox{iOS}{\includegraphics[height=17cm]{../assets/ios-settings}}
     \bicaption{应用在Android和iOS平台上的界面设计对比}{Comparison of the app's UI design on Android and iOS}
@@ -84,7 +84,7 @@ Python版本的算法并不直接被应用调用，因此该仓库不是其他�
 
 实时心电界面的整体设计如图~\ref{fig:real-time} 所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \subcaptionbox{心率检测中}{\includegraphics[width=.33\textwidth]{../assets/real-time-learning}}
     \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/real-time}}
     \subcaptionbox{设备未连接}{\includegraphics[width=.33\textwidth]{../assets/real-time-na}}
@@ -130,7 +130,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 \todo{没写完}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \subcaptionbox{轮廓}{\includegraphics[width=.15\textwidth]{../assets/icon-outlined}}
     \subcaptionbox{圆润}{\includegraphics[width=.15\textwidth]{../assets/icon-rounded}}
@@ -145,7 +145,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 历史心电界面的整体设计如图~\ref{fig:history} 所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/history-loading}}
     \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/history}}
     \subcaptionbox{无数据}{\includegraphics[width=.33\textwidth]{../assets/history-na}}
@@ -157,7 +157,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 \todo{时间选择器}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \subcaptionbox{表盘模式}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-clock}}
     \subcaptionbox{数字模式}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-field}}
@@ -171,7 +171,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 分析报告界面的整体设计如图~\ref{fig:analytics} 所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/analytics-loading}}
     \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/analytics}}
     \subcaptionbox{时间范围选择}{\includegraphics[width=.33\textwidth]{../assets/analytics-dialog}}
@@ -185,7 +185,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 \todo{心律类型详情界面的设计}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=.33\textwidth]{../assets/label-details}
     \bicaption{心律类型详情界面的设计}{Design of the heart rhythm details page}
@@ -196,7 +196,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 设备管理界面的整体设计如图~\ref{fig:device} 所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \subcaptionbox{已连接}{\includegraphics[width=.33\textwidth]{../assets/device-connected}}
     \subcaptionbox{连接新设备}{\includegraphics[width=.33\textwidth]{../assets/device-new}}
     \subcaptionbox{无可用设备}{\includegraphics[width=.33\textwidth]{../assets/device-na}}
@@ -210,7 +210,7 @@ Material规范对于图标的设计与使用有一些相关要求，本应用为
 
 应用中有一些用户不常使用，但仍然应该提供的功能，相关界面的设计如图~\ref{fig:other} 所示。
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \subcaptionbox{我的}{\includegraphics[width=.33\textwidth]{../assets/me}}
     \subcaptionbox{设置}{\includegraphics[width=.33\textwidth]{../assets/settings}}
     \subcaptionbox{许可}{\includegraphics[width=.33\textwidth]{../assets/license}}
