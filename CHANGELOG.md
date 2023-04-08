@@ -2,58 +2,53 @@
 
 ## [0.14.0](https://github.com/CCXXXI/thesis/compare/v0.13.0...v0.14.0) (2023-04-08)
 
-
 ### Features
 
-* **conc:** 更多展望 ([c471d5c](https://github.com/CCXXXI/thesis/commit/c471d5c0dfd6e836893a1569859572d98285f44a))
-* **design:** {分析报告界面的设计} 小节划分 ([8f75553](https://github.com/CCXXXI/thesis/commit/8f7555396c9390f68034d092092cc03baf9200d9))
-* **design:** {历史心电界面的设计} 添加子节 ([ea40cde](https://github.com/CCXXXI/thesis/commit/ea40cde2ab03ab01e90c4a75fc3452a33604ed5b))
-* **design:** 增加历史心电特殊状态的说明 ([2189350](https://github.com/CCXXXI/thesis/commit/218935077d35e6f7921b731a722bf73e409f32eb))
-* **design:** 完成 {Isar数据库介绍} ([fc9d724](https://github.com/CCXXXI/thesis/commit/fc9d724fdca1468ec39a1c7efe08910939cce798))
-* **design:** 完成 {Isar数据库的设计} ([7a5d7c1](https://github.com/CCXXXI/thesis/commit/7a5d7c100dc64a20dbe60d0c4fa1ed0a4487ac35))
-* **design:** 完成 {SharedPreferences数据库的设计} ([026bd85](https://github.com/CCXXXI/thesis/commit/026bd8573a6878a61c0ed9871a97bca8913dca20))
-* **design:** 完成 {其他功能的设计} ([3ec8dbb](https://github.com/CCXXXI/thesis/commit/3ec8dbbebaf26bde832289f2f95f7a4a83d19421))
-* **design:** 完成 {分析报告展示部分的设计} ([522658e](https://github.com/CCXXXI/thesis/commit/522658e134e8c042f908e83a3a7ee824c61af173))
-* **design:** 完成 {历史心电界面的设计} ([ee46bd4](https://github.com/CCXXXI/thesis/commit/ee46bd482be61d289000605f41e6e5d827b22174))
-* **design:** 完成 {应用中图标的设计} ([ad9d998](https://github.com/CCXXXI/thesis/commit/ad9d9988ceb231008a6a5114b4f9c501e4c3a7fb))
-* **design:** 完成 {心律类型详情界面的设计} ([4ca23b1](https://github.com/CCXXXI/thesis/commit/4ca23b169b0e041baca8fc7fa4a0ebe2274e4b83))
-* **design:** 完成 {心率部分的设计} ([456c573](https://github.com/CCXXXI/thesis/commit/456c573272ad545319ec79267c73fcae1237f8aa))
-* **design:** 完成 {心电图部分的设计} ([4b4c93d](https://github.com/CCXXXI/thesis/commit/4b4c93df9f4d64b4c12f64c91ab51e58c7d4661c))
-* **design:** 完成 {时间范围选择器部分的设计} ([bd0fb56](https://github.com/CCXXXI/thesis/commit/bd0fb56b1a66046dc0b5344c4bec1be6ac2ba7de))
-* **design:** 完成 {时间选择器部分的设计} ([5a6c8f3](https://github.com/CCXXXI/thesis/commit/5a6c8f335e431ea0381fbd985f9d44864a37cc4c))
-* **design:** 完成 {设备未连接状态的设计} ([e480eb7](https://github.com/CCXXXI/thesis/commit/e480eb777bda48e603e01debaa565a9e2ea3cf7f))
-* **design:** 完成 {设备管理界面的设计} ([cbf7b43](https://github.com/CCXXXI/thesis/commit/cbf7b43ef9971e93ccefe02f17243f4d23dcec7f))
-* **design:** 完成历史心电的 {心电图部分的设计} ([f2d0d5a](https://github.com/CCXXXI/thesis/commit/f2d0d5a74a968e879002237ae9beae009e8c43fd))
-* **design:** 整理插图 ([a8f71f3](https://github.com/CCXXXI/thesis/commit/a8f71f381cbd4df5b0ce11ae88157b025c68a379))
-* **design:** 说明历史心电的图标选择理由 ([f95ed60](https://github.com/CCXXXI/thesis/commit/f95ed6015c3bee35525d3307d9a7ecf25beaa276))
-
+- **conc:** 更多展望 ([c471d5c](https://github.com/CCXXXI/thesis/commit/c471d5c0dfd6e836893a1569859572d98285f44a))
+- **design:** {分析报告界面的设计} 小节划分 ([8f75553](https://github.com/CCXXXI/thesis/commit/8f7555396c9390f68034d092092cc03baf9200d9))
+- **design:** {历史心电界面的设计} 添加子节 ([ea40cde](https://github.com/CCXXXI/thesis/commit/ea40cde2ab03ab01e90c4a75fc3452a33604ed5b))
+- **design:** 增加历史心电特殊状态的说明 ([2189350](https://github.com/CCXXXI/thesis/commit/218935077d35e6f7921b731a722bf73e409f32eb))
+- **design:** 完成 {Isar 数据库介绍} ([fc9d724](https://github.com/CCXXXI/thesis/commit/fc9d724fdca1468ec39a1c7efe08910939cce798))
+- **design:** 完成 {Isar 数据库的设计} ([7a5d7c1](https://github.com/CCXXXI/thesis/commit/7a5d7c100dc64a20dbe60d0c4fa1ed0a4487ac35))
+- **design:** 完成 {SharedPreferences 数据库的设计} ([026bd85](https://github.com/CCXXXI/thesis/commit/026bd8573a6878a61c0ed9871a97bca8913dca20))
+- **design:** 完成 {其他功能的设计} ([3ec8dbb](https://github.com/CCXXXI/thesis/commit/3ec8dbbebaf26bde832289f2f95f7a4a83d19421))
+- **design:** 完成 {分析报告展示部分的设计} ([522658e](https://github.com/CCXXXI/thesis/commit/522658e134e8c042f908e83a3a7ee824c61af173))
+- **design:** 完成 {历史心电界面的设计} ([ee46bd4](https://github.com/CCXXXI/thesis/commit/ee46bd482be61d289000605f41e6e5d827b22174))
+- **design:** 完成 {应用中图标的设计} ([ad9d998](https://github.com/CCXXXI/thesis/commit/ad9d9988ceb231008a6a5114b4f9c501e4c3a7fb))
+- **design:** 完成 {心律类型详情界面的设计} ([4ca23b1](https://github.com/CCXXXI/thesis/commit/4ca23b169b0e041baca8fc7fa4a0ebe2274e4b83))
+- **design:** 完成 {心率部分的设计} ([456c573](https://github.com/CCXXXI/thesis/commit/456c573272ad545319ec79267c73fcae1237f8aa))
+- **design:** 完成 {心电图部分的设计} ([4b4c93d](https://github.com/CCXXXI/thesis/commit/4b4c93df9f4d64b4c12f64c91ab51e58c7d4661c))
+- **design:** 完成 {时间范围选择器部分的设计} ([bd0fb56](https://github.com/CCXXXI/thesis/commit/bd0fb56b1a66046dc0b5344c4bec1be6ac2ba7de))
+- **design:** 完成 {时间选择器部分的设计} ([5a6c8f3](https://github.com/CCXXXI/thesis/commit/5a6c8f335e431ea0381fbd985f9d44864a37cc4c))
+- **design:** 完成 {设备未连接状态的设计} ([e480eb7](https://github.com/CCXXXI/thesis/commit/e480eb777bda48e603e01debaa565a9e2ea3cf7f))
+- **design:** 完成 {设备管理界面的设计} ([cbf7b43](https://github.com/CCXXXI/thesis/commit/cbf7b43ef9971e93ccefe02f17243f4d23dcec7f))
+- **design:** 完成历史心电的 {心电图部分的设计} ([f2d0d5a](https://github.com/CCXXXI/thesis/commit/f2d0d5a74a968e879002237ae9beae009e8c43fd))
+- **design:** 整理插图 ([a8f71f3](https://github.com/CCXXXI/thesis/commit/a8f71f381cbd4df5b0ce11ae88157b025c68a379))
+- **design:** 说明历史心电的图标选择理由 ([f95ed60](https://github.com/CCXXXI/thesis/commit/f95ed6015c3bee35525d3307d9a7ecf25beaa276))
 
 ### Bug Fixes
 
-* **design:** fix typo ([2fa3ad7](https://github.com/CCXXXI/thesis/commit/2fa3ad7477212682d143c0938b960541d6ecdca6))
-* **design:** 修正图片标题 ([00912c5](https://github.com/CCXXXI/thesis/commit/00912c50a284350d61dbe326124c4a49c11e8f69))
-* **design:** 调整插图位置 ([c9ab416](https://github.com/CCXXXI/thesis/commit/c9ab416378007252ea22f1b641d215fa509da5cc))
-* **design:** 页面 -&gt; 界面 ([825fa0b](https://github.com/CCXXXI/thesis/commit/825fa0b2763aa281d6b8379bd6c04c6aa8c8c7a1))
-* **design:** 页面 -&gt; 界面 again ([615fc69](https://github.com/CCXXXI/thesis/commit/615fc69674cbb98ee5afbf7fc5e6f52117c3a1d3))
-
+- **design:** fix typo ([2fa3ad7](https://github.com/CCXXXI/thesis/commit/2fa3ad7477212682d143c0938b960541d6ecdca6))
+- **design:** 修正图片标题 ([00912c5](https://github.com/CCXXXI/thesis/commit/00912c50a284350d61dbe326124c4a49c11e8f69))
+- **design:** 调整插图位置 ([c9ab416](https://github.com/CCXXXI/thesis/commit/c9ab416378007252ea22f1b641d215fa509da5cc))
+- **design:** 页面 -&gt; 界面 ([825fa0b](https://github.com/CCXXXI/thesis/commit/825fa0b2763aa281d6b8379bd6c04c6aa8c8c7a1))
+- **design:** 页面 -&gt; 界面 again ([615fc69](https://github.com/CCXXXI/thesis/commit/615fc69674cbb98ee5afbf7fc5e6f52117c3a1d3))
 
 ### Miscellaneous Chores
 
-* add ecg paper image ([f4c63f8](https://github.com/CCXXXI/thesis/commit/f4c63f84cf22a07187e43dc3fffbfbc888b13ea2))
-* add material icons ([6eac2f6](https://github.com/CCXXXI/thesis/commit/6eac2f6b4f5366dc54eb5a2b8e7ddfe4cec0ccfb))
-* 更新分析报告设计图 ([0d41fd2](https://github.com/CCXXXI/thesis/commit/0d41fd21e27996e1c65505351f28bd81e845f45e))
-* 裁去横屏截图的黑边 ([53a74cb](https://github.com/CCXXXI/thesis/commit/53a74cb7b73d56430e2e76099cbcd0ada23f348e))
-
+- add ecg paper image ([f4c63f8](https://github.com/CCXXXI/thesis/commit/f4c63f84cf22a07187e43dc3fffbfbc888b13ea2))
+- add material icons ([6eac2f6](https://github.com/CCXXXI/thesis/commit/6eac2f6b4f5366dc54eb5a2b8e7ddfe4cec0ccfb))
+- 更新分析报告设计图 ([0d41fd2](https://github.com/CCXXXI/thesis/commit/0d41fd21e27996e1c65505351f28bd81e845f45e))
+- 裁去横屏截图的黑边 ([53a74cb](https://github.com/CCXXXI/thesis/commit/53a74cb7b73d56430e2e76099cbcd0ada23f348e))
 
 ### Code Refactoring
 
-* [h] -&gt; [ht] ([57bf003](https://github.com/CCXXXI/thesis/commit/57bf00333cd0a17028382521531f275fd20a36a9))
-* 移除不必要的 \centering ([ace5558](https://github.com/CCXXXI/thesis/commit/ace5558d92b32f737064841f8cae126fb2121662))
-
+- [h] -&gt; [ht] ([57bf003](https://github.com/CCXXXI/thesis/commit/57bf00333cd0a17028382521531f275fd20a36a9))
+- 移除不必要的 \centering ([ace5558](https://github.com/CCXXXI/thesis/commit/ace5558d92b32f737064841f8cae126fb2121662))
 
 ### Styles
 
-* restyle by whitespace ([8825561](https://github.com/CCXXXI/thesis/commit/882556187183863240fa0181875e062cf2cdfd65))
+- restyle by whitespace ([8825561](https://github.com/CCXXXI/thesis/commit/882556187183863240fa0181875e062cf2cdfd65))
 
 ## [0.13.0](https://github.com/CCXXXI/thesis/compare/v0.12.0...v0.13.0) (2023-04-07)
 
