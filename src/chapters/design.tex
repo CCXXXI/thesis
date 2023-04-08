@@ -191,12 +191,18 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 \subsubsection{时间选择器部分的设计}\label{subsubsec:history-time-picker-design}
 
-\todo{时间选择器}
+时间选择器部分由7个横向排开的按钮组成，按钮之间等间距，左右两侧不留额外空间。由于按钮在外观和功能上都采用了左右对称的设计，因此只对左起的4个按钮进行说明。
+
+前两个按钮分别使用了在倒退符号中包含数字30和数字5的图标，按钮功能分别为将所选时间调整为30秒前和5秒前。
+
+第三个按钮使用了向左的箭头作为图标，其作用在不同情况下有所差别。当用户点击该按钮后，如果当前时间之前可以找到另一个心拍，则会跳转至该心拍所在的时间；如果当前时间之前已经没有心拍，比如当前时间所示的是记录内的第一个心拍，或者用户手动跳转到了有数据记录之前的区域，或者算法在数据边界出现了偶然的故障而没有正确识别出心拍，则会跳转到1秒之前，保证该按钮无论如何都不会毫无作用。
+
+第四个按钮，即中间的按钮，其作用相较前几个按钮更多。首先，该按钮作为文本按钮，起到了普通文本的显示作用。其指示的当前查询时间是心电图正中间的时间，并且在切换横竖屏状态时仍然保持该时间在正中间。由于时间选择器的上一个与下一个心拍按钮以及分析报告中跳转心拍所在时间的设计，位于图像中间的通常刚好是某个心拍的R波，这保证了视觉效果最明显的R波恰好会位于用户视觉焦点上。其次，该按钮也提供了相比其他几个按钮更大粒度的时间跳转。点击按钮后，会弹出如图~\ref{fig:history-time-picker} 所示的时间选择器，用户可以在其中以表盘模式或数字模式输入要跳转到的时间，点击确定后，时间选择器会自动关闭并将历史心电图跳转至所选时间。由于该自由跳转功能的使用频率远低于其他几个按钮，所以只使用了强调效果最弱的文本按钮，以避免不必要地干扰用户。
 
 \begin{figure}[ht]
     \centering
-    \subcaptionbox{表盘模式}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-clock}}
-    \subcaptionbox{数字模式}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-field}}
+    \subcaptionbox{表盘模式输入}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-clock}}
+    \subcaptionbox{数字模式输入}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-field}}
     \bicaption{历史心电时间选择器的设计}{Design of the history ECG time picker}
     \label{fig:history-time-picker}
 \end{figure}
