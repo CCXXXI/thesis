@@ -335,6 +335,31 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 为了支持深色模式与浅色模式的切换，应用在设计中尽量避免了使用固定的颜色，而是使用系统上下文提供的颜色。这样，应用在不同的主题下自然都可以随之自动切换颜色，从而正常显示内容。
 
+
 \section{应用的数据库设计}\label{sec:db-design}
 
-\todo{数据库设计}
+应用的数据库分为两部分，存储简单数据的SharedPreferences数据库和存储复杂数据的Isar数据库。前者主要用于存储应用的设置，后者主要用于存储历史心电数据与分析报告结果。
+
+\subsection{SharedPreferences数据库的设计}\label{subsec:shared-preferences}
+
+\subsubsection{SharedPreferences数据库介绍}\label{subsubsec:shared-preferences-intro}
+
+SharedPreferences是Flutter的一个包，提供了简单键值对的存储功能，可以视为一个键值型的非关系型数据库。其在Android平台上基于同名的SharedPreferences功能，在iOS上则基于NSUserDefaults功能。
+
+SharedPreferences仅支持少数几种数据类型，即 \lstinline{int}、\lstinline{double}、\lstinline{bool}、\lstinline{String} 以及 \lstinline{List<String>}。键值型数据库的读写非常简单，不需要进行特别的设计。本项目对该数据库的设计主要在于将各种需要存储的类型映射为其支持的类型。
+
+\subsubsection{Duration类型的存储}\label{subsubsec:duration-storage}
+
+Duration类型表示时间长度。由于应用内对时间的各种操作最多只需要毫秒精度，所以应用在需要将Duration类型的数据存入SharedPreferences时会将其转换为毫秒数以整数格式进行存储。在读取时，应用会将毫秒数转换为Duration类型。
+
+\subsubsection{Color类型的存储}\label{subsubsec:color-storage}
+
+Color类型表示颜色。应用在需要将Color类型的数据存入SharedPreferences时，会将其编码为32位整数以整数格式进行存储。在读取时，应用会将32位整数转换为Color类型。具体的编码方式是将颜色的ARGB值分别存储在32位整数的高8位、次高8位、次低8位和低8位中。
+
+\subsubsection{枚举类型的存储}\label{subsubsec:enum-storage}
+
+应用中使用了各种枚举类型，有时会需要将枚举类型存入SharedPreferences。应用在存储枚举类型时会将其转换为索引值，以整数形式存储。枚举类型常见的存储方式还包括按其名称以字符串形式存储、为每个枚举值赋予自定义值然后按自定义值的类型存储。相比其他方法，直接按索引值存储的优点在于其简单高效；缺点在于已经存在的枚举值不能轻易改动，否则会破坏已有的数据。由于应用内的枚举值设计基本不变，所以该缺点并不明显，可以接受。
+
+\subsection{Isar数据库的设计}\label{subsec:isar}
+
+\subsubsection{Isar数据库介绍}\label{subsubsec:isar-intro}
