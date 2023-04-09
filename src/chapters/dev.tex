@@ -3,8 +3,35 @@
 
 \section{项目的开发环境与开发工具}\label{sec:env}
 
-\todo{开发环境与开发工具，本地开发环境，持续集成配置}
+本项目包含了多种语言的代码的编写，不同语言所使用的开发环境与工具有重叠部分也有不同部分，并且在本地环境与持续集成环境中的配置也有一定差异。
 
+\subsection{通用的环境与工具}\label{subsec:common-env}
+
+项目中的所有代码都使用了Git进行版本控制，项目的源代码托管在GitHub上，并且使用了GitHub Actions作为持续集成工具，开发过程中也遵循了GitHub推荐并支持的pull request、release等工作流程。Git的提交信息遵循约定式提交（Conventional Commits）规范，版本号则按照语义化版本（Semantic Versioning）规范进行管理。新版本的发布及版本号的更新基于Google的Release Please工具半自动地进行，该工具同时用于更新日志的自动生成。为了方便使用GitHub，在本地安装并使用了GitHub CLI与GitHub Desktop。
+
+项目的各部分代码均使用Codecov进行测试覆盖率的统计追踪，使用Renovate进行依赖项的自动更新，使用Restyled自动格式化代码，使用CodeFactor进行代码质量的检查，并使用Sentry来自动收集并上报错误信息。另外，各部分代码的编写都借助了GitHub Copilot来提供更智能的代码补全。
+
+\subsection{Dart及Flutter的环境与工具}\label{subsec:dart-env}
+
+项目开发基于最新的稳定版的Flutter SDK，在开发过程中其版本进行过几次更新，截止本文撰写时使用的是Flutter 3.7.10。Dart SDK使用的是捆绑于Flutter SDK中的对应版本，并未单独配置。
+
+开发过程中，在本地使用了IntelliJ IDEA作为Flutter开发的IDE，安装了Flutter插件与Dart插件来提供相应的支持，并额外安装了Flutter Freezed Snippets、Flutter Intl等插件来提供更多相关功能。为了获得对移动平台开发的支持，在一台Windows设备和一台macOS设备上分别额外安装了Android Studio和Xcode及其对应移动平台设备的模拟器。
+
+在持续集成环境中，基于subosito开发的flutter-action配置了Android和iOS平台的应用安装包的自动构建发布。除Flutter SDK自带的静态分析、代码测试等工具外，额外使用了社区开发的Dependency Validator包来检查依赖项是否有缺少或冗余。
+
+\subsection{\LaTeX 的环境与工具}\label{subsec:latex-env}
+
+在本地安装了\TeX\ Live 2023，并使用安装了\TeX iFy插件的IntelliJ IDEA作为IDE。在持续集成环境中，使用了xu-cheng提供的最新版\TeX\ Live的Docker镜像进行文档的编译，并配置了相应的自动发布。
+
+\subsection{C++的环境与工具}\label{subsec:cpp-env}
+
+项目中对于Pan-Tompkins算法和基于LibTorch的算法的开发使用了不同的环境。由于开发时主要使用的是Windows系统，所以在Pan-Tompkins算法的开发过程中使用了MSVC工具链。而基于LibTorch的算法则因为Windows平台的LibTorch分发版区分了调试与发布版本而较难使用，所以使用了安装在WSL2中的GCC工具链。两者都使用CLion作为IDE，一个直接安装在Windows系统中，另一个安装在WSL2中然后通过JetBrains Gateway连接。
+
+在持续集成环境中，使用aminya提供的setup-cpp工具来安装必要的依赖。两个仓库中的代码均在最新的Ubuntu环境下使用GCC与CMake工具链进行编译，然后基于Gcovr进行代码覆盖率的统计。
+
+\subsection{Python的环境与工具}\label{subsec:python-env}
+
+对于Python环境的管理使用了Mamba，Conda的一个更优秀的替代工具。在本地安装了Mambaforge用于依赖管理，持续集成环境中则使用provision-with-micromamba工具。Python代码的测试与覆盖率生成基于pytest和pytest-cov工具。本地开发的IDE选择了PyCharm。
 
 \section{Pan-Tompkins算法的实现}\label{sec:pan-tompkins}
 
