@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.16.1](https://github.com/CCXXXI/thesis/compare/v0.16.0...v0.16.1) (2023-04-10)
+
+
+### Bug Fixes
+
+* **ffi:** footnote 移至正文 ([0ffff3f](https://github.com/CCXXXI/thesis/commit/0ffff3fceeebc83c516a515484976365c3b4b9b9))
+* **isolate:** footnote 移至正文 ([fe46f02](https://github.com/CCXXXI/thesis/commit/fe46f021a94518dfb97ffee25afc4efa73f81807))
+* **tech:** 调整 Flutter 包相关说明 ([a140d07](https://github.com/CCXXXI/thesis/commit/a140d076bd082d9984a96c3be96bbc4cffb061e5))
+
 ## [0.16.0](https://github.com/CCXXXI/thesis/compare/v0.15.9...v0.16.0) (2023-04-10)
 
 ### Features
