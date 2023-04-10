@@ -37,10 +37,8 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: pdf
-      - uses: vimtor/action-zip@v1.1
-        with:
-          files: 10195101428_刘议临_${{ github.ref_name }}.pdf
-          dest: 10195101428_${{ github.ref_name }}.pdf.zip
+      # Non-ASCII characters in file names are not supported in GitHub releases
+      - run: mv 10195101428_刘议临_${{ github.ref_name }}.pdf 10195101428_${{ github.ref_name }}.pdf
       - uses: softprops/action-gh-release@v1
         with:
-          files: "*.zip"
+          files: 10195101428_${{ github.ref_name }}.pdf
