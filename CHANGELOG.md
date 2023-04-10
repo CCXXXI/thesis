@@ -2,10 +2,9 @@
 
 ## [0.15.2](https://github.com/CCXXXI/thesis/compare/v0.15.1...v0.15.2) (2023-04-10)
 
-
 ### Continuous Integration
 
-* **build:** fix file name ([#92](https://github.com/CCXXXI/thesis/issues/92)) ([6daf8e0](https://github.com/CCXXXI/thesis/commit/6daf8e04678d7936e4fd4cddfd1282f03c4bc995))
+- **build:** fix file name ([#92](https://github.com/CCXXXI/thesis/issues/92)) ([6daf8e0](https://github.com/CCXXXI/thesis/commit/6daf8e04678d7936e4fd4cddfd1282f03c4bc995))
 
 ## [0.15.1](https://github.com/CCXXXI/thesis/compare/v0.15.0...v0.15.1) (2023-04-10)
 
