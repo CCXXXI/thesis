@@ -106,9 +106,9 @@ Python版本的算法并不直接被应用调用，因此该仓库不是其他�
 
 \subsubsection{心电图部分的设计}\label{subsubsec:ecg-design}
 
-心电图部分的设计参考了医学上常用的心电图纸的设计。心电图纸的整体外观在\nameref{ch:intro}部分的图~\ref{fig:10sec-ekg-lead} 中已经展示过，这里对其具体布局方式进行一些补充介绍。
+心电图部分的设计参考了医学上常用的心电图纸的设计。心电图纸的整体外观在\nameref{ch:intro}部分的图~\ref{fig:ecg-paper-example} 中已经展示过，这里对其具体布局方式进行一些补充介绍。
 
-心电图纸包含红色的坐标线，如图~\ref{fig:ecg-paper} 所示。每1mm一小格（用细线分隔），每5mm一大格（用粗线分隔）。横轴一小格表示40ms，一大格表示200ms。纵轴一小格表示0.1mV，一大格表示0.5mV。心电图纸的左侧有1mV（10mm高）的参考波形，并标注该条图像的导联名称。
+心电图纸包含横纵交错的坐标线，通常为红色或浅红色，如图~\ref{fig:ecg-paper} 所示。每1mm一小格（用细线分隔），每5mm一大格（用粗线分隔）。横轴一小格表示40ms，一大格表示200ms。纵轴一小格表示0.1mV，一大格表示0.5mV。心电图的边缘有1mV（10mm高）的参考波形，并标注该条图像的导联名称。
 
 \begin{figure}[ht]
     \includegraphics[width=\textwidth]{../assets/ECG_Paper_v2}
