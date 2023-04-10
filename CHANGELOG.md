@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.16.0](https://github.com/CCXXXI/thesis/compare/v0.15.9...v0.16.0) (2023-04-10)
+
+
+### Features
+
+* **intro:** 完善 {\app 的意义} & {相关技术与应用现状} ([a90ce6f](https://github.com/CCXXXI/thesis/commit/a90ce6f267783642914fe5a04b92779020170e4d))
+
+
+### Bug Fixes
+
+* **intro:** correct ref ([2a93d14](https://github.com/CCXXXI/thesis/commit/2a93d1409335325360412dcb1cd40c7c24df22d0))
+
 ## [0.15.9](https://github.com/CCXXXI/thesis/compare/v0.15.8...v0.15.9) (2023-04-10)
 
 ### Bug Fixes
