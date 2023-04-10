@@ -50,7 +50,7 @@ Dart是一种多范式的语言，支持函数式、命令式、面向对象、�
 
 \subsubsection{外部函数接口}\label{subsubsec:ffi}
 
-外部函数接口（Foreign function interface，缩写为FFI）是一种机制，指用一种编程语言编写的程序可以调用另一种编程语言编写的功能。比如在C++中可以指定 |extern "C"| 来要求编译器在调用约定、名字重整等方面遵循C语言的标准\footnote{这一特性在C++中被称为语言链接（Language linkage）。}，从而实现与C语言之间的双向FFI。
+外部函数接口（Foreign function interface，缩写为FFI）是一种机制，指用一种编程语言编写的程序可以调用另一种编程语言编写的功能。比如在C++中可以指定 |extern "C"| 来要求编译器在调用约定、名字重整等方面遵循C语言的约定，从而实现与C语言之间的双向FFI。这一特性在C++中也被称为语言链接（Language linkage）。
 
 Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄弱。作为一种弥补方式，Dart实现了与许多其他语言之间的FFI，比如在Web上可以与JavaScript互相调用，在macOS和iOS上可以与Swift或Objective-C互相调用，在Android、Windows、macOS、Linux上可以与Kotlin或Java互相调用，以及对本项目来说最重要的——在除Web以外的所有平台可以与C语言直接进行交互，而无须像React Native等框架那样通过Java等中间层进行间接调用，这使得Dart与C语言之间的FFI十分高效。由于C++代码也可以通过指定 |extern "C"| 来编译为与C语言格式相同的接口，这意味着本应用的部分功能可以直接使用C++编写，从而充分利用C++的性能、生态、跨平台性等优势。
 
@@ -58,7 +58,7 @@ Dart作为一种专精于UI开发的语言，在其他方面的生态较为薄�
 
 \subsubsection{Isolate}\label{subsubsec:isolate}
 
-Isolate\footnote{该术语没有常用的中文译名，故本文中直接使用英文原名。}是Dart中的一种介于线程与进程之间的概念。在Dart程序中，所有的代码都在isolate中运行。每一个isolate都有独立的运行线程和独立的堆内存，从而确保isolate之间互相隔离，无法互相访问状态。相比于常规的线程，这样的实现并不会共享内存，所以也不需要担心互斥锁和其他锁等问题。相对地，由于无法与其他isolate共享可变对象，isolate之间的通信必须使用消息机制。
+Isolate是Dart中的一种介于线程与进程之间的概念。由于该术语没有常用的中文译名，故本文中直接使用英文原名。在Dart程序中，所有的代码都在isolate中运行。每一个isolate都有独立的运行线程和独立的堆内存，从而确保isolate之间互相隔离，无法互相访问状态。相比于常规的线程，这样的实现并不会共享内存，所以也不需要担心互斥锁和其他锁等问题。相对地，由于无法与其他isolate共享可变对象，isolate之间的通信必须使用消息机制。
 
 Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate，因为UI的更新都是在主isolate中进行的。在本应用中，数据库查询等可能较为耗时的操作都是放在其他isolate中异步执行的，以避免阻塞UI isolate导致UI卡顿。
 
@@ -66,7 +66,7 @@ Dart程序有一个默认的主isolate，在Flutter应用中也称为UI isolate�
 
 尽管Flutter SDK本身已经包含了大量的基础组件，但是在实际开发中，还是经常需要额外使用官方或社区开发的Flutter包来实现一些特定的功能。本项目所使用的Flutter包总计有上百个，其中一些包的使用比较简单，比如URL Launcher包只是用来在各个平台提供在浏览器中打开指定的URL的功能；而另一些包则在项目开发的各个阶段有着广泛的影响，比如Isar包的特性直接影响了本项目数据库的设计、实现与测试。
 
-由于项目使用的Flutter包非常多，而且作用分散在项目的各个阶段、各个模块，在此处一一介绍会使得本节过于冗长且难以理解，本文在后续章节涉及到相关Flutter包时再对各个包分别进行说明。另外，所有包的相关文档均可在 \url{https://pub.dev/} 上找到，由于数目众多，本文不在参考文献中分别列出。
+由于项目使用的Flutter包非常多，而且作用分散在项目的各个阶段、各个模块，在此处一一介绍会使得本节过于冗长且难以理解，本文在后续章节涉及到相关Flutter包时再对各个包分别进行说明。另外，所有包的相关文档均可在 \url{https://pub.dev/} 上找到，由于数目众多，本文不分别列出其链接。
 
 
 \section{项目使用的Python包与C++中的对应替代}\label{sec:python-cpp-packages}
