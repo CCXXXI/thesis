@@ -51,9 +51,9 @@
 使用了深度学习模型的这些\app 按其整体架构可以大致分为两类：一类是在移动端只对数据进行简单统计处理，完整的算法模型则部署于服务端\cite{wangJiyushenduxuexideyidongyuanchengxindianjiancexitongshejiyushixian2020,singhSmartECGMonitoring2022}，患者如果想获取完整的分析报告，则需要将数据上传至服务端后，等待服务端分析完成；这种应用架构的主要缺点是，患者能在移动端立即获取的结果较少，而完整分析结果可能因为网络质量差、服务端算力不足等原因而有较大延迟；另外，虽然患者不需要在自己的设备上运行相关算法，节省了一定开销，但上传与下载数据消耗的电量与流量成本不可忽视。另一类应用则采用了边缘计算架构，将深度学习模型部署在移动端，数据分析直接在移动端进行\cite{chenJiyushenduxuexidexindianfenximoxingdeshejiyuyouhua2021,liuJiyuyidongzhongduanfenxidekechuandairouxingxindianjiancexitong2021,wangEnablingSmartPersonalized2014,jinPredictingCardiovascularDisease2009}，这样可以缩短延迟，节省带宽，并节省了高算力服务器的成本；然而，已有的少数此类应用都只实现了极简单的功能，旨在以演示程序验证模型正确性，并没有进行完整的应用开发，如图~\ref{fig:demos} 所示；此外，这些简单的演示程序均只进行了单一操作系统的开发。
 
 \begin{figure}[ht]
-    \subcaptionbox{\label{fig:demo-0}}{\includegraphics[height=9cm]{../assets/demo-0}}
-    \subcaptionbox{\label{fig:demo-1}}{\includegraphics[height=9cm]{../assets/demo-1}}
-    \subcaptionbox{\label{fig:demo-2}}{\includegraphics[height=9cm]{../assets/demo-2}}
+    \subcaptionbox{\cite{chenJiyushenduxuexidexindianfenximoxingdeshejiyuyouhua2021}\label{fig:demo-0}}{\includegraphics[height=9cm]{../assets/demo-0}}
+    \subcaptionbox{\cite{liuJiyuyidongzhongduanfenxidekechuandairouxingxindianjiancexitong2021}\label{fig:demo-1}}{\includegraphics[height=9cm]{../assets/demo-1}}
+    \subcaptionbox{\cite{jinPredictingCardiovascularDisease2009}\label{fig:demo-2}}{\includegraphics[height=9cm]{../assets/demo-2}}
     \bicaption{一些仅为验证模型而开发的简单演示程序}{Some demo programs only for model validation}
     \label{fig:demos}
 \end{figure}
