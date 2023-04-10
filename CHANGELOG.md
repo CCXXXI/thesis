@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.8](https://github.com/CCXXXI/thesis/compare/v0.15.7...v0.15.8) (2023-04-10)
+
+### Bug Fixes
+
+- **intro:** add sub-figure titles ([25e3e7f](https://github.com/CCXXXI/thesis/commit/25e3e7f0a4f0dbe0890f1ba9e846cd4dd3613dd1))
+- **intro:** 程序 -&gt; 应用 ([f7b8b1f](https://github.com/CCXXXI/thesis/commit/f7b8b1f3ad647717b482dbad185bca784a7a8f2e))
+
 ## [0.15.7](https://github.com/CCXXXI/thesis/compare/v0.15.6...v0.15.7) (2023-04-10)
 
 ### Bug Fixes
