@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.15.5](https://github.com/CCXXXI/thesis/compare/v0.15.4...v0.15.5) (2023-04-10)
+
+### Bug Fixes
+
+- **design:** 大夏学堂 -&gt; 某些网站 ([#98](https://github.com/CCXXXI/thesis/issues/98)) ([d16716d](https://github.com/CCXXXI/thesis/commit/d16716da34e3e60274709c0b2c9a4469c2970092))
+
 ## [0.15.4](https://github.com/CCXXXI/thesis/compare/v0.15.3...v0.15.4) (2023-04-10)
 
 ### Bug Fixes
