@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.15.0](https://github.com/CCXXXI/thesis/compare/v0.14.0...v0.15.0) (2023-04-10)
+
+
+### Features
+
+* **dev:** 完成 {Pan-Tompkins算法的实现} ([5572aea](https://github.com/CCXXXI/thesis/commit/5572aea51b37eba79359faafeed898d590aa7657))
+* **dev:** 完成 {智能检测算法的移植与优化} ([e3a31da](https://github.com/CCXXXI/thesis/commit/e3a31dad92303baa142325e7c190706ad0731926))
+* **dev:** 完成 {项目的开发环境与开发工具} ([1ccd461](https://github.com/CCXXXI/thesis/commit/1ccd4619176e49d6b404744df6772cf801bd2ece))
+
+
+### Code Refactoring
+
+* \lstMakeShortInline[columns=fixed]| ([b57313a](https://github.com/CCXXXI/thesis/commit/b57313aad85f6dea60a3f6c4a4d1e84dd8e4fe7d))
+
+
+### Miscellaneous Chores
+
+* 更新心电图插图 ([15804b3](https://github.com/CCXXXI/thesis/commit/15804b3f12dc951d10b980e53562a216975456c4))
+
 ## [0.14.0](https://github.com/CCXXXI/thesis/compare/v0.13.0...v0.14.0) (2023-04-08)
 
 ### Features
