@@ -37,6 +37,17 @@
 对于Python环境的管理使用了Mamba，Conda的一个更优秀的替代工具。在本地安装了Mambaforge用于依赖管理，持续集成环境中则使用provision-with-micromamba工具。Python代码的测试与覆盖率生成基于pytest和pytest-cov工具。本地开发的IDE选择了PyCharm。
 
 
+\section{项目文件的整体组织结构}\label{sec:file-structure}
+
+\subsection{Git子模块介绍}\label{subsec:git-submodule}
+
+本项目的相关文件基于Git的子模块（submodule）功能进行组织，在此先对Git子模块进行简单介绍。
+
+Git子模块是一个Git中自带的工具，允许将一个Git仓库作为另一个Git仓库的子目录。为了方便项目管理，本项目的内容被拆分到了多个Git仓库，各个仓库之间的一些共享的部分使用了Git子模块来实现复用与同步。
+
+与Git子模块功能类似的工具还有Git子树（subtree）等，但其他工具对于在主仓库修改之后向子仓库进行推送的这一需求都没有像Git子模块这样的良好支持，再考虑到整个项目架构的一致性，本项目在内部各个仓库之间的依赖方式上都选择了Git子模块作为解决方案（对外部仓库的依赖方式则有所不同）。
+
+
 \section{Pan-Tompkins算法的实现}\label{sec:pan-tompkins}
 
 本应用为用户提供了实时的心率显示。因为所使用的基于LibTorch的算法无法实时给出心电分割结果，所以有必要另外使用一种实时在线算法来进行心率的统计。

@@ -8,12 +8,6 @@
 
 \todo{增加宏观介绍，Pan-T等模块的划分。 https://github.com/CCXXXI/thesis/issues/82}
 
-\subsection{Git子模块介绍}\label{subsec:git-submodule}
-
-Git子模块（submodule）允许将一个Git仓库作为另一个Git仓库的子目录。为了方便项目管理，本项目的内容被拆分到了多个Git仓库，各个仓库之间的一些共享的部分使用了Git子模块来实现复用与同步。
-
-与Git子模块功能类似的工具还有Git子树（subtree）等，但其他工具对于在主仓库修改之后向子仓库进行推送的这一需求都没有像Git子模块这样的良好支持，再考虑到整个项目架构的一致性，本项目在内部各个仓库之间的依赖方式上都选择了Git子模块作为解决方案（对外部仓库的依赖方式则有所不同）。
-
 \subsection{项目包含的Git仓库}\label{subsec:git-repositories}
 
 本项目在整体架构上一共由7个Git仓库组成，这些仓库的名称以及仓库之间的子模块关系如图~\ref{fig:repositories}所示。
