@@ -47,6 +47,54 @@ Git子模块是一个Git中自带的工具，允许将一个Git仓库作为另�
 
 与Git子模块功能类似的工具还有Git子树（subtree）等，但其他工具对于在主仓库修改之后向子仓库进行推送的这一需求都没有像Git子模块这样的良好支持，再考虑到整个项目架构的一致性，本项目在内部各个仓库之间的依赖方式上都选择了Git子模块作为解决方案（对外部仓库的依赖方式则有所不同）。
 
+\subsection{项目包含的Git仓库}\label{subsec:git-repositories}
+
+本项目在整体上一共由7个Git仓库组成，这些仓库的名称以及仓库之间的子模块关系如图~\ref{fig:repositories}所示。
+
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth]{../assets/repositories.drawio}
+    \bicaption{项目包含的Git仓库}{Git repositories of the project}
+    \label{fig:repositories}
+\end{figure}
+
+\subsubsection{thesis}\label{subsubsec:repo-thesis}
+
+这是本篇论文所在的仓库。论文本身作为项目文档，也被视为本项目的一部分。该仓库包含论文的\LaTeX 源码，以及论文中引用的图片等资源文件，还有自动格式化、依赖版本管理、自动构建测试、自动发布新版本等持续集成配置。
+
+论文与应用本身的代码是分离的，所以论文的仓库与应用的仓库之间没有任何子模块关系。此外，论文仓库以Git子树的形式包含了论文模板\footnote{\url{https://github.com/Koyamin/ECNUThesis-Undergraduate}}，没有使用Git子模块是因为基于模板进行编写后只需要直接提交至主仓库，不需要向子仓库推送，这与~\ref{subsec:git-submodule} 节所述的情况不同。
+
+\subsubsection{ecg\_monitor}\label{subsubsec:repo-monitor}
+
+这是应用的主体仓库。该仓库包含基于Flutter框架编写的Dart代码，以及相关的各种配置文件等。仓库的命名与应用的包名一致，因此按照Dart对包名的相关限制使用了小写下划线的命名风格，而非Git仓库常用的小写连字符。为了保持项目各个仓库之间的一致性，其他仓库（除PanTompkinsQRS外）也都使用了小写下划线的命名风格。
+
+为了方便调用C++代码，该仓库以Git子模块的形式包含了PanTompkinsQRS和ecg\_model\_cpp两个子仓库，这两个子仓库分别提供了Pan-Tompkins算法和基于LibTorch的心电图智能分析算法的实现。
+
+\subsubsection{PanTompkinsQRS}\label{subsubsec:repo-qrs}
+
+这是应用中用于实现Pan-Tompkins算法的仓库。该仓库是rafaelmmoreira编写的Pan-Tompkins算法的C语言实现\footnote{\url{https://github.com/rafaelmmoreira/PanTompkinsQRS}}的复刻（fork），在原始版本的基础上根据项目需要进行了一些修改。出于对原作者的尊重，该仓库的名称与原作者的命名保持一致，因此与项目内其他仓库的命名风格不同。
+
+该仓库被ecg\_monitor所包含，并且为了方便测试而将ecg\_data包含为了子仓库，后者提供了一些测试用的心电图数据，用作测试时的输入。
+
+\subsubsection{ecg\_model\_cpp}\label{subsubsec:repo-cpp}
+
+这是应用中用于实现基于LibTorch的心电图智能分析算法的仓库。该仓库是ecg\_model\_py仓库的C++实现，使用了LibTorch作为框架。
+
+该仓库被ecg\_monitor所包含，且包含了ecg\_data作为测试输入数据，还包含了ecg\_models作为与ecg\_model\_py共享的模型文件以及测试预期输出。
+
+\subsubsection{ecg\_model\_py}\label{subsubsec:repo-py}
+
+这是基于PyTorch实现的心电图智能分析算法的所在仓库。该仓库以算法的原始版本作为初始提交，在此基础上根据项目需要进行了修改。
+
+Python版本的算法并不直接被应用调用，因此该仓库不是其他仓库的子模块。该仓库包含了ecg\_data作为测试输入数据，将与ecg\_model\_cpp共享的模型文件保存在ecg\_models，并将PyTorch版本的算法输出也写入ecg\_models子模块以便与ecg\_model\_cpp共享。
+
+\subsubsection{ecg\_data}\label{subsubsec:repo-data}
+
+该仓库存储了各算法仓库用作测试输入的心电图数据，以及从公开数据库下载心电数据并转换格式的相关代码。该仓库中的数据由仓库内的代码写入，被上述三个算法仓库所读取。
+
+\subsubsection{ecg\_models}\label{subsubsec:repo-models}
+
+该仓库存储了TorchScript模型文件，以及模型在测试输入下的输出结果。该仓库的内容由ecg\_model\_py写入，被ecg\_model\_cpp读取。因为模型文件较大（60多MB），且不被Pan-Tompkins算法所需要，所以该仓库与ecg\_data进行了分离。
+
 
 \section{Pan-Tompkins算法的实现}\label{sec:pan-tompkins}
 
