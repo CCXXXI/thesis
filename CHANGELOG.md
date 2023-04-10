@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.15.9](https://github.com/CCXXXI/thesis/compare/v0.15.8...v0.15.9) (2023-04-10)
+
+### Bug Fixes
+
+- **dev:** 稍微扩充 {智能检测算法的移植与优化} ([#106](https://github.com/CCXXXI/thesis/issues/106)) ([f267a17](https://github.com/CCXXXI/thesis/commit/f267a1721943bc8e2695dbb92e3fc84b71049e28))
+
 ## [0.15.8](https://github.com/CCXXXI/thesis/compare/v0.15.7...v0.15.8) (2023-04-10)
 
 ### Bug Fixes
