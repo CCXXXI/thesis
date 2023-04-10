@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.15.7](https://github.com/CCXXXI/thesis/compare/v0.15.6...v0.15.7) (2023-04-10)
+
+
+### Bug Fixes
+
+* **intro:** move cite ([6b56864](https://github.com/CCXXXI/thesis/commit/6b568648626b47f97c130b062cf9337f01250cc8))
+* **intro:** 添加插图 2019年中国城乡居民主要疾病死因构成比 ([39df541](https://github.com/CCXXXI/thesis/commit/39df541e1961933f8d86825c5259e3ebaa932392))
+* **tech:** move cites ([34cfefb](https://github.com/CCXXXI/thesis/commit/34cfefbb21eac6a63bb39f271eddc653878857d0))
+
 ## [0.15.6](https://github.com/CCXXXI/thesis/compare/v0.15.5...v0.15.6) (2023-04-10)
 
 ### Bug Fixes
