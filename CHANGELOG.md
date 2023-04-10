@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.15.4](https://github.com/CCXXXI/thesis/compare/v0.15.3...v0.15.4) (2023-04-10)
+
+
+### Bug Fixes
+
+* **design:** 修正心电图描述 ([55a28b8](https://github.com/CCXXXI/thesis/commit/55a28b8fd8e9ff5d6180ac25feeba593f30c6c5f))
+* merge footnote ([302c7f0](https://github.com/CCXXXI/thesis/commit/302c7f044490f617464eb7ed39e9f6176b3a201d))
+
+
+### Code Refactoring
+
+* update figure label ([44a4c2a](https://github.com/CCXXXI/thesis/commit/44a4c2a0ef7db23b95644cfd2100787fd1021aff))
+
 ## [0.15.3](https://github.com/CCXXXI/thesis/compare/v0.15.2...v0.15.3) (2023-04-10)
 
 ### Continuous Integration
