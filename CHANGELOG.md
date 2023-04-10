@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.1](https://github.com/CCXXXI/thesis/compare/v0.15.0...v0.15.1) (2023-04-10)
+
+
+### Continuous Integration
+
+* **build:** zip the pdf ([#90](https://github.com/CCXXXI/thesis/issues/90)) ([9373a9b](https://github.com/CCXXXI/thesis/commit/9373a9bc51fc8bf559454c24d04fe52300a30871))
+
 ## [0.15.0](https://github.com/CCXXXI/thesis/compare/v0.14.0...v0.15.0) (2023-04-10)
 
 ### Features
