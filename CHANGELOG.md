@@ -2,10 +2,9 @@
 
 ## [0.15.6](https://github.com/CCXXXI/thesis/compare/v0.15.5...v0.15.6) (2023-04-10)
 
-
 ### Bug Fixes
 
-* 插图来源移至正文 ([#100](https://github.com/CCXXXI/thesis/issues/100)) ([4bd3005](https://github.com/CCXXXI/thesis/commit/4bd3005c2d7e7068a2526ca3c259c0485aef6119))
+- 插图来源移至正文 ([#100](https://github.com/CCXXXI/thesis/issues/100)) ([4bd3005](https://github.com/CCXXXI/thesis/commit/4bd3005c2d7e7068a2526ca3c259c0485aef6119))
 
 ## [0.15.5](https://github.com/CCXXXI/thesis/compare/v0.15.4...v0.15.5) (2023-04-10)
 
