@@ -186,6 +186,34 @@ Pan-Tompkins算法只能给出心拍的位置，但无法确定心拍的类型�
 
 \section{其他功能的实现}\label{sec:other}
 
+\subsection{平台自适应UI的实现}\label{subsec:adaptive-ui}
+
+\subsubsection{应用UI遵循的规范}
+
+本应用在UI方面与其他同类应用的一大差别在于其遵循专业的规范对UI元素的使用进行了精细的考虑。
+
+应用整体上遵循Material 3规范\cite{MaterialDesign}。Material 3（也称为Material You）是Google在2021年5月的Google I/O大会上宣布的新一代Material规范，和前代规范相比具有从用户的壁纸自动生成动态主题颜色、按钮更大、界面动画更多等新特性，并在其他一些细节上有所优化。目前Material 3规范已被广泛应用于Google的各种应用程序，并成为Android应用的推荐UI规范。
+
+尽管Material 3按照Google的设计是可以在任何平台（包括iOS）上使用的，但从事实上来说，iOS应用确实较少使用Material风格的UI，而较多按照苹果的推荐遵循Cupertino\footnote{苹果官方并未给自己的UI规范进行像Material这样的明确命名，Cupertino这个名字是Flutter在其文档中使用的，可能是基于苹果总部位于美国加利福尼亚州丘珀蒂诺（Cupertino）市的事实。}规范。
+
+\subsubsection{应用在不同平台的UI对比}
+
+为了符合iOS平台的用户习惯，本应用基于Flutter Platform Widgets包在iOS平台上将部分UI组件替换为了iOS应用常用的Cupertino风格的组件。由于Cupertino并未像Material一样设计为全平台可用，所以应用的UI风格仍然以Material为主，在Android平台上完全使用Material 3风格的UI，而在iOS平台上则使用Material 3风格与Cupertino风格的混合，如图~\ref{fig:android-ios} 所示。
+
+\begin{figure}[ht]
+    \centering
+    \subcaptionbox{Android}{\includegraphics[height=13cm]{../assets/settings}}
+    \subcaptionbox{iOS}{\includegraphics[height=13cm]{../assets/ios-settings}}
+    \bicaption{应用在Android和iOS平台上的UI对比}{Comparison of the app's UI on Android and iOS}
+    \label{fig:android-ios}
+\end{figure}
+
+从图中可以看出应用在Android平台与iOS平台上的UI实现上的一些差异，包括标题的对齐方式（Android居左，iOS居中）、左上角返回按钮的图标（Android使用完整箭头，iOS使用仅有头部的简化箭头）、滑动条与切换按钮的外观（按照各自规范中的相关要求）、文本的字体（iOS的字体更细）等。
+
+\subsubsection{Flutter Platform Widgets包在实现中的作用}
+
+Flutter Platform Widgets包在平台自适应UI的实现中起到的作用主要在于基于共识消除了不必要的样板代码。比如为了在Android平台和iOS平台使用不同的滑动条外观，原本需要在 |if| 条件中通过判断 |Platform.isAndroid| 或 |Platform.isIOS| 来决定使用 |Slider| 还是 |CupertinoSlider|。由于 |Slider| 和 |CupertinoSlider| 是公认的不同风格设计对同一种UI的实现，相关的代码并没有提供任何额外的信息量，只是无意义的冗余。使用Flutter Platform Widgets包后，只需要使用 |PlatformSlider| 即可，其内部会根据平台自动选择使用 |Slider| 还是 |CupertinoSlider|。这不仅避免了大量关于平台判断的 |if| 语句，也避免了将相同的参数分别传递至两个平台对应的类的构造函数之中，有助于使代码更加简洁。
+
 \subsection{路由功能的实现}\label{subsec:router}
 
 \todo{路由功能的实现}
