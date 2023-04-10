@@ -39,7 +39,7 @@ jobs:
           name: pdf
       - uses: vimtor/action-zip@v1.1
         with:
-          files: "*.pdf"
+          files: 10195101428_刘议临_${{ github.ref_name }}.pdf
           dest: 10195101428_${{ github.ref_name }}.pdf.zip
       - uses: softprops/action-gh-release@v1
         with:
