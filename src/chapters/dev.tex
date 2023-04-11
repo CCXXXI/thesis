@@ -290,7 +290,25 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 从图中也可以看出，当可用显示区域由于键盘的弹出而缩小时，应用的界面布局仍然可以保持基本可用。这也体现了应用的界面可以适应不同尺寸、不同屏幕比例的设备，并且对分屏等比例特殊的情况也有支持。
 
-\todo{心电模块的更多实现细节}
+\subsection{心电图的细节处理}\label{subsec:ecg}
+
+\subsubsection{坐标标签文本的间隔}
+
+坐标标签文本的间隔在默认设置下为每秒一个标签，但是当用户自行调整心电数据显示时长时，尤其是调整至较长时间时，需要一个算法来自动确定合适的间隔。经过研究，给出了以下公式：
+
+\[
+    intervalSeconds = \lceil duration.inSeconds / intervalCount \rceil
+\]
+
+其中，\(duration\) 是用户自行设定的时间，\(intervalCount\) 是坐标标签文本的数量上限，在横屏下为 \(5\)，竖屏下为 \(10\)。
+
+\subsubsection{坐标线粗细判定}
+
+心电图中每5小格（细线分隔）为1大格（粗线分隔），为了基于坐标线所位于的值来判定其应使用细线还是粗线，首先基于其横纵获取了相应的 \(largeInterval\) （\(200\) 或 \(0.5\)）和 \(smallInterval\) （\(40\) 或 \(0.1\)），然后考虑如下不等式是否成立：
+
+\[
+    (\lvert value \rvert + 10^{-6}) \bmod largeInterval < \frac{smallInterval}{2}
+\]
 
 
 \section{分析报告模块的实现}\label{sec:analytics}
