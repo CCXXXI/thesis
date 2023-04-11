@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.17.0](https://github.com/CCXXXI/thesis/compare/v0.16.2...v0.17.0) (2023-04-11)
+
+
+### Features
+
+* **design:** add {其他模块的设计} ([ff835eb](https://github.com/CCXXXI/thesis/commit/ff835eb85650167b2611cbccf33d675f932481a9)), closes [#83](https://github.com/CCXXXI/thesis/issues/83)
+* **design:** Riverpod模式简介 ([ff1bb0f](https://github.com/CCXXXI/thesis/commit/ff1bb0f40a2e5370548251628d8d66a91d51b613))
+* **design:** 完成 {Riverpod架构模式介绍} ([1c0855e](https://github.com/CCXXXI/thesis/commit/1c0855e4601e0f3f0bdd54a6d8e4f2e68af9f177))
+* **design:** 完成 {应用的整体架构设计} ([5bb115a](https://github.com/CCXXXI/thesis/commit/5bb115a2afaff2b83ad0066a0cb3d5abfee6f12a))
+* 完成 {平台自适应UI的实现} ([ddcfc7a](https://github.com/CCXXXI/thesis/commit/ddcfc7a1604c6b2b7ec95256d659dd82ef286fd0))
+
+
+### Bug Fixes
+
+* {Git子模块介绍} 移至实现 ([f9688ad](https://github.com/CCXXXI/thesis/commit/f9688ada033d937e05b83b00d7da41e51e3484c5))
+* {其他功能的实现} 内容迁移 ([81777fa](https://github.com/CCXXXI/thesis/commit/81777fac5a46dd4df4289dc8e23d401b0656de16))
+* {分析报告模块的实现} 内容迁移 ([3900e19](https://github.com/CCXXXI/thesis/commit/3900e199ac7a0fff67f87211a907cdfdf28d5e29))
+* {心电模块的实现} 内容迁移 ([c1de94a](https://github.com/CCXXXI/thesis/commit/c1de94a70a9b674e03627069f894d0389cf97c59))
+* {设备管理模块的实现} 内容迁移 ([e75625d](https://github.com/CCXXXI/thesis/commit/e75625d84e8f32b845bd7c5ee73535f3864780ac))
+* {项目包含的Git仓库} 移至实现 ([cfb4d36](https://github.com/CCXXXI/thesis/commit/cfb4d36bc04e0574f0d41a21d21bf8623e4c5a77))
+* **design:** {应用的界面与功能设计} -&gt; {应用各个模块的设计} ([659ccc2](https://github.com/CCXXXI/thesis/commit/659ccc2aedd631f026cc762258d97f53740eddf8))
+* **design:** 完善 {表示层} ([e28b7eb](https://github.com/CCXXXI/thesis/commit/e28b7eb2bfe07a4f73a72210524d9f5dd4106bde))
+* **dev:** fix typo ([06265fd](https://github.com/CCXXXI/thesis/commit/06265fda6c7c23eebe097718a6c6a214f16a90fe))
+* **dev:** fix typo again ([38ff00e](https://github.com/CCXXXI/thesis/commit/38ff00e4002f817e374cb587043f6c5d0f0695b2))
+* **dev:** 微调测试相关描述 ([6c1b8d0](https://github.com/CCXXXI/thesis/commit/6c1b8d054ba42fabc1526ea81f0d6b808460eb24))
+* **dev:** 心率检测 -&gt; 实时心率检测 ([e30e4fe](https://github.com/CCXXXI/thesis/commit/e30e4fee4960e5a7766ddcc31458905b32ff12ff))
+* **dev:** 部分 Screenshot -&gt; Screenshots ([ebdba98](https://github.com/CCXXXI/thesis/commit/ebdba98596ce9aa1133c6a38b6fffa11c01b69ad))
+
+
+### Styles
+
+* **dev:** add newline ([90979ce](https://github.com/CCXXXI/thesis/commit/90979cecf4c4f3551e801e5955229aeee9b460f9))
+
+
+### Documentation
+
+* **appendix:** add questions ([8eda945](https://github.com/CCXXXI/thesis/commit/8eda945f9066f46950f471a8e00ecc611ff469af))
+* **design:** add todo ([2b1cb07](https://github.com/CCXXXI/thesis/commit/2b1cb07ad4c62880c946e5f7e879c84143e849d8))
+* update todo ([612431d](https://github.com/CCXXXI/thesis/commit/612431d4055dbff317f074cda8f8e2701bc34080)), closes [#82](https://github.com/CCXXXI/thesis/issues/82)
+
+
+### Miscellaneous Chores
+
+* update gitignore ([e1b3bac](https://github.com/CCXXXI/thesis/commit/e1b3bac9fb10f720f2ec97cb1682a4d9953085a9))
+* update IDEA config ([2f3b054](https://github.com/CCXXXI/thesis/commit/2f3b0549fa051f9d9d9d6b177ffacf195290fade))
+
 ## [0.16.2](https://github.com/CCXXXI/thesis/compare/v0.16.1...v0.16.2) (2023-04-11)
 
 ### Performance Improvements
