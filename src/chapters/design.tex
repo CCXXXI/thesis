@@ -4,7 +4,9 @@
 \chapter{\app 的设计}\label{ch:design}
 
 
-\section{项目的整体架构设计}\label{sec:arch-design}
+\section{应用的整体架构设计}\label{sec:arch-design}
+
+在设计应用程序时选择正确的应用架构至关重要，过于简陋的设计会使得代码整体缺乏组织性，过于繁复的设计则会阻碍代码的修改迭代。自最经典的MVC架构以来，已有许多流行的应用架构被相继提出。其中一些对原始的MVC架构进行改动后仍沿用其名称，导致MVC这一术语的含义越发模糊；另一些变体则被命名为MVP、MVVM、MVC+S等MV*，或是如Clean Architecture等另起炉灶。这些经典的架构模式很难原样照搬至Flutter框架，即使强行在Flutter中进行实现也只会使得代码结构不伦不类。在探索Flutter适用的应用架构的过程中，社区已经提出了许多新模式，如BLoC、Stacked等。本应用的架构设计采用的是Andrea于2022年初提出的Riverpod模式\cite{bizzottoFlutterAppArchitecture}。Flutter曾经有一个流行的状态管理包Provider，其开发者后来将该包进行了大幅重写，并因其与旧版本不兼容而改名为Riverpod（对Provider中字母的重组）重新发布，Andrea提出的该架构模式因基于Riverpod包而命名为Riverpod模式。
 
 \todo{增加宏观介绍，Pan-T等模块的划分。 https://github.com/CCXXXI/thesis/issues/82}
 
