@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.16.2](https://github.com/CCXXXI/thesis/compare/v0.16.1...v0.16.2) (2023-04-11)
+
+### Performance Improvements
+
+- [ImgBot] Optimize images ([#113](https://github.com/CCXXXI/thesis/issues/113)) ([00801c7](https://github.com/CCXXXI/thesis/commit/00801c7eb8464b72b9f243ad936e59ad37aa107d))
+
 ## [0.16.1](https://github.com/CCXXXI/thesis/compare/v0.16.0...v0.16.1) (2023-04-10)
 
 ### Bug Fixes
