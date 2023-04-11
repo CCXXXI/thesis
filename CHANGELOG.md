@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.18.0](https://github.com/CCXXXI/thesis/compare/v0.17.0...v0.18.0) (2023-04-11)
+
+### Features
+
+- **design:** 完成 {分析报告模块的设计} ([1337550](https://github.com/CCXXXI/thesis/commit/13375504a1acdcf296d5e30dc2083843cd39f31b))
+- **design:** 完成 {心电模块的设计} ([b8dc863](https://github.com/CCXXXI/thesis/commit/b8dc863275eeac265d429b88866d03000d1bddca))
+- **design:** 完成 {设备管理模块的设计} ([4877d6e](https://github.com/CCXXXI/thesis/commit/4877d6e7320c05805bda3531b7917a79e6629440))
+
+### Bug Fixes
+
+- **design:** add spaces around ref ([8a86898](https://github.com/CCXXXI/thesis/commit/8a868984e29406c14cf39c9301c23a29d9f59610))
+- **design:** fix level of other-design ([0cc90ab](https://github.com/CCXXXI/thesis/commit/0cc90ab1a3dc87f70068c0932fc4aa72b919ab12))
+- **design:** 修正架构模式表述 ([94b2bfa](https://github.com/CCXXXI/thesis/commit/94b2bfae76ec8c5d4074938dd80312333be3e292))
+- **design:** 移除其他模块的设计 ([c1978bd](https://github.com/CCXXXI/thesis/commit/c1978bd949a69165bf41adcdf7f4c06d34a0a6e8))
+- **dev:** 自动删除 -&gt; 自动清理 ([0d4b80f](https://github.com/CCXXXI/thesis/commit/0d4b80fae67d4067ed845742ca41548061bce0eb))
+- **dev:** 设计中 -&gt; 界面实现中 ([f66ffbf](https://github.com/CCXXXI/thesis/commit/f66ffbfc078cae861cccffd5c1100a9fc9064734))
+- **dev:** 页面 -&gt; 界面 ([61438ff](https://github.com/CCXXXI/thesis/commit/61438ffde56ec78bfb6eb26ffe356b6b7c3ab387))
+
+### Miscellaneous Chores
+
+- correct diagram ([8614ed2](https://github.com/CCXXXI/thesis/commit/8614ed29b61d3ccfc3271648ef1d397819ffe12c))
+
 ## [0.17.0](https://github.com/CCXXXI/thesis/compare/v0.16.2...v0.17.0) (2023-04-11)
 
 ### Features
