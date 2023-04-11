@@ -46,57 +46,9 @@ Flutter曾经有一个流行的状态管理包Provider，该包也是上述的BL
 
 \todo{心电模块的设计}
 
-\subsection{分析报告界面的设计}\label{subsec:analytics-design}
+\subsection{分析报告模块的设计}\label{subsec:analytics-design}
 
-分析报告界面的整体外观如图~\ref{fig:analytics} 所示。在导航栏中为分析报告使用了表示数据分析的图标。
-
-\begin{figure}[ht]
-    \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/analytics-loading}}
-    \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/analytics}}
-    \subcaptionbox{时间范围选择}{\includegraphics[width=.33\textwidth]{../assets/analytics-dialog}}
-    \bicaption{分析报告界面的截图}{Screenshot of the analytics page}
-    \label{fig:analytics}
-\end{figure}
-
-该界面可以划分为分析报告展示与时间范围选择器两部分，另外点击心律类型可以展开心律类型详情界面。
-
-\subsubsection{分析报告展示部分的设计}\label{subsubsec:analytics-display-design}
-
-该部分区域整体上是一个可以上下滑动的列表。由于分析报告内容过多，在一个屏幕内完全展示会过于拥挤，所以使用了可滑动列表的形式。
-
-最上方的一小条区域是线状进度指示器。由于难以确定生成分析报告所需的具体时长，所以该进度指示器是不确定进度的样式。另外，由于该部分有很多界面元素可以在获取到实际数据之前就确认其内容与位置，所以没有像历史心电界面那样使用屏幕中央的圆形加载进度指示器，而只是在最上方使用了线状进度指示器，并在加载时提前显示部分可以确定的元素，以减少加载前后的界面变化，提升用户对界面内容的确定感。在加载完成后，该区域并不会直接消失，而是会替换为不可见的与进度指示器高度相同的空白元素，以保证界面布局的稳定性，避免下方内容在加载完成后突然上移。
-
-在进度指示器之下显示了所选时间范围的分析结果的总结，以右侧以带颜色的字体显示对分析结果的简要概括（“正常”、“心动过速”等），并在下方给出稍详细一些的解释。
-
-总结区域的下方放置了一条分割线，用以分割总体分析结果与具体的心律类型分析结果，并在视觉上对总体结果加以适当强调。
-
-在分割线之下，每个心律类型的分析结果都会显示在一个独立的区域中。首先以稍大的字体显示心律类型的名称、次数、占比，然后以小一些的字体给出该心律类型相关数据的正常范围作为参考值，第三行显示部分心律类型会具有的额外信息，如成对房早次数等；后两行的内容各自被限制在一行之内，溢出的内容会被以省略号替代，以提示用户可以点击该区域查看更多信息。此外，每个心律类型的右侧也和总结一样给出了对该心律类型分析结果的简要概括。
-
-各个心律类型的区域都是可以点击展开查看详细信息的。通常而言，可点击区域应当使用按钮等样式加以指示，但当屏幕上的可点击区域过多时应该避免过多的装饰，以免造成视觉上的混乱。对于列表项的可点击性的指示，一种常见的做法是在右侧显示一个箭头，但在本界面中右侧已经被占据，不便添加更多元素。因此，本界面使用了其他方式来提醒用户心律类型可以点击。除上文所述的省略号外，该界面利用下方被截断的列表项指示该区域可以滑动查看更多内容，并在用户滑过心律区域时展示了水墨扩散的效果，如图~\ref{fig:ink} 所示，效果会从点击位置向四周扩散。水墨扩散效果在Material设计中用于各种可点击区域的反馈，可以提醒用户心律展示区域点击后能触发额外动作。
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.5\textwidth]{../assets/ink}
-    \bicaption{心律类型区域的水墨扩散效果}{Ink effect of the heart rhythm area}
-    \label{fig:ink}
-\end{figure}
-
-\subsubsection{时间范围选择器部分的设计}\label{subsubsec:analytics-time-range-design}
-
-时间范围选择器部分仅在中间包含一个填充色调按钮。因为需要明确提醒用户所示分析报告的时间范围，所以没有使用强调效果较弱的轮廓按钮和文本按钮。按钮中的文本指示了当前选择的时间范围。点击按钮后，会弹出时间范围选择对话框。
-
-时间范围选择对话框的主体是一个圆环，用户可以拖动圆环上的两个点来选定分析范围的起止时间。为了不引起日期的混淆，当前时间（在圆环上显示为红色）不被允许包含在选择部分之中，这样可以保证用户所选的时间范围总是可以解释为过去24小时之内的某个时间段。
-
-\subsubsection{心律类型详情界面的设计}\label{subsubsec:label-details}
-
-心律类型详情界面的整体外观的如图~\ref{fig:label-details} 所示。除上方的心律名称和返回按钮外，界面由可滑动查看的列表构成。列表内容包括该心律类型的说明文本，以及心律出现的具体时间。为了保证每个时间都可以较容易点击到，时间之间留有适当的间隔。点击时间后，会跳转至历史心电的对应时间。
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.33\textwidth]{../assets/label-details}
-    \bicaption{心律类型详情界面的截图}{Screenshot of the heart rhythm details page}
-    \label{fig:label-details}
-\end{figure}
+\todo{分析报告模块的设计}
 
 \subsection{设备管理界面的设计}\label{subsec:device-design}
 
