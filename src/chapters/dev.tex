@@ -384,6 +384,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 设备类上定义了其状态的获取方法。其中，ID、名称、型号、采样率 因为不会变动而直接定义为 |String get| 或 |int get|。连接状态、信号强度、剩余电量和最关键的心电数据则因为需要被持续监听而定义为 |Stream|。之后，基于Riverpod包为这些 |Stream| 提供了分别的 |StreamProvider| 以方便监听。为了编码方便，这些 |StreamProvider| 在设备未连接时也会提供一些默认值，多数是 |Stream.empty()|，但连接状态是 |Stream.value(false)|。
 
+
 \section{其他功能的实现}\label{sec:other}
 
 应用中包含一些不直接面向用户的辅助功能，或者虽然用户不常主动使用但仍然应该提供的功能，一些相关界面的外观如图~\ref{fig:other} 所示。
