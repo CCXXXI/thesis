@@ -349,7 +349,26 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 \todo{分析报告模块的更多实现细节}
 
+
 \section{设备管理模块的实现}\label{sec:device}
+
+\subsection{设备管理界面的实现}\label{subsec:device-ui}
+
+设备管理界面的整体外观如图~\ref{fig:device} 所示。设备管理在导航栏中的图标是对心电监测设备所使用的电极片的简化表示。
+
+\begin{figure}[ht]
+    \subcaptionbox{已连接}{\includegraphics[width=.33\textwidth]{../assets/device-connected}}
+    \subcaptionbox{连接新设备}{\includegraphics[width=.33\textwidth]{../assets/device-new}}
+    \subcaptionbox{无可用设备}{\includegraphics[width=.33\textwidth]{../assets/device-na}}
+    \bicaption{设备管理界面的截图}{Screenshot of the device page}
+    \label{fig:device}
+\end{figure}
+
+该界面相比上述其他界面较为简单，分为已绑定设备和未绑定设备两种状态。
+
+在已绑定设备的状态下，该界面会以列表形式展示设备的名称、型号、信号强度、剩余电量与充电状态等信息，并提供解绑设备的按钮。该按钮没有使用额外的视觉效果来表示其可以点击，因为“解绑设备”这一文本本身已经足够明确地指示了该区域是可以点击的。
+
+在未绑定设备的状态下，该界面会起到搜索并绑定设备的作用。界面上方展示“正在搜索蓝牙设备”的提示并显示了不确定进度的圆形进度指示器，之后有一条分割线，下方则展示了搜索到的设备列表。列表中的每一项都表示了一个搜索到的蓝牙设备（由于Android和iOS模拟器均不支持蓝牙功能，截图中仅显示了一个模拟设备），并以带阴影的卡片的样式来显示其可以直接点击，而没有额外放置绑定按钮，以使应用界面更加简洁。
 
 \todo{设备管理模块的更多实现细节}
 
