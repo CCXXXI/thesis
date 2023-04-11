@@ -347,7 +347,17 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
     \label{fig:label-details}
 \end{figure}
 
-\todo{分析报告模块的更多实现细节}
+\subsection{分析报告模块的性能优化}\label{subsec:analytics-performance}
+
+在从数据库查询历史心拍数据时，将多个类型的心拍数据进行了并发查询，以提升性能。不过后来发现提升效果并不明显，因为九成以上的心拍集中于窦性心律类型。
+
+\subsection{将TimeRange转换为DateTime的算法}\label{subsec:timerange-to-datetime}
+
+当用户提交所选的查询范围时，可以获取的数据类型是 |TimeRange|，其内部是起止时间的 |TimeOfDay|，也就是只包含小时和分钟数据，不包含是哪一天。为了将其转换为完整的 |DateTime| 以供查询，首先将结束时间转换为过去的最近一次小时和分钟与 |TimeOfDay| 相同的 |DateTime|，然后以同样方式将开始时间转换为结束时间前的最近一个 |DateTime|，这样就完成了时间范围的转换。
+
+\subsection{LibTorch模块相关的处理技巧}\label{subsec:libtorch}
+
+由于LibTorch只提供了从文件加载模型的接口，而没有允许从内存直接加载模型，因此传递给C++的参数被设计为文件路径字符串。然而，Flutter中的assets没有直接提供路径，于是在应用启动时的初始化步骤中，会使用 |rootBundle.load| 将模型文件先从assets加载到内存，然后再将其保存到临时文件中，最后将临时文件的路径传递给C++。此外，将传递字符串参数的时候，实际的实现为动态分配的字符数组，需要注意在使用完毕后手动释放内存，在将心电数据作为数组传递时也是一样。
 
 
 \section{设备管理模块的实现}\label{sec:device}
