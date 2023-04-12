@@ -473,8 +473,6 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 点击导航栏跳转至对应界面时使用了顶级（Top level）转换效果。该效果专门用于在应用程序的顶级目的地之间导航时，比如点击导航栏中的按钮时。该效果会将旧屏幕快速淡出，然后新屏幕快速淡入。由于顶级目的地的内容不一定相关，因此该动画效果有意不使用分组或持久元素来在屏幕之间创建牢固的关系。
 
-\todo{界面过渡动画的更多实现细节}
-
 \subsection{数据自动上传与自动清理的实现}\label{subsec:data-auto-ui}
 
 应用每天会自动上传历史心电数据与分析报告结果至服务器（服务器端属于同课题的另一个子项目）。由于历史心电数据量较大而分析报告数据量较小，应用在设置中为两者的上传提供了分别的开关，以便流量有限的用户可以选择仅上传分析报告。
@@ -526,14 +524,6 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 \subsubsection{Flutter Platform Widgets包在实现中的作用}
 
 Flutter Platform Widgets包在平台自适应UI的实现中起到的作用主要在于基于共识消除了不必要的样板代码。比如为了在Android平台和iOS平台使用不同的滑动条外观，原本需要在 |if| 条件中通过判断 |Platform.isAndroid| 或 |Platform.isIOS| 来决定使用 |Slider| 还是 |CupertinoSlider|。由于 |Slider| 和 |CupertinoSlider| 是公认的不同风格设计对同一种UI的实现，相关的代码并没有提供任何额外的信息量，只是无意义的冗余。使用Flutter Platform Widgets包后，只需要使用 |PlatformSlider| 即可，其内部会根据平台自动选择使用 |Slider| 还是 |CupertinoSlider|。这不仅避免了大量关于平台判断的 |if| 语句，也避免了将相同的参数分别传递至两个平台对应的类的构造函数之中，有助于使代码更加简洁。
-
-\subsection{路由功能的实现}\label{subsec:router}
-
-\todo{路由功能的实现}
-
-\subsection{本地化功能的实现}\label{subsec:l10n}
-
-\todo{本地化功能的实现}
 
 \subsection{开发者工具的实现}\label{subsec:dev-tools}
 
