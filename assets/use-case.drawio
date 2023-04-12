@@ -1,0 +1,120 @@
+<mxfile host="Electron" modified="2023-04-12T00:46:20.443Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="GD0ly2_7sHRrLgphkowH" version="21.1.2" type="device">
+  <diagram id="h8sWslL2cCIQR9Mv2uak" name="第 1 页">
+    <mxGraphModel dx="1021" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aA63wH-vjKKXEL9CF68c-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-1" target="aA63wH-vjKKXEL9CF68c-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-1" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-1" value="用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="90" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.07;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-7" target="aA63wH-vjKKXEL9CF68c-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-7" value="服务器" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-24" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-35" target="aA63wH-vjKKXEL9CF68c-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="540" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-27" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
+          <mxGeometry x="160" y="200" width="400" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-28" value="心电监测应用" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="160" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-13" value="管理心电设备" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="160" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-15" value="管理心电数据" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="160" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-29" value="绑定心电设备" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="40" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-30" value="解绑心电设备" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="280" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-31" value="查看设备信息" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="160" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-32" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="aA63wH-vjKKXEL9CF68c-29" target="aA63wH-vjKKXEL9CF68c-13" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="330" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-34" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="aA63wH-vjKKXEL9CF68c-31" target="aA63wH-vjKKXEL9CF68c-13" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="133.51992338830337" y="429.08653657125024" as="sourcePoint" />
+            <mxPoint x="186.7179882264893" y="411.09400392450357" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-33" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="aA63wH-vjKKXEL9CF68c-30" target="aA63wH-vjKKXEL9CF68c-13" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="123.51992338830337" y="419.08653657125024" as="sourcePoint" />
+            <mxPoint x="176.7179882264893" y="401.09400392450357" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-48" value="查看实时心电" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="280" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-49" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="aA63wH-vjKKXEL9CF68c-48" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="130" y="150" as="sourcePoint" />
+            <mxPoint x="170" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-50" value="查看分析报告" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="160" y="280" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-51" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="aA63wH-vjKKXEL9CF68c-50" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="90" y="-50" as="sourcePoint" />
+            <mxPoint x="296.00000000001273" y="284.0000000000084" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-52" value="上传心电数据" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="280" y="280" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-53" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="aA63wH-vjKKXEL9CF68c-52" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="50" y="-250" as="sourcePoint" />
+            <mxPoint x="320" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NvV_OND-wKLd93dSySQ3-1" value="查看实时心率" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="40" y="200" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NvV_OND-wKLd93dSySQ3-2" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="NvV_OND-wKLd93dSySQ3-1" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="210" y="290" as="sourcePoint" />
+            <mxPoint x="210" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NvV_OND-wKLd93dSySQ3-3" value="查看历史心电" style="ellipse;whiteSpace=wrap;html=1;" parent="aA63wH-vjKKXEL9CF68c-27" vertex="1">
+          <mxGeometry x="40" y="280" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NvV_OND-wKLd93dSySQ3-4" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" parent="aA63wH-vjKKXEL9CF68c-27" source="NvV_OND-wKLd93dSySQ3-3" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="210" y="290" as="sourcePoint" />
+            <mxPoint x="210" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-54" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-35" target="aA63wH-vjKKXEL9CF68c-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aA63wH-vjKKXEL9CF68c-35" value="&lt;span style=&quot;&quot;&gt;可穿戴心电设备&lt;/span&gt;" style="html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

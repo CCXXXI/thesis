@@ -11,7 +11,37 @@
 
 \section{应用的功能性需求分析}\label{sec:func-req}
 
-\todo{应用有哪些功能性需求？（参考开题报告，结合之后实际开发的情况做些调整。）（写完开发那章再回来补应该好写一点。）}
+本应用的用例图如图~\ref{fig:use-case} 所示。
+
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth]{../assets/use-case.drawio}
+    \bicaption{应用的用例图}{Use case diagram of the app}
+    \label{fig:use-case}
+\end{figure}
+
+\subsection{管理心电设备的需求分析}\label{subsec:device-req}
+
+\begin{itemize}
+    \item[UC1] 用户可以通过应用程序绑定心电设备。
+    \item[UC2] 用户可以通过应用程序断开心电设备的绑定。
+    \item[UC3] 用户可以通过应用程序查看心电设备的名称。
+    \item[UC4] 用户可以通过应用程序查看心电设备的型号。
+    \item[UC5] 用户可以通过应用程序查看心电设备的连接状态。
+    \item[UC6] 用户可以通过应用程序查看心电设备的信号质量。
+    \item[UC7] 用户可以通过应用程序查看心电设备的电量。
+\end{itemize}
+
+\subsection{管理心电数据的需求分析}\label{subsec:ecg-req}
+
+\begin{itemize}
+    \item[UC8] 用户可以通过应用程序查看实时的心率数据。
+    \item[UC9] 用户可以通过应用程序查看实时的心电图。
+    \item[UC10] 用户可以通过应用程序查看历史的心电图。
+    \item[UC11] 用户可以筛选要查看的历史心电图的时间。
+    \item[UC12] 用户可以通过应用程序查看历史的心电分析报告。
+    \item[UC13] 用户可以筛选要查看的历史心电分析报告的时间范围。
+    \item[UC14] 用户可以通过应用程序上传心电数据到服务器。
+\end{itemize}
 
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
