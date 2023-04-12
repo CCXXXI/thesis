@@ -310,6 +310,38 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
     (\lvert value \rvert + 10^{-6}) \bmod largeInterval < \frac{smallInterval}{2}
 \]
 
+\subsection{实时心电图的性能优化}\label{subsec:ecg-performance}
+
+实时心电图由于数据量大、更新频繁，对性能要求较高，且对电量等资源的消耗也较高。为了降低实时心电图的渲染等开销，进行了两方面的优化。
+
+\subsubsection{刷新率的降低}
+
+在应用设置中提供了实时心电图的刷新率设置，默认为30Hz。在实时心电图的实现中，首先将其取倒数转换为最小刷新时间间隔，然后维护一个上次刷新时间的变量，在每次为底层数据添加了新的点时判断当前时间与上次刷新时间的差值是否大于最小刷新时间间隔，如果是则进行刷新，否则跳过。
+
+\subsubsection{点数的减少}
+
+每秒钟上百个点对于快速移动的实时心电图来说过于精细了，可以考虑通过各种算法减少图上的采样点的数量来降低渲染开销。
+
+一个最简单的方法是每隔若干个点取一个点，但是这样会导致图像的连续性变差，尤其是如果刚好跳过了一个波峰或波谷，那么图像的形状会有明显的变更，即使是在快速移动中也足够明显。因此，需要考虑一种算法来保证图像的连续性。
+
+在心电信号的重采样领域，已经存在许多算法，普遍都是使用各种方式进行插值。为了在大量计算时保证效率，本应用中使用了一种更简单的算法，每当一个点到达时，会比较其与前一个点的标准化的距离：
+
+\begin{align*}
+    dx  &= \frac{b.x - a.x}{smallXInterval} \\
+    dy  &= \frac{b.y - a.y}{smallYInterval} \\
+    dis &= \sqrt{dx^2 + dy^2} \\
+\end{align*}
+
+其中，\(smallXInterval\) 为横坐标的小格间距（40ms），\(smallYInterval\) 为纵坐标的小格间距（0.1mV），\(a\) 为前一个点，\(b\) 为当前点。如果 \(dis\) 大于可在设置中调整的一个阈值，则保留当前点，否则丢弃当前点。图~\ref{fig:filters} 为不同阈值的效果对比。本应用在默认设置下会使用0.5作为阈值，该阈值可以明显降低屏幕上需要渲染的点数，但不会使得图像过于失真。从图中也可以看出，本算法主要过滤掉的是较为稠密的区域的点，而对于波峰等较为稀疏的点则保留原样。
+
+\begin{figure}[ht]
+    \subcaptionbox{0}{\includegraphics[width=.33\textwidth]{../assets/filter-0}}
+    \subcaptionbox{0.5}{\includegraphics[width=.33\textwidth]{../assets/filter-0.5}}
+    \subcaptionbox{1}{\includegraphics[width=.33\textwidth]{../assets/filter-1}}
+    \bicaption{不同阈值的效果对比}{Comparison of different thresholds}
+    \label{fig:filters}
+\end{figure}
+
 
 \section{分析报告模块的实现}\label{sec:analytics}
 
