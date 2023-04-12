@@ -52,7 +52,7 @@ The~ engine~ "#1"~ is~ not~ supported.
     heading     = true,
     zihao       = -4,
     fontset     = none,
-    linespread  = 1.5,
+    linespread  = 1.625,
     \g__ecnu_to_ctexart_clist,
 }
 { ctexrep }
@@ -93,16 +93,19 @@ The~ engine~ "#1"~ is~ not~ supported.
     hyperref,
     bicaption,
     booktabs,
+    etoolbox,
 }
 \captionsetup [ figure ] [ bi-second ] { name=Figure }
 \captionsetup [ table  ] [ bi-second ] { name=Table  }
+\captionsetup { justification=centering  }
 \geometry
 {
 % showframe,
     a4paper,
     top       = 2.5 cm,
     bottom    = 2.0 cm,
-    footskip  = 0.7 cm,
+    footskip  = 6 mm,
+    headsep   = \dimexpr(9.55mm-11.7pt),
 }
 \bool_if:NTF \g__ecnu_twoside_bool
     {
@@ -186,17 +189,17 @@ The~ engine~ "#1"~ is~ not~ supported.
 }
 \pagestyle{fancy}
 \fancyhead[L,R]       { }
-\fancyhead[C]         {  \sffamily\zihao{-5} \l__ecnu_info_title_tl }
-\fancyfoot[C]         { \zihao{-5} \thepage }
+\fancyhead[C]         { \sffamily\footnotesize \l__ecnu_info_title_tl }
+\fancyfoot[C]         { \footnotesize \thepage }
 \fancyfoot[L,R]       { }
-\headheight = 13 pt
+\headheight = 11.7 pt
 \fancypagestyle{plain}
 {
     \fancyhead[L,R]     { }
-    \fancyhead[C]       {  \sffamily\zihao{-5} \l__ecnu_info_title_tl }
-    \fancyfoot[C]       { \zihao{-5} \thepage }
+    \fancyhead[C]       { \sffamily\footnotesize \l__ecnu_info_title_tl }
+    \fancyfoot[C]       { \footnotesize \thepage }
     \fancyfoot[L,R]     { }
-    \headheight = 13 pt
+    \headheight = 11.7 pt
 }
 % 字体设置
 \tl_new:N \g__ecnu_cjk_fontset_tl
@@ -794,25 +797,27 @@ qed           = \qedsymbol
         chapter / numbering = false,
         chapter / format    = \sffamily\bfseries\centering,
         chapter / titleformat = \zihao{-3},
+        chapter / beforeskip  = 7.125 bp,
+        chapter / afterskip   = 7.125 bp,
     }
     \chapter* {#1}
     \group_end:
 }
-\cs_new_protected:Npn \__ecnu_table_of_contents_title:n #1
+\cs_new_protected:Npn \__ecnu_toc_title:n #1
     {
     \group_begin:
     \ctexset
     {
         chapter / numbering = false,
         chapter / format    = \rmfamily\bfseries\centering,
-        chapter / titleformat = \zihao{-3},
+        chapter / titleformat = \zihao{-4},
     }
     \chapter* {#1}
     \group_end:
 }
 \cs_generate_variant:Nn \__ecnu_chapter:n { V }
 \cs_generate_variant:Nn \__ecnu_title:n { V }
-\cs_generate_variant:Nn \__ecnu_table_of_contents_title:n { V }
+\cs_generate_variant:Nn \__ecnu_toc_title:n { V }
 \cs_new:Npn \__ecnu_blank_underline:n #1
     { \rule [ -0.5 ex ] {#1} { 0.4 pt } }
 \cs_new:Npn \__ecnu_line_spread:N #1
@@ -1031,8 +1036,8 @@ qed           = \qedsymbol
         { 0.9 \textwidth }
         { \expandafter\uline\expandafter{\l__ecnu_info_titleEN_tl} },
     info / content     = \__ecnu_cover_info:,
-    title / format      = \__ecnu_line_spread:n { 1.1 } \zihao { 1 } \bfseries,
-    titleEN / format      = \__ecnu_line_spread:n { 1.1 } \zihao { 1 } \bfseries,
+    title / format      = \__ecnu_line_spread:n { 1 } \zihao { 1 } \bfseries,
+    titleEN / format      = \__ecnu_line_spread:n { 1 } \zihao { 1 } \bfseries,
     id / bottom-skip = 0 pt plus 0.5 fill,
     logo / bottom-skip = 0 pt plus 0.3 fill,
     titleEN / bottom-skip = 0 pt plus 2.5 fill,
@@ -1090,7 +1095,7 @@ qed           = \qedsymbol
 \cs_new_protected:Npn \__ecnu_abstract_end:
     {
     \__ecnu_keywords:nNn
-        { \sffamily \c__ecnu_name_keywords_tl \c__ecnu_colon_tl }
+        { \rmfamily\bfseries \c__ecnu_name_keywords_tl \c__ecnu_colon_tl }
     \l__ecnu_info_keywords_clist { ， }
     \clearpage{\thispagestyle{empty}\cleardoublepage}
 }
@@ -1115,15 +1120,27 @@ qed           = \qedsymbol
 }
 \cs_set:Npn \tableofcontents
 {
-    \__ecnu_table_of_contents_title:V \contentsname
-    \vspace{10pt}
+    \__ecnu_toc_title:V \contentsname
+    \group_begin:
+    \linespread{1.083}\selectfont
     \@starttoc{toc}
+    \group_end:
     \clearpage{\thispagestyle{empty}\cleardoublepage}
 }
+% 目录具体格式
 \renewcommand{\cftchapleader}{\cftdotfill{1.0}}
 \renewcommand{\cftsecleader}{\cftdotfill{1.0}}
-\renewcommand{\cftsubsecleader}{\cftdotfill{1.0}}
-\setlength{\cftbeforechapskip}{0pt}
+\setlength{\cftchapnumwidth}{0em}
+\setlength{\cftsecnumwidth}{0pt}
+% \setlength{\cftbeforetoctitleskip}{0pt}
+% 目录章节间距
+\setlength{\cftbeforechapskip}{6pt}
+\setlength{\cftbeforechapskip}{6pt}
+\renewcommand{\@tocrmarg}{0pt}
+\pretocmd{\section}
+{ \ifnum\value{section}=0\addtocontents{toc}{\protect\vspace{6pt}}\fi }
+{}{}
+
 % 附录
 \tl_const:Nn \c__ecnu_name_appendix_tl         { 附录 }
 \tl_const:Nn \c__ecnu_name_acknowledgement_tl  { 致谢 }
@@ -1138,6 +1155,7 @@ qed           = \qedsymbol
     \zihao{5}
     \par
     \begingroup
+%    \let\clearpage\relax
     \setcounter{chapter}{0}
     \setcounter{section}{0}
     \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
@@ -1171,8 +1189,11 @@ qed           = \qedsymbol
 \NewDocumentCommand \makeTOC { }
 {
     \addtocontents{toc}{\protect\thispagestyle{empty}}
+    \group_begin:
+    \pagestyle{empty}
     \pagenumbering{roman}
     \tableofcontents
+    \group_end:
 }
 
 \AtBeginDocument
