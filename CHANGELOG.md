@@ -2,10 +2,9 @@
 
 ## [0.22.2](https://github.com/CCXXXI/thesis/compare/v0.22.1...v0.22.2) (2023-04-12)
 
-
 ### Reverts
 
-* Revert "fix(TOC): add colons after 摘要 & ABSTRACT ([#41](https://github.com/CCXXXI/thesis/issues/41))" ([#132](https://github.com/CCXXXI/thesis/issues/132)) ([b43d2e1](https://github.com/CCXXXI/thesis/commit/b43d2e1d44f83a3fbb1f68c47d946667328ae8c7))
+- Revert "fix(TOC): add colons after 摘要 & ABSTRACT ([#41](https://github.com/CCXXXI/thesis/issues/41))" ([#132](https://github.com/CCXXXI/thesis/issues/132)) ([b43d2e1](https://github.com/CCXXXI/thesis/commit/b43d2e1d44f83a3fbb1f68c47d946667328ae8c7))
 
 ## [0.22.1](https://github.com/CCXXXI/thesis/compare/v0.22.0...v0.22.1) (2023-04-12)
 
