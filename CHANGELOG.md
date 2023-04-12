@@ -4,6 +4,7 @@
 
 ### Bug Fixes
 
+- 拉取上游论文模板的更新，修复了多处格式问题
 - **cls:** apply fix for TeX Live 2023 ([137838e](https://github.com/CCXXXI/thesis/commit/137838e6904bc78eb5279839295bd20c075313ba))
 - less line spread in title ([e10567c](https://github.com/CCXXXI/thesis/commit/e10567cd81f3e8c27d9cfda25ca74eace51d650f))
 - no `\let\clearpage\relax` ([a6c644f](https://github.com/CCXXXI/thesis/commit/a6c644f9a3e9188547511e3faf43e177270335c1))
