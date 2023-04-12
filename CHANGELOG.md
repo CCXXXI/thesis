@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.22.1](https://github.com/CCXXXI/thesis/compare/v0.22.0...v0.22.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* **cls:** apply fix for TeX Live 2023 ([137838e](https://github.com/CCXXXI/thesis/commit/137838e6904bc78eb5279839295bd20c075313ba))
+* less line spread in title ([e10567c](https://github.com/CCXXXI/thesis/commit/e10567cd81f3e8c27d9cfda25ca74eace51d650f))
+* no `\let\clearpage\relax` ([a6c644f](https://github.com/CCXXXI/thesis/commit/a6c644f9a3e9188547511e3faf43e177270335c1))
+* **TOC:** add colons after 摘要 & ABSTRACT ([#41](https://github.com/CCXXXI/thesis/issues/41)) ([521c984](https://github.com/CCXXXI/thesis/commit/521c98461b45a2fc1068e04ac0093eeb7a644e7e))
+
 ## [0.22.0](https://github.com/CCXXXI/thesis/compare/v0.21.0...v0.22.0) (2023-04-12)
 
 ### Features
