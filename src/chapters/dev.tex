@@ -310,6 +310,8 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
     (\lvert value \rvert + 10^{-6}) \bmod largeInterval < \frac{smallInterval}{2}
 \]
 
+若成立则使用粗线，否则使用细线。该算法可以适用于正数或负数的值，并考虑了浮点数的相关误差。
+
 \subsection{实时心电图的性能优化}\label{subsec:ecg-performance}
 
 实时心电图由于数据量大、更新频繁，对性能要求较高，且对电量等资源的消耗也较高。为了降低实时心电图的渲染等开销，进行了两方面的优化。
