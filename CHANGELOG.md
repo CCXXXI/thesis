@@ -2,28 +2,25 @@
 
 ## [0.19.0](https://github.com/CCXXXI/thesis/compare/v0.18.0...v0.19.0) (2023-04-12)
 
-
 ### Features
 
-* **dev:** 完成 {分析报告模块的实现} ([1af28b2](https://github.com/CCXXXI/thesis/commit/1af28b22edf600892258a6a3348aa553cddf6409))
-* **dev:** 完成 {实时心电图的性能优化} ([0aed89b](https://github.com/CCXXXI/thesis/commit/0aed89b532ebd55226839116b5299d23a857fb35))
-* **dev:** 完成 {应用自身信息的获取} ([890ed90](https://github.com/CCXXXI/thesis/commit/890ed907745f742a62527cac7df44af1a95f2997))
-* **dev:** 完成 {心电图的细节处理} ([0534502](https://github.com/CCXXXI/thesis/commit/05345029bc80e72578338eae2e54470e25c3a238))
-* **dev:** 完成 {设备管理模块的实现} ([c4d83ad](https://github.com/CCXXXI/thesis/commit/c4d83adefcbd950d634bb41381aa8a526de71870))
-
+- **dev:** 完成 {分析报告模块的实现} ([1af28b2](https://github.com/CCXXXI/thesis/commit/1af28b22edf600892258a6a3348aa553cddf6409))
+- **dev:** 完成 {实时心电图的性能优化} ([0aed89b](https://github.com/CCXXXI/thesis/commit/0aed89b532ebd55226839116b5299d23a857fb35))
+- **dev:** 完成 {应用自身信息的获取} ([890ed90](https://github.com/CCXXXI/thesis/commit/890ed907745f742a62527cac7df44af1a95f2997))
+- **dev:** 完成 {心电图的细节处理} ([0534502](https://github.com/CCXXXI/thesis/commit/05345029bc80e72578338eae2e54470e25c3a238))
+- **dev:** 完成 {设备管理模块的实现} ([c4d83ad](https://github.com/CCXXXI/thesis/commit/c4d83adefcbd950d634bb41381aa8a526de71870))
 
 ### Styles
 
-* **dev:** reformat ([8718265](https://github.com/CCXXXI/thesis/commit/87182654034dfcdab4eebe45536961c255bee4e6))
-
+- **dev:** reformat ([8718265](https://github.com/CCXXXI/thesis/commit/87182654034dfcdab4eebe45536961c255bee4e6))
 
 ### Documentation
 
-* **appendix:** 参考文献格式的替代方案 ([28abb17](https://github.com/CCXXXI/thesis/commit/28abb17afb33e5e5f25ba3502a24319cc2084bc6))
-* **dev:** remove more todos ([e077a14](https://github.com/CCXXXI/thesis/commit/e077a14f5a5f24af7cb9815cde76c648a2a5d8e8))
-* **dev:** remove todo ([d498211](https://github.com/CCXXXI/thesis/commit/d498211060d0ca44b74baae17400fc59d9b6f89b))
-* **dev:** remove todos ([27544d2](https://github.com/CCXXXI/thesis/commit/27544d2b6e8a1189867270231fcbf3d150eab407))
-* **dev:** 移除本章未完成部分 ([befef31](https://github.com/CCXXXI/thesis/commit/befef311a974508ddd166d0c345f194811057698))
+- **appendix:** 参考文献格式的替代方案 ([28abb17](https://github.com/CCXXXI/thesis/commit/28abb17afb33e5e5f25ba3502a24319cc2084bc6))
+- **dev:** remove more todos ([e077a14](https://github.com/CCXXXI/thesis/commit/e077a14f5a5f24af7cb9815cde76c648a2a5d8e8))
+- **dev:** remove todo ([d498211](https://github.com/CCXXXI/thesis/commit/d498211060d0ca44b74baae17400fc59d9b6f89b))
+- **dev:** remove todos ([27544d2](https://github.com/CCXXXI/thesis/commit/27544d2b6e8a1189867270231fcbf3d150eab407))
+- **dev:** 移除本章未完成部分 ([befef31](https://github.com/CCXXXI/thesis/commit/befef311a974508ddd166d0c345f194811057698))
 
 ## [0.18.0](https://github.com/CCXXXI/thesis/compare/v0.17.0...v0.18.0) (2023-04-11)
 
