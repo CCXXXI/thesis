@@ -310,6 +310,8 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
     (\lvert value \rvert + 10^{-6}) \bmod largeInterval < \frac{smallInterval}{2}
 \]
 
+若成立则使用粗线，否则使用细线。该算法可以适用于正数或负数的值，并考虑了浮点数的相关误差。
+
 \subsection{实时心电图的性能优化}\label{subsec:ecg-performance}
 
 实时心电图由于数据量大、更新频繁，对性能要求较高，且对电量等资源的消耗也较高。为了降低实时心电图的渲染等开销，进行了两方面的优化。
@@ -511,8 +513,8 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 \begin{figure}[ht]
     \centering
-    \subcaptionbox{Android}{\includegraphics[height=13cm]{../assets/settings}}
-    \subcaptionbox{iOS}{\includegraphics[height=13cm]{../assets/ios-settings}}
+    \subcaptionbox{Android}{\includegraphics[height=14cm]{../assets/settings}}
+    \subcaptionbox{iOS}{\includegraphics[height=14cm]{../assets/ios-settings}}
     \bicaption{应用在Android和iOS平台上的UI对比}{Comparison of the app's UI on Android and iOS}
     \label{fig:android-ios}
 \end{figure}
@@ -522,3 +524,15 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 \subsubsection{Flutter Platform Widgets包在实现中的作用}
 
 Flutter Platform Widgets包在平台自适应UI的实现中起到的作用主要在于基于共识消除了不必要的样板代码。比如为了在Android平台和iOS平台使用不同的滑动条外观，原本需要在 |if| 条件中通过判断 |Platform.isAndroid| 或 |Platform.isIOS| 来决定使用 |Slider| 还是 |CupertinoSlider|。由于 |Slider| 和 |CupertinoSlider| 是公认的不同风格设计对同一种UI的实现，相关的代码并没有提供任何额外的信息量，只是无意义的冗余。使用Flutter Platform Widgets包后，只需要使用 |PlatformSlider| 即可，其内部会根据平台自动选择使用 |Slider| 还是 |CupertinoSlider|。这不仅避免了大量关于平台判断的 |if| 语句，也避免了将相同的参数分别传递至两个平台对应的类的构造函数之中，有助于使代码更加简洁。
+
+\subsection{开发者工具的实现}\label{subsec:dev-tools}
+
+在开发过程中，为了方便调试应用，实现了一些开发者工具。这些工具的入口在默认情况下不会向用户展示，也不会加载相关资源，因此不会对正常的用户体验产生影响。可以通过在设置界面中手动启用开发者工具来开启相关功能。本节介绍一些较为重要的开发者工具。
+
+\subsubsection{模拟设备的实现}
+
+因为Android和iOS模拟器都不支持连接外部的蓝牙设备，所以为了方便调试，在应用中实现了一个模拟设备。该模拟设备对于电量、信号等数据均会给出固定值，而关键的心电数据则会循环输出一段样例数据。在曾经的旧版本实现中，模拟设备所使用的样例数据文件是作为资源文件打包在应用程序之中的，这样会使终端用户承担一些不必要的成本。当前的新版实现中，在开发者工具中实现了加载模拟设备所用心电数据的功能，在开启模拟设备之后需要选择本地的心电数据文件进行加载。通过这一改动，不仅减小了应用体积，也更方便切换不同数据进行调试。
+
+\subsubsection{日志功能的实现}
+
+应用的日志功能基于Logging包来实现，该包默认情况下只会将日志打印至控制台。为了方便在不连接控制台的情况下进行调试，基于Flutter UME包实现了应用内控制台。该包原本的实现并不支持将Logging包对接其提供的控制台，为了方便使用，对该包添加了相关的支持，并已经将该改动合并回了该包的开源仓库。
