@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.20.0](https://github.com/CCXXXI/thesis/compare/v0.19.0...v0.20.0) (2023-04-12)
+
+
+### Features
+
+* **req:** 完成 {项目的可行性分析} ([7c28c3b](https://github.com/CCXXXI/thesis/commit/7c28c3b7c709d64d4dce6f7bfc79afee1a4803d8))
+* **req:** 扩充 {应用的功能性需求分析} ([0838e99](https://github.com/CCXXXI/thesis/commit/0838e9943ac3f8d986fbb6ae042b13c4a5792b12))
+
 ## [0.19.0](https://github.com/CCXXXI/thesis/compare/v0.18.0...v0.19.0) (2023-04-12)
 
 ### Features
