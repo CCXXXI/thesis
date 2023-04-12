@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.22.0](https://github.com/CCXXXI/thesis/compare/v0.21.0...v0.22.0) (2023-04-12)
+
+### Features
+
+- **dev:** 完成 {开发者工具的实现} ([b32071e](https://github.com/CCXXXI/thesis/commit/b32071ed92cf1c6046c4a1fa1c291d3460191c57)), closes [#127](https://github.com/CCXXXI/thesis/issues/127)
+
+### Bug Fixes
+
+- **dev:** 加大图片 ([b2d9c45](https://github.com/CCXXXI/thesis/commit/b2d9c45ff6b717088ba5500fe5e804ee68a8fd5e))
+- **dev:** 补全 {坐标线粗细判定} ([e0eccd6](https://github.com/CCXXXI/thesis/commit/e0eccd6968adfcef2d4d6227e18c2c3aae046178))
+
+### Documentation
+
+- add todos ([15a1f29](https://github.com/CCXXXI/thesis/commit/15a1f293c88f7719a1e03697c10581c0a97eb295))
+- **appendix:** better todos ([f49368d](https://github.com/CCXXXI/thesis/commit/f49368dada8c74ad3f57901f90fc393ea14d6f57))
+
 ## [0.21.0](https://github.com/CCXXXI/thesis/compare/v0.20.0...v0.21.0) (2023-04-12)
 
 ### Features
