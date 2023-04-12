@@ -57,13 +57,12 @@ The~ engine~ "#1"~ is~ not~ supported.
 }
 { ctexrep }
 \clist_map_inline:nn
-    {
-        { no-math           } { fontspec     },
-        { perpage           } { footmisc     },
-        { mathrm=sym        } { unicode-math },
-}
-    { \PassOptionsToPackage #1 }
-\RequirePackage { etoolbox }
+  {
+    { no-math           } { fontspec     },
+    { perpage           } { footmisc     },
+    { mathrm=sym        } { unicode-math },
+  }
+  { \PassOptionsToPackage #1 }
 \LoadClass { ctexrep }
 % 导入宏包
 \PassOptionsToPackage { titles } { tocloft }
@@ -152,41 +151,59 @@ The~ engine~ "#1"~ is~ not~ supported.
 \int_new:N   \l__ecnu_info_year_int
 \int_zero:N  \l__ecnu_info_year_int
 \int_new:N   \l__ecnu_enroll_year_int
+\int_new:N   \l__ecnu_info_graduation_year_int
+\int_zero:N  \l__ecnu_info_graduation_year_int
 \int_new:N   \l__ecnu_info_month_int
 \int_zero:N  \l__ecnu_info_month_int
 \clist_new:N \l__ecnu_info_keywords_clist
 \clist_new:N \l__ecnu_info_keywordsEN_clist
 \keys_define:nn { ecnu / info }
-    {
-    title .tl_set:N     = \l__ecnu_info_title_tl,
-    titleEN .tl_set:N     = \l__ecnu_info_titleEN_tl,
-    author .tl_set:N     = \l__ecnu_info_author_tl,
-    studentID .tl_set:N     = \l__ecnu_info_studentID_tl,
-    department .tl_set:N     = \l__ecnu_info_department_tl,
-    major .tl_set:N     = \l__ecnu_info_major_tl,
-    supervisor .tl_set:N     = \l__ecnu_info_supervisor_tl,
-    academicTitle .tl_set:N     = \l__ecnu_info_academicTitle_tl,
-    year .int_set:N    = \l__ecnu_info_year_int,
-    month .int_set:N    = \l__ecnu_info_month_int,
-    keywords .clist_set:N  = \l__ecnu_info_keywords_clist,
-    keywordsEN .clist_set:N  = \l__ecnu_info_keywordsEN_clist
-}
-\int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int }
-    { \int_set_eq:NN \l__ecnu_info_year_int \c_sys_year_int }
-    { }
-\int_compare:nNnTF { \l__ecnu_info_month_int } = { \c_zero_int }
-    {
-    \int_set_eq:NN \l__ecnu_info_month_int \c_sys_month_int
-    \NewDocumentCommand \themonth { }
-    { \int_use:N \l__ecnu_info_month_int }
-}
-    { \NewDocumentCommand \themonth { } { \int_use:N \c_sys_month_int } }
-\NewDocumentCommand \theyear { } { \int_to_arabic:n {\l__ecnu_info_year_int} }
-\NewDocumentCommand \enrollYear { }
-{
-    \int_set:Nn \l__ecnu_enroll_year_int {\l__ecnu_info_year_int - 4 }
-    \int_use:N  \l__ecnu_enroll_year_int
-}
+  {
+    title           .tl_set:N     = \l__ecnu_info_title_tl,
+    titleEN         .tl_set:N     = \l__ecnu_info_titleEN_tl,
+    author          .tl_set:N     = \l__ecnu_info_author_tl,
+    studentID       .tl_set:N     = \l__ecnu_info_studentID_tl,
+    department      .tl_set:N     = \l__ecnu_info_department_tl,
+    major           .tl_set:N     = \l__ecnu_info_major_tl,
+    supervisor      .tl_set:N     = \l__ecnu_info_supervisor_tl,
+    academicTitle   .tl_set:N     = \l__ecnu_info_academicTitle_tl,
+    year            .int_set:N    = \l__ecnu_info_year_int,
+    month           .int_set:N    = \l__ecnu_info_month_int,
+    graduationYear  .int_set:N    = \l__ecnu_info_graduation_year_int,
+    keywords        .clist_set:N  = \l__ecnu_info_keywords_clist,
+    keywordsEN      .clist_set:N  = \l__ecnu_info_keywordsEN_clist
+  }
+\NewDocumentCommand \theyear { }
+  {
+    \int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int }
+      { \int_set_eq:NN \l__ecnu_info_year_int \c_sys_year_int }
+      { }
+    \int_use:N \l__ecnu_info_year_int
+  }
+\NewDocumentCommand \themonth { }
+  {
+    \int_compare:nNnTF { \l__ecnu_info_month_int } = { \c_zero_int }
+      { \int_set_eq:NN \l__ecnu_info_month_int \c_sys_month_int }
+      { }
+    \int_use:N \l__ecnu_info_month_int
+  }
+\NewDocumentCommand \graduationYear { }
+  {
+    \int_compare:nNnTF { \l__ecnu_info_graduation_year_int } = { \c_zero_int }
+      {
+        \int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int }
+          {
+            \int_set_eq:NN  \l__ecnu_info_graduation_year_int
+                            \c_sys_year_int
+          }
+          {
+            \int_set_eq:NN  \l__ecnu_info_graduation_year_int
+                            \l__ecnu_info_year_int
+          }
+      }
+      { }
+    \int_use:N  \l__ecnu_info_graduation_year_int
+  }
 \pagestyle{fancy}
 \fancyhead[L,R]       { }
 \fancyhead[C]         { \sffamily\footnotesize \l__ecnu_info_title_tl }
@@ -880,7 +897,7 @@ qed           = \qedsymbol
     \__ecnu_fixed_width_box:nn { \textwidth }
         {
         \bfseries\zihao { 4 }
-        \theyear \c__ecnu_thesisInfo_tl \hfill
+        \graduationYear \c__ecnu_thesisInfo_tl \hfill
         \c__ecnu_schoolNum_tl \c__ecnu_colon_tl \underline{10269}
     }
 }
@@ -1122,8 +1139,8 @@ qed           = \qedsymbol
 {
     \__ecnu_toc_title:V \contentsname
     \group_begin:
-    \linespread{1.083}\selectfont
-    \@starttoc{toc}
+      \linespread{1.2}\selectfont
+      \@starttoc{toc}
     \group_end:
     \clearpage{\thispagestyle{empty}\cleardoublepage}
 }
