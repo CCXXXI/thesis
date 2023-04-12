@@ -1036,8 +1036,8 @@ qed           = \qedsymbol
         { 0.9 \textwidth }
         { \expandafter\uline\expandafter{\l__ecnu_info_titleEN_tl} },
     info / content     = \__ecnu_cover_info:,
-    title / format      = \__ecnu_line_spread:n { 1.1 } \zihao { 1 } \bfseries,
-    titleEN / format      = \__ecnu_line_spread:n { 1.1 } \zihao { 1 } \bfseries,
+    title / format      = \__ecnu_line_spread:n { 1 } \zihao { 1 } \bfseries,
+    titleEN / format      = \__ecnu_line_spread:n { 1 } \zihao { 1 } \bfseries,
     id / bottom-skip = 0 pt plus 0.5 fill,
     logo / bottom-skip = 0 pt plus 0.3 fill,
     titleEN / bottom-skip = 0 pt plus 2.5 fill,
