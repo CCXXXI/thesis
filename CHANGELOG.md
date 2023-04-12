@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.3](https://github.com/CCXXXI/thesis/compare/v0.22.2...v0.22.3) (2023-04-12)
+
+
+### Bug Fixes
+
+* Merge commit '18f4e14977ba85df2477cae214ee2ae3e11e7705' into fix/subtree ([6bc8937](https://github.com/CCXXXI/thesis/commit/6bc89375ff6e93e93df27035a09b3ebaf17a1d89))
+
 ## [0.22.2](https://github.com/CCXXXI/thesis/compare/v0.22.1...v0.22.2) (2023-04-12)
 
 ### Reverts
