@@ -537,14 +537,14 @@ Flutter Platform Widgets包在平台自适应UI的实现中起到的作用主要
 
 应用的日志功能基于Logging包来实现，该包默认情况下只会将日志打印至控制台。为了方便在不连接控制台的情况下进行调试，基于Flutter UME包实现了应用内控制台。该包原本的实现并不支持将Logging包对接其提供的控制台，为了方便使用，对该包添加了相关的支持，并已经将该改动合并回了该包的开源仓库。
 
-Logging包除 @ALL@ 和 @OFF@ 外，提供了8个日志等级，从高到低分别为 @SHOUT@、@SEVERE@、@WARNING@、@INFO@、@CONFIG@、@FINE@、@FINER@、@FINEST@。在应用中，日志等级的使用遵循如表~\ref{tab:log-levels} 所示的规则。
+Logging包除 @ALL@ 和 @OFF@ 外，提供了8个日志等级，从高到低分别为 @SHOUT@、@SEVERE@、@WARNING@、@INFO@、@CONFIG@、@FINE@、@FINER@、@FINEST@。但是，该包并未指明在何种情况下使用哪个等级，而是交由开发者自行判断。在本应用中，结合实际情况，为日志等级的使用制定了如表~\ref{tab:log-levels} 所示的规则。
 
 \begin{table}[ht]
     \centering
     \bicaption{日志等级}{Log levels}\label{tab:log-levels}
     \begin{tabular}{|c|p{.4\linewidth}|p{.4\linewidth}|}
         \hline
-        等级 & 解释 & 示例 \\
+        \thead{等级} & \thead{描述} & \thead{示例} \\
         \hline
         @SHOUT@ &
         逻辑上不可能存在的情况，可能由一些笔误引发，需要修正程序代码。 &
