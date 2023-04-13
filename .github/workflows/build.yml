@@ -51,4 +51,6 @@ jobs:
       - run: mv 10195101428_刘议临_${{ github.ref_name }}_双面打印版.pdf 10195101428_${{ github.ref_name }}_printMode.pdf
       - uses: softprops/action-gh-release@v1
         with:
-          files: 10195101428_${{ github.ref_name }}.pdf
+          files: |
+            10195101428_${{ github.ref_name }}.pdf
+            10195101428_${{ github.ref_name }}_printMode.pdf
