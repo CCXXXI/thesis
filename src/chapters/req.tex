@@ -229,6 +229,34 @@
 
 另外，在1b中，患者可能指定绝对时间点（如10:24）或相对时间点（如当前查询点的5秒前）。
 
+\subsubsection{查看心电分析报告}
+
+应用内置心电分析算法模型，可以自动在本地对历史心电数据进行分析。患者可以查看过去某一时间段的分析报告。
+
+\begin{table}[!ht]
+    \bicaption{查看心电分析报告的用例详情}{Use case of viewing the ECG analysis report}
+    \label{tab:uc-report}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看心电分析报告     \\
+        \hline
+        主要参与者 & 患者           \\
+        \hline
+        触发条件  & 患者尝试查看心电分析报告 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者的心电分析报告。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 患者指定另一个时间段：应用展示患者指定的时间段的分析报告。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
