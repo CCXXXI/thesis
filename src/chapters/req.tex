@@ -19,6 +19,56 @@
     \label{fig:use-case}
 \end{figure}
 
+\subsection{心电设备相关需求分析}\label{subsec:device-req}
+
+\subsubsection{绑定心电设备}
+
+通常而言，新用户使用本应用的第一步是绑定其预先购买的动态心电信号监测设备（以下简称心电设备）。绑定心电设备的用例详情如表~\ref{tab:uc-bind-device} 所示。
+
+\renewcommand{\cellalign}{l}
+\setlist[enumerate]{nosep}
+\setlist[itemize]{nosep}
+
+\begin{table}[ht]
+    \centering
+    \bicaption{绑定心电设备的用例详情}{Use case of binding a device}
+    \label{tab:uc-bind-device}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称        & 绑定心电设备     \\
+        \hline
+        主要参与者     & 患者         \\
+        \hline
+        目标        & 绑定心电设备     \\
+        \hline
+        次要参与者     & 心电设备       \\
+        \hline
+        前置条件      & 尚未绑定心电设备   \\
+        \hline
+        后置条件（成功时） & 已绑定心电设备    \\
+        \hline
+        触发条件      & 患者尝试绑定心电设备 \\
+        \hline
+        主要事件流 &
+        \begin{enumerate}
+            \item 应用列出可绑定的心电设备，并定时刷新
+            \item 患者指定要绑定的心电设备
+            \item 应用绑定心电设备
+        \end{enumerate} \\
+        \hline
+        扩展事件流 &
+        \begin{itemize}
+            \item[1a.] 没有可绑定的心电设备：应用提示用户没有可绑定的心电设备，并定时刷新
+        \end{itemize} \\
+        \hline
+        异常事件流 &
+        \begin{itemize}
+            \item[3a.] 绑定心电设备失败：应用提示用户绑定心电设备失败
+        \end{itemize} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
