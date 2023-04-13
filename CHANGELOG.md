@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.23.1](https://github.com/CCXXXI/thesis/compare/v0.23.0...v0.23.1) (2023-04-13)
+
+### Bug Fixes
+
+- **dev:** better table ([#139](https://github.com/CCXXXI/thesis/issues/139)) ([640f0c7](https://github.com/CCXXXI/thesis/commit/640f0c7a141aa85bfb96f861937baf8145f89030))
+
 ## [0.23.0](https://github.com/CCXXXI/thesis/compare/v0.22.3...v0.23.0) (2023-04-13)
 
 ### Features
