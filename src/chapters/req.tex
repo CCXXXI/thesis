@@ -194,6 +194,41 @@
 
 心电图在易用性、性能等非功能性需求方面要求较高，但在功能性需求的方面是相对简单的。
 
+\subsection{历史心电数据相关功能分析}\label{subsec:history-req}
+
+\subsubsection{查看历史心电图}
+
+患者可以查看过去某个时间点的心电图。查看历史心电图的用例详情如表~\ref{tab:uc-history-ecg} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看历史心电图}{Use case of viewing the historical ECG}
+    \label{tab:uc-history-ecg}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看历史心电图     \\
+        \hline
+        主要参与者 & 患者          \\
+        \hline
+        触发条件  & 患者尝试查看历史心电图 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者的实时心电图。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 当前时间点无数据：应用提示患者当前所选的时间点无历史心电数据。
+            \item[1b.] 患者指定另一个时间点：应用展示患者指定的时间点的历史心电图。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+患者尝试查看历史心电图有两种情况：其一是患者直接指定某个时间点进行查看，这种情况相对较少；其二是患者看到分析报告中提及的某个时间点，然后查看该时间点的心电图，这种情况较为常见。
+
+另外，在1b中，患者可能指定绝对时间点（如10:24）或相对时间点（如当前查询点的5秒前）。
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
