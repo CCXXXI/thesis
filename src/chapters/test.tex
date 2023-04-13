@@ -3,7 +3,9 @@
 
 \section{项目的测试环境}\label{sec:test-env}
 
-\todo{测试环境}
+\subsection{测试的硬件环境}\label{subsec:test-hardware}
+
+测试共使用了一台Windows电脑、一台macOS电脑、一部Android手机、一个动态心电记录仪。另有部分测试运行于GitHub提供的虚拟环境中，其硬件情况不确定。由于模型可以在CPU上运行，测试时没有显卡方面的需求。Windows电脑是ThinkBook 16 G4+ IAP型号，为主要的开发用设备，也顺便执行了多数测试。macOS电脑为Mac mini M2 Pro型号，用于运行iOS模拟器以进行iOS平台相关测试，；苹果不允许Windows或Linux系统运行其设备模拟器，虽然也有办法绕过限制，但较为不便。Android手机为Redmi Note 8 Pro型号，用于执行蓝牙相关测试，因为Android和iOS模拟器均不支持蓝牙。动态心电记录仪为数创医疗的HA301B型号，用于测试设备连接。GitHub Actions环境用于持续集成中自动执行测试。
 
 
 \section{测试数据的来源}\label{sec:test-data}
