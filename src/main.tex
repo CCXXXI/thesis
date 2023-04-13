@@ -120,11 +120,7 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 
-% https://tex.stackexchange.com/a/531990/254533
-\newlist{itemizec}{itemize}{1}
-\setlist[itemizec]{nosep,
-before={\begin{minipage}[t]{\hsize}},
-after ={\end{minipage}} }
+\input{magic}
 
 % https://tex.stackexchange.com/a/584994/254533
 \captionsetup[figure][bi-second]{name=Figure}
@@ -143,30 +139,30 @@ after ={\end{minipage}} }
 \begin{document}
 
 % 设置前置部分编号
-\frontmatter
+    \frontmatter
 
-\include{chapters/abstract}
-\include{chapters/abstract-en}
+    \include{chapters/abstract}
+    \include{chapters/abstract-en}
 
 % 设置正文编号
-\mainmatter
+    \mainmatter
 
-\include{chapters/intro}
-\include{chapters/tech}
-\include{chapters/req}
-\include{chapters/design}
-\include{chapters/dev}
-\include{chapters/test}
-\include{chapters/conc}
+    \include{chapters/intro}
+    \include{chapters/tech}
+    \include{chapters/req}
+    \include{chapters/design}
+    \include{chapters/dev}
+    \include{chapters/test}
+    \include{chapters/conc}
 
 % 正文后部分
-\backmatter
+    \backmatter
 
 % 参考文献
-\PrintReference
+    \PrintReference
 
 % \include 会导致这些不出现在目录，原因未知
-\input{chapters/appendix}
-\input{chapters/acknowledgement}
+    \input{chapters/appendix}
+    \input{chapters/acknowledgement}
 
 \end{document}

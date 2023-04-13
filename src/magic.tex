@@ -1,0 +1,8 @@
+% Seperate this file from the main file to avoid the following error:
+% https://github.com/Hannah-Sten/TeXiFy-IDEA/issues/3032
+
+% https://tex.stackexchange.com/a/531990/254533
+\newlist{itemizec}{itemize}{1}
+\setlist[itemizec]{nosep,
+before={\begin{minipage}[t]{\hsize}},
+after ={\end{minipage}} }
