@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.25.0](https://github.com/CCXXXI/thesis/compare/v0.24.0...v0.25.0) (2023-04-13)
+
+
+### Features
+
+* **req:** 完成 {应用开发的重点与难点} ([#144](https://github.com/CCXXXI/thesis/issues/144)) ([be6c2c2](https://github.com/CCXXXI/thesis/commit/be6c2c2ffbd9a3bd27fdd55c99744ad1d329191e))
+
 ## [0.24.0](https://github.com/CCXXXI/thesis/compare/v0.23.1...v0.24.0) (2023-04-13)
 
 ### Features
