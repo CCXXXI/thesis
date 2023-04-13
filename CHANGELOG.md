@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.23.0](https://github.com/CCXXXI/thesis/compare/v0.22.3...v0.23.0) (2023-04-13)
+
+
+### Features
+
+* **dev:** 增加 {日志等级} ([86f090d](https://github.com/CCXXXI/thesis/commit/86f090d4463bdbac33d2afcd71087112214490a9))
+
+
+### Code Refactoring
+
+* lstMakeShortInline `@` ([57cee15](https://github.com/CCXXXI/thesis/commit/57cee15aad379ef9c41a1890d9d94cf295993f8b))
+
 ## [0.22.3](https://github.com/CCXXXI/thesis/compare/v0.22.2...v0.22.3) (2023-04-12)
 
 ### Bug Fixes
