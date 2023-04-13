@@ -51,7 +51,7 @@ Git子模块是一个Git中自带的工具，允许将一个Git仓库作为另�
 
 本项目在整体上一共由7个Git仓库组成，这些仓库的名称以及仓库之间的子模块关系如图~\ref{fig:repositories}所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \includegraphics[width=\textwidth]{../assets/repositories.drawio}
     \bicaption{项目包含的Git仓库}{Git repositories of the project}
     \label{fig:repositories}
@@ -102,7 +102,7 @@ Python版本的算法并不直接被应用调用，因此该仓库不是其他�
 
 Pan-Tompkins算法\cite{panRealTimeQRSDetection1985}可以用于检测心电图中的QRS波群。一次正常的窦性心律的组成如图~\ref{fig:sinus-rhythm} 所示，其中的QRS波群位于心电图中最明显的尖峰处。此功能使得Pan-Tompkins算法非常适合用作心率测量。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=.75\textwidth]{../assets/SinusRhythmLabels}
     \bicaption{正常窦性心律的心电图}{ECG of a heart in normal sinus rhythm}
@@ -165,7 +165,7 @@ Pan-Tompkins算法只能给出心拍的位置，但无法确定心拍的类型�
 
 实时心电界面的整体外观如图~\ref{fig:real-time} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{心率检测中}{\includegraphics[width=.33\textwidth]{../assets/real-time-learning}}
     \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/real-time}}
     \subcaptionbox{设备未连接}{\includegraphics[width=.33\textwidth]{../assets/real-time-na}}
@@ -191,7 +191,7 @@ Pan-Tompkins算法只能给出心拍的位置，但无法确定心拍的类型�
 
 心电图纸包含横纵交错的坐标线，通常为红色或浅红色，如图~\ref{fig:ecg-paper} 所示。每1mm一小格（用细线分隔），每5mm一大格（用粗线分隔）。横轴一小格表示40ms，一大格表示200ms。纵轴一小格表示0.1mV，一大格表示0.5mV。心电图的边缘有1mV（10mm高）的参考波形，并标注该条图像的导联名称。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \includegraphics[width=\textwidth]{../assets/ECG_Paper_v2}
     \bicaption{心电图纸的布局}{Layout of ECG paper}
     \label{fig:ecg-paper}
@@ -201,7 +201,7 @@ Pan-Tompkins算法只能给出心拍的位置，但无法确定心拍的类型�
 
 心电图部分在竖屏和横屏状态下有不同的显示方式。竖屏状态下，如之前所示，三个导联的心电图从上到下竖向排布在该区域。由于移动设备的屏幕宽度较窄，所以竖屏状态下可以显示的时长也较短，屏幕中每个导联通常只能显示一到两个心拍。虽然可以在应用设置中对显示时长进行调整，但在显示区域的宽度无法改变的情况下，显示更长时间的数据只能是以降低细节的可见程度为代价的。为了提供一种可以在不提高显示密度的情况下查看更长时间的数据的方式，应用在横屏状态下会改为仅显示单个导联的数据，如图~\ref{fig:real-time-landscape} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \includegraphics[width=\textwidth]{../assets/real-time-landscape}
     \bicaption{横屏状态下的心电图截图}{Screenshot of the ECG in landscape mode}
     \label{fig:real-time-landscape}
@@ -215,7 +215,7 @@ Pan-Tompkins算法只能给出心拍的位置，但无法确定心拍的类型�
 
 Material规范提供了各种外观风格的按钮。在该提示界面中，比较适用的几种风格的按钮如图~\ref{fig:buttons} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{抬升按钮}{\includegraphics[width=.196\textwidth]{../assets/button-elevated}}
     \subcaptionbox{填充按钮}{\includegraphics[width=.196\textwidth]{../assets/button-filled}}
     \subcaptionbox{填充色调按钮}{\includegraphics[width=.196\textwidth]{../assets/button-filled-tonal}}
@@ -233,7 +233,7 @@ Material规范提供了各种外观风格的按钮。在该提示界面中，比
 
 Material规范对于图标的设计与使用有一些相关要求。本应用为了遵循规范，使用的均是Google官方设计并开源供免费使用的图标。Google为其图标提供了各种风格的样式，常见的几种如图~\ref{fig:icons} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centering
     \subcaptionbox{轮廓}{\includegraphics[width=.15\textwidth]{../assets/icon-outlined}}
     \subcaptionbox{圆润}{\includegraphics[width=.15\textwidth]{../assets/icon-rounded}}
@@ -250,7 +250,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 历史心电界面的整体外观如图~\ref{fig:history} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/history-loading}}
     \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/history}}
     \subcaptionbox{无数据}{\includegraphics[width=.33\textwidth]{../assets/history-na}}
@@ -280,7 +280,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 第四个按钮，即中间的按钮，其作用相较前几个按钮更多。首先，该按钮作为文本按钮，起到了普通文本的显示作用。其指示的当前查询时间是心电图正中间的时间，并且在切换横竖屏状态时仍然保持该时间在正中间。由于时间选择器的上一个与下一个心拍按钮以及分析报告中跳转心拍所在时间的功能，位于图像中间的通常刚好是某个心拍的R波，这保证了视觉效果最明显的R波恰好会位于用户视觉焦点上。其次，该按钮也提供了相比其他几个按钮更大粒度的时间跳转。点击按钮后，会弹出如图~\ref{fig:history-time-picker} 所示的Material风格的时间选择器，用户可以在其中以表盘模式或数字模式输入要跳转到的时间，点击确定后，时间选择器会自动关闭并将历史心电图跳转至所选时间。由于该自由跳转功能的使用频率远低于其他几个按钮，所以只使用了强调效果最弱的文本按钮，以避免不必要地干扰用户的注意力。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centering
     \subcaptionbox{表盘模式输入}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-clock}}
     \subcaptionbox{数字模式输入}{\includegraphics[width=.33\textwidth]{../assets/history-dialog-field}}
@@ -336,7 +336,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 其中，\(smallXInterval\) 为横坐标的小格间距（40ms），\(smallYInterval\) 为纵坐标的小格间距（0.1mV），\(a\) 为前一个点，\(b\) 为当前点。如果 \(dis\) 大于可在设置中调整的一个阈值，则保留当前点，否则丢弃当前点。图~\ref{fig:filters} 为不同阈值的效果对比。本应用在默认设置下会使用0.5作为阈值，该阈值可以明显降低屏幕上需要渲染的点数，但不会使得图像过于失真。从图中也可以看出，本算法主要过滤掉的是较为稠密的区域的点，而对于波峰等较为稀疏的点则保留原样。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{0}{\includegraphics[width=.33\textwidth]{../assets/filter-0}}
     \subcaptionbox{0.5}{\includegraphics[width=.33\textwidth]{../assets/filter-0.5}}
     \subcaptionbox{1}{\includegraphics[width=.33\textwidth]{../assets/filter-1}}
@@ -351,7 +351,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 分析报告界面的整体外观如图~\ref{fig:analytics} 所示。在导航栏中为分析报告使用了表示数据分析的图标。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{加载中}{\includegraphics[width=.33\textwidth]{../assets/analytics-loading}}
     \subcaptionbox{正常状态}{\includegraphics[width=.33\textwidth]{../assets/analytics}}
     \subcaptionbox{时间范围选择}{\includegraphics[width=.33\textwidth]{../assets/analytics-dialog}}
@@ -375,7 +375,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 各个心律类型的区域都是可以点击展开查看详细信息的。通常而言，可点击区域应当使用按钮等样式加以指示，但当屏幕上的可点击区域过多时应该避免过多的装饰，以免造成视觉上的混乱。对于列表项的可点击性的指示，一种常见的做法是在右侧显示一个箭头，但在本界面中右侧已经被占据，不便添加更多元素。因此，本界面使用了其他方式来提醒用户心律类型可以点击。除上文所述的省略号外，该界面利用下方被截断的列表项指示该区域可以滑动查看更多内容，并在用户滑过心律区域时展示了水墨扩散的效果，如图~\ref{fig:ink} 所示，效果会从点击位置向四周扩散。水墨扩散效果在Material设计中用于各种可点击区域的反馈，可以提醒用户心律展示区域点击后能触发额外动作。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=.5\textwidth]{../assets/ink}
     \bicaption{心律类型区域的水墨扩散效果}{Ink effect of the heart rhythm area}
@@ -392,7 +392,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 心律类型详情界面的整体外观的如图~\ref{fig:label-details} 所示。除上方的心律名称和返回按钮外，界面由可滑动查看的列表构成。列表内容包括该心律类型的说明文本，以及心律出现的具体时间。为了保证每个时间都可以较容易点击到，时间之间留有适当的间隔。点击时间后，会跳转至历史心电的对应时间。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=.33\textwidth]{../assets/label-details}
     \bicaption{心律类型详情界面的截图}{Screenshot of the heart rhythm details page}
@@ -418,7 +418,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 设备管理界面的整体外观如图~\ref{fig:device} 所示。设备管理在导航栏中的图标是对心电监测设备所使用的电极片的简化表示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{已连接}{\includegraphics[width=.33\textwidth]{../assets/device-connected}}
     \subcaptionbox{连接新设备}{\includegraphics[width=.33\textwidth]{../assets/device-new}}
     \subcaptionbox{无可用设备}{\includegraphics[width=.33\textwidth]{../assets/device-na}}
@@ -441,7 +441,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 应用中包含一些不直接面向用户的辅助功能，或者虽然用户不常主动使用但仍然应该提供的功能，一些相关界面的外观如图~\ref{fig:other} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{我的}{\includegraphics[width=.33\textwidth]{../assets/me}}
     \subcaptionbox{设置}{\includegraphics[width=.33\textwidth]{../assets/settings}}
     \subcaptionbox{许可}{\includegraphics[width=.33\textwidth]{../assets/license}}
@@ -485,7 +485,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 图~\ref{fig:accessibility} 展示了应用的一些无障碍功能。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \subcaptionbox{界面放大}{\includegraphics[width=.33\textwidth]{../assets/big}}
     \subcaptionbox{粗体高对比度}{\includegraphics[width=.33\textwidth]{../assets/bold}}
     \subcaptionbox{深色模式}{\includegraphics[width=.33\textwidth]{../assets/dark}}
@@ -511,7 +511,7 @@ Material规范对于图标的设计与使用有一些相关要求。本应用为
 
 为了符合iOS平台的用户习惯，本应用基于Flutter Platform Widgets包在iOS平台上将部分UI组件替换为了iOS应用常用的Cupertino风格的组件。由于Cupertino并未像Material一样设计为全平台可用，所以应用的UI风格仍然以Material为主，在Android平台上完全使用Material 3风格的UI，而在iOS平台上则使用Material 3风格与Cupertino风格的混合，如图~\ref{fig:android-ios} 所示。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \centering
     \subcaptionbox{Android}{\includegraphics[height=14cm]{../assets/settings}}
     \subcaptionbox{iOS}{\includegraphics[height=14cm]{../assets/ios-settings}}
@@ -539,9 +539,10 @@ Flutter Platform Widgets包在平台自适应UI的实现中起到的作用主要
 
 Logging包除 @ALL@ 和 @OFF@ 外，提供了8个日志等级，从高到低分别为 @SHOUT@、@SEVERE@、@WARNING@、@INFO@、@CONFIG@、@FINE@、@FINER@、@FINEST@。但是，该包并未指明在何种情况下使用哪个等级，而是交由开发者自行判断。在本应用中，结合实际情况，为日志等级的使用制定了如表~\ref{tab:log-levels} 所示的规则。
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \bicaption{日志等级}{Log levels}\label{tab:log-levels}
+    \bicaption{日志等级}{Log levels}
+    \label{tab:log-levels}
     \begin{tabular}{|c|p{.4\linewidth}|p{.4\linewidth}|}
         \hline
         \thead{等级} & \thead{描述} & \thead{示例} \\

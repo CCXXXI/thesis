@@ -11,54 +11,307 @@
 
 \section{应用的功能性需求分析}\label{sec:func-req}
 
-本应用的用例图如图~\ref{fig:use-case} 所示。
+本应用的整体用例情况如图~\ref{fig:use-case} 所示。为了避免图像过于复杂，图中进行了一定程度的简化。
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
     \includegraphics[width=\textwidth]{../assets/use-case.drawio}
     \bicaption{应用的用例图}{Use case diagram of the app}
     \label{fig:use-case}
 \end{figure}
 
-\subsection{管理心电设备的需求分析}\label{subsec:device-req}
+\subsection{心电设备相关需求分析}\label{subsec:device-req}
 
-\begin{itemize}
-    \item[UC1] 用户可以通过应用程序绑定心电设备。
-    \item[UC2] 用户可以通过应用程序断开心电设备的绑定。
-    \item[UC3] 用户可以通过应用程序查看心电设备的名称。
-    \item[UC4] 用户可以通过应用程序查看心电设备的型号。
-    \item[UC5] 用户可以通过应用程序查看心电设备的连接状态。
-    \item[UC6] 用户可以通过应用程序查看心电设备的信号质量。
-    \item[UC7] 用户可以通过应用程序查看心电设备的电量。
-\end{itemize}
+\subsubsection{绑定心电设备}
 
-\subsection{管理心电数据的需求分析}\label{subsec:ecg-req}
+通常而言，新用户使用本应用的第一步是绑定其预先购买的动态心电信号监测设备（以下简称心电设备）。绑定心电设备的用例详情如表~\ref{tab:uc-bind-device} 所示。
 
-\begin{itemize}
-    \item[UC8] 用户可以通过应用程序查看实时的心率数据。
-    \item[UC9] 用户可以通过应用程序查看实时的心电图。
-    \item[UC10] 用户可以通过应用程序查看历史的心电图。
-    \item[UC11] 用户可以筛选要查看的历史心电图的时间。
-    \item[UC12] 用户可以通过应用程序查看历史的心电分析报告。
-    \item[UC13] 用户可以筛选要查看的历史心电分析报告的时间范围。
-    \item[UC14] 用户可以通过应用程序上传心电数据到服务器。
-\end{itemize}
+\begin{table}[!ht]
+    \bicaption{绑定心电设备的用例详情}{Use case of binding a device}
+    \label{tab:uc-bind-device}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称        & 绑定心电设备     \\
+        \hline
+        主要参与者     & 患者         \\
+        \hline
+        次要参与者     & 心电设备       \\
+        \hline
+        前置条件      & 未绑定心电设备    \\
+        \hline
+        后置条件（成功时） & 已绑定心电设备    \\
+        \hline
+        触发条件      & 患者尝试绑定心电设备 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用列出可绑定的心电设备，并定时刷新；
+            \item[2.] 患者指定要绑定的心电设备；
+            \item[3.] 应用绑定心电设备。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 没有可绑定的心电设备：应用提示患者没有可绑定的心电设备，并定时刷新。
+        \end{itemizec} \\
+        \hline
+        异常事件流 &
+        \begin{itemizec}
+            \item[3a.] 绑定心电设备失败：应用提示患者绑定心电设备失败。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsubsection{解绑心电设备}
+
+患者在绑定心电设备后，可能会因为各种原因需要解绑心电设备。解绑心电设备的用例详情如表~\ref{tab:uc-unbind-device} 所示。
+
+\begin{table}[!ht]
+    \bicaption{解绑心电设备的用例详情}{Use case of unbinding the device}
+    \label{tab:uc-unbind-device}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 解绑心电设备     \\
+        \hline
+        主要参与者 & 患者         \\
+        \hline
+        前置条件  & 已绑定心电设备    \\
+        \hline
+        后置条件  & 未绑定心电设备    \\
+        \hline
+        触发条件  & 患者尝试解绑心电设备 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用解除心电设备的绑定。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+解绑心电设备是应用程序单向的动作，不需要心电设备的参与或者同意，患者完全可以在心电设备已无法正常工作的情况下成功执行此用例。因此，该用例也没有异常事件流，应用保证其必定成功。
+
+\subsubsection{查看心电设备信息}
+
+患者在绑定心电设备后，可以查看其相关信息。查看心电设备信息的用例详情如表~\ref{tab:uc-view-device-info} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看心电设备信息的用例详情}{Use case of viewing the device information}
+    \label{tab:uc-view-device-info}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看心电设备信息     \\
+        \hline
+        主要参与者 & 患者           \\
+        \hline
+        次要参与者 & 心电设备         \\
+        \hline
+        前置条件  & 已绑定心电设备      \\
+        \hline
+        触发条件  & 患者尝试查看心电设备信息 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示心电设备的名称、型号、信号强度、电量等信息。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 设备已断开连接：应用提示患者设备已断开连接，并仅展示心电设备的名称、型号等已知信息，不展示电量等无法获知的信息。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+可以展示的心电设备的信息是根据心电设备的通信协议中能提供的信息，以及这些信息是否对于一般患者有意义来决定的。例如，心电设备的信号强度、电量等信息对于一般患者来说是有意义的，而心电设备的内部序列号等信息则对于一般患者来说是无意义的，即使心电设备的通信协议中提供了这些信息，应用也不应该展示，以保证界面的简洁易用。
+
+\subsection{实时心电数据相关需求分析}\label{subsec:real-time-req}
+
+\subsubsection{查看实时心率}
+
+在连接了心电设备后，应用可以展示患者当前的心率。查看实时心率的用例详情如表~\ref{tab:uc-heart-rate} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看实时心率的用例详情}{Use case of viewing the real-time heart rate}
+    \label{tab:uc-heart-rate}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看实时心率     \\
+        \hline
+        主要参与者 & 患者         \\
+        \hline
+        次要参与者 & 心电设备       \\
+        \hline
+        前置条件  & 已连接心电设备    \\
+        \hline
+        触发条件  & 患者尝试查看实时心率 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者当前的心率。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 心电设备未连接：应用提示患者心电设备未连接。
+            \item[1b.] 心率信息未就绪：应用提示患者心率正在检测中。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsubsection{查看实时心电图}
+
+作为一个动态心电图监测应用，查看实时的动态心电图是应用最核心的功能之一。查看实时心电图的用例详情如表~\ref{tab:uc-real-time-ecg} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看实时心电图的用例详情}{Use case of viewing the real-time ECG}
+    \label{tab:uc-real-time-ecg}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看实时心电图     \\
+        \hline
+        主要参与者 & 患者          \\
+        \hline
+        次要参与者 & 心电设备        \\
+        \hline
+        前置条件  & 已连接心电设备     \\
+        \hline
+        触发条件  & 患者尝试查看实时心电图 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者的实时心电图。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 心电设备未连接：应用提示患者心电设备未连接。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+心电图在易用性、性能等非功能性需求方面要求较高，但在功能性需求的方面是相对简单的。
+
+\subsection{历史心电数据相关需求分析}\label{subsec:history-req}
+
+\subsubsection{查看历史心电图}
+
+患者可以查看过去某个时间点的心电图。查看历史心电图的用例详情如表~\ref{tab:uc-history-ecg} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看历史心电图的用例详情}{Use case of viewing the historical ECG}
+    \label{tab:uc-history-ecg}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看历史心电图     \\
+        \hline
+        主要参与者 & 患者          \\
+        \hline
+        触发条件  & 患者尝试查看历史心电图 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者的实时心电图。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 当前时间点无数据：应用提示患者当前所选的时间点无历史心电数据。
+            \item[1b.] 患者指定另一个时间点：应用展示患者指定的时间点的历史心电图。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+患者尝试查看历史心电图有两种情况：其一是患者直接指定某个时间点进行查看，这种情况相对较少；其二是患者看到分析报告中提及的某个时间点，然后查看该时间点的心电图，这种情况较为常见。
+
+另外，在1b中，患者可能指定绝对时间点（如10:24）或相对时间点（如当前查询点的5秒前）。
+
+\subsubsection{查看心电分析报告}
+
+应用内置心电分析算法模型，可以自动在本地对历史心电数据进行分析。患者可以查看过去某一时间段的分析报告。
+
+\begin{table}[!ht]
+    \bicaption{查看心电分析报告的用例详情}{Use case of viewing the ECG analysis report}
+    \label{tab:uc-report}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看心电分析报告     \\
+        \hline
+        主要参与者 & 患者           \\
+        \hline
+        触发条件  & 患者尝试查看心电分析报告 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者的心电分析报告。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 患者指定另一个时间段：应用展示患者指定的时间段的分析报告。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsubsection{自动上传心电数据}
+
+在患者已绑定医疗账号的情况下，应用会自动上传心电数据至服务器。一方面是为了备份，另一方面也方便患者对接的医生进一步分析诊断。自动上传心电数据的用例详情如表~\ref{tab:uc-upload} 所示。
+
+\begin{table}[!ht]
+    \bicaption{自动上传心电数据的用例详情}{Use case of automatically uploading the ECG data}
+    \label{tab:uc-upload}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称        & 自动上传心电数据  \\
+        \hline
+        主要参与者     & 定时任务管理器   \\
+        \hline
+        次要参与者     & 服务器、患者    \\
+        \hline
+        前置条件      & 患者已绑定医疗账号 \\
+        \hline
+        后置条件（成功时） & 数据已上传至服务器 \\
+        \hline
+        触发条件      & 定时触发      \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用上传本地未上传的历史数据至服务器。
+            \item[2.] 应用通知患者已完成上传。
+        \end{itemizec} \\
+        \hline
+        异常事件流 &
+        \begin{itemizec}
+            \item[1a.] 上传失败：通知患者上传失败，患者可以选择重试或忽略（不进行选择则默认忽略）。重试则重新执行1；忽略则用例终止。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{其他需求分析}\label{subsec:other-req}
+
+除上述需求外，还有登录账号、调整应用设置、查看应用版本等其他需求。这些需求在许多应用中通用，在需求分析、设计等方面都没有值得特别说明的地方，因此不再赘述。
 
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
 \subsection{应用的易用性需求分析}\label{subsec:usability}
 
-因为大部分中老年的用户没有丰富的移动设备使用经验，所以设计一个简单直观、易于使用的应用程序很重要。界面设计应避免使用复杂的元素，以尽量简洁清晰为目标。
+因为大部分中老年的患者没有丰富的移动设备使用经验，所以设计一个简单直观、易于使用的应用程序很重要。界面设计应避免使用复杂的元素，以尽量简洁清晰为目标。
 
-此外，由于一般患者通常不会具备专业的医学知识，所以应用程序内应该尽可能地避免使用过于晦涩难懂的专业术语。同时，对于应用内无法避免使用的部分术语应该提供明显且易于理解的解释，以便用户理解其含义。
+此外，由于一般患者通常不会具备专业的医学知识，所以应用程序内应该尽可能地避免使用过于晦涩难懂的专业术语。同时，对于应用内无法避免使用的部分术语应该提供明显且易于理解的解释，以便患者理解其含义。
 
 \subsection{应用的无障碍需求分析}\label{subsec:accessibility}
 
-应用需要考虑到用户在视力等方面的障碍，尽可能地保证用户能够在不同的环境下使用应用程序。例如，应用程序应该提供对大字号、粗体字、高对比度、深浅主题等内容的支持。
+应用需要考虑到患者在视力等方面的障碍，尽可能地保证患者能够在不同的环境下使用应用程序。例如，应用程序应该提供对大字号、粗体字、高对比度、深浅主题等内容的支持。
 
 \subsection{应用的性能需求分析}\label{subsec:performance}
 
-由于动态心电监测的需要，本应用会长期驻留在系统后台运行。因此，应用程序的性能对于用户体验至关重要。应用程序应该尽可能地保持较低的内存占用和较低的电量消耗，以保证用户的使用体验。
+由于动态心电监测的需要，本应用会长期驻留在系统后台运行。因此，应用程序的性能对于患者体验至关重要。应用程序应该尽可能地保持较低的内存占用和较低的电量消耗，以保证患者的使用体验。
 
 \subsection{应用的兼容性需求分析}\label{subsec:compatibility}
 
