@@ -35,6 +35,50 @@ Flutter部分的测试基于该框架自带的测试功能。其写法与主流�
     \item 断言屏幕上可以找到一个 @realTime@ 字符串（在中文环境下为 @实时心电@）。
 \end{enumerate}
 
+\subsubsection{标准化距离测试}
+
+这是对~\ref{subsubsec:less-points} 节所述的标准化距离算法的测试。该算法用于计算两点在心电图上的按小格计算的距离，而非屏幕上实际显示的距离。尽管测试私有方法通常不被推荐，但由于通过公开的UI组件测试这种细节较为繁琐，因此本应用的测试中仍然使用了一些 @visibleForTesting@。
+
+测试时定义了一些点作为常量，如表~\ref{tab:spots} 所示。其x坐标含义为以毫秒为单位的时间，y坐标含义为以毫伏为单位的电压。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{标准化距离测试中使用的点}{Spots used in normalized distance test}
+    \label{tab:spots}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        点 & x  & y   \\
+        \hline
+        a & 0  & 0   \\
+        \hline
+        b & 0  & 0.1 \\
+        \hline
+        c & 40 & 0   \\
+        \hline
+        d & 40 & 0.1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+这些点之间的标准化距离的预期结果如表~\ref{tab:expected-distance} 所示。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{标准化距离测试的预期结果}{Expected results of normalized distance test}
+    \label{tab:expected-distance}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        参数1 & 参数2 & 预期结果  \\
+        \hline
+        a   & b   & 1     \\
+        \hline
+        a   & c   & 1     \\
+        \hline
+        a   & d   & \(\sqrt{2}\) \\
+        \hline
+    \end{tabular}
+\end{table}
+
 
 \section{测试结果分析}\label{sec:test-result}
 
