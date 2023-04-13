@@ -176,6 +176,16 @@ Flutter部分的测试基于该框架自带的测试功能。其写法与主流�
     \end{tabular}
 \end{table}
 
+\subsubsection{分析报告界面测试}
+
+该测试用于确保分析报告界面的外观基本正常。
+
+\begin{enumerate}
+    \item 执行必要的数据库初始化等步骤。
+    \item pump分析报告界面 @Analytics@。
+    \item 断言可以找到所有心律类型的名称，包括屏幕外部分（因为该界面需要滑动才能看到完整内容）。
+\end{enumerate}
+
 
 \section{测试结果分析}\label{sec:test-result}
 
