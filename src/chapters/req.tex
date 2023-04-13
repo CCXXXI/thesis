@@ -39,7 +39,7 @@
         \hline
         次要参与者     & 心电设备       \\
         \hline
-        前置条件      & 尚未绑定心电设备   \\
+        前置条件      & 未绑定心电设备    \\
         \hline
         后置条件（成功时） & 已绑定心电设备    \\
         \hline
@@ -64,6 +64,38 @@
         \hline
     \end{tabularx}
 \end{table}
+
+\subsubsection{解绑心电设备}
+
+用户在绑定心电设备后，可能会因为各种原因需要解绑心电设备。解绑心电设备的用例详情如表~\ref{tab:uc-unbind-device} 所示。
+
+\begin{table}[ht]
+    \centering
+    \bicaption{解绑心电设备的用例详情}{Use case of unbinding the device}
+    \label{tab:uc-unbind-device}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 解绑心电设备     \\
+        \hline
+        主要参与者 & 患者         \\
+        \hline
+        目标    & 解绑心电设备     \\
+        \hline
+        前置条件  & 已绑定心电设备    \\
+        \hline
+        后置条件  & 未绑定心电设备    \\
+        \hline
+        触发条件  & 患者尝试解绑心电设备 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用解除心电设备的绑定
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+解绑心电设备是应用程序单向的动作，不需要心电设备的参与或者同意，用户完全可以在心电设备已无法正常工作的情况下成功执行此用例。因此，该用例也没有异常事件流，应用保证其必定成功。
 
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
