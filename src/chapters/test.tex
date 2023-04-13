@@ -14,7 +14,7 @@
 
 \section{测试数据的来源}\label{sec:test-data}
 
-\todo{测试数据的来源}
+测试使用的部分数据是继承至原算法项目的，包括输入数据和模型的预期输出结果。由于其数据量较大，且为异常心电数据，另外从公开数据库中下载了一些正常数据以供测试。具体而言，从PhysioNet下载了CEBSDB数据集\footnote{\url{https://physionet.org/content/cebsdb/1.0.0/}}，并提取了其中m001号数据的I、II导联的前10分钟数据，再重采样为125Hz并转换为项目中使用的JSON格式。进行重采样一方面是因为原始数据为5000Hz，文件过大；另一方便是因为HA301B型号心电设备的采样率为125Hz，对数据进行重采样后可以更贴近其情况。
 
 
 \section{测试目标与测试方法}\label{sec:test-target}
