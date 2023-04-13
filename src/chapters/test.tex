@@ -213,7 +213,7 @@ Flutter部分的测试基于该框架自带的测试功能。其写法与主流�
 
 Python部分的测试基于pytest框架。
 
-\subsubsection{动态心电智能检测算法的测试}
+\subsubsection{动态心电智能检测算法的测试}\label{subsubsec:test-pytorch}
 
 该部分为对智能检测算法的Python版本的测试，用于确保在重构过程中没有改变算法的表现。
 
@@ -260,6 +260,12 @@ C++部分的测试基于Catch2框架。
     \item 忽略输出文件中的1个换行。
     \item 断言输出文件已经到达末尾。
 \end{enumerate}
+
+\subsubsection{动态心电智能检测算法的测试}
+
+该部分为对智能检测算法的C++版本的测试，用于确保在迁移过程中没有改变算法的表现。
+
+测试代码与算法代码一样是根据Python版本原样翻译的，只是将相关依赖库进行了替换。因此，测试流程与~\ref{subsubsec:test-pytorch} 中的Python版本的测试流程一致，不再重复说明。
 
 
 \section{测试结果分析}\label{sec:test-result}
