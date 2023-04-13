@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.0.0](https://github.com/CCXXXI/thesis/compare/v0.26.0...v1.0.0) (2023-04-13)
+
+### Features
+
+- **abstract:** 完成中文摘要 ([bcea2ec](https://github.com/CCXXXI/thesis/commit/bcea2ec7f8b2f60309e4d916d21df7900a36dbd2))
+- **abstract:** 完成英文摘要 ([37139f2](https://github.com/CCXXXI/thesis/commit/37139f22971650e33944cf2889f3a17148042a0f))
+- **ack:** 应盲审要求，隐去致谢内容 ([91b5a62](https://github.com/CCXXXI/thesis/commit/91b5a62349eb98cb7dec4e079086b58c30e6a1d8))
+- add keywords ([d6f998c](https://github.com/CCXXXI/thesis/commit/d6f998ca70496c3050338b93e679dc96bf46ade7))
+- **conc:** 完成 {总结} ([58ada70](https://github.com/CCXXXI/thesis/commit/58ada709a68910e970a2779b9183d61ea64d6881))
+
+### Bug Fixes
+
+- **abstract:** 第一次提及 ECG 时用全称 ([1425321](https://github.com/CCXXXI/thesis/commit/1425321b1b41842c12bb483dfda52d38042d9e62))
+- **appendix:** remove todo ([f791055](https://github.com/CCXXXI/thesis/commit/f791055e95b2640f5576f05e93fc8481521de267))
+- **intro:** 调整 cite 位置 ([e7f4655](https://github.com/CCXXXI/thesis/commit/e7f465515ded35104c37fb20308971a3e9748834))
+
+### Documentation
+
+- 移除更多 todo ([ff451bb](https://github.com/CCXXXI/thesis/commit/ff451bb9e6725c6eeb08f591c147ef4cd1ffa4f9))
+- 移除链接位置 todo ([97886be](https://github.com/CCXXXI/thesis/commit/97886be984f448dc13352a16da4e82bad8a28590))
+
+### Code Refactoring
+
+- remove easy-todo ([b598893](https://github.com/CCXXXI/thesis/commit/b5988931ef6645008da4b03c314d1624e97e8bf5))
+
 ## [0.26.0](https://github.com/CCXXXI/thesis/compare/v0.25.0...v0.26.0) (2023-04-13)
 
 ### Features
