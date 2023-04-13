@@ -1,5 +1,49 @@
 # Changelog
 
+## [0.24.0](https://github.com/CCXXXI/thesis/compare/v0.23.1...v0.24.0) (2023-04-13)
+
+
+### Features
+
+* **req:** compact table ([b29746e](https://github.com/CCXXXI/thesis/commit/b29746e4c5de604e1f8d963c843a857a6e5448d0))
+* **req:** 完成 {查看历史心电图} ([00341f8](https://github.com/CCXXXI/thesis/commit/00341f8f5a5dfa0ddd6fc6e0981da855bf0a74cc))
+* **req:** 完成 {查看实时心率} ([2722e7e](https://github.com/CCXXXI/thesis/commit/2722e7e50c9244766eb2cd11136c32cb503784ad))
+* **req:** 完成 {查看实时心电图} ([2d69bfc](https://github.com/CCXXXI/thesis/commit/2d69bfc45887e690b57204d1b3642e1f08e64bbe))
+* **req:** 完成 {查看心电分析报告} ([83bfb45](https://github.com/CCXXXI/thesis/commit/83bfb454943e86c02db4fe99184f778f8210eed7))
+* **req:** 完成 {查看心电设备信息} ([0af6064](https://github.com/CCXXXI/thesis/commit/0af60644d4a71aa40e2dff5d05e1d70dbc41242d))
+* **req:** 完成 {绑定心电设备} ([044f4de](https://github.com/CCXXXI/thesis/commit/044f4de34cbe005513db6c45035c09ea6a5739a1))
+* **req:** 完成 {自动上传心电数据} ([45f2906](https://github.com/CCXXXI/thesis/commit/45f2906db3bd3e10c2c05e05b466087ae1f61677))
+* **req:** 完成 {解绑心电设备} ([c8711bf](https://github.com/CCXXXI/thesis/commit/c8711bfb703b70d10fdffcb5921205fc0deffc7b))
+* **req:** 略过 {其他需求分析} ([787f167](https://github.com/CCXXXI/thesis/commit/787f167a3f7d8d26f59e86e531b9145adda791cc))
+
+
+### Bug Fixes
+
+* [ht] -&gt; [!ht] ([63c1aa7](https://github.com/CCXXXI/thesis/commit/63c1aa7d0e096392a2b448877e89d92bf3561dc7))
+* **req:** ……的用例详情 ([74d443f](https://github.com/CCXXXI/thesis/commit/74d443f9ebbf276a554784245d1f4c96d77f7157))
+* **req:** better table ([fea943e](https://github.com/CCXXXI/thesis/commit/fea943e0791656eba952c6a9a084b32386a57db0))
+* **req:** fix ref ([a83f3fe](https://github.com/CCXXXI/thesis/commit/a83f3fe48faea811095a8083a716276e81cb003a))
+* **req:** fix typo ([fec0004](https://github.com/CCXXXI/thesis/commit/fec0004b532c344a930b6b70a474edc28f471211))
+* **req:** fix typo again ([b8b74a2](https://github.com/CCXXXI/thesis/commit/b8b74a204000bd23b4251d7e77ec00710cde148f))
+* **req:** remove old use cases ([d5b59b8](https://github.com/CCXXXI/thesis/commit/d5b59b82f8999bef0a08c74ca6c5d002fc447d8e))
+* **req:** 修正 {其他需求分析} ([b689dec](https://github.com/CCXXXI/thesis/commit/b689dec5983c7fcaf87707994adf1041b256e6cb))
+* **req:** 微调表述 ([6c854cc](https://github.com/CCXXXI/thesis/commit/6c854cca6c53f0a393e40a72dffabb941047ca51))
+* **req:** 更新用例图描述 ([d337358](https://github.com/CCXXXI/thesis/commit/d337358b4439db1a207970eb8c2839197be853f5))
+* **req:** 用户 -&gt; 患者 ([eb7dc31](https://github.com/CCXXXI/thesis/commit/eb7dc313699b49141f6ae6e1e73262dd502d3421))
+* **req:** 用户 -&gt; 患者 ([e603472](https://github.com/CCXXXI/thesis/commit/e603472aa451ad617308668dacb167ed5315c4e6))
+* **req:** 移除目标字段 ([3ba823e](https://github.com/CCXXXI/thesis/commit/3ba823e56640d2b965689ad611becf094c47635d))
+* 图表全宽并移除不必要的居中 ([ecac49c](https://github.com/CCXXXI/thesis/commit/ecac49c44d4482ec0d998c4f88505c5df3debfad))
+
+
+### Styles
+
+* **dev:** add a new line ([ca3982d](https://github.com/CCXXXI/thesis/commit/ca3982dce929d926d24c0dc5a6d2709495825bf9))
+
+
+### Code Refactoring
+
+* avoid parsing error ([7c074e3](https://github.com/CCXXXI/thesis/commit/7c074e39f20e1543cda415bae322579bf8b0ddce))
+
 ## [0.23.1](https://github.com/CCXXXI/thesis/compare/v0.23.0...v0.23.1) (2023-04-13)
 
 ### Bug Fixes
