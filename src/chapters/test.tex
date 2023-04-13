@@ -3,24 +3,273 @@
 
 \section{项目的测试环境}\label{sec:test-env}
 
-\todo{测试环境}
+\subsection{测试的硬件环境}\label{subsec:test-hardware}
+
+测试共使用了一台Windows电脑、一台macOS电脑、一部Android手机、一个动态心电记录仪。另有部分测试运行于GitHub提供的虚拟环境中，其硬件情况不确定。由于模型可以在CPU上运行，测试时没有显卡方面的需求。Windows电脑是ThinkBook 16 G4+ IAP型号，为主要的开发用设备，也顺便执行了多数测试。macOS电脑为Mac mini M2 Pro型号，用于运行iOS模拟器以进行iOS平台相关测试，；苹果不允许Windows或Linux系统运行其设备模拟器，虽然也有办法绕过限制，但较为不便。Android手机为Redmi Note 8 Pro型号，用于执行蓝牙相关测试，因为Android和iOS模拟器均不支持蓝牙。动态心电记录仪为数创医疗的HA301B型号，用于测试设备连接。GitHub Actions环境用于持续集成中自动执行测试。
+
+\subsection{测试的软件环境}\label{subsec:test-software}
+
+本地测试环境中，不需要移动设备的测试都在Windows电脑上进行，其系统版本为Windows 11专业版22H2，测试时使用最新的stable频道的Flutter SDK，最新的Python SDK等；另通过WSL2配置了Linux环境，安装了最新的GCC等工具。需要移动设备的测试多数在模拟器中进行，Android模拟器使用了Pixel 6 Pro API 33型号，iOS模拟器使用了iPhone 14 Pro Max型号；需要真实蓝牙连接的测试在Android手机上执行，为Android 11版本。持续集成环境中各种工具也均使用最新稳定版本。
 
 
 \section{测试数据的来源}\label{sec:test-data}
 
-\todo{测试数据的来源}
-
-
-\section{测试目标与测试方法}\label{sec:test-target}
-
-\todo{测试目标与测试方法}
+测试使用的部分数据是继承至原算法项目的，包括输入数据和模型的预期输出结果。由于其数据量较大，且为异常心电数据，另外从公开数据库中下载了一些正常数据以供测试。具体而言，从PhysioNet下载了CEBSDB数据集\footnote{\url{https://physionet.org/content/cebsdb/1.0.0/}}，并提取了其中m001号数据的I、II导联的前10分钟数据，再重采样为125Hz并转换为项目中使用的JSON格式。进行重采样一方面是因为原始数据为5000Hz，文件过大；另一方便是因为HA301B型号心电设备的采样率为125Hz，对数据进行重采样后可以更贴近其情况。
 
 
 \section{测试用例}\label{sec:test-case}
 
-\todo{测试用例}
+应用开发过程中，在编写功能代码的同时，也为其编写了许多对应的单元测试用例，本节简单记录这些测试用例的情况。另外，对应用也以演示形式进行了集成测试，但没有明确遵循固定步骤，故不在此列出。
+
+\subsection{Flutter部分的测试}\label{subsec:test-flutter}
+
+Flutter部分的测试基于该框架自带的测试功能。其写法与主流测试库相近，主要差别在于对Flutter UI的测试有特别支持。在测试中，可以使用 @pumpWidget@ 方法只执行某一UI组件相关的代码，方便对各部分分别进行测试。其中的pump一词难以翻译，故以下描述中直接使用原文。
+
+\subsubsection{冒烟测试}
+
+这是最基本的一个测试用例。该用例在开发过程中有少数几次未通过的情况，基本都是类似提交了不完整的代码导致无法通过编译，或者持续集成环境配置出错等在实际运行前就报错的场景。该用例的通过可以确认项目的基本测试环境正常，而其失败则意味着其他用例的执行情况没有详细查看的意义。
+
+\begin{enumerate}
+    \item 进行必要的初始化，如数据库初始化等；基本与主函数相同，但数据库文件路径等使用测试用空路径，以模拟应用首次运行的情况。
+    \item pump应用主体组件 @AppCore@。
+    \item 断言屏幕上可以找到一个 @realTime@ 字符串（在中文环境下为 @实时心电@）。
+\end{enumerate}
+
+\subsubsection{标签间隔测试}
+
+这是对~\ref{subsubsec:label-interval} 节中确定坐标标签文本的间隔的算法的测试。该算法用于确定在心电图上显示坐标标签的间隔，以避免标签过于密集。该算法的输入为心电图的显示时长，输出为标签间隔的时间长度。
+
+由于横屏与竖屏下的测试类似，仅在表~\ref{tab:label-interval} 中列出了竖屏下的测试用例。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{标签间隔测试}{Label interval test}
+    \label{tab:label-interval}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        显示时长 & 预期标签间隔 \\
+        \hline
+        1秒   & 1秒     \\
+        \hline
+        5秒   & 1秒     \\
+        \hline
+        6秒   & 2秒     \\
+        \hline
+        10秒  & 2秒     \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{标准化距离测试}
+
+这是对~\ref{subsubsec:less-points} 节所述的标准化距离算法的测试。该算法用于计算两点在心电图上的按小格计算的距离，而非屏幕上实际显示的距离。尽管测试私有方法通常不被推荐，但由于通过公开的UI组件测试这种细节较为繁琐，因此本应用的测试中仍然使用了一些 @visibleForTesting@。
+
+测试时定义了一些点作为常量，如表~\ref{tab:spots} 所示。其x坐标含义为以毫秒为单位的时间，y坐标含义为以毫伏为单位的电压。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{标准化距离测试中使用的点}{Spots used in normalized distance test}
+    \label{tab:spots}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        点 & x  & y   \\
+        \hline
+        a & 0  & 0   \\
+        \hline
+        b & 0  & 0.1 \\
+        \hline
+        c & 40 & 0   \\
+        \hline
+        d & 40 & 0.1 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+这些点之间的标准化距离的预期结果如表~\ref{tab:expected-distance} 所示。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{标准化距离测试的预期结果}{Expected results of normalized distance test}
+    \label{tab:expected-distance}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        参数1 & 参数2 & 预期结果         \\
+        \hline
+        a   & b   & 1            \\
+        \hline
+        a   & c   & 1            \\
+        \hline
+        a   & d   & \(\sqrt{2}\) \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{三导联心电图测试}
+
+该测试用于判定三导联心电图组件的外观基本正常。易用性等方面的测试难以通过自动化测试来完成，仅通过肉眼检查来保证。
+
+\begin{enumerate}
+    \item pump三导联心电图组件 @Chart3Lead@，传入一些假数据。
+    \item 调整屏幕尺寸为横向1000、纵向2000。
+    \item 断言屏幕上可以找到三个单导联心电图组件。
+    \item 断言屏幕上可以找到 @leadI@、@leadII@、@leadIII@ 三个字符串。
+    \item 调整屏幕尺寸为横向2000、纵向1000。
+    \item 断言屏幕上可以找到一个单导联心电图组件。
+    \item 断言屏幕上可以找到一个分段按钮。
+    \item 断言该分段按钮的已选中项仅有一个，为第一项。（默认情况）
+    \item 点击分段按钮的第二项。
+    \item 断言该分段按钮的已选中项仅有一个，为第二项。
+    \item 恢复默认屏幕尺寸。
+\end{enumerate}
+
+\subsubsection{心率就绪判定测试}
+
+心率组件的底层数据为一个 @HeartRateData@ 类型的变量，其有 @int rate@ 和 @double progress@ 两个字段，默认值均为0。在创建该状态时只会提供其中最多一个参数，@rate@ 的正常值为正数，@progress@ 的正常值为0到1的浮点数。该测试用于判定代码中对于心率数据是否就绪，即构造时传入了哪个参数的判断是否正确。测试输入及预期结果如表~\ref{tab:heart-rate-ready} 所示。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{心率就绪判定测试}{Heart rate ready test}
+    \label{tab:heart-rate-ready}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        rate & progress & 预期  \\
+        \hline
+        60   & 默认       & 就绪  \\
+        \hline
+        默认   & 默认       & 未就绪 \\
+        \hline
+        默认   & 0        & 未就绪 \\
+        \hline
+        默认   & 0.5      & 未就绪 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{时间转文本测试}
+
+应用程序中有多处需要将时间以文本形式显示，遗憾的是，Flutter中没有提供合适的方法。因为转换规则较为简单，在开发时自行实现了相关方法，并编写了如表~\ref{tab:time-to-text} 所示的测试。
+
+\begin{table}[!ht]
+    \centering
+    \bicaption{时间转文本测试}{Time to text test}
+    \label{tab:time-to-text}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        时间                      & 显示毫秒 & 预期结果         \\
+        \hline
+        1970-01-01 00:00:00.000 & 否    & 00:00:00     \\
+        \hline
+        1970-01-01 00:00:00.000 & 是    & 00:00:00.000 \\
+        \hline
+        1970-01-01 00:00:00.001 & 否    & 00:00:00     \\
+        \hline
+        1970-01-01 00:00:00.001 & 是    & 00:00:00.001 \\
+        \hline
+        1970-01-01 00:00:00.999 & 否    & 00:00:00     \\
+        \hline
+        1970-01-01 00:00:00.999 & 是    & 00:00:00.999 \\
+        \hline
+        1970-01-01 00:00:01.000 & 否    & 00:00:01     \\
+        \hline
+        1970-01-01 00:00:01.000 & 是    & 00:00:01.000 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{分析报告界面测试}
+
+该测试用于确保分析报告界面的外观基本正常。
+
+\begin{enumerate}
+    \item 执行必要的数据库初始化等步骤。
+    \item pump分析报告界面 @Analytics@。
+    \item 断言可以找到所有心律类型的名称，包括屏幕外部分（因为该界面需要滑动才能看到完整内容）。
+\end{enumerate}
+
+\subsubsection{数据库测试}
+
+该测试用于保证数据库模块的各种读写功能正常。
+
+\begin{enumerate}
+    \item 初始化数据库（初始时数据库中没有数据）。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有窦性心律类型的心拍总数，断言结果为0。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有窦性心律类型的心拍的出现时间，断言结果列表为空。
+    \item 写入时间为 @DateTime(2023)@ 的窦性心律类型的心拍。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有窦性心律类型的心拍总数，断言结果为1。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有窦性心律类型的心拍的出现时间，断言结果列表中只有一个元素，且与之前插入的数据一致。
+    \item 查询在 @DateTime(2024)@ 之前的最近一个心拍的时间，断言结果与之前插入的数据的时间一致。
+    \item 查询在 @DateTime(2022)@ 之后的最近一个心拍的时间，断言结果与之前插入的数据的时间一致。
+    \item 查询在 @DateTime(2024)@ 之后的最近一个心拍的时间，断言结果为空。
+    \item 查询在 @DateTime(2022)@ 之前的最近一个心拍的时间，断言结果为空。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有采样点数据，断言结果为空。
+    \item 写入时间为 @DateTime(2023)@，导联I为1mV，导联II为2mV的采样点数据。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有采样点数据，断言结果为空。因为如~\ref{subsec:db-optimization} 节所述，存在写入缓存。
+    \item 以之前写入的采样点的时间为起始，写入1000个采样点数据。
+    \item 查询在 @DateTime(2022)@ 和 @DateTime(2024)@ 之间的所有采样点数据，断言结果列表不为空。这里没有断言结果的具体长度，因为缓存大小这一实现细节不在测试范围，只要保证不会过大导致延迟过长即可。
+    \item 清空数据库。
+\end{enumerate}
+
+\subsection{Python部分的测试}\label{subsec:test-python}
+
+Python部分的测试基于pytest框架。
+
+\subsubsection{动态心电智能检测算法的测试}\label{subsubsec:test-pytorch}
+
+该部分为对智能检测算法的Python版本的测试，用于确保在重构过程中没有改变算法的表现。
+
+测试基于的一个假设是，该算法的原始版本是正确的。在后来的重构过程中发现其实并非如此，但没有找到更好的测试方法。因此，该测试无法保证算法可以正确对心电数据进行分析，只能保证分析结果与算法的原版本或经过确认的修正版本一致。
+
+\begin{enumerate}
+    \item 设置模型文件路径。该路径在Python版本的实现中可以作为常量，但仍然将设置函数提取了出来，因为最终在Dart中调用C++时会需要设置该路径。
+    \item 读取用作测试输入的心电数据文件。
+    \item 获取算法的预测结果。
+    \item 读取存储预期结果的文件。
+    \item 断言实际的预测结果与预期一致。
+\end{enumerate}
+
+\subsubsection{心电数据获取与转换的测试}
+
+该部分为对~\ref{sec:test-data} 中提到的从公开数据库下载数据并转换格式的测试。测试目标是保证仓库中的数据文件是代码实际生成的文件，未作改动，也没有因代码变动时忘记重新获取而过时。另外，该测试也保证数据满足一些基本约束。
+
+\begin{enumerate}
+    \item 下载原始数据。
+    \item 断言原始数据的采样率不低于输出结果的目标采样率。（在当前版本中，采样率是从5000Hz降低到125Hz。）
+    \item 断言原始数据的时长不低于输出结果的目标时长。输出结果是裁剪了开头一段，所以原始数据的时长至少要不比输出结果的时长更短。
+    \item 断言原始数据中前两段数据的标签为I和II。原始数据中包含除心电外的更多数据，但本项目只需要心电数据，因此不对其他部分进行断言。
+    \item 转换为输出数据。
+    \item 从文件读取输出数据。
+    \item 断言转换的输出数据与从文件读取的输出数据一致。
+\end{enumerate}
+
+在持续集成环境中进行测试时，对下载的文件进行了缓存，以免对原始数据库造成过大压力。此外，缓存也加快了测试的执行速度，因为GitHub内部的数据传输速度远远快于从公开数据库下载数据的速度。
+
+\subsection{C++部分的测试}\label{subsec:test-cpp}
+
+C++部分的测试基于Catch2框架。
+
+\subsubsection{Pan-Tompkins算法的测试}
+
+该算法的结果的正确性是由人工检查的，不在自动化测试中。自动化测试仅保证算法可以正常执行，不会报错，且输出结果与存储于文件供检查的结果一致。
+
+\begin{enumerate}
+    \item 打开作为测试输入的心电数据文件。
+    \item 将心电数据文件内容作为JSON进行解析。
+    \item 打开作为预期输出的结果文件。
+    \item 以125Hz的采样率（测试输入的采样率）初始化算法。
+    \item 对于测试输入中的每个点，调用算法获取实际结果，从预期输出文件中读取预期结果，断言二者一致。
+    \item 忽略输出文件中的1个换行。
+    \item 断言输出文件已经到达末尾。
+\end{enumerate}
+
+\subsubsection{动态心电智能检测算法的测试}
+
+该部分为对智能检测算法的C++版本的测试，用于确保在迁移过程中没有改变算法的表现。
+
+测试代码与算法代码一样是根据Python版本原样翻译的，只是将相关依赖库进行了替换。因此，测试流程与~\ref{subsubsec:test-pytorch} 中的Python版本的测试流程一致，不再重复说明。
 
 
 \section{测试结果分析}\label{sec:test-result}
 
-\todo{测试结果分析}
+在对实现进行过各种修正后，各部分单元测试均可通过。在集成测试中也未发现明显问题。因此，可以认为应用基本满足了需求。
+
+另外，对各部分代码的覆盖率基于Codecov进行了统计。其中，Flutter部分的测试覆盖率仅有54\%，这是因为代码中的UI部分的测试编写较为繁琐，只对一些核心方法进行了测试。Pan-Tompkins算法的测试覆盖率为78\%，一部分未覆盖部分是用于输入输出的主函数，另一部分是算法原实现中有部分代码在测试时未被执行全部分支；由于未充分理解其实现意图，对该部分保留原样，未作改动。其余几个仓库中的代码的覆盖率均为100\%，不过手动排除了不可能被正常覆盖的 @if __name__ == "__main__"@ 部分。从测试覆盖率来看，项目的容易出错的部分代码均已经得到了充分的测试，可以保证其基本正确。
