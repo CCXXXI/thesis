@@ -125,6 +125,41 @@
 
 可以展示的心电设备的信息是根据心电设备的通信协议中能提供的信息，以及这些信息是否对于一般用户有意义来决定的。例如，心电设备的信号强度、电量等信息对于一般用户来说是有意义的，而心电设备的内部序列号等信息则对于一般用户来说是无意义的，即使心电设备的通信协议中提供了这些信息，应用也不应该展示，以保证界面的简洁易用。
 
+\subsection{实时心电数据相关需求分析}\label{subsec:real-time-req}
+
+\subsubsection{查看实时心率}
+
+在连接了心电设备后，应用可以展示用户当前的心率。查看实时心率的用例详情如表~\ref{tab:uc-heart-rate} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看实时心率}{Use case of viewing the real-time heart rate}
+    \label{tab:uc-heart-rate}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看实时心率     \\
+        \hline
+        主要参与者 & 患者         \\
+        \hline
+        次要参与者 & 心电设备       \\
+        \hline
+        前置条件  & 未连接心电设备    \\
+        \hline
+        触发条件  & 患者尝试查看实时心率 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者当前的心率。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 心电设备未连接：应用提示用户心电设备未连接。
+            \item[1b.] 心率信息未就绪：应用提示用户心率正在检测中。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
