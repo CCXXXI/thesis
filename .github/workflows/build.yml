@@ -6,9 +6,18 @@ on:
 
 jobs:
   build-pdf:
+    strategy:
+      matrix:
+        include:
+          - sed-command: "sed -i 's/documentclass{ecnuthesis}/documentclass[printMode]{ecnuthesis}/' src/main.tex"
+            file-suffix: "_双面打印版"
+          - sed-command: ""
+            file-suffix: ""
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - run: ${{ matrix.sed-command }}
 
       - uses: xu-cheng/latex-action@v2
         with:
@@ -19,10 +28,10 @@ jobs:
       # ref_name for tags, sha for commits
       - name: Rename pdf file (for tags)
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
-        run: mv src/main.pdf 10195101428_刘议临_${{ github.ref_name }}.pdf
+        run: mv src/main.pdf 10195101428_刘议临_${{ github.ref_name }}${{ matrix.file-suffix }}.pdf
       - name: Rename pdf file (for commits)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
-        run: mv src/main.pdf 10195101428_刘议临_${{ github.sha }}.pdf
+        run: mv src/main.pdf 10195101428_刘议临_${{ github.sha }}${{ matrix.file-suffix }}.pdf
 
       - uses: actions/upload-artifact@v3
         with:
@@ -39,6 +48,7 @@ jobs:
           name: pdf
       # Non-ASCII characters in file names are not supported in GitHub releases
       - run: mv 10195101428_刘议临_${{ github.ref_name }}.pdf 10195101428_${{ github.ref_name }}.pdf
+      - run: mv 10195101428_刘议临_${{ github.ref_name }}_双面打印版.pdf 10195101428_${{ github.ref_name }}_printMode.pdf
       - uses: softprops/action-gh-release@v1
         with:
           files: 10195101428_${{ github.ref_name }}.pdf
