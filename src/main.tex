@@ -120,11 +120,16 @@
 % https://tex.stackexchange.com/a/584994/254533
 \captionsetup[figure][bi-second]{name=Figure}
 \captionsetup[bi-second]{listtype+=Eng}
-\DeclareFloatingEnvironment[fileext=lof2]{figureEng}[Figure][List of Figures]
+\DeclareFloatingEnvironment[fileext=lof2]{figureEng}[Figure][Figures]
+
+% table
+\captionsetup[table][bi-second]{name=Table}
+\captionsetup[bi-second]{listtype+=Eng}
+\DeclareFloatingEnvironment[fileext=lot2]{tableEng}[Table][Tables]
 
 \newcommand*{\app}{可穿戴动态心电监测应用}
 
-\lstMakeShortInline[columns=fixed]|
+\lstMakeShortInline[columns=fixed]@
 
 \begin{document}
 
