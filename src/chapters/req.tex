@@ -95,6 +95,42 @@
 
 解绑心电设备是应用程序单向的动作，不需要心电设备的参与或者同意，用户完全可以在心电设备已无法正常工作的情况下成功执行此用例。因此，该用例也没有异常事件流，应用保证其必定成功。
 
+\subsubsection{查看心电设备信息}
+
+用户在绑定心电设备后，可以查看其相关信息。查看心电设备信息的用例详情如表~\ref{tab:uc-view-device-info} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看心电设备信息的用例详情}{Use case of viewing the device information}
+    \label{tab:uc-view-device-info}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看心电设备信息     \\
+        \hline
+        主要参与者 & 患者           \\
+        \hline
+        目标    & 查看心电设备信息     \\
+        \hline
+        次要参与者 & 心电设备         \\
+        \hline
+        前置条件  & 已绑定心电设备      \\
+        \hline
+        触发条件  & 患者尝试查看心电设备信息 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示心电设备的名称、型号、信号强度、电量等信息。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 设备已断开连接：应用提示用户设备已断开连接，并仅展示心电设备的名称、型号等已知信息，不展示电量等无法获知的信息。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+可以展示的心电设备的信息是根据心电设备的通信协议中能提供的信息，以及这些信息是否对于一般用户有意义来决定的。例如，心电设备的信号强度、电量等信息对于一般用户来说是有意义的，而心电设备的内部序列号等信息则对于一般用户来说是无意义的，即使心电设备的通信协议中提供了这些信息，应用也不应该展示，以保证界面的简洁易用。
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
