@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-04-12T00:46:20.443Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="GD0ly2_7sHRrLgphkowH" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-04-13T09:37:47.825Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="pmWPGq1amreCUy21_VsP" version="21.1.2" type="device">
   <diagram id="h8sWslL2cCIQR9Mv2uak" name="第 1 页">
     <mxGraphModel dx="1021" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="aA63wH-vjKKXEL9CF68c-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-1" target="aA63wH-vjKKXEL9CF68c-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aA63wH-vjKKXEL9CF68c-1" value="用户" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+        <mxCell id="aA63wH-vjKKXEL9CF68c-1" value="患者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="90" y="300" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aA63wH-vjKKXEL9CF68c-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;exitX=0.07;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="aA63wH-vjKKXEL9CF68c-7" target="aA63wH-vjKKXEL9CF68c-52" edge="1">
