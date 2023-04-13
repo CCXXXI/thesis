@@ -536,3 +536,49 @@ Flutter Platform Widgets包在平台自适应UI的实现中起到的作用主要
 \subsubsection{日志功能的实现}
 
 应用的日志功能基于Logging包来实现，该包默认情况下只会将日志打印至控制台。为了方便在不连接控制台的情况下进行调试，基于Flutter UME包实现了应用内控制台。该包原本的实现并不支持将Logging包对接其提供的控制台，为了方便使用，对该包添加了相关的支持，并已经将该改动合并回了该包的开源仓库。
+
+Logging包除 @ALL@ 和 @OFF@ 外，提供了8个日志等级，从高到低分别为 @SHOUT@、@SEVERE@、@WARNING@、@INFO@、@CONFIG@、@FINE@、@FINER@、@FINEST@。在应用中，日志等级的使用遵循如表~\ref{tab:log-levels} 所示的规则。
+
+\begin{table}[ht]
+    \centering
+    \bicaption{日志等级}{Log levels}\label{tab:log-levels}
+    \begin{tabular}{|c|p{.4\linewidth}|p{.4\linewidth}|}
+        \hline
+        等级 & 解释 & 示例 \\
+        \hline
+        @SHOUT@ &
+        逻辑上不可能存在的情况，可能由一些笔误引发，需要修正程序代码。 &
+        @kReleaseMode@、@kProfileMode@、@kDebugMode@ 均不成立。 \\
+        \hline
+        @SEVERE@ &
+        严重故障，应用已经不能正常运行，可能由不兼容的应用升级引发，需要清除应用数据或卸载重装。 &
+        数据库格式异常，无法读取。 \\
+        \hline
+        @WARNING@ &
+        潜在问题，应用主要功能仍然正常，可能需要用户处理，但并不紧急。 &
+        网络故障，无法连接到服务器，导致未能完成数据上传。 \\
+        \hline
+        @INFO@ &
+        信息消息，确认应用按预期运行。 &
+        完成了一段数据的上传。 \\
+        \hline
+        @CONFIG@ &
+        配置信息，帮助调试可能与特定配置相关的问题。 &
+        内存大小、深色模式开关。 \\
+        \hline
+        @FINE@ &
+        细节信息，用于Debug，并且仅在主动执行特定操作时会触发有限次数。 &
+        @NavigationBar@ （应用下方常驻的导航栏）的 @selectedIndex@ 变化，切换到另一个界面。 \\
+        \hline
+        @FINER@ &
+        更细节的信息，同样用于Debug，会自动循环无限触发，但频率不高，是正常人类可以实时检查的程度。 &
+        检测到一个新的QRS波群（每秒1次左右）。 \\
+        \hline
+        @FINEST@ &
+        最细节的信息，用于临时Debug，会自动循环无限触发，且频率过高，只能运行一段时间后检查历史记录。 &
+        接收到一个新的采样点信息（每秒上百次）。 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+其中，@INFO@ 及以上级别的消息也需要在UI上展示给用户。@CONFIG@ 及以下级别的消息对一般用户没有意义，不在UI上展示。但应用内的开发者工具不受此约束，因为开发者工具相关的UI并不是面向一般用户的。
