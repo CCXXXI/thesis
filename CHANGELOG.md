@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.26.0](https://github.com/CCXXXI/thesis/compare/v0.25.0...v0.26.0) (2023-04-13)
+
+### Features
+
+- **dev:** 完成 {数据库的性能优化} ([4f1860f](https://github.com/CCXXXI/thesis/commit/4f1860fcdc4d6860be04fb34ffe2c1a45970f6db))
+- **test:** 完成 {Pan-Tompkins 算法的测试} ([17d249d](https://github.com/CCXXXI/thesis/commit/17d249db7e3b887d9e15c2f384ef428e83fd5a19))
+- **test:** 完成 {三导联心电图测试} ([596631a](https://github.com/CCXXXI/thesis/commit/596631ac2efe5e761b375c1f9b9da2bd9a959001))
+- **test:** 完成 {冒烟测试} ([0d0b17b](https://github.com/CCXXXI/thesis/commit/0d0b17bce6c182b3e023866a5aa5930be59aa065))
+- **test:** 完成 {分析报告界面测试} ([07a9f86](https://github.com/CCXXXI/thesis/commit/07a9f860fa1c2bbd837e725eb1fad10394e30042))
+- **test:** 完成 {动态心电智能检测算法的测试} ([35da31d](https://github.com/CCXXXI/thesis/commit/35da31d2498c9b4b19e761153ae53de23cdf7f49))
+- **test:** 完成 {心率就绪判定测试} ([7314463](https://github.com/CCXXXI/thesis/commit/7314463eadf35ab63cb1048bdda48d33ca8e17c1))
+- **test:** 完成 {数据库测试} ([ddead12](https://github.com/CCXXXI/thesis/commit/ddead126ba61eb05ff65f947e0a232f2658ff429))
+- **test:** 完成 {时间转文本测试} ([876e437](https://github.com/CCXXXI/thesis/commit/876e4374e8cd0b9da662ec534dfda25b72476503))
+- **test:** 完成 {标准化距离测试} ([c297a8a](https://github.com/CCXXXI/thesis/commit/c297a8a5eb15834a3a9d69e8e36cb15b5ffe6292))
+- **test:** 完成 {标签间隔测试} ([93613ed](https://github.com/CCXXXI/thesis/commit/93613ede28b30b8e7dae99dcdb7d16754f7a4828))
+- **test:** 完成 {测试数据的来源} ([d218c71](https://github.com/CCXXXI/thesis/commit/d218c71cd5ee7bd84eb28739913bfd7ab0a813de))
+- **test:** 完成 {测试的硬件环境} ([8df5046](https://github.com/CCXXXI/thesis/commit/8df5046e51de3242ded26d187aeda4604f30dced))
+- **test:** 完成 {测试的软件环境} ([a859ef4](https://github.com/CCXXXI/thesis/commit/a859ef400b9ebac226bf23bc136d2b92321d90d7))
+- **test:** 完成 {测试结果分析} ([86e79d3](https://github.com/CCXXXI/thesis/commit/86e79d3578c2cf2b0d4fa0abb4b2722650cb492b))
+- **test:** 完成 Python 部分的测试 ([8e87133](https://github.com/CCXXXI/thesis/commit/8e8713312c92da8812fc550f228636e53b60fe40))
+
+### Bug Fixes
+
+- **test:** fix typo ([9e5b3db](https://github.com/CCXXXI/thesis/commit/9e5b3db7a03750bba3edf814de5b7ff1a771fada))
+- **test:** sqrt2 -&gt; \(\sqrt{2}\) ([b296c38](https://github.com/CCXXXI/thesis/commit/b296c3888897b5dfc0d3854c67a1995ef41ba58c))
+- **test:** 移除 {测试目标与测试方法} ([aa59c53](https://github.com/CCXXXI/thesis/commit/aa59c5321ac18e8df08ba74161339b6bee5f33fa))
+- **test:** 调整小节顺序 ([90ddb1a](https://github.com/CCXXXI/thesis/commit/90ddb1a30687f9d977d24c1f9636b82ca946693f))
+
 ## [0.25.0](https://github.com/CCXXXI/thesis/compare/v0.24.0...v0.25.0) (2023-04-13)
 
 ### Features
