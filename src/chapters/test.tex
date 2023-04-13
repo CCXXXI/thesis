@@ -104,6 +104,24 @@ Flutter部分的测试基于该框架自带的测试功能。其写法与主流�
     \end{tabular}
 \end{table}
 
+\subsubsection{三导联心电图测试}
+
+该测试用于判定三导联心电图组件的外观基本正常。易用性等方面的测试难以通过自动化测试来完成，仅通过肉眼检查来保证。
+
+\begin{enumerate}
+    \item pump三导联心电图组件 @Chart3Lead@，传入一些假数据。
+    \item 调整屏幕尺寸为横向1000、纵向2000。
+    \item 断言屏幕上可以找到三个单导联心电图组件。
+    \item 断言屏幕上可以找到 @leadI@、@leadII@、@leadIII@ 三个字符串。
+    \item 调整屏幕尺寸为横向2000、纵向1000。
+    \item 断言屏幕上可以找到一个单导联心电图组件。
+    \item 断言屏幕上可以找到一个分段按钮。
+    \item 断言该分段按钮的已选中项仅有一个，为第一项。（默认情况）
+    \item 点击分段按钮的第二项。
+    \item 断言该分段按钮的已选中项仅有一个，为第二项。
+    \item 恢复默认屏幕尺寸。
+\end{enumerate}
+
 
 \section{测试结果分析}\label{sec:test-result}
 
