@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/CCXXXI/thesis/compare/v1.0.0...v1.0.1) (2023-04-13)
+
+### Continuous Integration
+
+- **build:** correct release ([5930b27](https://github.com/CCXXXI/thesis/commit/5930b27993ed472ac5633930488d1cf0b20d2c89))
+- **build:** 增加双面打印版 ([28d8af5](https://github.com/CCXXXI/thesis/commit/28d8af5745d934b8b8a0d219881d0441b75573d0))
+
 ## [1.0.0](https://github.com/CCXXXI/thesis/compare/v0.26.0...v1.0.0) (2023-04-13)
 
 ### Features
