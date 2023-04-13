@@ -160,6 +160,40 @@
     \end{tabularx}
 \end{table}
 
+\subsubsection{查看实时心电图}
+
+作为一个动态心电图监测应用，查看实时的动态心电图是应用最核心的功能之一。查看实时心电图的用例详情如表~\ref{tab:uc-heart-rate} 所示。
+
+\begin{table}[!ht]
+    \bicaption{查看实时心电图}{Use case of viewing the real-time ECG}
+    \label{tab:uc-real-time-ecg}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称    & 查看实时心电图     \\
+        \hline
+        主要参与者 & 患者          \\
+        \hline
+        次要参与者 & 心电设备        \\
+        \hline
+        前置条件  & 已连接心电设备     \\
+        \hline
+        触发条件  & 患者尝试查看实时心电图 \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用展示患者的实时心电图。
+        \end{itemizec} \\
+        \hline
+        扩展事件流 &
+        \begin{itemizec}
+            \item[1a.] 心电设备未连接：应用提示用户心电设备未连接。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+心电图在易用性、性能等非功能性需求方面要求较高，但在功能性需求的方面是相对简单的。
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
