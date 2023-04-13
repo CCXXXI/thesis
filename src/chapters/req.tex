@@ -257,6 +257,41 @@
     \end{tabularx}
 \end{table}
 
+\subsubsection{自动上传心电数据}
+
+在患者已绑定医疗账号的情况下，应用会自动上传心电数据至服务器。一方面是为了备份，另一方面也方便患者对接的医生进一步分析诊断。自动上传心电数据的用例详情如表~\ref{tab:uc-upload} 所示。
+
+\begin{table}[!ht]
+    \bicaption{自动上传心电数据的用例详情}{Use case of automatically uploading the ECG data}
+    \label{tab:uc-upload}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        名称        & 自动上传心电数据  \\
+        \hline
+        主要参与者     & 定时任务管理器   \\
+        \hline
+        次要参与者     & 服务器、患者    \\
+        \hline
+        前置条件      & 患者已绑定医疗账号 \\
+        \hline
+        后置条件（成功时） & 数据已上传至服务器 \\
+        \hline
+        触发条件      & 定时触发      \\
+        \hline
+        主要事件流 &
+        \begin{itemizec}
+            \item[1.] 应用上传本地未上传的历史数据至服务器。
+            \item[2.] 应用通知患者已完成上传。
+        \end{itemizec} \\
+        \hline
+        异常事件流 &
+        \begin{itemizec}
+            \item[1a.] 上传失败：通知患者上传失败，患者可以选择重试或忽略（不进行选择则默认忽略）。重试则重新执行1；忽略则用例终止。
+        \end{itemizec} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
 
 \section{应用的非功能性需求分析}\label{sec:nonfunc-req}
 
