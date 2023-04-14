@@ -2,11 +2,10 @@
 
 ## [1.1.0](https://github.com/CCXXXI/thesis/compare/v1.0.2...v1.1.0) (2023-04-14)
 
-
 ### Features
 
-* **abstract:** 更新中文摘要 ([1613f56](https://github.com/CCXXXI/thesis/commit/1613f5616b92b35a8224b400b5b16b2472863210))
-* **abstract:** 更新英文摘要 ([8f4521e](https://github.com/CCXXXI/thesis/commit/8f4521e22f4c63985da62a1a0d30ca717fa2df58))
+- **abstract:** 更新中文摘要 ([1613f56](https://github.com/CCXXXI/thesis/commit/1613f5616b92b35a8224b400b5b16b2472863210))
+- **abstract:** 更新英文摘要 ([8f4521e](https://github.com/CCXXXI/thesis/commit/8f4521e22f4c63985da62a1a0d30ca717fa2df58))
 
 ## [1.0.2](https://github.com/CCXXXI/thesis/compare/v1.0.1...v1.0.2) (2023-04-14)
 
