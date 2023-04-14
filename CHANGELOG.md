@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/CCXXXI/thesis/compare/v1.0.1...v1.0.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* 移除附录 ([#155](https://github.com/CCXXXI/thesis/issues/155)) ([f421574](https://github.com/CCXXXI/thesis/commit/f42157422e1748b45751c95eef952129ef57538c))
+
 ## [1.0.1](https://github.com/CCXXXI/thesis/compare/v1.0.0...v1.0.1) (2023-04-13)
 
 ### Continuous Integration
