@@ -48,6 +48,11 @@
         month = 4,
         % 论文完成月份
         %
+        % graduationYear = 2077,
+        % 内封面毕业届别
+        % 说明:
+        %   若 graduationYear 字段为空，则内封面毕业届别为 year
+        %
         keywords = {移动终端,可穿戴设备,动态心电图,深度学习},
         % 中文关键词
         % 请使用英文逗号 "," 以分隔
@@ -96,6 +101,11 @@
         %   lm        使用 TeX 自带的 Latin Modern 数学字体
         %   times     使用 Times 风格的数学字体
         %   (默认选项为 lm )
+        %
+        % declarationPage = {./source/declaration.pdf},
+        % 扫描版声明页 PDF 文件
+        % 若该值为空则生成模版预定义的声明页；否则将插入指定路径所对应的 PDF 文件
+        % 默认值为空
         %
         bibResource = {./thesis-ref.bib},
         % 参考文献数据源
