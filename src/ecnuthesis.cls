@@ -57,12 +57,12 @@ The~ engine~ "#1"~ is~ not~ supported.
 }
 { ctexrep }
 \clist_map_inline:nn
-  {
-    { no-math           } { fontspec     },
-    { perpage           } { footmisc     },
-    { mathrm=sym        } { unicode-math },
-  }
-  { \PassOptionsToPackage #1 }
+    {
+        { no-math           } { fontspec     },
+        { perpage           } { footmisc     },
+        { mathrm=sym        } { unicode-math },
+}
+    { \PassOptionsToPackage #1 }
 \LoadClass { ctexrep }
 % 导入宏包
 \PassOptionsToPackage { titles } { tocloft }
@@ -158,52 +158,52 @@ The~ engine~ "#1"~ is~ not~ supported.
 \clist_new:N \l__ecnu_info_keywords_clist
 \clist_new:N \l__ecnu_info_keywordsEN_clist
 \keys_define:nn { ecnu / info }
-  {
-    title           .tl_set:N     = \l__ecnu_info_title_tl,
-    titleEN         .tl_set:N     = \l__ecnu_info_titleEN_tl,
-    author          .tl_set:N     = \l__ecnu_info_author_tl,
-    studentID       .tl_set:N     = \l__ecnu_info_studentID_tl,
-    department      .tl_set:N     = \l__ecnu_info_department_tl,
-    major           .tl_set:N     = \l__ecnu_info_major_tl,
-    supervisor      .tl_set:N     = \l__ecnu_info_supervisor_tl,
-    academicTitle   .tl_set:N     = \l__ecnu_info_academicTitle_tl,
-    year            .int_set:N    = \l__ecnu_info_year_int,
-    month           .int_set:N    = \l__ecnu_info_month_int,
-    graduationYear  .int_set:N    = \l__ecnu_info_graduation_year_int,
-    keywords        .clist_set:N  = \l__ecnu_info_keywords_clist,
-    keywordsEN      .clist_set:N  = \l__ecnu_info_keywordsEN_clist
-  }
+    {
+    title .tl_set:N     = \l__ecnu_info_title_tl,
+    titleEN .tl_set:N     = \l__ecnu_info_titleEN_tl,
+    author .tl_set:N     = \l__ecnu_info_author_tl,
+    studentID .tl_set:N     = \l__ecnu_info_studentID_tl,
+    department .tl_set:N     = \l__ecnu_info_department_tl,
+    major .tl_set:N     = \l__ecnu_info_major_tl,
+    supervisor .tl_set:N     = \l__ecnu_info_supervisor_tl,
+    academicTitle .tl_set:N     = \l__ecnu_info_academicTitle_tl,
+    year .int_set:N    = \l__ecnu_info_year_int,
+    month .int_set:N    = \l__ecnu_info_month_int,
+    graduationYear .int_set:N    = \l__ecnu_info_graduation_year_int,
+    keywords .clist_set:N  = \l__ecnu_info_keywords_clist,
+    keywordsEN .clist_set:N  = \l__ecnu_info_keywordsEN_clist
+}
 \NewDocumentCommand \theyear { }
-  {
+{
     \int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int }
-      { \int_set_eq:NN \l__ecnu_info_year_int \c_sys_year_int }
-      { }
+        { \int_set_eq:NN \l__ecnu_info_year_int \c_sys_year_int }
+        { }
     \int_use:N \l__ecnu_info_year_int
-  }
+}
 \NewDocumentCommand \themonth { }
-  {
+{
     \int_compare:nNnTF { \l__ecnu_info_month_int } = { \c_zero_int }
-      { \int_set_eq:NN \l__ecnu_info_month_int \c_sys_month_int }
-      { }
+        { \int_set_eq:NN \l__ecnu_info_month_int \c_sys_month_int }
+        { }
     \int_use:N \l__ecnu_info_month_int
-  }
+}
 \NewDocumentCommand \graduationYear { }
-  {
+{
     \int_compare:nNnTF { \l__ecnu_info_graduation_year_int } = { \c_zero_int }
-      {
+        {
         \int_compare:nNnTF { \l__ecnu_info_year_int } = { \c_zero_int }
-          {
+            {
             \int_set_eq:NN  \l__ecnu_info_graduation_year_int
-                            \c_sys_year_int
-          }
-          {
+            \c_sys_year_int
+        }
+            {
             \int_set_eq:NN  \l__ecnu_info_graduation_year_int
-                            \l__ecnu_info_year_int
-          }
-      }
-      { }
+            \l__ecnu_info_year_int
+        }
+    }
+        { }
     \int_use:N  \l__ecnu_info_graduation_year_int
-  }
+}
 \pagestyle{fancy}
 \fancyhead[L,R]       { }
 \fancyhead[C]         { \sffamily\footnotesize \l__ecnu_info_title_tl }
@@ -780,8 +780,9 @@ qed           = \qedsymbol
 \cs_new_protected:Npn \__ecnu_spread_box:nn #1#2
     {
     \mode_leave_vertical:
-    \hbox_to_wd:nn {#1} {\unskip #2 \unskip}
+    \hbox_to_wd:nn {#1} { \tl_map_inline:nn {#2} { ##1 \hfil } \unskip }
 }
+\cs_generate_variant:Nn \__ecnu_spread_box:nn { no }
 \cs_new_protected:Npn \__ecnu_center_box:nn #1#2
     {
     \mode_leave_vertical:
@@ -851,8 +852,56 @@ qed           = \qedsymbol
 \tl_const:Nn \c__ecnu_colon_tl              { ： }
 \tl_const:Nn \c__ecnu_year_tl               { 年 }
 \tl_const:Nn \c__ecnu_month_tl              { 月 }
+\tl_const:Nn \c__ecnu_day_tl                { 日 }
 \tl_const:Nn \c__ecnu_thesisInfo_tl         { 届本科生学士学位论文 }
+\tl_const:Nn \c__ecnu_date_tl               { 日期 }
+\tl_const:Nn \c__ecnu_orig_sign_tl          { 承诺人签名 }
+\tl_const:Nn \c__ecnu_author_sign_tl        { 作者签名 }
+\tl_const:Nn \c__ecnu_supervisor_sign_tl    { 导师签名 }
+\tl_const:Nn \c__ecnu_name_orig_tl  { 华东师范大学学位论文诚信承诺 }
+\tl_const:Nn \c__ecnu_name_auth_tl  { 华东师范大学学位论文使用授权说明 }
+\tl_const:Nn \c__ecnu_orig_text_tl
+    {
+    \par
+    本毕业论文是本人在导师指导下独立完成的，内容真实、可靠。本人在撰写
+    毕业论文过程中不存在请人代写、抄袭或者剽窃他人作品、伪造或者篡改数据
+    以及其他学位论文作假行为。\par
+    本人清楚知道学位论文作假行为将会导致行为人收到不授予/撤销学位、开除
+    学籍等处理（处分）决定。本人如果被查证在撰写本毕业论文过程中存在学位
+    论文作假行为，愿意接受学校依法作出的处理（处分）决定。
+}
+\tl_const:Nn \c__ecnu_auth_text_tl
+    {
+    \par
+    本论文的研究成果归华东师范大学所有，本论文的研究内容不得以其它单位的
+    名义发表。本学位论文作者和指导教师完全了解华东师范大学有关保留、使用
+    学位论文的规定，即：学校有权保留并向国家有关部门或机构送交论文的复印
+    件和电子版，允许论文被查阅和借阅；本人授权华东师范大学可以将论文的全部
+    或部分内容编入有关数据库进行检索、交流，可以采用影印、缩印或其他复制
+    手段保存论文和汇编本学位论文。\par
+    保密的毕业论文（设计）在解密后应遵守此规定。
+}
 %% 封面各部件的封装
+\cs_new_protected:Npn \__ecnu_orig_sign_area:
+    {
+    \c__ecnu_orig_sign_tl \c__ecnu_colon_tl
+    \hbox_to_wd:nn { 15 em } { }
+    \c__ecnu_date_tl \c__ecnu_colon_tl
+    \hbox_to_wd:nn { 3.4 em } { } \c__ecnu_year_tl
+    \hbox_to_wd:nn { 1.5 em } { } \c__ecnu_month_tl
+    \hbox_to_wd:nn { 1.5 em } { } \c__ecnu_day_tl
+}
+\cs_new_protected:Npn \__ecnu_auth_sign_area:
+    {
+    \c__ecnu_author_sign_tl \c__ecnu_colon_tl
+    \hbox_to_wd:nn { 5.5 em } { }
+    \c__ecnu_supervisor_sign_tl \c__ecnu_colon_tl
+    \hbox_to_wd:nn { 5.5 em } { }
+    \c__ecnu_date_tl \c__ecnu_colon_tl
+    \hbox_to_wd:nn { 3.4 em } { } \c__ecnu_year_tl
+    \hbox_to_wd:nn { 1.5 em } { } \c__ecnu_month_tl
+    \hbox_to_wd:nn { 1.5 em } { } \c__ecnu_day_tl
+}
 \cs_new_protected:Npn \__ecnu_cover_info:
     {
     \begin{minipage} [ c ] { \textwidth }
@@ -881,7 +930,7 @@ qed           = \qedsymbol
             \bfseries
             \clist_pop:NN \l__ecnu_tmpa_clist \l__ecnu_tmpa_tl
             \clist_pop:NN \l__ecnu_tmpb_clist \l__ecnu_tmpb_tl
-            \__ecnu_spread_box:nn { 4 em } { \l__ecnu_tmpa_tl }
+            \__ecnu_spread_box:no { 4 em } { \l__ecnu_tmpa_tl }
             \c__ecnu_colon_tl
             \underline{\__ecnu_center_box:nn { 6 cm } { \l__ecnu_tmpb_tl }}
             \skip_vertical:n { 1 ex }
@@ -1038,6 +1087,16 @@ qed           = \qedsymbol
 { \ecnu_cover_declare_template:nn {#1} {#2} }
 \DeclareCoverTemplate { cover-i   }
 { id, logo, title, titleEN, info }
+\DeclareCoverTemplate { cover-ii  }
+{
+    title-space,
+    originality-name,
+    originality-text,
+    originality-sign,
+    authorization-name,
+    authorization-text,
+    authorization-sign
+}
 \renewcommand{\ULthickness}{1pt}
 \DeclareInstance { ecnu / cover } { cover-i-default } { cover-i }
 {
@@ -1063,6 +1122,40 @@ qed           = \qedsymbol
     title / align       = center,
     titleEN / align       = center,
     info / align       = center,
+}
+\DeclareInstance { ecnu / cover } { cover-ii-default } { cover-ii }
+{
+    format                            = \__ecnu_line_spread:n { 1.625 },
+    top-skip                          = 0 pt plus 0.2 fill,
+    bottom-skip                       = 0 pt plus 2.5 fill,
+    originality-name / content     = \c__ecnu_name_orig_tl,
+    originality-text / content     = \c__ecnu_orig_text_tl,
+    originality-sign / content     = \__ecnu_orig_sign_area:,
+    authorization-name / content     = \c__ecnu_name_auth_tl,
+    authorization-text / content     = \c__ecnu_auth_text_tl,
+    authorization-sign / content     = \__ecnu_auth_sign_area:,
+    originality-name / format      =
+    \__ecnu_line_spread:n { 1.2 } \zihao { 4 } \bfseries,
+    authorization-name / format      =
+    \__ecnu_line_spread:n { 1.2 } \zihao { 4 } \bfseries,
+    title-space / bottom-skip = 1 em plus 0.2 fill,
+    originality-text / bottom-skip = -0.5 em,
+    originality-sign / bottom-skip = 0 pt plus 0.75 fill,
+    authorization-name / bottom-skip = 0 pt,
+    authorization-text / bottom-skip = 1 em,
+    originality-name / align       = center,
+    originality-sign / align       = right,
+    authorization-name / align       = center,
+    authorization-sign / align       = right,
+}
+\tl_new:N \l__ecnu_declaration_page_tl
+\keys_define:nn { ecnu / style }
+    {
+    declarationPage .code:n =
+        {
+        \tl_set_eq:NN \l__ecnu_declaration_page_tl \l_keys_value_tl
+        \RequirePackage { pdfpages }
+    },
 }
 % 中英文摘要
 \tl_const:Nn \c__ecnu_name_abstract_tl    { 摘要 }
@@ -1139,8 +1232,8 @@ qed           = \qedsymbol
 {
     \__ecnu_toc_title:V \contentsname
     \group_begin:
-      \linespread{1.2}\selectfont
-      \@starttoc{toc}
+    \linespread{1.2}\selectfont
+    \@starttoc{toc}
     \group_end:
     \clearpage{\thispagestyle{empty}\cleardoublepage}
 }
@@ -1172,7 +1265,7 @@ qed           = \qedsymbol
     \zihao{5}
     \par
     \begingroup
-%    \let\clearpage\relax
+    \let\clearpage\relax
     \setcounter{chapter}{0}
     \setcounter{section}{0}
     \addtocontents{toc}{\protect\setcounter{tocdepth}{-2}}
@@ -1202,6 +1295,15 @@ qed           = \qedsymbol
     \thispagestyle { empty }
     \UseInstance { ecnu / cover } { cover-i-default }
 }
+\NewDocumentCommand \makecoverii { }
+{
+    \cleardoublepage
+    \thispagestyle { empty }
+    \tl_set:Nn \thepage { C }
+    \tl_if_empty:NTF \l__ecnu_declaration_page_tl
+        { \UseInstance { ecnu / cover } { cover-ii-default } }
+        { \includepdf { \l__ecnu_declaration_page_tl } }
+}
 % 目录命令封装
 \NewDocumentCommand \makeTOC { }
 {
@@ -1219,12 +1321,12 @@ qed           = \qedsymbol
     {
         top     = 2.0 cm,
         bottom  = 2.0 cm,
-        left    = 2.5 cm,
-        right   = 2.5 cm
+        left    = 3.0 cm,
+        right   = 3.0 cm
     }
     \begin{titlepage}
         \bool_if:NT \g__ecnu_pdfpagelabels_bool { \thispdfpagelabel{COVER} }
-        \makecoveri
+        \makecoveri \newpage \makecoverii
     \end{titlepage}
     \restoregeometry
     \makeTOC
