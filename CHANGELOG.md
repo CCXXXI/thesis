@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.1](https://github.com/CCXXXI/thesis/compare/v1.1.0...v1.1.1) (2023-04-18)
+
+### Bug Fixes
+
+- less line spread in title ([8200413](https://github.com/CCXXXI/thesis/commit/820041353ae5ee35ae334b62f4ae2854553ea75d))
+
+### Miscellaneous Chores
+
+- remove src/CHANGELOG.md ([8fd3a74](https://github.com/CCXXXI/thesis/commit/8fd3a74fee5d950d0de41ed043186b920caa962b))
+- 保存知网查重报告 ([#159](https://github.com/CCXXXI/thesis/issues/159)) ([eede45f](https://github.com/CCXXXI/thesis/commit/eede45f844c97ba6c0571b06a6efabc026c770f4))
+- 保存维普查重结果 ([#161](https://github.com/CCXXXI/thesis/issues/161)) ([833f58b](https://github.com/CCXXXI/thesis/commit/833f58b259725b3b9efaeb26b93c5b377d82c464))
+
+### Code Refactoring
+
+- 拉取模板新参数 ([b8657a4](https://github.com/CCXXXI/thesis/commit/b8657a422c3a900a906a7b30421a0553b62dfa67))
+
 ## [1.1.0](https://github.com/CCXXXI/thesis/compare/v1.0.2...v1.1.0) (2023-04-14)
 
 ### Features
