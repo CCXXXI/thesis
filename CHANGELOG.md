@@ -2,15 +2,13 @@
 
 ## [1.3.0](https://github.com/CCXXXI/thesis/compare/v1.2.0...v1.3.0) (2023-04-19)
 
-
 ### Features
 
-* **ack:** 完成致谢 ([28b1ca0](https://github.com/CCXXXI/thesis/commit/28b1ca08430cc056f34abfb6378cc307b2a26f4d)), closes [#143](https://github.com/CCXXXI/thesis/issues/143)
-
+- **ack:** 完成致谢 ([28b1ca0](https://github.com/CCXXXI/thesis/commit/28b1ca08430cc056f34abfb6378cc307b2a26f4d)), closes [#143](https://github.com/CCXXXI/thesis/issues/143)
 
 ### Bug Fixes
 
-* **ack:** 排比 ([313c6d5](https://github.com/CCXXXI/thesis/commit/313c6d592dac893bcfb5997ceadcec04fa663a11))
+- **ack:** 排比 ([313c6d5](https://github.com/CCXXXI/thesis/commit/313c6d592dac893bcfb5997ceadcec04fa663a11))
 
 ## [1.2.0](https://github.com/CCXXXI/thesis/compare/v1.1.1...v1.2.0) (2023-04-19)
 
