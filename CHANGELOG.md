@@ -2,17 +2,15 @@
 
 ## [1.2.0](https://github.com/CCXXXI/thesis/compare/v1.1.1...v1.2.0) (2023-04-19)
 
-
 ### Features
 
-* **intro:** 补充更多 {国内外\app 现状} ([a50e9c3](https://github.com/CCXXXI/thesis/commit/a50e9c3df216d45b932b65b0021c30bfb674247d))
-
+- **intro:** 补充更多 {国内外\app 现状} ([a50e9c3](https://github.com/CCXXXI/thesis/commit/a50e9c3df216d45b932b65b0021c30bfb674247d))
 
 ### Bug Fixes
 
-* **intro:** Ⅱ -&gt; II ([45c15a5](https://github.com/CCXXXI/thesis/commit/45c15a51e77e693b750d60e9e554132d9ea97abf))
-* **intro:** 修正插图标题 ([dd30293](https://github.com/CCXXXI/thesis/commit/dd302939e101fd64055df106500c9e42d0df6021))
-* **intro:** 调整标点使用 ([a5f3f6e](https://github.com/CCXXXI/thesis/commit/a5f3f6e70c604746893c5bc68ee4844bbbd7c919))
+- **intro:** Ⅱ -&gt; II ([45c15a5](https://github.com/CCXXXI/thesis/commit/45c15a51e77e693b750d60e9e554132d9ea97abf))
+- **intro:** 修正插图标题 ([dd30293](https://github.com/CCXXXI/thesis/commit/dd302939e101fd64055df106500c9e42d0df6021))
+- **intro:** 调整标点使用 ([a5f3f6e](https://github.com/CCXXXI/thesis/commit/a5f3f6e70c604746893c5bc68ee4844bbbd7c919))
 
 ## [1.1.1](https://github.com/CCXXXI/thesis/compare/v1.1.0...v1.1.1) (2023-04-18)
 
