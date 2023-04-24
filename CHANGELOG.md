@@ -2,21 +2,18 @@
 
 ## [1.3.1](https://github.com/CCXXXI/thesis/compare/v1.3.0...v1.3.1) (2023-04-24)
 
-
 ### Bug Fixes
 
-* less line spread in title ([f5c6883](https://github.com/CCXXXI/thesis/commit/f5c688340157fb2dfdb13caa11d16b9c3f2fecb1))
-
+- less line spread in title ([f5c6883](https://github.com/CCXXXI/thesis/commit/f5c688340157fb2dfdb13caa11d16b9c3f2fecb1))
 
 ### Miscellaneous Chores
 
-* 拉取模板参数更新 ([86b39cb](https://github.com/CCXXXI/thesis/commit/86b39cbc3bf295a55559b30cb4896544ea49b7ef))
-
+- 拉取模板参数更新 ([86b39cb](https://github.com/CCXXXI/thesis/commit/86b39cbc3bf295a55559b30cb4896544ea49b7ef))
 
 ### Continuous Integration
 
-* correct sed command again ([b09ddaf](https://github.com/CCXXXI/thesis/commit/b09ddaf8ebd76f869877960b807399bc9a8218e2))
-* fix sed command ([db99692](https://github.com/CCXXXI/thesis/commit/db99692e62a65dce12df7a3912b7fcedc39097bc))
+- correct sed command again ([b09ddaf](https://github.com/CCXXXI/thesis/commit/b09ddaf8ebd76f869877960b807399bc9a8218e2))
+- fix sed command ([db99692](https://github.com/CCXXXI/thesis/commit/db99692e62a65dce12df7a3912b7fcedc39097bc))
 
 ## [1.3.0](https://github.com/CCXXXI/thesis/compare/v1.2.0...v1.3.0) (2023-04-19)
 
