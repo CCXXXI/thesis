@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - sed-command: "sed -i 's/documentclass{ecnuthesis}/documentclass[printMode]{ecnuthesis}/' src/main.tex"
+          - sed-command: "sed -i 's/documentclass[declarePage]{ecnuthesis}/documentclass[declarePage,printMode]{ecnuthesis}/' src/main.tex"
             file-suffix: "_双面打印版"
           - sed-command: ""
             file-suffix: ""
