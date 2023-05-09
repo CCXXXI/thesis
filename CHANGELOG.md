@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.0](https://github.com/CCXXXI/thesis/compare/v1.3.1...v1.4.0) (2023-05-09)
+
+### Features
+
+- add declaration ([90462a5](https://github.com/CCXXXI/thesis/commit/90462a51e92f5235a7c7ae053dfb6d72a5f914a9)), closes [#170](https://github.com/CCXXXI/thesis/issues/170)
+
+### Bug Fixes
+
+- month = 5 ([78155ea](https://github.com/CCXXXI/thesis/commit/78155ea6f25ede82aa6b510f71de5491a5fa5595))
+
 ## [1.3.1](https://github.com/CCXXXI/thesis/compare/v1.3.0...v1.3.1) (2023-04-24)
 
 ### Bug Fixes
