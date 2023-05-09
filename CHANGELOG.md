@@ -2,11 +2,10 @@
 
 ## [1.4.2](https://github.com/CCXXXI/thesis/compare/v1.4.1...v1.4.2) (2023-05-09)
 
-
 ### Continuous Integration
 
-* correct sed command ([c3da2b8](https://github.com/CCXXXI/thesis/commit/c3da2b84f884435e53733a48ef3c3df6c7d2ee47))
-* simplify escape ([f314b6c](https://github.com/CCXXXI/thesis/commit/f314b6c149e6dddd2205d7be48fe95831da11594))
+- correct sed command ([c3da2b8](https://github.com/CCXXXI/thesis/commit/c3da2b84f884435e53733a48ef3c3df6c7d2ee47))
+- simplify escape ([f314b6c](https://github.com/CCXXXI/thesis/commit/f314b6c149e6dddd2205d7be48fe95831da11594))
 
 ## [1.4.1](https://github.com/CCXXXI/thesis/compare/v1.4.0...v1.4.1) (2023-05-09)
 
