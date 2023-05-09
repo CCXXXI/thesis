@@ -2,10 +2,9 @@
 
 ## [1.4.1](https://github.com/CCXXXI/thesis/compare/v1.4.0...v1.4.1) (2023-05-09)
 
-
 ### Continuous Integration
 
-* correct sed ([#174](https://github.com/CCXXXI/thesis/issues/174)) ([a654a74](https://github.com/CCXXXI/thesis/commit/a654a7489fe38c30612d5c86ddde25481acc0c69))
+- correct sed ([#174](https://github.com/CCXXXI/thesis/issues/174)) ([a654a74](https://github.com/CCXXXI/thesis/commit/a654a7489fe38c30612d5c86ddde25481acc0c69))
 
 ## [1.4.0](https://github.com/CCXXXI/thesis/compare/v1.3.1...v1.4.0) (2023-05-09)
 
