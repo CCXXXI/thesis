@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/CCXXXI/thesis/compare/v1.4.2...v1.4.3) (2023-05-14)
+
+
+### Continuous Integration
+
+* **build:** disable print mode ([#182](https://github.com/CCXXXI/thesis/issues/182)) ([4b0da7e](https://github.com/CCXXXI/thesis/commit/4b0da7ef0c5d0975d1c2b13d119adf4c12a4ae74))
+
 ## [1.4.2](https://github.com/CCXXXI/thesis/compare/v1.4.1...v1.4.2) (2023-05-09)
 
 ### Continuous Integration
