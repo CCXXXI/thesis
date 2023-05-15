@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/CCXXXI/thesis/compare/v1.4.3...v1.5.0) (2023-05-15)
+
+
+### Features
+
+* **ack:** add more ack ([#184](https://github.com/CCXXXI/thesis/issues/184)) ([f285c92](https://github.com/CCXXXI/thesis/commit/f285c92d7a259f3ed2351313ff775d3e6779e341))
+
 ## [1.4.3](https://github.com/CCXXXI/thesis/compare/v1.4.2...v1.4.3) (2023-05-14)
 
 ### Continuous Integration
